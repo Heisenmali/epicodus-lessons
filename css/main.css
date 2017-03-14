@@ -1,0 +1,42 @@
+html {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+div {
+  width: 100%;
+  background-color: #455442;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  font-size: 20px;
+  margin: 7px;
+}
+
+a {
+  text-decoration: none;
+  color: #EBE4C4;
+}
+
+h1 {
+  font-family: 'Francois One', sans-serif;
+  font-size: 100px;
+  font-style: normal;
+  text-align: left;
+  color: #EBE4C4;
+  margin: 0;
+  padding: 0 0 20px 70px;
+}
+
+.coverimg {
+  width: 100%;
+}
