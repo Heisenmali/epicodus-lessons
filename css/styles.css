@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #f4e6bf;
+  background-color: #c7b299;
 }
 
 div {
@@ -67,5 +67,5 @@ p {
 .bodyimg {
   width: 100%;
   margin: 0px 0;
-  max-height: 75em;
+  max-height: 70em;
 }
