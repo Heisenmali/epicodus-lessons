@@ -48,8 +48,24 @@ h2 {
   padding: 0 0 0 70px;
 }
 
+.imgh {
+  font-family: 'Francois One', sans-serif;
+  font-size:30px;
+  font-style: normal;
+  text-align: left;
+  /*color: ;*/
+  margin: 15px 0;
+  padding: 0 0 120px 70px;
+}
+
 p {
   margin: 15px 15px 15px 0;
   width: 50%;
   padding: 0 0 0 70px;
+}
+
+.bodyimg {
+  width: 100%;
+  margin: 0px 0;
+  max-height: 75em;
 }
