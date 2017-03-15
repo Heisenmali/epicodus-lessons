@@ -3,6 +3,8 @@ body {
   margin: 0;
 }
 
+/*topbar*/
+
 div.hbox {
   height: 500px;
   /*vertical-align: middle;*/
@@ -25,16 +27,30 @@ h2 {
   color: #9f1e07;
 }
 
+/*main content*/
+
 div.img {
   float: left;
-  padding: 20px 0;
   width: 30%;
   margin: 15px;
 }
 
-div.description {
-  
- }
+img {
+  width: 100%;
+}
+
+span.flashy{
+  color: #9f1e07;
+  font-style: italic;
+}
+
+span.best {
+  color: #89ecda;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+ /*footer*/
 
 div.footer {
   background-color: #9f1e07;
@@ -51,4 +67,9 @@ li {
   display: inline;
   padding: 15px;
   color: #89ecda;
+}
+
+a {
+  text-decoration: none;
+  color:#89ecda;
 }
