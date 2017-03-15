@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+div.intro {
+  padding: 40px 60px;
+}
+
+h1.intro {
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: normal;
+  font-size: 60px;
+}
+
+h2.intro {
+  /*font-family: 'Cormorant Garamond', serif;*/
+  font-family: 'Alfa Slab One', cursive;
+  font-weight: 300;
+}
+
+p.intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+}
