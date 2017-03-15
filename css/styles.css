@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: 'Droid Serif', serif;
+}
+
+img {
+  height: 800px;
+  width: 100%;
+}
+
+/*Header*/
+
+div.header{
+  height: 400px;
+}
+
+.header h1 {
+  text-align: center;
+  padding: 90px 0;
+  font-size: 68px;
+}
+
+/*Sidebar*/
+
+.sidebar {
+  float: right;
+  margin: 0 100px 0 50px;
+}
+
+.sidebar h2 {
+  margin: 0 0 40px 0;
+}
+
+.sidebar li {
+  list-style: none;
+  margin: 10px;
+}
+
+/*Maincontent*/
+
+.maincontent {
+  /*float: left;*/
+  padding: 10px 80px 10px 60px;
+}
