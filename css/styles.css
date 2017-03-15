@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+/*Header*/
+
+.header {
+  height: 400px;
+  background-color: white;
+}
+
+.header h1 {
+  padding: 180px 0 0 50px;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 75px;
+}
+
+/*Main content*/
+
+.maincontent {
+  padding: 50px 200px 50px 50px;
+}
+
+h2 {
+  font-family: 'Rubik Mono One', sans-serif;
+  padding: 0 0 10px 0;
+}
+
+p {
+  font-family: 'Comfortaa', cursive;
+  padding: 0 0 60px 0;
+}
+
+/*About section*/
+
+.about {
+  background-color: black;
+  height: 300px;
+  color: white;
+  padding: 50px 200px 50px 50px;
+}
+
+.about h2 {
+  font-size: 48px;
+}
