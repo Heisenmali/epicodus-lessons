@@ -1,0 +1,28 @@
+/*Main left column*/
+
+.left-column {
+  padding: 15px 15px 15px 30px;
+}
+
+/*Main right column*/
+
+.col-md-10 h2 {
+  border: 1px solid black;
+}
+
+.mainbox {
+  padding: 10px;
+}
+
+.mainbox .col-md-5 {
+  border: 1px solid black;
+  margin: 3px;
+}
+
+.mainbox .col-md-5:first-child {
+  background-color: #dff0d8;
+}
+
+.mainbox .col-md-5:last-child {
+  background-color: #d9edf7;
+}
