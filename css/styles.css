@@ -55,14 +55,16 @@ ul {
   list-style: none;
 }
 
+.gh {
+  text-align: right;
+}
+
 a.ghpages {
   color: black;
 }
 
 a.ghrepo {
-  text-align :right;
   color: black;
-  width: 100%;
 }
 
 a:hover {
@@ -79,6 +81,14 @@ span {
 .aboutbox {
   background-color: black;
   color: white;
+}
+
+.left {
+
+}
+
+.right {
+  float: right;
 }
 
 #strike {
@@ -119,9 +129,20 @@ img {
   background-color: black;
   color: white;
   height: 20vh;
-  margin-left: 0;
 }
 
 sup {
   color: rgb(0, 235, 127);
+}
+
+/*media queries */
+
+@media screen and (max-width: 998px) {
+    .right {
+        float: left;
+    }
+
+    .meimg {
+      padding-top: 90px;
+    }
 }
