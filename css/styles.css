@@ -1,10 +1,9 @@
-* {
-  margin: 0;
-}
+
 
 body {
-    font-family: 'Inconsolata', monospace;
-    font-size: 1.5em;
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5em;
 }
 
 h1, h2, h3, h4 {
@@ -16,10 +15,6 @@ h1 {
   font-weight: bold;
 }
 
-h1:first-letter, h2:first-letter, p small:first-letter {
-  color: rgb(0, 235, 127)
-}
-
 h2 {
   font-size: 164%;
   font-weight: bold;
@@ -28,8 +23,8 @@ h2 {
 h3 {
   font-size: 145%;
   font-weight: normal;
+  margin: 50px 0 10px 0px;
 }
-
 
 h4 {
 font-size: 118%;
@@ -40,37 +35,54 @@ p {
   margin: 0 0 25px;
 }
 
+h1:first-letter, h2:first-letter, p small:first-letter {
+  color: rgb(0, 235, 127);
+}
+
 .container-fluid {
   padding: 30px 200px 30px 30px;
 }
 
-/*headbox*/
-
-.heabox {
-
-}
+/*header section*/
 
 small {
   font-style: italic;
 }
 
-/*mainbox*/
+a {
+  float:right;
+  color: black;
+}
+
+a:hover {
+  color: rgb(0, 235, 127);
+  text-decoration: none;
+}
+
+span {
+  color: rgb(0, 235, 127);
+}
+
+/*main section*/
 
 ul {
   list-style: none;
 }
 
-/*aboutbox*/
+/*about section*/
 
 .aboutbox {
   background-color: black;
   color: white;
 }
 
-img {
-  height: 125px;
-  width: 125px;
-  float: right;
+#interests {
+  list-style-type: lower-roman;
+  color: rgb(0, 235, 127);
+}
+
+#interests li span {
+  color: white;
 }
 
 .meimg {
@@ -86,6 +98,20 @@ img {
 }
 
 .imgdesc {
-  text-align: center;
-  line-height: 50px;
+  text-align: left;
+  line-height: 100px;
+  width: 150px;
+}
+
+/*footer section*/
+
+.footerbox {
+  background-color: black;
+  color: white;
+  height: 20vh;
+  margin-left: 0;
+}
+
+sup {
+  color: rgb(0, 235, 127);
 }
