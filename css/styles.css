@@ -35,6 +35,10 @@ p {
   margin: 0 0 25px;
 }
 
+.mainbox ul li p:nth-last-child(2) {
+  margin-bottom: 70px;
+}
+
 h1:first-letter, h2:first-letter, p small:first-letter {
   color: rgb(0, 235, 127);
 }
@@ -73,6 +77,11 @@ ul {
 
 .aboutbox {
   background-color: black;
+  color: white;
+}
+
+#strike {
+  text-decoration: line-through;
   color: white;
 }
 
