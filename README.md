@@ -15,11 +15,9 @@ _This webpage gives an overview of the projects I have worked on as well as who 
 * _if you didn't get the joke on the line above this one, shame on you._
 * _I should be taking this more seriously, but it's a README..._
 
-_leave nothing to chance - check!_
-
 ## Known Bugs
 
-_none at the moment_
+_None at the moment._
 
 ## Support and contact details
 
