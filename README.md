@@ -23,7 +23,7 @@ _This webpage gives an overview of the projects I have worked on as well as who 
 
 * _Feature links that will only change color when hovering over the text_
 
-#### v1
+#### v1 branch
 
 * _Doesn't make use of the bootstrap row_
 
