@@ -1,37 +1,36 @@
-# _{Application Name}_
+# _Niklas Long Portfolio_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _This webpage serves as my portfolio website and can be found [here](https://heisenmali.github.io/portfolio/)_ 
 
-#### By _**{List of contributors}**_
+#### By _**Me, myself and I**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This webpage gives an overview of the projects I have worked on as well as who I am and what I do_
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _a web browser_
+* _an thorough understanding of dry humor and what sarcasm is_
+* _if you didn't get the joke on the line above this one, shame on you_
+* _I should be taking this more seriously, but it's a README_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+_leave nothing to chance - check!_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_none at the moment_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_If you run into any issues... - you know where to find me_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_This website is built using html, css, the bootstrap framework and 8 hours of quality Epicodus time_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*{MIT and GPL}*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2017 **_{Niklas Long}_**
