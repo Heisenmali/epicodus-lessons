@@ -35,10 +35,6 @@ p {
   margin: 0 0 25px;
 }
 
-.mainbox ul li p:nth-last-child(2) {
-  margin-bottom: 70px;
-}
-
 h1:first-letter, h2:first-letter, p small:first-letter {
   color: rgb(0, 235, 127);
 }
@@ -53,9 +49,20 @@ small {
   font-style: italic;
 }
 
-a {
-  float:right;
+/*main section*/
+
+ul {
+  list-style: none;
+}
+
+a.ghpages {
   color: black;
+}
+
+a.ghrepo {
+  text-align :right;
+  color: black;
+  width: 100%;
 }
 
 a:hover {
@@ -65,12 +72,6 @@ a:hover {
 
 span {
   color: rgb(0, 235, 127);
-}
-
-/*main section*/
-
-ul {
-  list-style: none;
 }
 
 /*about section*/
