@@ -16,23 +16,49 @@ h1 {
   font-weight: bold;
 }
 
+h1:first-letter, h2:first-letter {
+  color: rgb(0, 235, 127)
+}
+
 h2 {
   font-size: 164%;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 145%;
+  font-weight: normal;
 }
+
 
 h4 {
 font-size: 118%;
+font-weight: lighter;
+}
+
+.container-fluid {
+  padding: 30px;
 }
 
 /*headbox*/
 
+.heabox {
+  text-align: right;
+}
 
+small {
+  font-style: italic;
+}
 
 /*mainbox*/
 
+ul {
+  list-style: none;
+}
 
 /*aboutbox*/
+
+.aboutbox {
+  background-color: black;
+  color: white;
+}
