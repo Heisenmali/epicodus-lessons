@@ -128,7 +128,8 @@ img {
 .footerbox {
   background-color: black;
   color: white;
-  height: 20vh;
+  height: 30vh;
+  padding: 30px 0 60px 40px;
 }
 
 sup {
