@@ -78,6 +78,10 @@ span {
 
 /*about section*/
 
+.black {
+  background: black;
+}
+
 .aboutbox {
   background-color: black;
   color: white;
