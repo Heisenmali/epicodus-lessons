@@ -43,3 +43,15 @@ p {
 .about h2 {
   font-size: 48px;
 }
+
+/*jQuery rules*/
+
+.color-change {
+  background-color: black;
+  color: white;
+}
+
+.color-change2 {
+  background-color: white;
+  color: black;
+}
