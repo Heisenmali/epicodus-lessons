@@ -1,0 +1,35 @@
+/*#initially-showing {
+  display: none;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+}*/
+
+.green-background {
+  background-color: green;
+}
+
+
+.red-background {
+  background-color: red;
+}
+
+
+.yellow-background {
+  background-color: yellow;
+}
+
+.test-background {
+  background-color: blue;
+}
+
+.change-color {
+  color: white;
+  background-color: black;
+}
