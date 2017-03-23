@@ -67,13 +67,26 @@ $(document).ready(function() {
 		$("form#divide").submit(function(event) {
 			event.preventDefault();
 
-			var num1 = parseInt($("input#div1").val());
-			var num2 = parseInt($("input#div2").val());
+			var num1 = parseFloat($("input#div1").val());
+			var num2 = parseFloat($("input#div2").val());
 			var result = divide(num1, num2);
-
 			$(".divresult").text(result);
 	});
 
+	$("form #beverage").change(function(event) {
+		event.preventDefault();
+
+		var beverage = $("#beverage :selected").val();
+
+		if (beverage === "First number") {
+			$(".firstnum").show();
+			$(".secondnum").hide();
+		} else {
+			$(".firstnum").hide();
+			$(".secondnum").show();
+		};
+
+	});
 
 
 });
