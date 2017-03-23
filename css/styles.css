@@ -1,0 +1,7 @@
+.jumbotron {
+  text-align: center;
+  background-color: rgba(0, 198, 255, 0.3);
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
