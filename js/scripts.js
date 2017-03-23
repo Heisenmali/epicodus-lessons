@@ -8,6 +8,9 @@ console.log(height);
 console.log(weight);
 
     if (isNaN(height) === true) {
+      $(".heavyrides").removeClass("green red");
+      $(".tallrides").removeClass("green red");
+      $(".shortrides").removeClass("green red");
       alert("Please enter a number!")
     } else {
         if (height <= 59 && weight !== 3) {
