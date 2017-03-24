@@ -27,10 +27,9 @@ $(document).ready(function() {
     $(".footer h4").show();
     $("span#name").text(name + ",");
 
-    // DISCLAIMER : The following two lines of code were added following my reading of numerous articles discussing how to use jQuery to scroll to the bottom of the page. It wasn't written by me. I left it in, as it suits the project very well and improves the UX. I have a basic understanding of how it works, but wouldn't be able to reproduce it, or come up with it by myself at this point. This is the most relevant article : https://www.electrictoolbox.com/jquery-scroll-bottom/
+    // DISCLAIMER : The following line of code was added following my reading of numerous articles discussing how to use jQuery to scroll to the bottom of the page. It wasn't written by me. I left it in, as it suits the project very well and improves the UX. I have a basic understanding of how it works, but wouldn't be able to reproduce it, or come up with it by myself at this point. This is the most relevant article : https://www.electrictoolbox.com/jquery-scroll-bottom/
 
     $('html, body').animate({scrollTop:$(document).height()}, 500);
-        return false;
 
   });
 });

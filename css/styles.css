@@ -60,29 +60,26 @@ padding: 20px 0;
 /*TEXT FIELDS*/
 
 input[type=text] {
-    border: none;
-    background-color: #bb1515;
-    border-bottom: 5px solid #e0cda7;
-    padding: 10px;
-    margin: 20px 0;
-    transition: 0.3s ease all;
+  border: none;
+  background-color: #bb1515;
+  border-bottom: 5px solid #e0cda7;
+  padding: 10px;
+  margin: 20px 0;
+  transition: 0.3s ease all;
 }
 
 /*Chrome and Safari border outline removed when focused */
 
 input[type=text]:focus {
-    outline: none;
-    width: 40vw;
-    border-bottom: 5px solid #e0cda7;
-    transition: 0.3s ease all;
-
+  outline: none;
+  width: 40vw;
+  border-bottom: 5px solid #e0cda7;
+  transition: 0.3s ease all;
 }
-
 
 /*Firefox box shadow removed when data entered doesn't match regex pattern*/
 
 input[type=text]:invalid {
-
   border-bottom: 5px solid #e0cda7;
   width: 40vw;
   outline: none;
@@ -90,16 +87,13 @@ input[type=text]:invalid {
   transition: 0.3s ease all;
 }
 
-
 input[type=text]:valid {
-
   border-bottom: 1px solid #e0cda7;
   width: 40vw;
   outline: none;
   box-shadow: none;
   transition: 0.3s ease all;
 }
-
 
 /*RADIO BUTTONS*/
 
@@ -111,8 +105,6 @@ label {
 label span#text {
   padding-left: 0.5em;
 }
-
-
 
 [type="radio"] { /*Makes the standard radio checkbox dissapear using clip */
   border: 0;
@@ -130,8 +122,7 @@ label span#text {
   width: 0.5em;
   height: 0.5em;
   color: #bb1515;
-
-  margin-right: 0.75em;
+  margin-right: 1em;
   transition: 0.4s ease all;
 }
 
@@ -157,10 +148,21 @@ label span#text {
 /*SUBMIT BUTTON*/
 
 button {
-  border : 1px solid #e0cda7;
+  border-top: 1px solid #e0cda7;
+  border-bottom: 1px solid #e0cda7;
+  border-left: 1px solid #bb1515;
+  border-right: 1px solid #bb1515;
   background-color: #bb1515;
   padding: 10px;
   margin: 3vh 3vh 10vh 3vh;
+  transition: 0.1s ease all;
+}
+
+button:hover {
+  border-top: 1px solid #bb1515;
+  border-bottom: 1px solid #bb1515;
+  border-left: 1px solid #e0cda7;
+  border-right: 1px solid #e0cda7;
 }
 
 /*FOOTER*/
@@ -178,5 +180,5 @@ button {
 p {
   display: none;
   border-left: 1px solid #e0cda7;
-  padding-left: 20px;
+  padding-left: 1em;
 }
