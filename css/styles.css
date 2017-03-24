@@ -63,7 +63,6 @@ input[type=text] {
     border: none;
     background-color: #bb1515;
     border-bottom: 5px solid #e0cda7;
-    width: 10vw;
     padding: 10px;
     margin: 20px 0;
     transition: 0.3s ease all;
@@ -170,6 +169,10 @@ button {
   height: 60vh;
   padding: 10vh 20vw 20vh 10vw;
   background-color: #2a334f;
+}
+
+.footer h4 {
+  display: none;
 }
 
 p {
