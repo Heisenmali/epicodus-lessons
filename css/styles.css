@@ -40,10 +40,11 @@ h3 {
 h4 {
 font-size: 118%;
 font-weight: lighter;
+padding: 20px 0;
 }
 
 .header {
-  height: 30vh;
+  height: 35vh;
   text-align: center;
   padding: 40px;
 }
@@ -173,4 +174,6 @@ button {
 
 p {
   display: none;
+  border-left: 1px solid #e0cda7;
+  padding-left: 20px;
 }
