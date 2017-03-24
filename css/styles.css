@@ -1,0 +1,42 @@
+/*@font-face {
+  font-family: "Podriq";
+  font-weight: normal;
+  src: url(../Podriq/Podriq.otf);
+}
+
+@font-face {
+  font-family: "Podriq";
+  font-weight: lighter;
+  src: url(../Podriq/Podriq-Thin.otf);
+}
+
+@font-face {
+  font-family: "Podriq";
+  font-weight: bold;
+  src: url(../Podriq/Podriq-Thick.otf);
+}*/
+
+body {
+  /*font-family: "Podriq";*/
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 218%;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 164%;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 145%;
+  font-weight: normal;
+}
+
+h4 {
+font-size: 118%;
+font-weight: lighter;
+}

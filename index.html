@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pick a programming language!</h1>
+      <form id="langpick">
+
+        <div class="form-group">
+          <label for="name">Enter your name!</label>
+          <input id="name" class="form-control" type="text">
+        </div>
+
+        <div class="form-group">
+          <label for="age">How old are you?</label>
+          <input id="age" class="form-control" type="number">
+        </div>
+
+        <div class="form-group">
+          <h2>What type of company you would like to work at?</h2>
+          <input type="radio" name="company" value="startup" checked> Startups and smaller companies<br>
+          <input type="radio" name="company" value="agency"> Bigger companies and agencies<br>
+        </div>
+
+        <div class="form-group">
+          <h2>What you would like to build?</h2>
+          <input type="radio" name="worktype" value="webapps" checked> Web apps<br>
+          <input type="radio" name="worktype" value="agency"> Websites with heavy content<br>
+          <input type="radio" name="worktype" value="android"> Android apps<br>
+        </div>
+
+        <div class="form-group">
+          <h2>Would you like to be a specialist or a generalist? </h2>
+          <input type="radio" name="specialisation" value="specialist" checked> A specialist<br>
+          <input type="radio" name="specialisation" value="generalist"> A generalist<br>
+        </div>
+
+        <button type="submit">Submit!</button>
+      </form>
+
+    </div>
+  </body>
+</html>
