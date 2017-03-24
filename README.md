@@ -4,6 +4,8 @@
 
 #### By _**Niklas Long**_
 
+#### _This webpage can be found [here](https://heisenmali.github.io/survey/)._
+
 ## Description
 
 _This webpage helps the user choose a programming language based on a couple criteria entered through the form._
@@ -26,7 +28,7 @@ _As always, you know where to find me!_
 
 ## Technologies Used
 
-_html, css, jQuery, Bootstrap, chocolate (not the editor)_
+_html, css, js, jQuery, Bootstrap, chocolate (not the editor)_
 
 ### License
 
