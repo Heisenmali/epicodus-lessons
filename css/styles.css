@@ -1,4 +1,4 @@
-*@font-face {
+@font-face {
   font-family: "Ikaros";
   font-weight: normal;
   src: url(../Ikaros/Ikaros-Regular.otf);
@@ -38,9 +38,9 @@ h3 {
 }
 
 h4 {
-font-size: 118%;
-font-weight: lighter;
-padding: 20px 0;
+  font-size: 118%;
+  font-weight: lighter;
+  padding: 20px 0;
 }
 
 .header {
@@ -144,7 +144,6 @@ label span#text {
   color: #e0cda7;
 }
 
-
 /*SUBMIT BUTTON*/
 
 button {
@@ -155,7 +154,7 @@ button {
   background-color: #bb1515;
   padding: 10px;
   margin: 3vh 3vh 10vh 3vh;
-  transition: 0.1s ease all;
+  transition: 0.4s ease all;
 }
 
 button:hover {
@@ -163,6 +162,7 @@ button:hover {
   border-bottom: 1px solid #bb1515;
   border-left: 1px solid #e0cda7;
   border-right: 1px solid #e0cda7;
+  transition: 0.4s ease all;
 }
 
 /*FOOTER*/
