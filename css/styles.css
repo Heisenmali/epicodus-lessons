@@ -1,29 +1,30 @@
-/*@font-face {
-  font-family: "Podriq";
+*@font-face {
+  font-family: "Ikaros";
   font-weight: normal;
-  src: url(../Podriq/Podriq.otf);
+  src: url(../Ikaros/Ikaros-Regular.otf);
 }
 
 @font-face {
-  font-family: "Podriq";
+  font-family: "Ikaros";
   font-weight: lighter;
-  src: url(../Podriq/Podriq-Thin.otf);
+  src: url(../Ikaros/Ikaros-Light.otf);
 }
-
-@font-face {
-  font-family: "Podriq";
-  font-weight: bold;
-  src: url(../Podriq/Podriq-Thick.otf);
-}*/
 
 body {
-  /*font-family: "Podriq";*/
-  font-size: 1.5em;
+  font-family: "Ikaros";
+  font-size: 1.8em;
+  background-color: #bb1515;
+  color: #e0cda7;
+  margin: 0;
+  padding: 20px;
+  width: 100vw;
+
 }
 
 h1 {
   font-size: 218%;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -39,4 +40,43 @@ h3 {
 h4 {
 font-size: 118%;
 font-weight: lighter;
+}
+
+.container {
+  padding: 0 20vw 0 10vw;
+}
+
+.form-group {
+  padding: 3vh;
+}
+
+input[type=text] {
+    border: none;
+    background-color: #bb1515;
+    border-bottom: 3px solid #e0cda7;
+    width: 40vw;
+    padding: 10px;
+    margin: 20px;
+}
+
+/*Chrome and Safari border outline removed when focused */
+
+input[type=text]:focus {
+    outline: none;
+    border-bottom: 3px solid #e0cda7;
+}
+
+/*Firefox box shadow removed when date entered doesn't match regex pattern*/
+
+input[type=text]:invalid {
+
+  border-bottom: 3px solid #e0cda7;
+  outline: none;
+  box-shadow: none;
+}
+
+button {
+  border : 1px solid #e0cda7;
+  background-color: #bb1515;
+  float: right;
 }

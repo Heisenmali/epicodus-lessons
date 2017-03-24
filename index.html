@@ -15,18 +15,18 @@
 
         <div class="form-group">
           <label class="sr-only" for="name">Enter your name!</label>
-          <input id="name" class="form-control" type="text" placeholder="name">
+          <input id="name" type="text" placeholder="name">
         </div>
 
         <div class="form-group">
           <label class="sr-only" for="age">How old are you?</label>
-          <input id="age" class="form-control" type="number" placeholder="age">
+          <input id="age" type="text" placeholder="age" pattern="[0-9]+">
         </div>
 
         <div class="form-group">
           <h2>What type of company you would like to work at?</h2>
-          <input type="radio" name="company" value="startup" checked> Startups and smaller companies<br>
-          <input type="radio" name="company" value="agency"> Bigger companies and agencies<br>
+          <input class="regular-radio" type="radio" name="company" value="startup" checked> Startups and smaller companies<br>
+          <input class="regular-radio" type="radio" name="company" value="agency"> Bigger companies and agencies<br>
         </div>
 
         <div class="form-group">
