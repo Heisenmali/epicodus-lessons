@@ -10,18 +10,19 @@ $(document).ready(function() {
     var result;
 
     if ((company === "startup") && (worktype === "webapp") && (specialisation === "generalist")) {
-      result = "Ruby";
+      result = "Ruby.";
     } else if ((company === "agency") && (worktype === "android") && (specialisation === "generalist")) {
-      result = "Java";
+      result = "Java.";
     } else if ((company === "agency") && (worktype === "heavyweb") && (specialisation === "specialist")) {
-      result = "PHP";
+      result = "PHP.";
     } else if ((worktype !== "heavyweb") && (specialisation === "specialist")) {
-      result = "Design/css";
+      result = "Design/css.";
     } else {
-      result = "It's ok if your confused, you can choose later!"
+      result = "we don't know. I mean come on, we can't know everything! We just think you should seriously reconsider all the life choices that have led you here!"
     }
 
-    $("div#result").text(result);
+    $("span#result").text(result);
+    $("p").show();
   });
 
 });

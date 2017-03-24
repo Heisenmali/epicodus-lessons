@@ -16,9 +16,8 @@ body {
   background-color: #bb1515;
   color: #e0cda7;
   margin: 0;
-  padding: 20px;
+  padding: 0;
   width: 100vw;
-
 }
 
 h1 {
@@ -30,6 +29,7 @@ h1 {
 h2 {
   font-size: 164%;
   font-weight: bold;
+  padding-bottom: 20px;
 }
 
 h3 {
@@ -42,41 +42,135 @@ font-size: 118%;
 font-weight: lighter;
 }
 
-.container {
+.header {
+  height: 30vh;
+  text-align: center;
+  padding: 40px;
+}
+
+.main-content {
   padding: 0 20vw 0 10vw;
 }
 
 .form-group {
-  padding: 3vh;
+  padding: 3vh 0;
 }
+
+/*TEXT FIELDS*/
 
 input[type=text] {
     border: none;
     background-color: #bb1515;
-    border-bottom: 3px solid #e0cda7;
-    width: 40vw;
+    border-bottom: 5px solid #e0cda7;
+    width: 10vw;
     padding: 10px;
-    margin: 20px;
+    margin: 20px 0;
+    transition: 0.3s ease all;
 }
 
 /*Chrome and Safari border outline removed when focused */
 
 input[type=text]:focus {
     outline: none;
-    border-bottom: 3px solid #e0cda7;
+    width: 40vw;
+    border-bottom: 5px solid #e0cda7;
+    transition: 0.3s ease all;
+
 }
 
-/*Firefox box shadow removed when date entered doesn't match regex pattern*/
+
+/*Firefox box shadow removed when data entered doesn't match regex pattern*/
 
 input[type=text]:invalid {
 
-  border-bottom: 3px solid #e0cda7;
+  border-bottom: 5px solid #e0cda7;
+  width: 40vw;
   outline: none;
   box-shadow: none;
+  transition: 0.3s ease all;
 }
+
+
+input[type=text]:valid {
+
+  border-bottom: 1px solid #e0cda7;
+  width: 40vw;
+  outline: none;
+  box-shadow: none;
+  transition: 0.3s ease all;
+}
+
+
+/*RADIO BUTTONS*/
+
+label {
+  font-weight: normal;
+  width: 100%;
+}
+
+label span#text {
+  padding-left: 0.5em;
+}
+
+
+
+[type="radio"] { /*Makes the standard radio checkbox dissapear using clip */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+[type="radio"] + span::before {
+  content: "\00a6";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  color: #bb1515;
+
+  margin-right: 0.75em;
+  transition: 0.4s ease all;
+}
+
+[type="radio"]:hover + span::before {
+  content: "\00a6";/*"\00ac"*/
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  transition: 0.4s ease all;
+  color: #e0cda7;
+}
+
+[type="radio"]:checked + span::before {
+  content: "\00a6";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  transition: 0.4s ease all;
+  color: #e0cda7;
+}
+
+
+/*SUBMIT BUTTON*/
 
 button {
   border : 1px solid #e0cda7;
   background-color: #bb1515;
-  float: right;
+  padding: 10px;
+  margin: 3vh 3vh 10vh 3vh;
+}
+
+/*FOOTER*/
+
+.footer {
+  height: 60vh;
+  padding: 10vh 20vw 20vh 10vw;
+  background-color: #2a334f;
+}
+
+p {
+  display: none;
 }

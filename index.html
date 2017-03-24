@@ -9,44 +9,76 @@
     <title></title>
   </head>
   <body>
-    <div class="container">
-      <h1>Pick a programming language!</h1>
+
+    <div class="header">
+      <h1>The choice</h1>
+      <h4>Will you choose the language... or will the language choose you?</h4>
+    </div>
+
+    <div class="main-content">
       <form id="langpick">
 
         <div class="form-group">
-          <label class="sr-only" for="name">Enter your name!</label>
-          <input id="name" type="text" placeholder="name">
+          <label class="sr-only" for="name">Enter your name !</label>
+          <input id="name" type="text" placeholder="name" pattern="[ a-zA-Z0-9]+" required>
         </div>
 
         <div class="form-group">
-          <label class="sr-only" for="age">How old are you?</label>
-          <input id="age" type="text" placeholder="age" pattern="[0-9]+">
+          <label class="sr-only" for="age">How old are you ?</label>
+          <input id="age" type="text" placeholder="age" pattern="[0-9]+" required>
         </div>
 
         <div class="form-group">
-          <h2>What type of company you would like to work at?</h2>
-          <input class="regular-radio" type="radio" name="company" value="startup" checked> Startups and smaller companies<br>
-          <input class="regular-radio" type="radio" name="company" value="agency"> Bigger companies and agencies<br>
+          <h2>What type of company you would like to work at ?</h2>
+          <label for="startup">
+            <input class="regular-radio" type="radio" name="company" value="startup" id="startup" checked>
+            <span>Startups and smaller companies</span>
+          </label>
+          <label for="agency">
+            <input class="regular-radio" type="radio" name="company" value="agency" id="agency">
+            <span>Bigger companies and agencies</span>
+          </label>
         </div>
 
         <div class="form-group">
-          <h2>What you would like to build?</h2>
-          <input type="radio" name="worktype" value="webapp" checked> Web apps<br>
-          <input type="radio" name="worktype" value="heavyweb"> Websites with heavy content<br>
-          <input type="radio" name="worktype" value="android"> Android apps<br>
+          <h2>What you would like to build ?</h2>
+          <label for="webapp">
+            <input type="radio" name="worktype" value="webapp" id="webapp" checked>
+            <span>Web apps</span>
+          </label>
+          <label for="heavyweb">
+            <input type="radio" name="worktype" value="heavyweb" id="heavyweb">
+            <span>Websites with heavy content</span>
+          </label>
+          <label for="android">
+            <input type="radio" name="worktype" value="android" id="android">
+            <span>Android apps</span>
+          </label>
         </div>
 
         <div class="form-group">
-          <h2>Would you like to be a specialist or a generalist? </h2>
-          <input type="radio" name="specialisation" value="specialist" checked> A specialist<br>
-          <input type="radio" name="specialisation" value="generalist"> A generalist<br>
+          <h2>Would you like to be a specialist or a generalist ? </h2>
+          <label for="specialist">
+            <input type="radio" name="specialisation" value="specialist" id="specialist" checked>
+            <span>A specialist</span>
+          </label>
+          <label for="generalist">
+            <input type="radio" name="specialisation" value="generalist" id="generalist">
+            <span>A generalist</span>
+          </label>
         </div>
 
         <button type="submit">Submit!</button>
       </form>
 
-      <div id="result"></div>
 
+    </div>
+    <div class="footer">
+      <h2>This is it.</h2>
+      <h4>So, this is the part we tell you what language you are doomed to learn. Don't cry; please don't cry; like really...</h4>
+      <p>You were meant to learn : <span id="result"></span> <br>
+        Why you ask? Because we said so!
+      </p>
     </div>
   </body>
 </html>
