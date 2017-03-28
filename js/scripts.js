@@ -85,11 +85,11 @@ var charCheck = function(letters, char) {
 
   var letters = $("#sentence").val();
   var splitLetters = letters.split("");
-  var chars = $("#characters").val().replace(" ", "");
-  var splitChars = chars.split("");
+  var chars = $("#characters").val();
+  var strippedChars = chars.replace(/\s/g, "")
+
+  var splitChars = strippedChars.split("");
   var removedChar = [];
-
-
 
   splitLetters.forEach(function(letter) {
     splitChars.forEach(function(char) {
