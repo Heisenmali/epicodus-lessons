@@ -81,7 +81,7 @@ $(document).ready(function(){
 
 
 
-var vowelCheck = function(letters, char) {
+var charCheck = function(letters, char) {
 
   var letters = $("#sentence").val();
   var splitLetters = letters.split("");
@@ -109,7 +109,7 @@ $(document).ready(function(){
 
   $("#userInput").submit(function(e) {
     e.preventDefault();
-    console.log(vowelCheck());
+    console.log(charCheck());
   });
 
 });
