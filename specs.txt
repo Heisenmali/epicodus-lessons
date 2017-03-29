@@ -33,3 +33,7 @@
 9: If the word begins with a "y", move "y" to the end and add "ay"
   Example Input: your or yay;
   Example Output: ouryay or ayyay ;
+
+10: making all this work across multiple words
+  Example Input: hello world;
+  Example output: ellohay orldway;
