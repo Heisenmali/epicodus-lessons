@@ -13,12 +13,11 @@ var consonantCheck = function(sentence) {
 
   var consonants = /[^aeiouy]/gi;
 
-  for (i = 0; i < sentence.length; i++) {
+  for (var i = 0; i < sentence.length; i++) {
     if (sentence[i].match(consonants)) {
       // continue looping
 
     } else {
-      conCut = i;
       return i;
     }
   }
@@ -29,12 +28,11 @@ var consonantCheck = function(sentence) {
 var pigLatin = function(sentence) {
 
   // var splitSentence = sentence.split("");
-  // var conCut;
-
 
   if (regexCheck(sentence) === true) {
+    var conCut = consonantCheck(sentence);
 
-    if (consonantCheck(sentence) > 0) {
+    if (conCut > 0) {
       return sentence.substr(conCut) + sentence.substr(0, conCut) + "ay";
 
     } else {
@@ -54,11 +52,9 @@ $(function(){
   $("#piglatin").submit(function(e) {
     e.preventDefault();
 
-    var conCut;
-
     var sentence = $("#userinput").val();
     var result = pigLatin(sentence);
-
+    
     $("#result").text(result);
   });
 });
