@@ -1,5 +1,23 @@
+var regexCheck = function(sentence) {
+  // var splitSentence = sentence.split("");
+  if (sentence.match(/[a-z]/ig)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+
+
+
 var pigLatin = function(sentence) {
-  return sentence;
+
+  if (regexCheck(sentence) === true) {
+    return sentence + "ay";
+  } else {
+    return sentence;
+  }
+
 };
 
 
