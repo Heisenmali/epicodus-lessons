@@ -1,5 +1,4 @@
 var regexCheck = function(sentence) {
-  // var splitSentence = sentence.split("");
   if (sentence.match(/[a-z]/ig)) {
     return true;
   } else {
@@ -7,13 +6,28 @@ var regexCheck = function(sentence) {
   }
 };
 
+var consonantCheck = function(sentence) {
+  var consonants = /[^aeiouy]/gi;
 
+  if (sentence[0].match(consonants)) {
+    return true;
+  }
+};
 
 
 var pigLatin = function(sentence) {
 
+  // var splitSentence = sentence.split("");
+
   if (regexCheck(sentence) === true) {
-    return sentence + "ay";
+
+    if (consonantCheck(sentence) === true) {
+      return sentence.substr(1) + sentence.substr(0, 1) + "ay";
+
+    } else {
+      return sentence + "ay";
+    }
+
   } else {
     return sentence;
   }
