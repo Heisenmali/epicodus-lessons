@@ -1,6 +1,6 @@
-var regexCheck = function(sentence) {
+var regexCheck = function(word) {
 
-  if (sentence.match(/[a-z]/ig)) {
+  if (word.match(/[a-z]/ig)) {
     return true;
 
   } else {
@@ -9,20 +9,20 @@ var regexCheck = function(sentence) {
 
 };
 
-var consonantCheck = function(sentence) {
+var consonantCheck = function(word) {
 
   var consonants = /[^aeiouy]/gi;
   var q = /[q]/i;
   var u = /[u]/i;
   var y = /[y]/i;
 
-  for (var i = 0; i < sentence.length; i++) {
-    if (sentence[i].match(consonants)) {
+  for (var i = 0; i < word.length; i++) {
+    if (word[i].match(consonants)) {
       // continue looping
-    } else if (i > 0 && sentence[i - 1].match(q) && sentence[i].match(u)) {
+    } else if (i > 0 && word[i - 1].match(q) && word[i].match(u)) {
       return i + 1;
 
-    } else if (i === 0 && sentence[i].match(y)){
+    } else if (i === 0 && word[i].match(y)){
       return i + 1;
     } else {
       return i;
@@ -34,22 +34,40 @@ var consonantCheck = function(sentence) {
 
 var pigLatin = function(sentence) {
 
-  // var splitSentence = sentence.split("");
+  var splitSentence = sentence.split(" ");
+  var newSplitSentence = [];
+  var newSentence = "";
+  var puncReg = /[.,\/#!$%\^&\*;:{}=\-_`~()]/g
+  var punc = "";
 
-  if (regexCheck(sentence) === true) {
-    var conCut = consonantCheck(sentence);
+  splitSentence.forEach(function(word) {
 
-    if (conCut > 0) {
-      return sentence.substr(conCut) + sentence.substr(0, conCut) + "ay";
-
-    } else {
-      return sentence + "way";
+    if (word.length > 1 && word[word.length - 1].match(puncReg)) {
+      punc = word[word.length - 1];
+      // word = word.substr(0, word.length - 1); this works too!
+      word = word.slice(0, word.length - 1);
     }
 
-  } else {
-    return sentence;
-  }
+    if (regexCheck(word) === true) {
+      var conCut = consonantCheck(word);
 
+      if (conCut > 0) {
+        newSplitSentence.push(word.substr(conCut) + word.substr(0, conCut) + "ay" + punc);
+
+      } else if (conCut === undefined) {
+        newSplitSentence.push(word + "ay" + punc);
+
+      } else {
+        newSplitSentence.push(word + "way" + punc);
+      }
+
+    } else {
+      newSplitSentence.push(word + punc);
+    }
+
+  });
+  newSentence = newSplitSentence.join(" ");
+  return newSentence;
 };
 
 
