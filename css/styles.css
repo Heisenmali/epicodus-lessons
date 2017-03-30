@@ -2,13 +2,8 @@
   text-align: center;
 }
 
-.output {
-  display: none;
-}
-
 #result {
   font-size: 24px;
-
 }
 
 #resultFinal {
