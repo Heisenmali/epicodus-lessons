@@ -31,8 +31,6 @@
   Input: 400-899
   Ouput: D
 
-  CMDCDLCL
-
   Input: 900-3999
   Ouput: M
 

@@ -1,6 +1,79 @@
 
 // BACK-END business logic
 
+var iFunk = function () {
+  var iWord = "!";
+  } if (iNum === 1) {
+    iWord = "I";
+  } else if (iNum === 2) {
+    iWord = "II";
+  } else if (iNum === 3) {
+    iWord = "III";
+  }
+  return iWord;
+};
+
+var vFunk = function (vNum) {
+  var vWord = "!";
+  if (vNum >= 40) {
+    vWord = "IV";
+  } else if (vNum >= 50) {
+    vWord = "V";
+  } else if (vNum >= 60) {
+    vWord = "VI";
+  } else if (vNum >= 70) {
+    vWord = "VII";
+  } else if (vNum >= 80) {
+    vWord = "VIII";
+  }
+  return vWord;
+};
+
+var cFunk = function (cNum) {
+  var cWord = "!";
+  if (cNum === 9) {
+    cWord = "XC";
+  } else if ((cNum >= 10) && (cNum <= 19)) {
+    cWord = "C";
+  } else if ((cNum >= 20) && (cNum <= 29)) {
+    cWord = "CC";
+  } else if ((cNum >= 30) && (cNum <= 39)) {
+    cWord = "CCC";
+  }
+  return cWord;
+};
+
+var lFunk = function (lNum) {
+  var lWord = "!";
+  if ((lNum >= 40) && (lNum <= 49)) {
+    lWord = "XL";
+  } else if ((lNum >= 50) && (lNum <= 59)) {
+    lWord = "L";
+  } else if ((lNum >= 60) && (lNum <= 69)) {
+    lWord = "LX";
+  } else if ((lNum >= 70) && (lNum <= 79)) {
+    lWord = "LXX";
+  } else if ((lNum >= 80) && (lNum <= 89)) {
+    lWord = "LXXX";
+  }
+  return lWord;
+};
+
+var cFunk = function (cNum) {
+  var cWord = "!";
+  if ((cNum >= 90) && (cNum <= 99)) {
+    cWord = "XC";
+  } else if ((cNum >= 100) && (cNum <= 199)) {
+    cWord = "C";
+  } else if ((cNum >= 200) && (cNum <= 299)) {
+    cWord = "CC";
+  } else if ((cNum >= 300) && (cNum <= 399)) {
+    cWord = "CCC";
+  }
+  return cWord;
+};
+
+// console.log("dNum = ", cFunk(90));
 
 var dFunk = function (dNum) {
   var dWord = "!";
@@ -18,7 +91,7 @@ var dFunk = function (dNum) {
   return dWord;
 };
 
-console.log("dNum = ", dFunk(500));
+
 
 var mFunk = function (mNum) {
   var mWord = "!";
