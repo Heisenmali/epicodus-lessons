@@ -1,13 +1,13 @@
 //BEHAVIORS
 
-Symbol  Value
-I       1
-V       5
-X       10
-L       50
-C       100
-D       500
-M       1,000
+  Symbol  Value
+  I       1
+  V       5
+  X       10
+  L       50
+  C       100
+  D       500
+  M       1,000
 
 
 1: Exclude any other input nut numbers.
@@ -31,5 +31,9 @@ M       1,000
   Input: 400-899
   Ouput: D
 
+  CMDCDLCL
+
   Input: 900-3999
   Ouput: M
+
+3.

@@ -2,12 +2,7 @@
   text-align: center;
 }
 
-#result {
-  font-size: 24px;
-}
-
-#resultFinal {
-  font-size: 24px;
+#result1 {
+  font-size: 60px;
   color: red;
-  font-weight: bolder;
 }
