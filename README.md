@@ -34,4 +34,13 @@
   Input: 900-3999
   Ouput: M
 
-3.
+3: The program returns the first correct roman numeral "word" for the left-most decimal number.
+
+  Input: 2345
+  Output MM
+
+  Input: 199
+  Output C
+
+  Input: 89
+  Output: LXXX
