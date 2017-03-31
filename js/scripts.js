@@ -1,17 +1,17 @@
 var divBy = function(num) {
 
-    if (num % 15 === 0) {
-      num = "ping-pong";
+  if (num % 15 === 0) {
+    num = "ping-pong";
 
-    } else if (num % 5 === 0) {
-      num = "pong";
+  } else if (num % 5 === 0) {
+    num = "pong";
 
-    } else if (num % 3 === 0) {
-      num = "ping";
+  } else if (num % 3 === 0) {
+    num = "ping";
 
-    } else {
-      num;
-    }
+  } else {
+    num;
+  }
 
   return num;
 };
@@ -24,6 +24,7 @@ var upCount = function(endNum) {
   for (let i = 1; i <= endNum; i++) {
     workingArray.push(divBy(i));
   }
+  
   var resultString = workingArray.join(" ");
   return resultString;
 };
