@@ -1,4 +1,4 @@
-–– The program returns numbers 1 through to number inputed by the user.
+√ –– The program returns numbers 1 through to number inputed by the user.
     input: 3
     output: 1, 2, 3
 
