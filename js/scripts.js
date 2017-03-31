@@ -1,5 +1,6 @@
 var divBy = function(num) {
 
+<<<<<<< HEAD
   if (num % 15 === 0) {
     num = "ping-pong";
 
@@ -8,6 +9,16 @@ var divBy = function(num) {
 
   } else if (num % 3 === 0) {
     num = "ping";
+=======
+    if (num % 15 === 0) {
+      num = "PING–PING";
+
+    } else if (num % 5 === 0) {
+      num = "PONG";
+
+    } else if (num % 3 === 0) {
+      num = "PING";
+>>>>>>> dev
 
   } else {
     num;
@@ -39,7 +50,7 @@ $(function() {
 
     var inputEndNum = $("input#endnum").val();
 
-    $("#output").text(upCount(inputEndNum));
+    $("span#result").text(upCount(inputEndNum));
   });
 
 });

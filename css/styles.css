@@ -1,18 +1,96 @@
 body {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-family: charterregular;
+  padding-left: 20vw;
+  padding-right: 25vw;
+  background-color: #f7f7f7;
 }
+
 h1, h2, h3, h4, h5, h6 {
-  font—weight: normal
 }
+
 h1 {
+  font-family: charterbold;
+  text-transform: uppercase;
   font—size: 218%;
+  padding: 5vh 0;
 }
+
 h2 {
   font—size: 164%;
+  padding-bottom: 1vh;
 }
+
 h3 {
   font—size: 145%;
 }
+
 h4 {
   font—size: 118%;
+}
+
+label {
+  font-weight: normal;
+}
+
+#header {
+  height: 20vh;
+  padding-left: 10vw;
+  text-align: left;
+}
+
+#main-content {
+  padding-left: 10vw;
+}
+
+#rules {
+  padding-bottom: 15vh;
+  text-align: justify;
+}
+
+ul {
+  list-style: none;
+  border-left: 1px solid #898989;
+  margin: 5vh 0;
+  line-height: 1.8;
+}
+
+
+/* ––––––––  Number input*/
+
+input[type=text] {
+  border: none;
+  background-color: #f7f7f7;
+  width: 70px;
+}
+
+/*Chrome and Safari border outline removed when focused */
+
+input[type=text]:focus {
+  outline: none;
+}
+
+/*Firefox box shadow removed when data entered doesn't match regex pattern*/
+
+input[type=text]:invalid {
+  border-bottom: 1px solid #898989;
+  outline: none;
+  box-shadow: none;
+}
+
+input[type=text]:valid {
+  border-bottom: 1px solid #898989;
+  outline: none;
+  box-shadow: none;
+}
+
+button {
+  visibility: hidden;
+}
+
+#output {
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+  text-align: justify;
+  text-align-last: justify;
 }

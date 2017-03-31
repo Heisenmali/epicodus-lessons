@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="charter/webfonts/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="Peace-Sans/stylesheet.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.0.js"></script>
     <script src="js/scripts.js"></script>
@@ -10,17 +12,37 @@
   </head>
   <body>
 
-    <div class="main-content">
+    <div id="header">
+      <h1>Ping Pong</h1>
+    </div>
+
+    <div id="main-content">
+      <div id="rules">
+
+        <h2>Here are the rules: </h2>
+        <p>Ping Pong will count up to the number you enter with the exception of a few rules. What? You don't like rules? Well life is full of rules and they exist even on this web page. Sorry. So if you're ready, here they are: </p>
+        <ul>
+          <li>Numbers divisible by 3 are replaced with "ping"</li>
+          <li>Numbers divisible by 5 are replaced with "pong"</li>
+          <li>Numbers divisible by 15 are replaced with "ping-pong"</li>
+        </ul>
+
+      </div>
+
       <form id="pingpong">
         <div class="form-group">
-          <label for="endnum">Please enter a number to ping-pong to:</label>
-          <input id="endnum" class="form-control" type="number" name="endnum">
+          <label for="endnum">Enter a number and press enter : </label>
+          <input id="endnum" type="text" name="endnum" placeholder="e.g. 300" pattern="[0-9]+" required>
         </div>
 
         <button type="submit" name="button">Start count!</button>
       </form>
 
+<<<<<<< HEAD
       <div id="output"></div>
+=======
+      <div id="output"><p><span id="result"></span></p></div>
+>>>>>>> dev
     </div>
 
   </body>
