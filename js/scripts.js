@@ -1,23 +1,19 @@
-var divBy = function(workingArray) {
-
-  workingArray.forEach(function(num) {
-    var index = workingArray.indexOf(num);
+var divBy = function(num) {
 
     if (num % 15 === 0) {
-      workingArray[index] = "ping-pong";
+      num = "ping-pong";
 
     } else if (num % 5 === 0) {
-      workingArray[index] = "pong";
+      num = "pong";
 
     } else if (num % 3 === 0) {
-      workingArray[index] = "ping";
+      num = "ping";
 
     } else {
-      workingArray[index] = num;
+      num;
     }
 
-  });
-  return workingArray;
+  return num;
 };
 
 
@@ -26,15 +22,8 @@ var upCount = function(endNum) {
   var workingArray = [];
 
   for (let i = 1; i <= endNum; i++) {
-    workingArray.push(i);
-
-    // console.log("result: " , workingArray);
-    // console.log("i" , i);
-
-    // workingArray = divBy(workingArray);
-
+    workingArray.push(divBy(i));
   }
-  workingArray = divBy(workingArray);
 
   return workingArray;
 };
@@ -48,8 +37,7 @@ $(function() {
     e.preventDefault();
 
     var inputEndNum = $("input#endnum").val();
-    // console.log("endnum: " , endNum);
-    var result = [];
+
     $("#output").text(upCount(inputEndNum));
   });
 
