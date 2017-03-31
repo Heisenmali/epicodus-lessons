@@ -1,15 +1,5 @@
 var divBy = function(num) {
 
-<<<<<<< HEAD
-  if (num % 15 === 0) {
-    num = "ping-pong";
-
-  } else if (num % 5 === 0) {
-    num = "pong";
-
-  } else if (num % 3 === 0) {
-    num = "ping";
-=======
     if (num % 15 === 0) {
       num = "PING–PING";
 
@@ -18,7 +8,6 @@ var divBy = function(num) {
 
     } else if (num % 3 === 0) {
       num = "PING";
->>>>>>> dev
 
   } else {
     num;
@@ -35,7 +24,7 @@ var upCount = function(endNum) {
   for (let i = 1; i <= endNum; i++) {
     workingArray.push(divBy(i));
   }
-  
+
   var resultString = workingArray.join(" ");
   return resultString;
 };
