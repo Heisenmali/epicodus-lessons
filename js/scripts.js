@@ -1,13 +1,13 @@
 var divBy = function(num) {
 
     if (num % 15 === 0) {
-      num = "ping-pong";
+      num = "PING–PING";
 
     } else if (num % 5 === 0) {
-      num = "pong";
+      num = "PONG";
 
     } else if (num % 3 === 0) {
-      num = "ping";
+      num = "PING";
 
     } else {
       num;
@@ -38,7 +38,7 @@ $(function() {
 
     var inputEndNum = $("input#endnum").val();
 
-    $("#output").text(upCount(inputEndNum));
+    $("span#result").text(upCount(inputEndNum));
   });
 
 });
