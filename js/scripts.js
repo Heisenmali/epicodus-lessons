@@ -1,41 +1,25 @@
-// –––––––– Business Logic
-var divByThree = function(workingArray) {
-  workingArray.forEach(function(num) {
-
-    var index = workingArray.indexOf(num);
-
-    if (num % 3 === 0 && num % 15 !== 0) {
-      workingArray[index] = "ping";
-    }
-  });
-  return workingArray;
-};
-
-
-var divByFive = function(workingArray) {
-
-  workingArray.forEach(function(num) {
-    var index = workingArray.indexOf(num);
-
-    if (num % 5 === 0 && num % 15 !== 0) {
-      workingArray[index] = "pong";
-    }
-  });
-  return workingArray;
-};
-
-
-var divByFifteen = function(workingArray) {
+var divBy = function(workingArray) {
 
   workingArray.forEach(function(num) {
     var index = workingArray.indexOf(num);
 
     if (num % 15 === 0) {
       workingArray[index] = "ping-pong";
+
+    } else if (num % 5 === 0) {
+      workingArray[index] = "pong";
+
+    } else if (num % 3 === 0) {
+      workingArray[index] = "ping";
+
+    } else {
+      workingArray[index] = num;
     }
+
   });
   return workingArray;
 };
+
 
 
 var upCount = function(endNum) {
@@ -47,11 +31,11 @@ var upCount = function(endNum) {
     // console.log("result: " , workingArray);
     // console.log("i" , i);
 
-    workingArray = divByThree(workingArray);
-    workingArray = divByFive(workingArray);
-    workingArray = divByFifteen(workingArray);
+    // workingArray = divBy(workingArray);
 
   }
+  workingArray = divBy(workingArray);
+
   return workingArray;
 };
 
