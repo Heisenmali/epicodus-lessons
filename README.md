@@ -1,37 +1,59 @@
-# _{Application Name}_
+# Ping Pong
 
-#### _{Brief description of application}, {Date of current version}_
+#### Web based version of the ping pong counter game
 
-#### By _**{List of contributors}**_
+#### By **Niklas Long**
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+The ping pong web app asks the user for a number to count up to and returns a string where numbers divisble by 3, 5 and 15 are replace by "ping", "pong" and "ping-pong respectively"
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* Git
+* Github
+* Open terminal
+* use `git clone` and the link provided in the github repository to clone the project directory onto your computer
+* open project in your text editor and enjoy!
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+* bunny
+* in Amber – by the prog jazz band Get the Blessing?
+* the movie?
+
+## Specs (BDD)
+
+* The program returns numbers 1 through to number inputed by the user.
+    * input: 3
+    * output: 1, 2, 3
+
+* The program replaces numbers divisible by 3 by ping.
+    * input: 3
+    * output: ping
+
+* The program replaces numbers divisible by 5 by pong.
+    * input: 5
+    * output: pong
+
+* The program replaces numbers divisible by 15 by ping-pong.
+    * input: 15
+    * output: ping-pong
+
+* The program iterates over the array of numbers using a for loop and replaces the numbers which fit the conditions above with their respective outputs.
+    * input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    * output: [1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, 12, 13, 14, ping-pong]
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+I don't need support; I can manage on my own, but it's very kind of you to offer...
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+html, css, js, bootstrap, jquery and pink socks.
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT and GPL*
 
-Copyright (c) 2017 **_{List of contributors or company name}_**
+Copyright (c) 2017 **{Niklas Long}**

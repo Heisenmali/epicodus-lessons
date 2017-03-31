@@ -24,8 +24,8 @@ var upCount = function(endNum) {
   for (let i = 1; i <= endNum; i++) {
     workingArray.push(divBy(i));
   }
-
-  return workingArray;
+  var resultString = workingArray.join(" ");
+  return resultString;
 };
 
 
