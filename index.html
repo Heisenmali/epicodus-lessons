@@ -10,25 +10,39 @@
   </head>
 
   <body>
-    <h1>Address Book</h1>
     <div class="container">
-      <form id="new-contact">
-        <div class="form-group">
-          <input type="text" class="form-control" id="new-first-name" placeholder="First name">
-        <div class="form-group">
-          <input type="text" class="form-control" id="new-last-name" placeholder="Last name">
-        <div class="form-group">
-          <input type="text" class="form-control" id="Address" placeholder="Address">
-        <div class="form-group">
-          <input type="text" class="form-control" id="City" placeholder="City">
-        <div class="form-group">
-          <input type="text" class="form-control" id="State" placeholder="State">
-        <button type="button" name="button" id="submit">Submit</button>
-        <button type="button" name="button" id="add">Add addresses</button>
-
-
+    <h1>Address Book</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="new-contact">
+            <div class="form-group">
+              <input type="text" class="form-control" id="new-first-name" placeholder="First name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="new-last-name" placeholder="Last name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="address" placeholder="Address">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="city" placeholder="City">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="state" placeholder="State">
+            </div>
+            <button type="submit" name="button" id="submit">Submit</button>
+            <button type="button" name="button" id="add">Add addresses</button>
+        <div class="col-md-6">
+          <h2>Contacts:</h2>
+          <ul id="contacts">
+          </ul>
         </div>
-      </form>
+
+
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     </div>
