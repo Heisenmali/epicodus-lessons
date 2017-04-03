@@ -24,12 +24,23 @@ $(document).ready(function() {
 
 
       $("ul#contacts").append("<li><span class='contact'>" + newContact.firstName + " " + newContact.lastName + "</span></li>");
-      $("ul#contacts").append("<li><span class='contact'>" +  newContact.address + "</span></li>");
-      $("ul#contacts").append("<li><span class='contact'>" +  newContact.city + "</span></li>");
-      $("ul#contacts").append("<li><span class='contact'>" +  newContact.state + "</span></li>");
+      // $("ul#contacts").append("<li><span class='contact'>" +  newContact.address + "</span></li>");
+      // $("ul#contacts").append("<li><span class='contact'>" +  newContact.city + "</span></li>");
+      // $("ul#contacts").append("<li><span class='contact'>" +  newContact.state + "</span></li>");
+      $("#contacts").last().click(function() {
+        $("#show-contact").show();
+        $("#show-contact h2").text(newContact.firstName + " " + newContact.lastName);
+        $(".first-name").text(newContact.firstName);
+        $(".last-name").text(newContact.lastName);
+        $(".address").text(newContact.address);
+        $(".city").text(newContact.city);
+        $(".state").text(newContact.state);
+
     });
 
-
+    $("input#new-first-name").val("");
+    $("input#new-last-name").val("");
+    });
 
 
 
