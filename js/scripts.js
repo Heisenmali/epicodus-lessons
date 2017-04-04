@@ -1,10 +1,5 @@
 // BE logic
 
-function Viewer(movieName, age, timeOfDay) {
-  this.movieName = movieName;
-  this.age = age;
-  this.timeOfDay = timeOfDay;
-}
 
 // function Movie(movieName, ageRating, time) {
 //   this.movieName = movieName;
@@ -43,6 +38,22 @@ function Viewer(movieName, age, timeOfDay) {
 //   }
 // }
 
+Array.prototype.contains = function (needle) {
+  for (i = 0; i < this.length; i++ ) {
+    console.log(this[i]);
+    if(this[i] === parseInt(needle)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function Viewer(movieName, age, timeOfDay) {
+  this.movieName = movieName;
+  this.age = age;
+  this.timeOfDay = timeOfDay;
+}
+
 var movies = {
   theDouble: {
     movieName: "The Double",
@@ -76,7 +87,7 @@ var movies = {
 var agePrice = function(inputtedMovieName, newViewer, MovieTheater) {
 
   var newPrice = movies[inputtedMovieName].price;
-  console.log(movies[inputtedMovieName].price);
+
 
   if (newViewer.age <= 26) {
     newPrice -= 1;
@@ -85,11 +96,8 @@ var agePrice = function(inputtedMovieName, newViewer, MovieTheater) {
   } else {
     newPrice -= 2;
   }
-  console.log(newPrice);
   return newPrice;
 }
-
-
 
 var ageCheck = function(inputtedMovieName, newViewer) {
 
@@ -101,6 +109,14 @@ var ageCheck = function(inputtedMovieName, newViewer) {
   }
 }
 
+var showTime = function(inputtedMovieName, newViewer) {
+  console.log(movies[inputtedMovieName].time.contains(newViewer.timeOfDay));
+  if(movies[inputtedMovieName].time.contains(newViewer.timeOfDay)) {
+    return "This movie is available"
+  } else {
+    return "This movie is not playing at that time."
+  }
+}
 
 // UI logic
 
@@ -114,7 +130,8 @@ $(function() {
 
     var newViewer = new Viewer(inputtedMovieName, inputtedAge, inputtedTime);
 
-    $("#output #para").text(ageCheck(inputtedMovieName, newViewer));
+    $("#output #price").text(ageCheck(inputtedMovieName, newViewer));
+    $("#output #available").text((showTime(inputtedMovieName, newViewer)));
 
   });
 
