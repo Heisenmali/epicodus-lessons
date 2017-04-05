@@ -9,21 +9,48 @@ function Player(score, tempScore, exit) {
   this.exit = exit;
 }
 
-Game.prototype.turn = function () {
+Game.prototype.currentPlayer = function () {
+  var player = null;
 
-  if(this.players[0].exit === true ) {
-    this.players[1].exit = false;
-    console.log("switch to player 2");  
+  if (this.players[0].exit === false) {
+    player = this.players[0];
 
-  } else if(this.players[1].exit === true) {
-    console.log("player 0" , this.players[0].exit);
-    console.log("player 1" , this.players[1].exit);
-    this.players[0].exit = false;
-    console.log("player 0 after change" , this.players[0].exit);
-    console.log("switch to player 1");
   } else {
-    console.log("Nope");
+    player = this.players[1];
+
   }
+  return player;
+}
+
+Game.prototype.turn = function (game) {
+
+  if (game.currentPlayer() === this.players[0]) {
+    this.players[0].exit = true;
+    this.players[1].exit = false;
+    console.log("switch to player 1");
+
+  } else if (game.currentPlayer() === this.players[1]) {
+    this.players[0].exit = false;
+    this.players[1].exit = true;
+    console.log("switch to player 0");
+  } else {
+    console.log("!!! Oh no");
+  }
+
+
+  // if(this.players[0].exit === true ) {
+  //   this.players[1].exit = false;
+  //   console.log("switch to player 1");
+  //
+  // } else if(this.players[1].exit === true) {
+  //   console.log("player 0" , this.players[0].exit);
+  //   console.log("player 1" , this.players[1].exit);
+  //   this.players[0].exit = false;
+  //   console.log("player 0 after change" , this.players[0].exit);
+  //   console.log("switch to player 0");
+  // } else {
+  //   console.log("Nope");
+  // }
 };
 
 // Dice roll generator
@@ -67,12 +94,13 @@ $(function() {
   console.log(game);
 
   $("button#roll").click(function() {
-    game.turn();
+    game.currentPlayer().check();
   });
 
   $("button#exit").click(function(){
-
-    game.turn();
+    // console.log(game.currentPlayer().exit = true);
+    game.currentPlayer().exit;
+    game.turn(game);
   });
 
 });
