@@ -22,14 +22,14 @@ Game.prototype.currentPlayer = function () {
   return player;
 }
 
-Game.prototype.turn = function (game) {
+Game.prototype.turn = function () {
 
-  if (game.currentPlayer() === this.players[0]) {
+  if (this.currentPlayer() === this.players[0]) {
     this.players[0].exit = true;
     this.players[1].exit = false;
     console.log("switch to player 1");
 
-  } else if (game.currentPlayer() === this.players[1]) {
+  } else if (this.currentPlayer() === this.players[1]) {
     this.players[0].exit = false;
     this.players[1].exit = true;
     console.log("switch to player 0");
@@ -37,21 +37,13 @@ Game.prototype.turn = function (game) {
     console.log("!!! Oh no");
   }
 
-
-  // if(this.players[0].exit === true ) {
-  //   this.players[1].exit = false;
-  //   console.log("switch to player 1");
-  //
-  // } else if(this.players[1].exit === true) {
-  //   console.log("player 0" , this.players[0].exit);
-  //   console.log("player 1" , this.players[1].exit);
-  //   this.players[0].exit = false;
-  //   console.log("player 0 after change" , this.players[0].exit);
-  //   console.log("switch to player 0");
-  // } else {
-  //   console.log("Nope");
-  // }
 };
+
+Game.prototype.playerRoll = function () {
+  if(this.currentPlayer().check() === 1){
+     this.turn();
+  }
+}
 
 // Dice roll generator
 Player.prototype.roll = function () {
@@ -65,6 +57,7 @@ Player.prototype.check = function () {
   console.log("roll: " , diceRoll);
 
   if (this.exit) {
+    this.tempScore = 0; //change tempScore to 0 when dieroll is a 1
     var exitScore = this.score += this.tempScore; //add tempScore to the total score, and exits the function
     console.log("score at hold: " , this.score);
 
@@ -74,13 +67,14 @@ Player.prototype.check = function () {
   if(diceRoll === 1) {
     this.tempScore = 0; //change tempScore to 0 when dieroll is a 1
     console.log("score: " , this.score);
-    this.exit = true;
-    return this.score += this.tempScore; //adds 0 to score
+
+    return diceRoll; //adds 0 to score
 
   } else {
     this.tempScore += diceRoll; //adds roll value to tempScore
     console.log("tempscore: " , this.tempScore);
   }
+
 };
 
 
@@ -94,13 +88,13 @@ $(function() {
   console.log(game);
 
   $("button#roll").click(function() {
-    game.currentPlayer().check();
+    game.playerRoll();
+    //game.currentPlayer().check(game);
   });
 
   $("button#exit").click(function(){
     // console.log(game.currentPlayer().exit = true);
-    game.currentPlayer().exit;
-    game.turn(game);
+    game.turn();
   });
 
 });
