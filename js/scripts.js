@@ -46,14 +46,14 @@ Game.prototype.playerRoll = function () {
 }
 
 // Dice roll generator
-Player.prototype.roll = function () {
+var roll = function () {
   return Math.floor(Math.random() * (7 - 1)) + 1;
 };
 
 //keeps score
 Player.prototype.check = function () {
 
-  const diceRoll = this.roll(); //stores die roll by calling roll function
+  const diceRoll = roll(); //stores die roll by calling roll function
   console.log("roll: " , diceRoll);
 
   if (this.exit) {
