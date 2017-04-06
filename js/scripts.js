@@ -99,27 +99,28 @@ $(function() {
   game.players.push(new Player("Player 2",0, 0, 1, true));
   console.log(game);
 
+  //displays the score of the current player
   var scoreDisplay = function() {
     if (game.currentPlayer() === game.players[0]) {
-      $("#player-0 .score").text("score: " + game.currentPlayer().score);
-      $("#player-0 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+      $("#player-0 .score").text("Score: " + game.currentPlayer().score);
+      $("#player-0 .temp-score").text("Round score: " + game.currentPlayer().tempScore);
 
     } else {
-      $("#player-1 .score").text("score: " + game.currentPlayer().score);
-      $("#player-1 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+      $("#player-1 .score").text("Score: " + game.currentPlayer().score);
+      $("#player-1 .temp-score").text("Round score: " + game.currentPlayer().tempScore);
     }
   }
 
   var scoreHold = function() {
     var totalScore = null;
     if (game.currentPlayer() === game.players[0]) {
-      $("#player-0 .score").text("score: " + (totalScore = game.turn()));
-      $("#player-0 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+      $("#player-0 .score").text("Score: " + (totalScore = game.turn()));
+      $("#player-0 .temp-score").text("Round score: " + game.currentPlayer().tempScore);
 
 
     } else {
-      $("#player-1 .score").text("score: " + (totalScore = game.turn()));
-      $("#player-1 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+      $("#player-1 .score").text("Score: " + (totalScore = game.turn()));
+      $("#player-1 .temp-score").text("Round score: " + game.currentPlayer().tempScore);
     }
 
     if (totalScore >= 60) {
