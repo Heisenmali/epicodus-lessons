@@ -4,9 +4,11 @@ function Game(players){
 }
 
 // Making constructor for player
-function Player(score, tempScore, exit) {
+function Player(playerName, score, tempScore, currentRoll, exit) {
+  this.playerName = playerName;
   this.score = score;
   this.tempScore = tempScore;
+  this.currentRoll = currentRoll;
   this.exit = exit;
 }
 
@@ -18,7 +20,7 @@ Game.prototype.currentPlayer = function () {
   if (this.players[0].exit === false) {
     player = this.players[0];
 
-  //current player is player 1  
+  //current player is player 1
   } else {
     player = this.players[1];
 
@@ -29,7 +31,7 @@ Game.prototype.currentPlayer = function () {
 
 Game.prototype.turn = function () {
   //Adds tempScore to the score property of the player object
-  this.currentPlayer().score += this.currentPlayer().tempScore;
+  var score = this.currentPlayer().score += this.currentPlayer().tempScore;
   //reset tempScore to 0
   this.currentPlayer().tempScore = 0;
   console.log("score at hold: " , this.currentPlayer().score);
@@ -45,6 +47,8 @@ Game.prototype.turn = function () {
     this.players[1].exit = true;
     console.log("switch to player 0");
   }
+
+  return score;
 };
 
 //Main game loop. Runs when you hit 'roll dice'
@@ -52,21 +56,25 @@ Game.prototype.playerRoll = function () {
   //runs check() on currentPlayer() even when the statement evaluates to false
   //The check function will store tempScore in the object each time playerRoll is run
   if(this.currentPlayer().check() === 1){
-     this.turn();
+    var roll = this.currentPlayer().currentRoll;
+    this.turn();
+    return roll;
   }
 }
 
 
 // Dice roll generator
-var roll = function () {
-  return Math.floor(Math.random() * (7 - 1)) + 1;
+Player.prototype.roll = function () {
+  var dieRoll = Math.floor(Math.random() * (7 - 1)) + 1;
+  this.currentRoll = dieRoll;
+  return dieRoll;
 };
 
 
 //keeps score
 Player.prototype.check = function () {
   //stores die roll by calling roll function
-  const diceRoll = roll();
+  const diceRoll = this.roll();
   console.log("roll: " , diceRoll);
 
   if(diceRoll === 1) {
@@ -87,15 +95,63 @@ Player.prototype.check = function () {
 $(function() {
   var game = new Game();
 
-  game.players.push(new Player(0, 0, false)); //adds player to players array in game object
-  game.players.push(new Player(0, 0, true));
+  game.players.push(new Player("Player 1", 0, 0, 1, false)); //adds player to players array in game object
+  game.players.push(new Player("Player 2",0, 0, 1, true));
   console.log(game);
 
+  var scoreDisplay = function() {
+    if (game.currentPlayer() === game.players[0]) {
+      $("#player-0 .score").text("score: " + game.currentPlayer().score);
+      $("#player-0 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+
+    } else {
+      $("#player-1 .score").text("score: " + game.currentPlayer().score);
+      $("#player-1 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+    }
+  }
+
+  var scoreHold = function() {
+    var totalScore = null;
+    if (game.currentPlayer() === game.players[0]) {
+      $("#player-0 .score").text("score: " + (totalScore = game.turn()));
+      $("#player-0 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+
+
+    } else {
+      $("#player-1 .score").text("score: " + (totalScore = game.turn()));
+      $("#player-1 .temp-score").text("Current round score: " + game.currentPlayer().tempScore);
+    }
+
+    if (totalScore >= 60) {
+      $(".container").hide();
+      $("body").append("<h1 id='victory'>" + game.currentPlayer().playerName + ", YOU LOSE!</h1>");
+    }
+  }
+
+  var rollDisplay = function(playerRoll) {
+    if (playerRoll === 1){
+      $("#dice-roll").text("You rolled a 1. It's " + game.currentPlayer().playerName + "'s turn to SHRED!");
+
+    } else {
+      $("#dice-roll").text("Current roll: " + game.currentPlayer().currentRoll);
+    }
+
+  }
+
   $("button#roll").click(function() {
-    game.playerRoll();
+    var playerRoll = game.playerRoll();
+
+    scoreDisplay();
+    rollDisplay(playerRoll);
+
+    $("#playing").text("Currently Playing: " + game.currentPlayer().playerName);
   });
 
   $("button#exit").click(function(){
-    game.turn();
+
+    scoreHold();
+
+    $("#dice-roll").text(game.currentPlayer().playerName + "'s turn")
+    $("#playing").text("Currently Playing: " + game.currentPlayer().playerName);
   });
 });

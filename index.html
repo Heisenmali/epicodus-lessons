@@ -10,9 +10,30 @@
   </head>
   <body>
     <div class="container">
-
-      <button id="roll" type="button">Roll die</button>
-      <button id="exit" type="button">Hold</button>
+      <div class="row">
+        <div id="player-0" class="col-md-6">
+          <h2>Player 1</h2>
+          <p class="score"></p>
+          <p class="temp-score"></p>
+        </div>
+        <div id="player-1" class="col-md-6">
+          <h2>Player 2</h2>
+          <p class="score"></p>
+          <p class="temp-score"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div id="roll-container" class="col-md-12">
+          <h3 id="dice-roll"></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div id="button-container" class="col-md-12">
+          <button id="roll" class="btn" type="button">Roll die</button>
+          <button id="exit" class="btn" type="button">Hold</button>
+        </div>
+        <p id="playing"><p>
+      </div>
     </div>
   </body>
 </html>
