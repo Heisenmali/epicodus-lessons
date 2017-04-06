@@ -2,12 +2,14 @@
 function Game(players){
   this.players = [];
 }
+
 // Making constructor for player
 function Player(score, tempScore, exit) {
   this.score = score;
   this.tempScore = tempScore;
   this.exit = exit;
 }
+
 
 Game.prototype.currentPlayer = function () {
   var player = null;
@@ -22,8 +24,11 @@ Game.prototype.currentPlayer = function () {
   return player;
 }
 
-Game.prototype.turn = function () {
 
+Game.prototype.turn = function () {
+  this.currentPlayer().score += this.currentPlayer().tempScore;
+  this.currentPlayer().tempScore = 0;
+  console.log("score at hold: " , this.currentPlayer().score);
   if (this.currentPlayer() === this.players[0]) {
     this.players[0].exit = true;
     this.players[1].exit = false;
@@ -39,30 +44,25 @@ Game.prototype.turn = function () {
 
 };
 
+
 Game.prototype.playerRoll = function () {
   if(this.currentPlayer().check() === 1){
      this.turn();
   }
 }
 
+
 // Dice roll generator
 var roll = function () {
   return Math.floor(Math.random() * (7 - 1)) + 1;
 };
+
 
 //keeps score
 Player.prototype.check = function () {
 
   const diceRoll = roll(); //stores die roll by calling roll function
   console.log("roll: " , diceRoll);
-
-  if (this.exit) {
-    this.tempScore = 0; //change tempScore to 0 when dieroll is a 1
-    var exitScore = this.score += this.tempScore; //add tempScore to the total score, and exits the function
-    console.log("score at hold: " , this.score);
-
-    return exitScore; //returns total score
-  }
 
   if(diceRoll === 1) {
     this.tempScore = 0; //change tempScore to 0 when dieroll is a 1
@@ -74,7 +74,6 @@ Player.prototype.check = function () {
     this.tempScore += diceRoll; //adds roll value to tempScore
     console.log("tempscore: " , this.tempScore);
   }
-
 };
 
 
@@ -89,12 +88,9 @@ $(function() {
 
   $("button#roll").click(function() {
     game.playerRoll();
-    //game.currentPlayer().check(game);
   });
 
   $("button#exit").click(function(){
-    // console.log(game.currentPlayer().exit = true);
     game.turn();
   });
-
 });
