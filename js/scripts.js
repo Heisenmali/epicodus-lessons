@@ -10,13 +10,15 @@ function Player(score, tempScore, exit) {
   this.exit = exit;
 }
 
-
+//returns the current player (whichever player has an exit property of false)
 Game.prototype.currentPlayer = function () {
   var player = null;
 
+  //current player is player 0
   if (this.players[0].exit === false) {
     player = this.players[0];
 
+  //current player is player 1  
   } else {
     player = this.players[1];
 
@@ -26,26 +28,29 @@ Game.prototype.currentPlayer = function () {
 
 
 Game.prototype.turn = function () {
+  //Adds tempScore to the score property of the player object
   this.currentPlayer().score += this.currentPlayer().tempScore;
+  //reset tempScore to 0
   this.currentPlayer().tempScore = 0;
   console.log("score at hold: " , this.currentPlayer().score);
+  //changes from player 0, to player 1
   if (this.currentPlayer() === this.players[0]) {
     this.players[0].exit = true;
     this.players[1].exit = false;
     console.log("switch to player 1");
 
-  } else if (this.currentPlayer() === this.players[1]) {
+  //changes from player 1, to player 0
+  } else {
     this.players[0].exit = false;
     this.players[1].exit = true;
     console.log("switch to player 0");
-  } else {
-    console.log("!!! Oh no");
   }
-
 };
 
-
+//Main game loop. Runs when you hit 'roll dice'
 Game.prototype.playerRoll = function () {
+  //runs check() on currentPlayer() even when the statement evaluates to false
+  //The check function will store tempScore in the object each time playerRoll is run
   if(this.currentPlayer().check() === 1){
      this.turn();
   }
@@ -60,8 +65,8 @@ var roll = function () {
 
 //keeps score
 Player.prototype.check = function () {
-
-  const diceRoll = roll(); //stores die roll by calling roll function
+  //stores die roll by calling roll function
+  const diceRoll = roll();
   console.log("roll: " , diceRoll);
 
   if(diceRoll === 1) {
