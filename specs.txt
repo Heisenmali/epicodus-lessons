@@ -12,4 +12,4 @@
 
 √ – Add option to select multiple toppings for a pizza
 
-– Add option to order multiple pizzas
+√ – Add option to order multiple pizzas
