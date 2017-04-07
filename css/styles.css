@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Leon";
+  font-weight: normal;
+  src: url("../Napo-Typeface/Leon-Regular.ttf");
+}
+
+body {
+  font-size: 2em;
+  font-family: "Leon";
+  padding: 0 30vw 0 25vw;
+  letter-spacing: 0.08em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font—weight: normal
+}
+
+h1 {
+  font—size: 218%;
+}
+
+h2 {
+  font—size: 164%;
+}
+
+h3 {
+  font—size: 145%;
+}
+
+h4 {
+  font—size: 118%;
+}
+
+.header {
+  height: 20vh;
+}
+
+.main-content {
+  padding: 5vh 0;
+}
+
+.form-control {
+  font-size: inherit;
+  margin: 2vh 0;
+}
+
+button {
+  margin: 20px 20px 20px 0;
+}
+.btn {
+  font-size: inherit;
+}
+
+#output {
+  display: none;
+}
