@@ -16,6 +16,24 @@ _Web app built as an exercise focusing on object oriented javascript_
 * _Clone using git_
 * _open up and have fun_
 
+## specs
+
+* Create pizza constructor which creates object on page load
+    * input: pizza
+    * ouput: pizza {prop1, prop2, ...};
+
+* Pizza object stores input variables from UI and returns them
+    * input: size: small
+    * output: pizza.size = small
+
+* Create prototype function which returns price based on topping
+    * input: topping
+    * output: $amount
+
+* Add option to select multiple toppings for a pizza and adjust price in consequence
+
+* Add option to select multiple toppings for a pizza
+
 
 ## Known Bugs
 
