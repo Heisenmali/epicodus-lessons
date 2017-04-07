@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Movie Tickets</title>
+    <title>Pizza</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src= "js/jquery-3.2.0.js"></script>
@@ -13,20 +13,19 @@
     <div class="main-content">
       <form id="pizza-info">
         <select id="pizza-size" class="form-control">
-          <option value="small">Small</option>
+          <option value="small" selected>Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
           <option value="xtraLarge">Xtra-large</option>
         </select>
 
-        <select id="pizza-topping" class="form-control">
-          <option value="olive">Olives</option>
-          <option value="cheese">Cheese</option>
-          <option value="pepperoni">Pepperoni</option>
-          <option value="artichoke">Artichoke</option>
-        </select>
+        <div id="topping">
 
-        <button class="btn" type="submit" name="button">Submit!</button>
+        </div>
+
+
+        <button class="btn" type="button" name="add-topping">Add topping</button>
+        <button class="btn" type="submit" name="order">Order!</button>
 
       </form>
 
