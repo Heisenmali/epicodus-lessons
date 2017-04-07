@@ -6,10 +6,10 @@
       input: size: small
       output: pizza.size = small
 
-– Create prototype function which returns price based on topping
+√ – Create prototype function which returns price based on topping
       input: topping
       output: $amount
 
-– Add option to select multiple toppings for a pizza
+√ – Add option to select multiple toppings for a pizza
 
 – Add option to order multiple pizzas
