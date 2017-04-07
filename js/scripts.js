@@ -17,7 +17,6 @@ Pizza.prototype.toppingPrice = function() {
   var toppingPrice = 0;
 
   this.topping.forEach(function(topping) {
-    console.log(topping);
     if (topping !== "none") {
       toppingPrice += 2;
     }
