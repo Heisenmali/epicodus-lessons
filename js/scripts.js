@@ -1,3 +1,5 @@
+// –––––––– Business logic
+
 function Pizza(size) {
   this.size = size;
   this.topping = [];
@@ -34,7 +36,7 @@ Pizza.prototype.pizzaPrice = function () {
   }
 };
 
-
+// –––––––– UI logic
 
 $(function() {
 
@@ -59,15 +61,12 @@ $(function() {
     pizza.size = $("#pizza-size").val();
     var topping;
 
-
-
     $(".pizza-topping").each(function() {
       topping = $(this).val();
       pizza.topping.push(topping);
     });
 
     console.log(pizza);
-
     console.log(pizza.pizzaPrice());
 
     // $(".pizza-topping).prop("selectedIndex", 0);

@@ -10,6 +10,6 @@
       input: topping
       output: $amount
 
-√ – Add option to select multiple toppings for a pizza
+√ – Add option to select multiple toppings for a pizza and adjust price in consequence
 
 – Add option to order multiple pizzas
