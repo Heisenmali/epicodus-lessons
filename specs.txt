@@ -1,14 +1,14 @@
-– Create pizza constructor which creates object on page load
-    input: pizza
-    ouput: pizza {prop1, prop2, ...};
+√ – Create pizza constructor which creates object on page load
+      input: pizza
+      ouput: pizza {prop1, prop2, ...};
 
-– Pizza object stores input variables from UI and returns them
-    input: size: small
-    output: pizza.size = small
+√ – Pizza object stores input variables from UI and returns them
+      input: size: small
+      output: pizza.size = small
 
 – Create prototype function which returns price based on topping
-  input: topping
-  output: $amount
+      input: topping
+      output: $amount
 
 – Add option to select multiple toppings for a pizza
 
