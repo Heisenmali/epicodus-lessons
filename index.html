@@ -10,30 +10,38 @@
   </head>
   <body>
 
+    <div class="header">
+      <h1>Do you like Lego ?</h1>
+      <p>Then build a pizza below !</p>
+    </div>
+
     <div class="main-content">
       <form id="pizza-info">
+        <h2>Choose your size and toppings : </h2>
+
         <select id="pizza-size" class="form-control">
-          <option value="small" selected>Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-          <option value="xtraLarge">Xtra-large</option>
+          <option value="Small" selected>Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+          <option value="Extra-large">Extra-large</option>
         </select>
 
-        <div id="topping">
-
-        </div>
-
+        <div id="topping"></div>
 
         <button class="btn" type="button" name="add-topping">Add topping</button>
-        <button class="btn" type="submit" name="order">Order!</button>
+        <button class="btn" type="button" name="add-pizza">Add pizza</button>
+        <button class="btn" type="submit" name="order">Order !</button>
 
       </form>
 
       <div id="output">
-
-
+        <h2>Your order : </h2>
+        <p id="pizza-count"></p>
       </div>
+    </div>
 
+    <div class="footer">
+      <p>I agree, this is cheesy…</p>
     </div>
 
   </body>
