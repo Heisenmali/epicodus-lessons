@@ -1,12 +1,8 @@
-@font-face {
-  font-family: "Leon";
-  font-weight: normal;
-  src: url("../Napo-Typeface/Leon-Regular.ttf");
-}
 
 body {
   font-size: 2em;
-  font-family: "Leon";
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
   padding: 0 30vw 0 25vw;
   letter-spacing: 0.08em;
 }
@@ -41,6 +37,7 @@ h4 {
 
 .form-control {
   font-size: inherit;
+  height: 45px;
   margin: 2vh 0;
 }
 
@@ -48,6 +45,7 @@ button {
   margin: 20px 20px 20px 0;
 }
 .btn {
+  height: 45px;
   font-size: inherit;
 }
 
