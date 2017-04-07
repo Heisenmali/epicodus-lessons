@@ -12,12 +12,18 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> gh-pages
 √ – Add option to select multiple toppings for a pizza and adjust price in consequence
 =======
 √ – Add option to select multiple toppings for a pizza
 >>>>>>> dev
+<<<<<<< HEAD
 =======
 √ – Add option to select multiple toppings for a pizza and adjust price in consequence
 >>>>>>> 16e235a9c21a3a4f492a210e18f51a0241979107
+=======
+>>>>>>> gh-pages
 
 √ – Add option to order multiple pizzas
