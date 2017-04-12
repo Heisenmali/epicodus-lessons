@@ -2,7 +2,7 @@
 
 #### This web app allows the user to place a pizza order
 
-#### By _**me**_
+#### By _**Niklas Long**_
 
 ## Description
 
