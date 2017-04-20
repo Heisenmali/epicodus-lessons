@@ -8,8 +8,8 @@ get('/') do
 end
 
 get('/results') do
-  @find = params.fetch('find')
-  @replace = params.fetch('replace')
-  @string = params.fetch('string').replace(@find, @replace)
+  find = params.fetch('find')
+  replace = params.fetch('replace')
+  @string = params.fetch('string').replace(find, replace)
   erb(:results)
 end
