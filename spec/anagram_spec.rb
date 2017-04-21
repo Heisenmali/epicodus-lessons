@@ -4,8 +4,8 @@ require 'anagram'
 
 describe 'String#anagram' do
   # first spec
-  it 'takes user input and downcases, stores it in an array and removes whitespace' do
-    expect('HELlo WorlD how are you'.anagram).to(eq ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d", "h", "o", "w", "a", "r", "e", "y", "o", "u"])
+  it 'takes user input and downcases, stores it in an array, removes whitespace and counts the number of characters and stores that in a hash' do
+    expect('HELlo WorlD how are you'.anagram).to(eq({'h'=>2, 'e'=>2, 'l'=>3, 'o'=>4, 'w'=>2, 'r'=>2, 'd'=>1, 'a'=>1, 'y'=>1, 'u'=>1}))
   end
   # second spec
   # it 'explanation of what this test tests' do
