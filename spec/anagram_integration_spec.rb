@@ -1,14 +1,15 @@
-# require 'capybara/rspec'
-# require './app'
+require 'capybara/rspec'
+require './app'
 
-# Capybara.app = Sinatra::Application
-# set(:show_exceptions, false)
+Capybara.app = Sinatra::Application
+set(:show_exceptions, false)
 
-# describe 'the application path', {:type => :feature} do
-#   it 'it processes the user entry and returns...' do
-#     visit '/'
-#     fill_in 'input_id', :with => 'input'
-#     click_button 'button_id'
-#     expect(page).to have_content 'expected output'
-#   end
-# end
+describe 'the anagram path', {:type => :feature} do
+  it 'it processes the user entry and returns if it is an anagram or a palindrome' do
+    visit '/'
+    fill_in 'word', :with => 'ana'
+    fill_in 'second-word', :with => 'ana'
+    click_button 'submit'
+    expect(page).to have_content "this is the result ana and ana are anagrams ana is a palindrome!"
+  end
+end

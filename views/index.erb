@@ -1,2 +1,11 @@
 <!-- Hompage content -->
-<%= @greeting %>
+
+<form action="/result">
+  <div class="form-group">
+    <label for="word">Type in the word you would like to check</label>
+    <input id="word" type="text" name="word" class="form-control">
+    <label for="second-word">Type a second word</label>
+    <input id="second-word" type="text" name="second-word" class="form-control">
+  </div>
+  <button id="submit" type="submit" name="button" class="btn btn-success">Submit!</button>
+</form>
