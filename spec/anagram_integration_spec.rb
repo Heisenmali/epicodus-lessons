@@ -10,7 +10,7 @@ describe 'the anagram path', {:type => :feature} do
     fill_in 'word', :with => 'ana'
     fill_in 'second-word', :with => 'ana'
     click_button 'submit'
-    expect(page).to have_content "this is the result ana and ana are anagrams ana is a palindrome!"
+    expect(page).to have_content "ana is an anagram of ana"
   end
   it 'it processes the user entry and returns if it is an anagram or a palindrome' do
     visit '/'
