@@ -10,6 +10,9 @@ describe 'String#anagram' do
   it 'takes user input and downcases, stores it in an array, removes whitespace and counts the number of characters and stores that in a hash' do
     expect(('eat').anagram('hello')).to(eq("eat and hello are not anagrams"))
   end
+    it 'checks for anagrams regardless of case' do
+    expect(('Eat').anagram('TeA')).to(eq("Eat and TeA are anagrams"))
+  end
   # second spec
   # it 'explanation of what this test tests' do
   #   expect('input'.method_name).to(eq 'expected output')

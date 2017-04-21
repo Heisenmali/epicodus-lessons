@@ -1,12 +1,10 @@
 # ruby code
 class String
   def anagram(second_word)
-    first_word_array = self.downcase
-    first_word_array = first_word_array.split("")
+    first_word_array = self.downcase.split("")
     first_word_array.reject!{|char| char == " "}
 
-    second_word_array = second_word.downcase
-    second_word_array = second_word_array.split("")
+    second_word_array = second_word.downcase.split("")
     second_word_array.reject!{|char| char == " "}
 
     first_word_count = Hash.new 0
