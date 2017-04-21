@@ -1,0 +1,44 @@
+body {
+  font-size: 2em;
+  font-family: charterregular;
+  margin-left: 20vw;
+  margin-right: 25vw;
+  background-color: #f7f7f7;
+}
+
+
+h1 {
+  font-family: charterbold;
+  font—size: 218%;
+  padding: 5vh 0;
+}
+
+h2 {
+  font—size: 164%;
+  padding-bottom: 1vh;
+}
+
+h3 {
+  font—size: 145%;
+}
+
+h4 {
+  font—size: 118%;
+}
+
+label {
+  font-weight: normal;
+  padding: 3vh 0 .5vh;
+}
+
+.header {
+  height: 18vh;
+}
+
+.container {
+  width: 60vw;
+}
+
+.form-control {
+  width: 60vw;
+}

@@ -1,22 +1,21 @@
-# _{Application Name}_
+# Anagram or antigram?
 
-#### _{Brief description of application}, {Date of current version}_
+#### This app tests if words entered by the user are anagrams, palindromes, or antigrames.
 
-#### By _**{List of contributors}**_
+#### By _**{niklaslong}**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+This app takes user input and tests for different conditions - anagram, palindrome or antigram? IT was built for an Epicodus code review in the ruby course.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Git, text editor, browser are required_
+* _Clone from github_
+* _Open in text editor_
+* _Make sure you run bundle in terminal to install all the gems used for this project_
+* _Run ruby anagram.rb in terminal_
+* _App will run on localhost:4567_
 
 ## Specs
 
@@ -34,18 +33,18 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_none_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_contact me@niklaslong.ch if you have any questions_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_This app uses Ruby, Sinatra_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT and GPL*
 
-Copyright (c) 2017 **_{List of contributors or company name}_**
+Copyright (c) 2017 **_niklaslong_**

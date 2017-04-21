@@ -10,7 +10,7 @@ describe 'the anagram path', {:type => :feature} do
     fill_in 'word', :with => 'ana'
     fill_in 'second-word', :with => 'ana'
     click_button 'submit'
-    expect(page).to have_content "Ana is an anagram of ana"
+    expect(page).to have_selector("div#output", :text =>"'Ana' is an anagram of 'ana'")
   end
   it 'it processes the user entry checks if it is valid.' do
     visit '/'
@@ -24,7 +24,7 @@ describe 'the anagram path', {:type => :feature} do
     fill_in 'word', :with => 'hello world'
     fill_in 'second-word', :with => 'ab if'
     click_button 'submit'
-    expect(page).to have_content "Hello world is not an anagram of ab if and they are not antigrams."
+    expect(page).to have_content "'Hello world' is not an anagram of 'ab if' and they are not antigrams."
   end
   it 'it processes the user entry and checks if the app detects punctuation' do
     visit '/'
