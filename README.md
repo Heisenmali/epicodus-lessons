@@ -20,13 +20,14 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Specs
 
-| Spec                                         | Input                          | Output      |
-| ---------------------------------------------|:-------------------------------|:------------|
-| method checks if two words are anagrams      | tea, eat                       | yes!        |
-| method checks if two words are not anagrams  | tea, hello                     | No!         |   
-| Same as above without reagrdless of case     | TeA, eat                       | yes!        |
-| Same as above and checks for palindromes     | Ana                            | yes!        |
-| App displays output on sinatra(integration)  | ana, ana                       | yes! yes!   |
+| Spec                                          | Input                          | Output      |
+| --------------------------------------------- |:-------------------------------|:------------|
+| method checks if two words are anagrams       | tea, eat                       | yes!        |
+| method checks if two words are not anagrams   | tea, hello                     | No!         |   
+| Same as above without reagrdless of case      | TeA, eat                       | yes!        |
+| Same as above and checks for palindromes      | Ana                            | yes!        |
+| App displays output on sinatra(integration)   | ana, ana                       | yes! yes!   |
+|  Check if input is valid contains aieou       | hd                     | Enter a valid input |
 
 ## Known Bugs
 
