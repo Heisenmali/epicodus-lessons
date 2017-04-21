@@ -1,9 +1,9 @@
 class String
   def antigram(second_word)
-    if self.match?(/#{second_word}/) == false
-      "This is an antigram"
+    if !self.match?(/[#{second_word}]/)
+      return true
     else
-      "This isn't an antigram"
+      return false
     end
   end
 end

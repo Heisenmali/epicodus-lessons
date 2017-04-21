@@ -27,7 +27,10 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 | Same as above without reagrdless of case      | TeA, eat                       | yes!        |
 | Same as above and checks for palindromes      | Ana                            | yes!        |
 | App displays output on sinatra(integration)   | ana, ana                       | yes! yes!   |
-|  Check if input is valid contains aieou       | hd                     | Enter a valid input |
+| Check if input is valid contains aieou        | hd                     | Enter a valid input |
+| Antigram unit testing                         | hd, no                 | are antigrams!      |
+| Eliminates punctuation from input             | hello world!           | Enter a valid input |
+
 
 ## Known Bugs
 

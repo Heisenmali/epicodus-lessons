@@ -19,9 +19,9 @@ class String
     end
 
     if first_word_count == second_word_count
-      return "#{self} and #{second_word} are anagrams"
+      return true
     else
-      return "#{self} and #{second_word} are not anagrams"
+      return false
     end
   end
 end
