@@ -21,8 +21,8 @@ This app takes user input and tests for different conditions - anagram, palindro
 
 | Spec                                          | Input                          | Output      |
 | --------------------------------------------- |:-------------------------------|:------------|
-| method checks if two words are anagrams       | tea, eat                       | yes!        |
-| method checks if two words are not anagrams   | tea, hello                     | No!         |   
+| Method checks if two words are anagrams       | tea, eat                       | yes!        |
+| Method checks if two words are not anagrams   | tea, hello                     | No!         |   
 | Same as above without reagrdless of case      | TeA, eat                       | yes!        |
 | Same as above and checks for palindromes      | Ana                            | yes!        |
 | App displays output on sinatra(integration)   | ana, ana                       | yes! yes!   |
