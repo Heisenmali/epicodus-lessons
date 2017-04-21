@@ -20,12 +20,10 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Specs
 
-| Spec                               | Input                          | Output      |
-| ---------------------------------- |:-------------------------------|:------------|
-| Takes user input and downcases it. | HELlo WorlD                    | hello world |
-| Takes user input, splits it, removes whitespace                     | HELlo WorlD | ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"] |
-| Does all the above, returns hash number of each character counted   | HELlo WorlD how are you | {'h'=>2, 'e'=>2, 'l'=>3, 'o'=>4, 'w'=>2, 'r'=>2, 'd'=>1, 'a'=>1, 'y'=>1, 'u'=>1}|
-| All the above and does the same thing for second input              | HELlo WorlD how are you | {'h'=>2, 'e'=>2, 'l'=>3, 'o'=>4, 'w'=>2, 'r'=>2, 'd'=>1, 'a'=>1, 'y'=>1, 'u'=>1} |
+| Spec                                     | Input                          | Output      |
+| ---------------------------------------- |:-------------------------------|:------------|
+| method checks if two words are anagrams  |   tea, eat                     |     yes!    |
+
 
 ## Known Bugs
 
