@@ -1,6 +1,6 @@
 # ruby code
 class String
   def anagram
-    input = self.downcase
+    input_array = self.downcase.split("").reject!{|char| char == " "}
   end
 end
