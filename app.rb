@@ -14,6 +14,5 @@ get '/result' do
   weight = params.fetch('weight').to_i
   new_parcel = Parcel.new(length, width, weight)
   @output = new_parcel.shipping_cost?
-
   erb(:result)
 end

@@ -8,16 +8,20 @@ class Parcel
     @weight = weight
   end
 
+  def Parcel.clear
+    @@all_parcels = []
+  end
+
+  def Parcel.all
+    @@all_parcels
+  end
+
   def volume?
     volume = @length * @width
   end
 
   def shipping_cost?
     cost = @length * @width * @weight / 4
-  end
-
-  def Parcel.all
-    @@all_parcels
   end
 
   def save

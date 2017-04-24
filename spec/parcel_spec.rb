@@ -3,6 +3,9 @@ require 'parcel'
 
 
 describe(Parcel) do
+  before() do
+    Parcel.clear()
+  end
 
   describe("#volume?")
   it('checks length and width to determine volume') do
@@ -26,6 +29,13 @@ describe(Parcel) do
     test_parcel = Parcel.new(3, 3, 3)
     test_parcel.save()
     expect(Parcel.all()).to(eq([test_parcel]))
+  end
+
+  describe(".clear")
+  it("empties out all of the saved parcels") do
+    Parcel.new(2, 2, 2).save()
+    Parcel.clear()
+    expect(Parcel.all()).to(eq([]))
   end
 
 end
