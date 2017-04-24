@@ -8,9 +8,15 @@ class Parcel
 
   def volume?
     volume = @length * @width
+
   end
 
   def shipping_cost?
     cost = @length * @width * @weight / 4
   end
+
+  def Parcel.all
+    []
+  end
+
 end

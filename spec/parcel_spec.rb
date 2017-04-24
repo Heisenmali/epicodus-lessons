@@ -15,4 +15,18 @@ describe(Parcel) do
     test_parcel = Parcel.new(2, 4, 6)
     expect(test_parcel.shipping_cost?).to(eq(12))
   end
+
+  describe(".all")
+  it("is empty at first") do
+    expect(Parcel.all()).to(eq([]))
+  end
+
+
+  # describe("#save") do
+  # it("adds a parcel to the array of saved parcels") do
+  #   test_parcel = Parcel.new("")
+  #   test_parcel.save()
+  #   expect(Parcel.all()).to(eq([test_parcel]))
+  # end
+
 end
