@@ -21,12 +21,11 @@ describe(Parcel) do
     expect(Parcel.all()).to(eq([]))
   end
 
-
-  # describe("#save") do
-  # it("adds a parcel to the array of saved parcels") do
-  #   test_parcel = Parcel.new("")
-  #   test_parcel.save()
-  #   expect(Parcel.all()).to(eq([test_parcel]))
-  # end
+  describe("#save")
+  it("adds a parcel to the array of saved parcels") do
+    test_parcel = Parcel.new(3, 3, 3)
+    test_parcel.save()
+    expect(Parcel.all()).to(eq([test_parcel]))
+  end
 
 end

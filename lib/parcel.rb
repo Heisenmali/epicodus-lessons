@@ -1,5 +1,7 @@
 
 class Parcel
+  @@all_parcels = []
+
   def initialize(length, width, weight)
     @length = length
     @width = width
@@ -8,7 +10,6 @@ class Parcel
 
   def volume?
     volume = @length * @width
-
   end
 
   def shipping_cost?
@@ -16,7 +17,11 @@ class Parcel
   end
 
   def Parcel.all
-    []
+    @@all_parcels
+  end
+
+  def save
+    @@all_parcels.push(self)
   end
 
 end
