@@ -10,12 +10,12 @@ class String
     first_word_count = Hash.new 0
     second_word_count = Hash.new 0
 
-    first_word_array.each do |word|
-    first_word_count[word] += 1
+    first_word_array.each do |char|
+    first_word_count[char] += 1
     end
 
-    second_word_array.each do |word|
-    second_word_count[word] += 1
+    second_word_array.each do |char|
+    second_word_count[char] += 1
     end
 
     if first_word_count == second_word_count
