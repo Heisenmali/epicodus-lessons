@@ -94,6 +94,7 @@ end
 class Age
   attr_accessor :state
   attr_accessor :timestamp
+  attr_accessor :birthday
 
   AGE_STATE = ["child", "teen", "adult", "death"]
 
@@ -102,7 +103,17 @@ class Age
     self.timestamp = Time.now
   end
 
-  def age
-    "death" if Time.now - birthday > 180
+  def change_state
+    age = Time.now - timestamp
+    state = if age > 180
+      "death"
+    elsif age > 120
+      "adult"
+    elsif age > 60
+      "teen"
+    else
+      "child"
+    end
   end
+  
 end

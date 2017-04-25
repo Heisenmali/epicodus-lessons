@@ -104,7 +104,9 @@ describe "Tamagotchi" do
   end
 
   describe "Age" do
+
     describe "age" do
+
       before do
         Timecop.freeze(Time.new(2008, 9, 1, 10, 5, 0))
       end
@@ -114,7 +116,34 @@ describe "Tamagotchi" do
       end
 
       it "should return a dead tamagotchi " do
+        tamagotchi = Tamagotchi.new
+        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 181
+        Timecop.travel(death_time)
+        expect(tamagotchi.age.change_state).to eq "death"
+      end
+
+      it "should return a child tamagotchi " do
+        tamagotchi = Tamagotchi.new
+        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 20
+        Timecop.travel(death_time)
+        expect(tamagotchi.age.change_state).to eq "child"
+      end
+
+      it "should return a teen tamagotchi " do
+        tamagotchi = Tamagotchi.new
+        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 61
+        Timecop.travel(death_time)
+        expect(tamagotchi.age.change_state).to eq "teen"
+      end
+
+      it "should return a adult tamagotchi " do
+        tamagotchi = Tamagotchi.new
+        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 121
+        Timecop.travel(death_time)
+        expect(tamagotchi.age.change_state).to eq "adult"
+      end
     end
+
   end
 
 end
