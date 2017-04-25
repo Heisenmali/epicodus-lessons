@@ -29,7 +29,7 @@ class Stomach
   attr_accessor :state
   attr_accessor :timestamp
 
-  STOMACH_STATE = ["death", "starving", "hungry", "sated", "full", "death"]
+  STOMACH_STATE = ["dead", "starving", "hungry", "sated", "full", "death"]
 
   def initialize
     self.state = "hungry"
@@ -38,12 +38,30 @@ class Stomach
 
   def eat
     i = STOMACH_STATE.index(state)
-    self.state = STOMACH_STATE[i + 1]
+
+  return "death" if state == "death" || state == "dead"
+
+
+    time_passed = Time.now - timestamp
+    state = if time_passed < 10
+      self.state = STOMACH_STATE[i + 1]
+    elsif time_passed < 30
+      self.state = STOMACH_STATE[i]
+    elsif time_passed < 120
+      self.state = STOMACH_STATE[i - 1]
+    else
+      self.state = STOMACH_STATE[0]
+    end
+
+    self.timestamp = Time.now
+    state
+
   end
 
   def dead?
-    return true if state == "death"
+    return true if state == "death" || state == "dead"
   end
+
 end
 
 
@@ -51,7 +69,7 @@ class Play
   attr_accessor :state
   attr_accessor :timestamp
 
-  PLAY_STATE = ["death", "depressed", "bored", "content", "fatigued", "death"]
+  PLAY_STATE = ["dead", "depressed", "bored", "content", "fatigued", "death"]
 
   def initialize
     self.state = "bored"
@@ -60,11 +78,26 @@ class Play
 
   def delight
     i = PLAY_STATE.index(state)
-    self.state = PLAY_STATE[i + 1]
+
+  return "death" if state == "death" || state == "dead"
+
+    time_passed = Time.now - timestamp
+    state = if time_passed < 10
+      self.state = PLAY_STATE[i + 1]
+    elsif time_passed < 30
+      self.state = PLAY_STATE[i]
+    elsif time_passed < 120
+      self.state = PLAY_STATE[i - 1]
+    else
+      self.state = PLAY_STATE[0]
+    end
+
+    self.timestamp = Time.now
+    state
   end
 
   def dead?
-    return true if state == "death"
+    return true if state == "death" || state == "dead"
   end
 end
 
@@ -73,7 +106,7 @@ class Rest
   attr_accessor :state
   attr_accessor :timestamp
 
-  REST_STATE = ["death", "deprived", "rested", "coma", "death"]
+  REST_STATE = ["dead", "deprived", "rested", "in a coma", "death"]
 
   def initialize
     self.state = "rested"
@@ -82,11 +115,26 @@ class Rest
 
   def slumber
     i = REST_STATE.index(state)
-    self.state = REST_STATE[i + 1]
+
+    return "death" if state == "death" || state == "dead"
+
+    time_passed = Time.now - timestamp
+    state = if time_passed < 10
+      self.state = REST_STATE[i + 1]
+    elsif time_passed < 30
+      self.state = REST_STATE[i]
+    elsif time_passed < 120
+      self.state = REST_STATE[i - 1]
+    else
+      self.state = REST_STATE[0]
+    end
+
+    self.timestamp = Time.now
+    state
   end
 
   def dead?
-    return true if state == "death"
+    return true if state == "death" || state == "dead"
   end
 end
 
@@ -115,5 +163,5 @@ class Age
       "child"
     end
   end
-  
+
 end

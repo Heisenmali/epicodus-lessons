@@ -35,7 +35,7 @@ describe "Tamagotchi" do
 
   end
 
-  describe "#hatch" do
+  describe "check initial states" do
     let(:tamagotchi) {Tamagotchi.new}
 
     it "initialize child state, checking age state for child" do
@@ -53,6 +53,57 @@ describe "Tamagotchi" do
 
   end
 
+end
+
+describe "Age" do
+
+  describe "#state" do
+
+    before do
+      Timecop.freeze(Time.new(2008, 9, 1, 10, 5, 0))
+    end
+
+    after do
+      Timecop.return
+    end
+
+    it "should return a dead tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      death_time = Time.new(2008, 9, 1, 10, 5, 0) + 181
+      Timecop.travel(death_time)
+      expect(tamagotchi.age.change_state).to eq "death"
+    end
+
+
+
+    it "should return a child tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      death_time = Time.new(2008, 9, 1, 10, 5, 0) + 20
+      Timecop.travel(death_time)
+      expect(tamagotchi.age.change_state).to eq "child"
+    end
+
+    it "should return a teen tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      death_time = Time.new(2008, 9, 1, 10, 5, 0) + 61
+      Timecop.travel(death_time)
+      expect(tamagotchi.age.change_state).to eq "teen"
+    end
+
+    it "should return a adult tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      death_time = Time.new(2008, 9, 1, 10, 5, 0) + 121
+      Timecop.travel(death_time)
+      expect(tamagotchi.age.change_state).to eq "adult"
+    end
+  end
+
+
+end
+
+
+describe "Stomach" do
+
   describe "#eat" do
 
     tamagotchi = Tamagotchi.new
@@ -69,81 +120,148 @@ describe "Tamagotchi" do
       expect(tamagotchi.stomach.eat).to eq "death"
     end
 
+    before do
+      Timecop.freeze(Time.new(2008, 9, 1, 10, 5, 0))
+    end
+
+    after do
+      Timecop.return
+    end
+
+    it "should return a dead tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      feeding_time = Time.new(2008, 9, 1, 10, 5, 0) + 121
+      Timecop.travel(feeding_time)
+      expect(tamagotchi.stomach.eat).to eq "dead"
+    end
+
+    it "should return a child tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      feeding_time = Time.new(2008, 9, 1, 10, 5, 0) + 20
+      Timecop.travel(feeding_time)
+      expect(tamagotchi.stomach.eat).to eq "hungry"
+    end
+
+    it "should return a teen tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      feeding_time = Time.new(2008, 9, 1, 10, 5, 0) + 61
+      Timecop.travel(feeding_time)
+      expect(tamagotchi.stomach.eat).to eq "starving"
+    end
+
+    it "should return a adult tamagotchi " do
+      tamagotchi = Tamagotchi.new
+      feeding_time = Time.new(2008, 9, 1, 10, 5, 0) + 5
+      Timecop.travel(feeding_time)
+      tamagotchi.stomach.eat
+      expect(tamagotchi.stomach.eat).to eq "full"
+    end
+  end
+end
+
+
+describe "#delight" do
+
+  tamagotchi = Tamagotchi.new
+
+  it "modify play state to equal content" do
+    expect(tamagotchi.play.delight).to eq "content"
   end
 
-  describe "#delight" do
+  it "modify play state to equal fatigued" do
+    expect(tamagotchi.play.delight).to eq "fatigued"
+  end
 
+  it "modify play state to equal death" do
+    expect(tamagotchi.play.delight).to eq "death"
+  end
+
+  before do
+    Timecop.freeze(Time.new(2008, 9, 1, 10, 5, 0))
+  end
+
+  after do
+    Timecop.return
+  end
+
+  it "should return a dead tamagotchi " do
     tamagotchi = Tamagotchi.new
-
-    it "modify play state to equal content" do
-      expect(tamagotchi.play.delight).to eq "content"
-    end
-
-    it "modify play state to equal fatigued" do
-      expect(tamagotchi.play.delight).to eq "fatigued"
-    end
-
-    it "modify play state to equal death" do
-      expect(tamagotchi.play.delight).to eq "death"
-    end
-
+    play_time = Time.new(2008, 9, 1, 10, 5, 0) + 121
+    Timecop.travel(play_time)
+    expect(tamagotchi.play.delight).to eq "dead"
   end
 
-  describe "#slumber" do
-
+  it "should return a child tamagotchi " do
     tamagotchi = Tamagotchi.new
-
-    it "modify play rest to equal coma" do
-      expect(tamagotchi.rest.slumber).to eq "coma"
-    end
-
-    it "modify play rest to equal death" do
-      expect(tamagotchi.rest.slumber).to eq "death"
-    end
-
+    play_time = Time.new(2008, 9, 1, 10, 5, 0) + 20
+    Timecop.travel(play_time)
+    expect(tamagotchi.play.delight).to eq "bored"
   end
 
-  describe "Age" do
+  it "should return a teen tamagotchi " do
+    tamagotchi = Tamagotchi.new
+    play_time = Time.new(2008, 9, 1, 10, 5, 0) + 61
+    Timecop.travel(play_time)
+    expect(tamagotchi.play.delight).to eq "depressed"
+  end
 
-    describe "age" do
+  it "should return a adult tamagotchi " do
+    tamagotchi = Tamagotchi.new
+    play_time = Time.new(2008, 9, 1, 10, 5, 0) + 5
+    Timecop.travel(play_time)
+    tamagotchi.play.delight
+    expect(tamagotchi.play.delight).to eq "fatigued"
+  end
 
-      before do
-        Timecop.freeze(Time.new(2008, 9, 1, 10, 5, 0))
-      end
+end
 
-      after do
-        Timecop.return
-      end
 
-      it "should return a dead tamagotchi " do
-        tamagotchi = Tamagotchi.new
-        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 181
-        Timecop.travel(death_time)
-        expect(tamagotchi.age.change_state).to eq "death"
-      end
+describe "#slumber" do
 
-      it "should return a child tamagotchi " do
-        tamagotchi = Tamagotchi.new
-        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 20
-        Timecop.travel(death_time)
-        expect(tamagotchi.age.change_state).to eq "child"
-      end
+  tamagotchi = Tamagotchi.new
 
-      it "should return a teen tamagotchi " do
-        tamagotchi = Tamagotchi.new
-        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 61
-        Timecop.travel(death_time)
-        expect(tamagotchi.age.change_state).to eq "teen"
-      end
+  it "modify play rest to equal coma" do
+    expect(tamagotchi.rest.slumber).to eq "coma"
+  end
 
-      it "should return a adult tamagotchi " do
-        tamagotchi = Tamagotchi.new
-        death_time = Time.new(2008, 9, 1, 10, 5, 0) + 121
-        Timecop.travel(death_time)
-        expect(tamagotchi.age.change_state).to eq "adult"
-      end
-    end
+  it "modify play rest to equal death" do
+    expect(tamagotchi.rest.slumber).to eq "death"
+  end
 
+  before do
+    Timecop.freeze(Time.new(2008, 9, 1, 10, 5, 0))
+  end
+
+  after do
+    Timecop.return
+  end
+
+  it "should return a dead tamagotchi " do
+    tamagotchi = Tamagotchi.new
+    rest_time = Time.new(2008, 9, 1, 10, 5, 0) + 121
+    Timecop.travel(rest_time)
+    expect(tamagotchi.rest.slumber).to eq "dead"
+  end
+
+  it "should return a child tamagotchi " do
+    tamagotchi = Tamagotchi.new
+    rest_time = Time.new(2008, 9, 1, 10, 5, 0) + 20
+    Timecop.travel(rest_time)
+    expect(tamagotchi.rest.slumber).to eq "rested"
+  end
+
+  it "should return a teen tamagotchi " do
+    tamagotchi = Tamagotchi.new
+    rest_time = Time.new(2008, 9, 1, 10, 5, 0) + 61
+    Timecop.travel(rest_time)
+    expect(tamagotchi.rest.slumber).to eq "deprived"
+  end
+
+  it "should return a adult tamagotchi " do
+    tamagotchi = Tamagotchi.new
+    rest_time = Time.new(2008, 9, 1, 10, 5, 0) + 5
+    Timecop.travel(rest_time)
+    expect(tamagotchi.rest.slumber).to eq "coma"
   end
 
 end
