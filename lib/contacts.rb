@@ -19,6 +19,10 @@ class Contact
     @@contacts.push(self)
   end
 
+  def clear
+    @@contact = []
+  end
+
 end
 
 class Name

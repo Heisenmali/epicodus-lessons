@@ -47,4 +47,10 @@ describe Contact do
     expect(test_contact.save).to(eq([test_contact]))
   end
 
+  describe "#clear"
+  it "clears contact to contacts array" do
+    test_contact = Contact.new({:first_name => "Kat", :last_name => "", :street => "", :city => "", :state => "", :zip => "", :email => "", :cell => ""})
+    expect(test_contact.clear).to(eq([]))
+  end
+
 end
