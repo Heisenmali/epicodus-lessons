@@ -35,7 +35,7 @@ class Contact
   def Contact.find(first_name)
     Contact.all.each do |contact|
       if contact.name.first == first_name
-        return contact.name.last
+        return contact
       else
         nil
       end

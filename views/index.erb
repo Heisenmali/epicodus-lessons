@@ -2,7 +2,7 @@
 
 <ul>
   <% @output.each do |contact|%>
-  <li><a href=""><%= contact.name.first %></a></li>
+  <li><a href="contacts/<%= contact.name.first %>"><%= contact.name.first %></a></li>
   <% end %>
 </ul>
 <a href="/contacts/addform" class="btn">Add</a>

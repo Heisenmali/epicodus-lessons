@@ -31,4 +31,7 @@ post('/contacts/addnew') do
   erb(:success)
 end
 
-# get('/contacts/:name')
+get('/contacts/:name') do
+  @contact = Contact.find(params.fetch('name'))
+  erb(:contact_page)
+end

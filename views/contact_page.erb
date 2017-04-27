@@ -1,0 +1,8 @@
+<h3>Name</h3>
+<%= "#{@contact.name.first} #{@contact.name.last}" %>
+<h3>Address</h3>
+<%= "#{@contact.address.street}, #{@contact.address.city},   #{@contact.address.state}, #{@contact.address.zip}" %>
+<h3>Email</h3>
+<%= @contact.email.personal %>
+<h3>Phone</h3>
+<%= @contact.phone.cell %>
