@@ -32,6 +32,16 @@ class Contact
     # Contact.contacts.push(self)
   end
 
+  def Contact.find(first_name)
+    Contact.all.each do |contact|
+      if contact.name.first == first_name
+        return contact.name.last
+      else
+        nil
+      end
+    end
+  end
+
   attr_accessor :name
   attr_accessor :address
   attr_accessor :email
