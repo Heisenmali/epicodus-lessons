@@ -40,4 +40,11 @@ describe Contact do
     test_contact = Contact.new({:first_name => "Kat", :last_name => "", :street => "", :city => "", :state => "", :zip => "", :email => "", :cell => "5036082203"})
     expect(test_contact.phone.cell).to(eq("5036082203"))
   end
+
+  describe "#save"
+  it "saves contact to contacts array" do
+    test_contact = Contact.new({:first_name => "Kat", :last_name => "", :street => "", :city => "", :state => "", :zip => "", :email => "", :cell => ""})
+    expect(test_contact.save).to(eq([test_contact]))
+  end
+
 end
