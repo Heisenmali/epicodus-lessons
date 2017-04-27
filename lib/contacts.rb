@@ -2,6 +2,18 @@ class Contact
 
   @@contacts = []
 
+  def Contact.all
+    @@contacts
+  end
+
+  def Contact.clear
+    @@contacts = []
+  end
+
+  def save
+    @@contacts.push(self)
+  end
+
   attr_accessor :name
   attr_accessor :address
   attr_accessor :email
@@ -14,15 +26,6 @@ class Contact
     self.email = Email.new(attribute.fetch(:email))
     self.phone = Phone.new(attribute.fetch(:cell))
   end
-
-  def save
-    @@contacts.push(self)
-  end
-
-  def clear
-    @@contact = []
-  end
-
 end
 
 class Name
