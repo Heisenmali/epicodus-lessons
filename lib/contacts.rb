@@ -1,21 +1,21 @@
-module Phonebook
-  # def contacts
-  #   @contacts
-  # end
-
-  @@contacts = []
-
-  # def contacts=(contact)
-  #   @contacts = contact
-  # end
-end
+# module Phonebook
+#   # def contacts
+#   #   @contacts
+#   # end
+#
+#   @@contacts = []
+#
+#   # def contacts=(contact)
+#   #   @contacts = contact
+#   # end
+# end
 
 
 class Contact
 
-  include Phonebook
+  # include Phonebook
 
-  # @@contacts = []
+  @@contacts = []
 
   def Contact.all
     @@contacts
@@ -51,9 +51,13 @@ class Contact
 
     self.name = Name.new(attribute.fetch(:first_name), attribute.fetch(:last_name))
     self.address = Address.new(attribute.fetch(:street), attribute.fetch(:city), attribute.fetch(:state), attribute.fetch(:zip))
-    self.email = Email.new(attribute.fetch(:email))
+    self.email = {:personal => Email.new(attribute.fetch(:email))}
     self.phone = Phone.new(attribute.fetch(:cell))
 
+  end
+
+  def add_email(type, email_instance)
+    self.email[type.to_sym] = email_instance
   end
 end
 
@@ -85,10 +89,10 @@ end
 
 class Email
 
-  attr_accessor :personal
+  attr_accessor :email
 
   def initialize(email)
-    self.personal = email
+    self.email = email
   end
 end
 
@@ -122,3 +126,9 @@ end
 #   end
 #
 # end
+
+
+# {
+#   :personal => Email.new()
+#   :work => Email.new()
+# }

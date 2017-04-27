@@ -3,6 +3,20 @@
 <h3>Address</h3>
 <%= "#{@contact.address.street}, #{@contact.address.city},   #{@contact.address.state}, #{@contact.address.zip}" %>
 <h3>Email</h3>
-<%= @contact.email.personal %>
+
+<% @contact.email.each do |type, email| %>
+<li><%= "#{type}: #{email.email}" %></li>
+<% end %>
+
 <h3>Phone</h3>
 <%= @contact.phone.cell %>
+
+<form action="/contacts/<%= @contact.name.first %>/addemail" method="post">
+  <label for="type">email type</label>
+  <input class="form-control" type="text" name="type">
+  <label for="email">email</label>
+  <input class="form-control" type="text" name="email">
+
+  <button class="btn" type="submit" name="button">Submit</button>
+
+</form>

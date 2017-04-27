@@ -31,6 +31,13 @@ post('/contacts/addnew') do
   erb(:success)
 end
 
+post('/contacts/:name/addemail') do
+  type = params.fetch("type")
+  address = params.fetch("email")
+  Contact.find(params.fetch('name')).add_email(type, Email.new(address))
+  erb(:success)
+end
+
 get('/contacts/:name') do
   @contact = Contact.find(params.fetch('name'))
   erb(:contact_page)
