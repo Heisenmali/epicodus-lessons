@@ -1,17 +1,35 @@
-class Contact
+module Phonebook
+  # def contacts
+  #   @contacts
+  # end
 
   @@contacts = []
 
+  # def contacts=(contact)
+  #   @contacts = contact
+  # end
+end
+
+
+class Contact
+
+  include Phonebook
+
+  # @@contacts = []
+
   def Contact.all
     @@contacts
+    # Contact.contacts
   end
 
   def Contact.clear
     @@contacts = []
+    # Contact.contacts = []
   end
 
   def save
     @@contacts.push(self)
+    # Contact.contacts.push(self)
   end
 
   attr_accessor :name
@@ -25,6 +43,7 @@ class Contact
     self.address = Address.new(attribute.fetch(:street), attribute.fetch(:city), attribute.fetch(:state), attribute.fetch(:zip))
     self.email = Email.new(attribute.fetch(:email))
     self.phone = Phone.new(attribute.fetch(:cell))
+
   end
 end
 
@@ -72,6 +91,24 @@ class Phone
   def initialize(phone)
     self.cell = phone
     # self.home =
-
   end
 end
+
+
+# module Test
+#   @@variable = "Kat"
+# end
+#
+# class Giff
+#
+#   include Test
+#
+#   def modify_var
+#     @@variable = "Cat"
+#   end
+#
+#   def variable
+#     @@variable
+#   end
+#
+# end
