@@ -43,4 +43,11 @@ describe Word do
         test_word.new_definition("definition2")
         expect(test_word.definitions[1].word_definition).to(eq("definition2"))
     end
+
+    describe ".find"
+    it "finds an instance of Word by name" do
+        test_word = Word.new("hello", "world")
+        test_word.save
+        expect(Word.search("hello")).to(eq(test_word))
+    end
 end

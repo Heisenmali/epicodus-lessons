@@ -6,6 +6,7 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 get '/' do
+  @dictionary = Word.all
   erb(:index)
 end
 
@@ -19,4 +20,9 @@ post '/new-word/add' do
   new_word = Word.new(word, definition)
   new_word.save
   erb(:success)
+end
+
+get '/:word' do
+  @word = Word.search(params.fetch('word'))
+  erb(:word)
 end

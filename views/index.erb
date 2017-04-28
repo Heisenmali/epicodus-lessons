@@ -1,5 +1,6 @@
-<% # @dictionary.each do |word| %>
-  <li><a href=""><% # word.word %></a></li>
-<% # end %>
-
+<ul>
+  <%  @dictionary.each do |word| %>
+    <li><a href="/<%= word.word %>"><%= word.word %></a></li>
+  <%  end %>
+</ul>
 <a id="new-word" href="/new-word" class="btn">Add a word!</a>
