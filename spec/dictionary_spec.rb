@@ -10,7 +10,7 @@ describe Word do
         expect(test_word.definitions[0].word_definition).to(eq("definition"))
     end
 
-     describe ".all"
+    describe ".all"
     it "returns array set to class variable" do
         Word.new("word", "definition")
         expect(Word.all).to(eq([]))

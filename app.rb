@@ -5,6 +5,10 @@ require 'pry'
 
 also_reload('lib/**/*.rb')
 
-get('/') do
+get '/' do
   erb(:index)
+end
+
+get '/new-word'do
+  erb(:new_word)
 end
