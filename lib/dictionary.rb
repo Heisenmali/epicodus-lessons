@@ -1,9 +1,20 @@
-# example ruby code
+class Word
 
-# class Palindrome
+    attr_accessor :definition_instance
+    attr_accessor :word
 
-#   def is_word?(user_input)
-#     user_input.match?(/[aeiouy]+/i)
-#   end
+    def initialize(word, word_definition)
+        self.word = word
+        self.definition_instance = Definition.new(word_definition)
+    end
+end
 
-# end
+
+class Definition
+
+    attr_accessor :word_definition
+
+    def initialize(word_definition)
+        self.word_definition = word_definition
+    end
+end
