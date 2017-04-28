@@ -3,7 +3,12 @@ require "rspec"
 require "pry"
 
 
+
 describe Word do
+  before do
+    Word.clear
+  end
+
     describe "#initialize"
     it "initialises a new instance of Word and child object definition" do
         test_word = Word.new("word", "definition")

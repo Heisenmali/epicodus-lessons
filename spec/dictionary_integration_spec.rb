@@ -28,4 +28,12 @@ describe "The add new word path", {:type => :feature} do
     click_link("new-word")
     expect(page).to have_selector("form")
   end
+
+  it "fills out form and shows success page" do
+    visit "/new-word"
+    fill_in("word", with: "hello" )
+    fill_in("definition", with: "world")
+    click_button("submit")
+    expect(page).to have_content("yay!")
+  end
 end

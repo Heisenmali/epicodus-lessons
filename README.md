@@ -30,7 +30,7 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
-| Create instance of Word containg instance of Definition | `Word.new("word", "definition"` |"definitio                |
+| Create instance of Word containg instance of Definition | `Word.new("word", "definition"` |"definition               |
 | Create "database" using array set to class variable     | `Word.new("word", "definition")`|`[word, word]`            |
 | Add support for multiple definitions for one word       | `word.new_definition`           |`[definition, definition]`|
 
@@ -39,9 +39,10 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
 | Add word page accessible from homepage and shows form       | `visit '/new-word'`      | page has new word form    |
+| Form submits and adds new instance of Word to array         | `visit '/new-word/add'`  | page displays success     |
 | Homepage lists words currently stored                       | `visit '/'`              | page has a list of words  |
-| Word page accessible from hompegage, lists word definitions | `visit '/:word/new-def'` | page has new word form    |
-| Add definition page accessible from word page               | `visit '/:word/new-def'` | page has new word form    |
+| Word page accessible from hompegage, lists word definitions | `visit '/:word'`         | page shows definitions    |
+| Add definition page accessible from word page               | `visit '/:word/new-def'` | page has new def form     |
 
  
 ## Authors
