@@ -1,1 +1,11 @@
 <%= "#{@word.word}: #{@word.definitions[0].word_definition}"%>
+
+<% @word.definitions.each do |definition|%>
+    <li><%= definition.word_definition %></li>
+  <%  end %>
+
+<form action="/<%= @word.word %>/new-definition" method="post">
+  <label for="added-definition">Enter another definition</label>
+  <input id="added-definition" type="text" name="added-definition">
+  <button type="submit" id="submit">Add definition</button>
+</form>

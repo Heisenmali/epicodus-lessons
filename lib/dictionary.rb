@@ -23,15 +23,14 @@ class Word
 	end
 
 	def self.search(word_to_search)
-		@@dictionary.each do |word|
-			if word.word == word_to_search
-				return word
+		@@dictionary.each do |word_instance|
+			if word_instance.word == word_to_search
+				return word_instance
 			else
 				nil
 			end
 		end
 	end
-	
 
 	def new_definition(new_word_definition)
 		self.definitions.push(Definition.new(new_word_definition))
