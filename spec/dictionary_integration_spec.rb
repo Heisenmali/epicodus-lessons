@@ -29,7 +29,7 @@ describe "The add new word path", {:type => :feature} do
     fill_in("word", with: "hello" )
     fill_in("definition", with: "world")
     click_button("submit")
-    expect(page).to have_content("yay!")
+    expect(page).to have_content("hello")
   end
 end
 

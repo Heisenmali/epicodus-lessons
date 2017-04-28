@@ -19,7 +19,7 @@ post '/new-word/add' do
   definition = params.fetch('definition')
   new_word = Word.new(word, definition)
   new_word.save
-  erb(:success)
+  redirect '/'
 end
 
 get '/:word' do
@@ -31,5 +31,5 @@ post '/:word/new-definition' do
   searched_word = Word.search(params.fetch('word'))
   searched_word.new_definition(params.fetch('added-definition'))  
   #Why is searchd_word an array??? Only before word.erb file was modified with imbedded ruby
-  erb(:success)
+  redirect back
 end

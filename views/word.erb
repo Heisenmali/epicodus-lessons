@@ -1,4 +1,4 @@
-<%= "#{@word.word}: #{@word.definitions[0].word_definition}"%>
+<h2><%= "#{@word.word}:"%></h2>
 
 <% @word.definitions.each do |definition|%>
     <li><%= definition.word_definition %></li>
