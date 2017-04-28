@@ -43,7 +43,7 @@ describe "The word path", {:type => :feature} do
     fill_in("definition", with: "world")
     click_button("submit")
     visit "/hello"
-    expect(page).to have_content("hello: world")
+    expect(page).to have_content("hello world")
   end
 end
 

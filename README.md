@@ -1,13 +1,13 @@
 # <!--PROJECT NAME HERE-->
 
-<!--PROJECT DESCRIPTION HERE-->
+This app is a customizable word book for chilren. 
 
 ### Prerequisites
 
 Web browser with ES6 compatibility
 Examples: Chrome, Safari
 
-Ruby <!--VERSION HERE-->
+Ruby 2.4.1
 Bundler
 
 ### Installing
@@ -22,7 +22,7 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 * CSS
 * Bootstrap https://getbootstrap.com/
 * ES6
-* Jquery https://jquery.com/
+* JS/Jquery https://jquery.com/
 
 ## Specifications
 
@@ -48,8 +48,8 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
  
 ## Authors
 
-* <!--YOUR NAME HERE-->
+* niklaslong
 
 ## License
 
-Copyright © 2017 <!--YOUR NAME HERE-->
+Copyright © 2017 Niklas Long
