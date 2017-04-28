@@ -3,7 +3,6 @@ class Word
 	@@dictionary = []
 
 	attr_accessor :definitions, :word
-	
 
 	def initialize(word, word_definition)
 		self.word = word
