@@ -28,8 +28,9 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
-|Create instance of Word containg instance of Definition | Word.new("word", "definition")|"definition" |
-|Create "database" using array set to class variable     | Word.new("word", "definition")|@@dictionary |
+|Create instance of Word containg instance of Definition | `Word.new("word", "definition"` |"definitio                |
+|Create "database" using array set to class variable     | `Word.new("word", "definition")`|`[word, word]`            |
+|Add support for multiple definitions for one word       | `word.new_definition`           |`[definition, definition]`|
 <!--SPECS GO HERE-->
  
 ## Authors

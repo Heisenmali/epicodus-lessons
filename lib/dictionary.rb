@@ -2,12 +2,12 @@ class Word
 
     @@dictionary = []
 
-    attr_accessor :definition_instance
-    attr_accessor :word
+    attr_accessor :definitions, :word
+    
 
     def initialize(word, word_definition)
         self.word = word
-        self.definition_instance = Definition.new(word_definition)
+        self.definitions = [Definition.new(word_definition)]
     end
 
     def save
@@ -20,6 +20,10 @@ class Word
 
     def self.all
         @@dictionary
+    end
+
+    def new_definition(new_word_definition)
+        self.definitions.push(Definition.new(new_word_definition))
     end
 end
 

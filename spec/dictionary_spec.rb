@@ -7,12 +7,12 @@ describe Word do
     describe "#initialize"
     it "initialises a new instance of Word and child object definition" do
         test_word = Word.new("word", "definition")
-        expect(test_word.definition_instance.word_definition).to(eq("definition"))
+        expect(test_word.definitions[0].word_definition).to(eq("definition"))
     end
 
      describe ".all"
     it "returns array set to class variable" do
-        test_word = Word.new("word", "definition")
+        Word.new("word", "definition")
         expect(Word.all).to(eq([]))
     end
 
@@ -29,5 +29,13 @@ describe Word do
         test_word.save
         Word.clear
         expect(Word.all).to(eq([]))
+    end
+
+      describe "new_definition"
+    it "creates new instance of Definition and stores it in definitions hash" do
+        test_word = Word.new("word", "definition")
+        test_word.save
+        test_word.new_definition("definition2")
+        expect(test_word.definitions[1].word_definition).to(eq("definition2"))
     end
 end
