@@ -28,6 +28,8 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
+|Create instance of Word containg instance of Definition | Word.new("word", "definition")|"definition" |
+|Create "database" using array set to class variable     | Word.new("word", "definition")|@@dictionary |
 <!--SPECS GO HERE-->
  
 ## Authors

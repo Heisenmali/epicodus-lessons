@@ -1,11 +1,25 @@
 class Word
 
+    @@dictionary = []
+
     attr_accessor :definition_instance
     attr_accessor :word
 
     def initialize(word, word_definition)
         self.word = word
         self.definition_instance = Definition.new(word_definition)
+    end
+
+    def save
+        @@dictionary.push(self)
+    end
+
+    def self.clear
+        @@dictionary = []
+    end
+
+    def self.all
+        @@dictionary
     end
 end
 
