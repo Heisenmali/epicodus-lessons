@@ -1,6 +1,6 @@
 # <!--PROJECT NAME HERE-->
 
-This app is a customizable word book for chilren. 
+This app is a customizable wordbook for chilren. 
 
 ### Prerequisites
 

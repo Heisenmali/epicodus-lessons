@@ -2,7 +2,6 @@ body {
     font-family: 'Prata', serif;
 }
 
-
 body {
   font-size: 3em;
 }
@@ -73,6 +72,15 @@ input.form-control {
 
 #new-definition {
   display: none;
+}
+
+#clear {
+  float: right;
+}
+
+#buttons {
+  float: right;
+  width: 250px;
 }
 
 .btn {
