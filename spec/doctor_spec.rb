@@ -29,7 +29,7 @@ describe 'Doctor' do
   end
   describe '.all_patients' do
     it "returns a list of a doctor's patients" do
-      uuid = Doctor.save({:name => "Faust"})
+      uuid = Doctor.save({:name => "Phouse"})
       patients = Doctor.all_patients(uuid)
       expect(patients.ntuples).to eq 0
     end
@@ -37,5 +37,11 @@ describe 'Doctor' do
 end
 
 describe 'Patient' do
-
+  describe '.save' do
+    it "creates a new patient and assigns it to a doctor" do
+      doc_id = Doctor.save({:name => "Faust"})
+      patient_id = Patient.save({:name => "Sickman", :birthdate => "1802-03-02", :doctor_id => doc_id})
+      expect(DB.exec("select * from patients where id = '#{patient_id}'")[0]["name"]).to eq "Sickman"
+    end
+  end
 end

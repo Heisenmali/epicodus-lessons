@@ -18,5 +18,9 @@ module Doctor
 end
 
 module Patient
-
+  def self.save (args)
+    uuid = SecureRandom.uuid
+    DB.exec("insert into patients values ('#{uuid}', '#{args[:name]}', '#{args[:birthdate]}', '#{args[:doctor_id]}')")
+    uuid
+  end
 end
