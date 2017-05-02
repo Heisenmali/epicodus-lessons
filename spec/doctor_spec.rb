@@ -20,6 +20,13 @@ describe 'Doctor' do
       expect(DB.exec("select * from doctors")[0]["id"]).to eq uuid
     end
   end
+  describe '.edit' do
+    it "lets the user change a doctor's name" do
+      uuid = Doctor.save({:name => "Phouse"})
+      Doctor.edit({:id => uuid, :new_name => "Dr. Mouse"})
+      expect(DB.exec("select * from doctors where id = '#{uuid}'")[0]["name"]).to eq "Dr. Mouse"
+    end
+  end
 end
 
 describe 'Patient' do
