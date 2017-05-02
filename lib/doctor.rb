@@ -15,6 +15,10 @@ module Doctor
   def self.all_patients (uuid)
     DB.exec("select id, name from patients where doctor_id = '#{uuid}'").to_a
   end
+
+  def self.name (uuid)
+    DB.exec("select name from doctors where id = '#{uuid}'")[0]["name"]
+  end
 end
 
 module Patient

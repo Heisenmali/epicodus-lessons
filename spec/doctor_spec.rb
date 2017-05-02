@@ -40,6 +40,14 @@ describe 'Doctor' do
       expect(patients[0]["name"]).to eq "Mikkson"
     end
   end
+
+  describe '.name' do
+    it "returns the name of a patient's doctor" do
+      doc_id = Doctor.save({:name => "Phouse"})
+      patient_id = Patient.save({:name => "Sickman", :doctor_id => doc_id, :birthdate => "1802-03-02"})
+      expect(Doctor.name(doc_id)).to eq "Phouse"
+    end
+  end
 end
 
 describe 'Patient' do
