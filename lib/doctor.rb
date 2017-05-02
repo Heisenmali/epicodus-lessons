@@ -1,5 +1,6 @@
 require 'pg'
 require 'securerandom'
+require 'pry'
 
 module DBE
   def self.reset
@@ -22,6 +23,10 @@ module Doctor
 
   def self.all_patients (uuid)
     DB.exec("select id, name from patients where doctor_id = '#{uuid}'").to_a
+  end
+
+  def self.all_docs
+    DB.exec("select * from doctors").to_a
   end
 
   def self.name (uuid)
@@ -53,6 +58,7 @@ module Speciality
   end
 
   def self.id_by_name (name)
-    DB.exec("select id from specialities where name = '#{name}'")[0]["id"]
+    ret = DB.exec("select id from specialities where name = '#{name}'")
+    ret.first ? ret.first["id"] : ret.first
   end
 end

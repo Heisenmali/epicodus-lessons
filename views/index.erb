@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-4">
+    <h1>Doctors</h1>
+    <form action="/new_doc" method="post">
+      <input type="input" name="name">
+      <label for="name">Doctor Name</label><br>
+      <input type="input" name ="speciality">
+      <label for="speciality">Doctor Speciality</label><br>
+      <button type="submit">Submit</button>
+    </form>
+    <% if @doctors %>
+      <% @doctors.each do |doc| %>
+        <%="<a href ='/docs/#{doc["id"]}'><h2>#{doc["name"]}</h2></a>"%>
+      <% end %>
+    <% end %>`
+  </div>
+  <div class="col-md-4">
+    <% if @patients%>
+      <h1><%=@doc_name%></h1>
+      <form action="/new_patient" method="post">
+        <input type="input" name="name">
+        <label for="name">Patient Name</label><br>
+        <input type="input" name ="birthdate">
+        <label for="birthdare">Birth Date</label><br>
+        <input type="hidden" name="doctor_id" value="<%=@id%>">
+        <button type="submit">Submit</button>
+      </form>
+      <% @patients.each do |patient| %>
+        <%="<h2>#{patient["name"]}</h2>"%>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+    <% if @patient%>
+    <% end %>
+  </div>
+</div>
