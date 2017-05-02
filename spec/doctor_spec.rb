@@ -22,16 +22,22 @@ describe 'Doctor' do
   end
   describe '.edit' do
     it "lets the user change a doctor's name" do
-      uuid = Doctor.save({:name => "Phouse"})
-      Doctor.edit({:id => uuid, :new_name => "Dr. Mouse"})
-      expect(DB.exec("select * from doctors where id = '#{uuid}'")[0]["name"]).to eq "Dr. Mouse"
+      doc_id = Doctor.save({:name => "Phouse"})
+      Doctor.edit({:id => doc_id, :new_name => "Dr. Mouse"})
+      expect(DB.exec("select * from doctors where id = '#{doc_id}'")[0]["name"]).to eq "Dr. Mouse"
     end
   end
   describe '.all_patients' do
-    it "returns a list of a doctor's patients" do
-      uuid = Doctor.save({:name => "Phouse"})
-      patients = Doctor.all_patients(uuid)
-      expect(patients.ntuples).to eq 0
+    it "returns an empty list if a doctor has no patients" do
+      doc_id = Doctor.save({:name => "Phouse"})
+      patients = Doctor.all_patients(doc_id)
+      expect(patients.length).to eq 0
+    end
+    it "returns all patient's details for a specific doctor" do
+      doc_id = Doctor.save({:name => "Phouse"})
+      Patient.save({:name => "Mikkson", :birthdate => "2002-03-02", :doctor_id => doc_id})
+      patients = Doctor.all_patients(doc_id)
+      expect(patients[0]["name"]).to eq "Mikkson"
     end
   end
 end

@@ -13,7 +13,7 @@ module Doctor
   end
 
   def self.all_patients (uuid)
-    DB.exec("select * from patients where doctor_id = '#{uuid}'")
+    DB.exec("select id, name from patients where doctor_id = '#{uuid}'").to_a
   end
 end
 
@@ -22,5 +22,9 @@ module Patient
     uuid = SecureRandom.uuid
     DB.exec("insert into patients values ('#{uuid}', '#{args[:name]}', '#{args[:birthdate]}', '#{args[:doctor_id]}')")
     uuid
+  end
+
+  def self.name (uuid)
+    DB.exec("select name from patients where id = '#{uuid}'")
   end
 end
