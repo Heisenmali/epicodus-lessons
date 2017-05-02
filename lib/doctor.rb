@@ -1,10 +1,19 @@
 require 'pg'
 require 'securerandom'
 
+module DBE
+  def self.reset
+    DB.exec("delete from doctors *;")
+    DB.exec("delete from patients *;")
+    DB.exec("delete from specialities *;")
+    DB.exec("insert into specialities values ('83ef45be-7e84-4301-85f7-97e6fdeb0b3e', 'Generalist')")
+  end
+end
+
 module Doctor
-  def self.save (args)
+  def self.save (name, spec_id = "83ef45be-7e84-4301-85f7-97e6fdeb0b3e")
     uuid = SecureRandom.uuid
-    DB.exec("insert into doctors values ('#{uuid}', '#{args[:name]}') returning id;")[0]["id"]
+    DB.exec("insert into doctors values ('#{uuid}', '#{name}', '#{spec_id}') returning id")[0]["id"]
   end
 
   def self.edit (args)
@@ -41,5 +50,9 @@ module Speciality
     uuid = SecureRandom.uuid
     DB.exec("insert into specialities values ('#{uuid}', '#{args[:name]}')")
     uuid
+  end
+
+  def self.id_by_name (name)
+    DB.exec("select id from specialities where name = '#{name}'")[0]["id"]
   end
 end
