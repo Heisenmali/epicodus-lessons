@@ -9,7 +9,7 @@ module Doctor
   end
 
   def self.edit (args)
-    DB.exec("update doctors set name = '#{args[:new_name]}' where id = '#{args[:id]}'")
+    DB.exec("update doctors set name = '#{args[:new_name]}' where id = '#{args[:doc_id]}'")
   end
 
   def self.all_patients (uuid)
@@ -20,11 +20,12 @@ end
 module Patient
   def self.save (args)
     uuid = SecureRandom.uuid
-    DB.exec("insert into patients values ('#{uuid}', '#{args[:name]}', '#{args[:birthdate]}', '#{args[:doctor_id]}')")
+    DB.exec("insert into patients values ('#{uuid}', '#{args[:name]}', '#{args[:doctor_id]}', '#{args[:birthdate]}')")
     uuid
   end
-
-  def self.name (uuid)
-    DB.exec("select name from patients where id = '#{uuid}'")
+  def self.edit (id, args)
+    args.each do |k,v|
+      DB.exec("update patients set #{k} = '#{v}' where id = '#{id}'")
+    end
   end
 end
