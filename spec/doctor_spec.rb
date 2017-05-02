@@ -67,4 +67,13 @@ describe 'Patient' do
       expect(DB.exec("select name from patients where id = '#{patient_id}'")[0]["name"]).to eq "Gretchen"
     end
   end
+
+  describe '.details' do
+    it "returns all information on a specific patient" do
+      doc_id = Doctor.save({:name => "Faust"})
+      patient_id = Patient.save({:name => "Gretchen", :doctor_id => doc_id, :birthdate => "1802-03-02"})
+      patient_details = Patient.details(patient_id)
+      expect(patient_details["name"]).to eq "Gretchen"
+    end
+  end
 end

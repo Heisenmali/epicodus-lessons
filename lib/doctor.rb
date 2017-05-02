@@ -32,4 +32,7 @@ module Patient
       DB.exec("update patients set #{k} = '#{v}' where id = '#{id}'")
     end
   end
+  def self.details (id)
+    DB.exec("select * from patients where id = '#{id}'")[0]
+  end
 end
