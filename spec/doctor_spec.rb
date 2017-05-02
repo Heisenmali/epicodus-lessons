@@ -9,7 +9,7 @@ RSpec.configure do |config|
   config.after(:each) do
     DB.exec("delete from doctors *;")
     DB.exec("delete from patients *;")
-    # DB.exec("delete from specialties *;")
+    DB.exec("delete from specialities *;")
   end
 end
 
@@ -25,6 +25,13 @@ describe 'Doctor' do
       uuid = Doctor.save({:name => "Phouse"})
       Doctor.edit({:id => uuid, :new_name => "Dr. Mouse"})
       expect(DB.exec("select * from doctors where id = '#{uuid}'")[0]["name"]).to eq "Dr. Mouse"
+    end
+  end
+  describe '.all_patients' do
+    it "returns a list of a doctor's patients" do
+      uuid = Doctor.save({:name => "Faust"})
+      patients = Doctor.all_patients(uuid)
+      expect(patients.ntuples).to eq 0
     end
   end
 end

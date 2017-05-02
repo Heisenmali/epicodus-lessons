@@ -11,6 +11,10 @@ module Doctor
   def self.edit (args)
     DB.exec("update doctors set name = '#{args[:new_name]}' where id = '#{args[:id]}'")
   end
+
+  def self.all_patients (uuid)
+    DB.exec("select * from patients where doctor_id = '#{uuid}'")
+  end
 end
 
 module Patient
