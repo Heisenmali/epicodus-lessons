@@ -77,3 +77,12 @@ describe 'Patient' do
     end
   end
 end
+
+describe 'Speciality' do
+  describe '.save' do
+    it "creates a new speciality for a doctor or doctors" do
+      spec_id = Speciality.save({:name => "Optimeterist"})
+      expect(DB.exec("select * from specialities")[0]["name"]).to eq "Optimeterist"
+    end
+  end
+end

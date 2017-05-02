@@ -4,8 +4,7 @@ require 'securerandom'
 module Doctor
   def self.save (args)
     uuid = SecureRandom.uuid
-    DB.exec("insert into doctors values ('#{uuid}', '#{args[:name]}') returning id;")
-    uuid
+    DB.exec("insert into doctors values ('#{uuid}', '#{args[:name]}') returning id;")[0]["id"]
   end
 
   def self.edit (args)
@@ -34,5 +33,13 @@ module Patient
   end
   def self.details (id)
     DB.exec("select * from patients where id = '#{id}'")[0]
+  end
+end
+
+module Speciality
+  def self.save (args)
+    uuid = SecureRandom.uuid
+    DB.exec("insert into specialities values ('#{uuid}', '#{args[:name]}')")
+    uuid
   end
 end
