@@ -9,7 +9,7 @@ also_reload('lib/**/*.rb')
 extend Train
 extend City
 
-DB = PG.connect({:dbname => 'train_test'})
+DB = PG.connect({:dbname => 'train'})
 
 get '/' do
   @trains = Train.all
@@ -36,15 +36,16 @@ get '/train/edit/:id' do
 end
 
 patch '/train/edit/:id' do
-  redirect "/train/#{@train['id']}"
+  train_id = params.fetch('id')
+  name = params.fetch('name')
+  Train.edit(name, train_id)
+  redirect "/train/#{train_id}"
 end
 
 #TRAIN DELETE
-get '/train/delete/:id' do
-  erb(:delete_train)
-end
-
-delete '/delete_train' do
+delete '/train/delete/:id' do
+  train_id = params.fetch('id')
+  Train.delete(train_id)
   redirect '/'
 end
 
@@ -68,15 +69,16 @@ get '/city/edit/:id' do
   erb(:edit_city)
 end
 
-patch '/edit_city' do
-  redirect '/'
+patch '/city/edit/:id' do
+  city_id = params.fetch('id')
+  name = params.fetch('name')
+  City.edit(name, city_id)
+  redirect "/city/#{city_id}"
 end
 
 #CITY DELETE
-get '/delete_city' do
-  erb(:delete_city)
-end
-
-delete '/delete_city' do
+delete '/city/delete/:id' do
+  city_id = params.fetch('id')
+  City.delete(city_id)
   redirect '/'
 end

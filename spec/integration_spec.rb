@@ -42,6 +42,22 @@ describe("the train path", {:type => :feature}) do
     click_link("Edit train")
     expect(page).to have_content("Edit train: The Burf Express")
   end
+
+  it("edits a train") do
+    visit("/")
+    click_link("The Burf Express")
+    click_link("Edit train")
+    fill_in("name", :with => "The Diddloo")
+    click_button("Make changes")
+    expect(page).to have_content("The Diddloo")
+  end
+
+  it("deletes a train") do
+    visit("/")
+    click_link("The Burf Express")
+    click_button("Delete train")
+    expect(page).to have_no_content("The Burf Express")
+  end
 end
 
 describe("the city path", {:type => :feature}) do
@@ -51,14 +67,20 @@ describe("the city path", {:type => :feature}) do
     click_link("Edit city")
     expect(page).to have_content("Edit city: Portland")
   end
-end
 
-# describe("the root path", {:type => :feature}) do
-#   it("verifies a list of all trains, and a list of all cities") do
-#     visit("/")
-#     fill_in("word", :with => "Banana")
-#     fill_in("definition", :with => "A delicious fruit")
-#     click_button("Add")
-#     expect(page).to have_content("Banana")
-#   end
-# end
+  it("edits a city") do
+    visit("/")
+    click_link("Portland")
+    click_link("Edit city")
+    fill_in("name", :with => "Mango")
+    click_button("Make changes")
+    expect(page).to have_content("Mango")
+  end
+
+  it("deletes a city") do
+    visit("/")
+    click_link("Portland")
+    click_button("Delete city")
+    expect(page).to have_no_content("Portland")
+  end
+end
