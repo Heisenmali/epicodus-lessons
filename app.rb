@@ -18,10 +18,14 @@ get '/' do
 end
 
 #TRAIN ADD
+get '/train/:id' do
+  @train = Train.find(params.fetch('id'))
+  erb(:train)
+end
 
 post '/add_train' do
   name = params.fetch('train')
-  Train.save()
+  Train.save(name)
   redirect '/'
 end
 
@@ -46,11 +50,14 @@ end
 #-------------------------------------------------
 
 #CITY ADD
-get '/add_city' do
-  erb(:add_city)
+get '/city/:id' do
+  @city = City.find(params.fetch('id'))
+  erb(:city)
 end
 
 post '/add_city' do
+  name = params.fetch('city')
+  City.save(name)
   redirect '/'
 end
 

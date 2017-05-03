@@ -21,6 +21,18 @@ describe("the root path", {:type => :feature}) do
     click_button("Add city")
     expect(page).to have_content("Seattle")
   end
+
+  it("clicks on a train and goes to a single train page") do
+    visit("/")
+    click_link("The Burf Express")
+    expect(page).to have_content("The Burf Express")
+  end
+
+  it("clicks on a city and goes to a single city page") do
+    visit("/")
+    click_link("Portland")
+    expect(page).to have_content("City: Portland")
+  end
 end
 
 # describe("the root path", {:type => :feature}) do

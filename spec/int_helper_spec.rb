@@ -6,18 +6,19 @@ require 'securerandom'
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 #
-module DBI #load data into database
-    train_uuid = SecureRandom.uuid
-    name = "The Burf Express"
-    Train.save(name, train_uuid)
-    city_uuid = SecureRandom.uuid
-    name = "Portland"
-    City.save(name, city_uuid)
+module DBI
+  def self.load_data #load data into database
+    train_name = "The Burf Express"
+    Train.save(train_name)
+    city_name = "Portland"
+    City.save(city_name)
+  end
 end
 
 RSpec.configure do |config|
   config.before(:each) do
     extend DBI
+    DBI.load_data
   end
 end
 
