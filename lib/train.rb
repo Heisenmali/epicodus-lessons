@@ -10,4 +10,8 @@ module Train
   def self.find(uuid)
     DB.exec("SELECT * FROM trains where id = '#{uuid}';")[0]
   end
+
+  def self.edit(name, uuid)
+    DB.exec("UPDATE trains SET name = '#{name}' WHERE id = '#{uuid}';")
+  end
 end
