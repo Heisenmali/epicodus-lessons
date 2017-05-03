@@ -35,6 +35,24 @@ describe("the root path", {:type => :feature}) do
   end
 end
 
+describe("the train path", {:type => :feature}) do
+  it("routes to the edit page") do
+    visit("/")
+    click_link("The Burf Express")
+    click_link("Edit train")
+    expect(page).to have_content("Edit train: The Burf Express")
+  end
+end
+
+describe("the city path", {:type => :feature}) do
+  it("routes to the edit page") do
+    visit("/")
+    click_link("Portland")
+    click_link("Edit city")
+    expect(page).to have_content("Edit city: Portland")
+  end
+end
+
 # describe("the root path", {:type => :feature}) do
 #   it("verifies a list of all trains, and a list of all cities") do
 #     visit("/")

@@ -30,16 +30,17 @@ post '/add_train' do
 end
 
 #TRAIN EDIT
-get '/edit_train' do
+get '/train/edit/:id' do
+  @train = Train.find(params.fetch('id'))
   erb(:edit_train)
 end
 
-patch '/edit_train' do
-  redirect '/'
+patch '/train/edit/:id' do
+  redirect "/train/#{@train['id']}"
 end
 
 #TRAIN DELETE
-get '/delete_train' do
+get '/train/delete/:id' do
   erb(:delete_train)
 end
 
@@ -62,7 +63,8 @@ post '/add_city' do
 end
 
 #CITY EDIT
-get '/edit_city' do
+get '/city/edit/:id' do
+  @city = City.find(params.fetch('id'))
   erb(:edit_city)
 end
 
