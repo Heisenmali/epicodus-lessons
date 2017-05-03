@@ -1,4 +1,4 @@
-require 'helper_spec'
+require 'unit_helper_spec'
 
 describe 'City' do
   describe '.all' do

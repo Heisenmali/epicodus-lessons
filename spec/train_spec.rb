@@ -1,4 +1,4 @@
-require 'helper_spec'
+require 'unit_helper_spec'
 
 describe 'Train' do
   describe '.all' do
@@ -33,7 +33,7 @@ describe 'Train' do
       expect(Train.all[0]["name"]).to eq "Burf"
     end
   end
-  
+
   describe '.delete' do
     it "will allow a user to delete a train" do
       train_uuid = SecureRandom.uuid

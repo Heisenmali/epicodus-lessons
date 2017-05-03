@@ -5,7 +5,6 @@ module Train
 
   def self.save(name, uuid)
   stuff =  DB.exec("INSERT INTO trains (id, name) VALUES ('#{uuid}', '#{name}') RETURNING id;")
-  binding.pry
   end
 
   def self.find(uuid)

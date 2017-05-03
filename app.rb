@@ -9,7 +9,11 @@ also_reload('lib/**/*.rb')
 extend Train
 extend City
 
+DB = PG.connect({:dbname => 'train_test'})
+
 get '/' do
+  @trains = Train.all
+  @cities = City.all
   erb(:index)
 end
 
