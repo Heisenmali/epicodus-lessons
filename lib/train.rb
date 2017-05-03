@@ -6,4 +6,8 @@ module Train
   def self.save(name, uuid)
     DB.exec("INSERT INTO trains (id, name) VALUES ('#{uuid}', '#{name}') RETURNING id;")[0]["id"]
   end
+
+  def self.find(uuid)
+    DB.exec("SELECT * FROM trains where id = '#{uuid}';")[0]
+  end
 end

@@ -15,4 +15,12 @@ describe 'Train' do
       expect(Train.all[0]["id"]).to(eq(train_uuid))
     end
   end
+  describe '.find' do
+    it 'returns a train based on id' do
+      train_uuid = SecureRandom.uuid
+      name = "test train"
+      Train.save(name, train_uuid)
+      expect(Train.find(train_uuid)["name"]).to(eq("test train"))
+    end
+  end
 end
