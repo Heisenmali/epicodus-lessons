@@ -3,6 +3,7 @@ require 'rspec'
 require 'pg'
 require 'city'
 require 'train'
+require 'securerandom'
 
 DB = PG.connect({:dbname => 'train_test'})
 
