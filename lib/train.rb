@@ -14,4 +14,8 @@ module Train
   def self.edit(name, uuid)
     DB.exec("UPDATE trains SET name = '#{name}' WHERE id = '#{uuid}';")
   end
+
+  def self.delete(uuid)
+    DB.exec("DELETE FROM trains WHERE id = '#{uuid}';")
+  end
 end

@@ -3,7 +3,7 @@ require 'helper_spec'
 describe 'Train' do
   describe '.all' do
     it 'Will return an empty array for the all method' do
-      expect(Train.all).to(eq([]))
+      expect(Train.all).to eq []
     end
   end
 
@@ -31,6 +31,16 @@ describe 'Train' do
       Train.save(name, train_uuid)
       Train.edit("Burf", train_uuid)
       expect(Train.all[0]["name"]).to eq "Burf"
+    end
+  end
+  
+  describe '.delete' do
+    it "will allow a user to delete a train" do
+      train_uuid = SecureRandom.uuid
+      name = "test train"
+      Train.save(name, train_uuid)
+      Train.delete(train_uuid)
+      expect(Train.all).to eq []
     end
   end
 end
