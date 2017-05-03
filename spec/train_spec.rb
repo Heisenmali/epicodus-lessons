@@ -9,26 +9,23 @@ describe 'Train' do
 
   describe '.save' do
     it 'It will save a train to the trains table' do
-      train_uuid = SecureRandom.uuid
       name = "test train"
-      Train.save(name, train_uuid)
+      train_uuid = Train.save(name)
       expect(Train.all[0]["id"]).to eq train_uuid
     end
   end
   describe '.find' do
     it 'returns a train based on id' do
-      train_uuid = SecureRandom.uuid
       name = "test train"
-      Train.save(name, train_uuid)
+      train_uuid = Train.save(name)
       expect(Train.find(train_uuid)["name"]).to eq "test train"
     end
   end
 
   describe '.edit' do
     it "will allow a user to edit a train" do
-      train_uuid = SecureRandom.uuid
       name = "test train"
-      Train.save(name, train_uuid)
+      train_uuid = Train.save(name)
       Train.edit("Burf", train_uuid)
       expect(Train.all[0]["name"]).to eq "Burf"
     end
@@ -36,9 +33,8 @@ describe 'Train' do
 
   describe '.delete' do
     it "will allow a user to delete a train" do
-      train_uuid = SecureRandom.uuid
       name = "test train"
-      Train.save(name, train_uuid)
+      train_uuid = Train.save(name)
       Train.delete(train_uuid)
       expect(Train.all).to eq []
     end

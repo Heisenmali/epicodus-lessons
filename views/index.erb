@@ -1,14 +1,27 @@
 <div class="row">
   <div class="col-md-6">
     <h3>Trains:</h3>
-    <% @trains.each do |train| %>
-      <%= train['name'] %>
-    <% end %>
+    <ul>
+      <% @trains.each do |train| %>
+      <li><a href="/train/<%= train['id'] %>"><%= train['name'] %></a></li>
+      <% end %>
+    </ul>
+    <form action="/add_train" method="post">
+      <input type="text" name="train" placeholder="Name a train">
+      <button type="submit">Add train</button>
+    </form>
   </div>
+
   <div class="col-md-6">
     <h3>Cities:</h3>
-    <% @cities.each do |city| %>
-      <%= city['name'] %>
-    <% end %>
+    <ul>
+      <% @cities.each do |city| %>
+      <li><a href="/city/<%= city['id'] %>"><%= city['name'] %></a></li>
+      <% end %>
+    </ul>
+    <form action="/add_city" method="post">
+      <input type="text" name="city" placeholder="Name a city">
+      <button type="submit">Add city</button>
+    </form>
   </div>
 </div>

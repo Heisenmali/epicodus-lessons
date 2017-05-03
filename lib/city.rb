@@ -1,9 +1,12 @@
+require 'securerandom'
+
 module City
   def self.all
     DB.exec("SELECT * FROM cities;").to_a
   end
 
-  def self.save(name, uuid)
+  def self.save(name)
+    uuid = SecureRandom.uuid
     DB.exec("INSERT INTO cities (id, name) VALUES ('#{uuid}', '#{name}') RETURNING id;")[0]["id"]
   end
 

@@ -9,26 +9,23 @@ describe 'City' do
 
   describe '.save' do
     it 'It will save a city to the cities table' do
-      city_uuid = SecureRandom.uuid
       name = "test city"
-      City.save(name, city_uuid)
+      city_uuid = City.save(name)
       expect(City.all[0]["id"]).to eq city_uuid
     end
   end
   describe '.find' do
     it 'returns a city based on id' do
-      city_uuid = SecureRandom.uuid
       name = "test city"
-      City.save(name, city_uuid)
+      city_uuid = City.save(name)
       expect(City.find(city_uuid)["name"]).to eq "test city"
     end
   end
 
   describe '.edit' do
     it "will allow a user to edit a city" do
-      city_uuid = SecureRandom.uuid
       name = "test city"
-      City.save(name, city_uuid)
+      city_uuid = City.save(name)
       City.edit("Portland", city_uuid)
       expect(City.all[0]["name"]).to eq "Portland"
     end
@@ -36,9 +33,8 @@ describe 'City' do
 
   describe '.delete' do
     it "will allow a user to delete a city" do
-      city_uuid = SecureRandom.uuid
       name = "test city"
-      City.save(name, city_uuid)
+      city_uuid = City.save(name)
       City.delete(city_uuid)
       expect(City.all).to eq []
     end

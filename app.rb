@@ -17,6 +17,34 @@ get '/' do
   erb(:index)
 end
 
+#TRAIN ADD
+
+post '/add_train' do
+  name = params.fetch('train')
+  Train.save()
+  redirect '/'
+end
+
+#TRAIN EDIT
+get '/edit_train' do
+  erb(:edit_train)
+end
+
+patch '/edit_train' do
+  redirect '/'
+end
+
+#TRAIN DELETE
+get '/delete_train' do
+  erb(:delete_train)
+end
+
+delete '/delete_train' do
+  redirect '/'
+end
+
+#-------------------------------------------------
+
 #CITY ADD
 get '/add_city' do
   erb(:add_city)
@@ -41,34 +69,5 @@ get '/delete_city' do
 end
 
 delete '/delete_city' do
-  redirect '/'
-end
-
-#-------------------------------------------------
-
-#TRAIN ADD
-get '/add_train' do
-  erb(:add_train)
-end
-
-post '/add_train' do
-  redirect '/'
-end
-
-#TRAIN EDIT
-get '/edit_train' do
-  erb(:edit_train)
-end
-
-patch '/edit_train' do
-  redirect '/'
-end
-
-#TRAIN DELETE
-get '/delete_train' do
-  erb(:delete_train)
-end
-
-delete '/delete_train' do
   redirect '/'
 end
