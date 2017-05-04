@@ -39,4 +39,19 @@ describe 'Train' do
       expect(Train.all).to eq []
     end
   end
+
+  describe '.train_cities' do
+    it "will list all of the cities of a specific train" do
+      name = "test train"
+      train_uuid = Train.save(name)
+      expect(Train.train_cities(train_uuid)).to eq []
+    end
+
+  # describe '.add_train_cities' do
+  #   it "will add cities to the join table with a specific train id" do
+  #     name = "test train"
+  #     train_uuid = Train.save(name)
+  #     expect(Train.train_cities)
+  #   end
+  end
 end

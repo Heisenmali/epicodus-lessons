@@ -21,4 +21,8 @@ module Train
   def self.delete(uuid)
     DB.exec("DELETE FROM trains WHERE id = '#{uuid}';")
   end
+
+  def self.train_cities(uuid)
+    DB.exec("SELECT * FROM trains_cities WHERE train_id = '#{uuid}';").to_a
+  end
 end
