@@ -6,7 +6,7 @@ module City
   end
 
   def self.timetable
-    stuff = DB.exec("SELECT * FROM trains_cities;")[0]
+    stuff = DB.exec("SELECT * FROM trains_cities;")
   end
 
   def self.save(name)

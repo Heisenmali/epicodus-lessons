@@ -25,7 +25,7 @@ describe 'City' do
       Train.add_train_cities(train_uuid2, city_uuid_a, time_a)
 
 
-      expect(City.timetable).to eq({"train_id" => train_uuid, "stop_time" => "12:00:00", "city_id" => city_uuid})
+      expect(City.timetable[0]).to eq({"train_id" => train_uuid, "stop_time" => "12:00:00", "city_id" => city_uuid})
     end
   end
 

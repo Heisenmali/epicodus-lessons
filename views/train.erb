@@ -2,7 +2,7 @@
 
 <h3>This train travels to:</h3>
 <% @train_cities.each_with_index do |city, index| %>
-  <%= "#{city['name']} : #{@times[index]}" %>
+  <h3><%= "#{city['name']} : #{@times[index]}" %></h3>
 <% end %>
 <a href="/train/edit/<%= @train['id']%>">Edit train</a>
 

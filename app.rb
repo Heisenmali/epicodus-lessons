@@ -20,10 +20,9 @@ end
 get '/timetable' do
   @timetable = []
   trains_cities_times = City.timetable
-  binding.pry
   trains_cities_times.each_with_index do |hash, index|
     train = Train.find(hash["train_id"])["name"]
-    city = City.find(hash["train_id"])["name"]
+    city = City.find(hash["city_id"])["name"]
     time = hash["stop_time"]
     @timetable.push({:train => train, :city => city, :time => time})
   end
@@ -70,7 +69,7 @@ end
 post '/train/edit/:id' do
   train_id = params.fetch("id")
   city_ids = params.fetch("city_ids")
-  city_times = params.fetch("city_times")
+  city_times = params.fetch("city_times").push("").reject! { |e| e == "" }
   Train.add_train_cities(train_id, city_ids, city_times)
   redirect "/train/#{train_id}"
 end
