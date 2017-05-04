@@ -1,5 +1,9 @@
 <h1>Train: <%= @train["name"] %></h1>
 
+<h3>This train travels to:</h3>
+<% @train_cities.each do |city| %>
+  <%= city['name'] %>
+<% end %>
 <a href="/train/edit/<%= @train['id']%>">Edit train</a>
 
 <form action="/train/delete/<%= @train['id']%>" method="post">

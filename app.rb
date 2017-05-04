@@ -19,7 +19,14 @@ end
 
 #TRAIN ADD
 get '/train/:id' do
-  @train = Train.find(params.fetch('id'))
+  train_uuid = params.fetch('id')
+  @train = Train.find(train_uuid)
+  @train_cities = []
+  city_a = Train.train_cities(train_uuid)
+  city_a.each do |city|
+    current_city = City.find(city['city_id'])
+    @train_cities.push(current_city)
+  end
   erb(:train)
 end
 
@@ -32,6 +39,7 @@ end
 #TRAIN EDIT
 get '/train/edit/:id' do
   @train = Train.find(params.fetch('id'))
+  @cities = City.all
   erb(:edit_train)
 end
 
@@ -39,6 +47,14 @@ patch '/train/edit/:id' do
   train_id = params.fetch('id')
   name = params.fetch('name')
   Train.edit(name, train_id)
+  redirect "/train/#{train_id}"
+end
+
+#add cities to train
+post '/train/edit/:id' do
+  train_id = params.fetch("id")
+  city_ids = params.fetch("city_ids")
+  Train.add_train_cities(train_id, city_ids)
   redirect "/train/#{train_id}"
 end
 

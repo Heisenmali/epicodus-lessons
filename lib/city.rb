@@ -12,6 +12,7 @@ module City
 
   def self.find(uuid)
     DB.exec("SELECT * FROM cities where id = '#{uuid}';")[0]
+
   end
 
   def self.edit(name, uuid)
