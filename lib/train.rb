@@ -23,6 +23,12 @@ module Train
   end
 
   def self.train_cities(uuid)
-    DB.exec("SELECT * FROM trains_cities WHERE train_id = '#{uuid}';").to_a
+    DB.exec("SELECT city_id FROM trains_cities WHERE train_id = '#{uuid}';").to_a
+  end
+
+  def self.add_train_cities(train_uuid, city_uuid_a)
+    city_uuid_a.each do |city_uuid|
+      DB.exec("INSERT INTO trains_cities (train_id, city_id) VALUES ('#{train_uuid}', '#{city_uuid}');")
+    end
   end
 end
