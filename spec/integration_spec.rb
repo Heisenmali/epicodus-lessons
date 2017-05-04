@@ -99,4 +99,15 @@ describe("the city path", {:type => :feature}) do
     click_button("Delete city")
     expect(page).to have_no_content("Portland")
   end
+
+  it("displays a list of trains for a city") do
+    visit("/")
+    click_link("The Burf Express")
+    click_link("Edit train")
+    check('Portland')
+    click_button("Add Cities")
+    visit("/")
+    click_link("Portland")
+    expect(page).to have_content("The Burf Express")
+  end
 end

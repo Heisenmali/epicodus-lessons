@@ -70,6 +70,13 @@ end
 #CITY ADD
 get '/city/:id' do
   @city = City.find(params.fetch('id'))
+  city_uuid = params.fetch('id')
+  @city_trains = []
+  train_a = City.city_trains(city_uuid)
+  train_a.each do |train|
+    current_train = Train.find(train['train_id'])
+    @city_trains.push(current_train)
+  end
   erb(:city)
 end
 
