@@ -3,7 +3,7 @@
     <h3>Trains:</h3>
     <ul>
       <% @trains.each do |train| %>
-      <li><a href="/train/<%= train['id'] %>"><%= train['name'] %></a></li>
+      <a href="/train/<%= train['id'] %>"><li><%= train['name'] %></li></a>
       <% end %>
     </ul>
     <form action="/add_train" method="post">
@@ -16,7 +16,7 @@
     <h3>Cities:</h3>
     <ul>
       <% @cities.each do |city| %>
-      <li><a href="/city/<%= city['id'] %>"><%= city['name'] %></a></li>
+      <a href="/city/<%= city['id'] %>"><li><%= city['name'] %></li></a>
       <% end %>
     </ul>
     <form action="/add_city" method="post">

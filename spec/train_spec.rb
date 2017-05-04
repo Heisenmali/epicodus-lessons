@@ -1,4 +1,4 @@
-require 'unit_helper_spec'
+ require 'unit_helper_spec'
 
 describe 'Train' do
   describe '.all' do
@@ -51,16 +51,22 @@ describe 'Train' do
   describe '.add_train_cities' do
     it "will add cities to the join table with a specific train id" do
       city_uuid_a = []
+      time_a = []
       city_name = "Portland"
       city_uuid = City.save(city_name)
+      city_time = "12:00 PM"
       city_name2 = "Seattle"
+      city_time2 = "2:00 PM"
       city_uuid2 = City.save(city_name2)
+      time_a.push(city_time, city_time2)
       city_uuid_a.push(city_uuid, city_uuid2)
       name = "test train"
       train_uuid = Train.save(name)
-      Train.add_train_cities(train_uuid, city_uuid_a)
+      Train.add_train_cities(train_uuid, city_uuid_a, time_a)
       expect(Train.train_cities(train_uuid)[0]["city_id"]).to eq city_uuid
       expect(Train.train_cities(train_uuid)[1]["city_id"]).to eq city_uuid2
+      expect(Train.train_cities(train_uuid)[0]["stop_time"]).to eq "12:00:00"
+      expect(Train.train_cities(train_uuid)[1]["stop_time"]).to eq "14:00:00"
     end
   end
 end

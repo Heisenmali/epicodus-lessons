@@ -11,6 +11,7 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" name="city_ids[]" value="<%= city['id'] %>"><%= city['name'] %>
+      <input id="<%= city['name']%>" type="time" name="city_times[]">
      </label>
    </div>
   <% end %>
