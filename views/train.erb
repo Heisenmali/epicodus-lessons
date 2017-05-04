@@ -1,8 +1,8 @@
 <h1>Train: <%= @train["name"] %></h1>
 
 <h3>This train travels to:</h3>
-<% @train_cities.each do |city| %>
-  <%= city['name'] %>
+<% @train_cities.each_with_index do |city, index| %>
+  <%= "#{city['name']} : #{@times[index]}" %>
 <% end %>
 <a href="/train/edit/<%= @train['id']%>">Edit train</a>
 

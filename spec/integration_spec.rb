@@ -82,7 +82,7 @@ describe("the train path", {:type => :feature}) do
     check('Portland')
     fill_in('Portland', :with => "12:00 PM")
     click_button("Add Cities")
-    expect(page).to have_content("Portland : 12:00 PM")
+    expect(page).to have_content("Portland : 12:00:00")
   end
 end
 

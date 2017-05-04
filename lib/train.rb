@@ -24,7 +24,7 @@ module Train
 
   def self.train_cities(uuid)
     DB.exec("SELECT city_id, stop_time FROM trains_cities WHERE train_id = '#{uuid}';").to_a
-  end
+    end
 
   def self.add_train_cities(train_uuid, city_uuid_a, stop_time_a)
     city_uuid_a.each_with_index do |city_uuid, index|

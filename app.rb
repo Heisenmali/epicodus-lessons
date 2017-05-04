@@ -22,10 +22,13 @@ get '/train/:id' do
   train_uuid = params.fetch('id')
   @train = Train.find(train_uuid)
   @train_cities = []
+  @times = []
   city_a = Train.train_cities(train_uuid)
   city_a.each do |city|
     current_city = City.find(city['city_id'])
+    current_stop_time = city['stop_time']
     @train_cities.push(current_city)
+    @times.push(current_stop_time)
   end
   erb(:train)
 end
@@ -56,7 +59,6 @@ post '/train/edit/:id' do
   city_ids = params.fetch("city_ids")
   city_times = params.fetch("city_times")
   Train.add_train_cities(train_id, city_ids, city_times)
-  binding.pry
   redirect "/train/#{train_id}"
 end
 

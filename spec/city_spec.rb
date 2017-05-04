@@ -45,13 +45,17 @@ describe 'City' do
       name = "test train"
       train_uuid = Train.save(name)
       name2 = "test train2"
+      city_time = "12:00 PM"
       train_uuid2 = Train.save(name2)
       city_name = "Portland"
+      city_time2 = "2:00 PM"
       city_uuid = City.save(city_name)
       city_uuid_a = []
+      time_a = []
       city_uuid_a.push(city_uuid)
-      Train.add_train_cities(train_uuid, city_uuid_a)
-      Train.add_train_cities(train_uuid2, city_uuid_a)
+      time_a.push(city_time, city_time2)
+      Train.add_train_cities(train_uuid, city_uuid_a, time_a)
+      Train.add_train_cities(train_uuid2, city_uuid_a, time_a)
       expect(City.city_trains(city_uuid)[0]["train_id"]).to eq train_uuid
       expect(City.city_trains(city_uuid)[1]["train_id"]).to eq train_uuid2
     end
