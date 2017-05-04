@@ -17,6 +17,19 @@ get '/' do
   erb(:index)
 end
 
+get '/timetable' do
+  @timetable = []
+  trains_cities_times = City.timetable
+  binding.pry
+  trains_cities_times.each_with_index do |hash, index|
+    train = Train.find(hash["train_id"])["name"]
+    city = City.find(hash["train_id"])["name"]
+    time = hash["stop_time"]
+    @timetable.push({:train => train, :city => city, :time => time})
+  end
+  erb(:timetable)
+end
+
 #TRAIN ADD
 get '/train/:id' do
   train_uuid = params.fetch('id')

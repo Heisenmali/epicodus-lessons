@@ -5,6 +5,10 @@ module City
     DB.exec("SELECT * FROM cities;").to_a
   end
 
+  def self.timetable
+    stuff = DB.exec("SELECT * FROM trains_cities;")[0]
+  end
+
   def self.save(name)
     uuid = SecureRandom.uuid
     DB.exec("INSERT INTO cities (id, name) VALUES ('#{uuid}', '#{name}') RETURNING id;")[0]["id"]
@@ -12,7 +16,6 @@ module City
 
   def self.find(uuid)
     DB.exec("SELECT * FROM cities where id = '#{uuid}';")[0]
-
   end
 
   def self.edit(name, uuid)
