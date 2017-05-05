@@ -39,3 +39,9 @@ post '/volunteer' do
   Volunteer.save(volunteer_name)
   redirect '/' 
 end
+
+get '/volunteer/:id' do
+  volunteer_id = params.fetch('id')
+  @volunteer_info = Volunteer.find(volunteer_id)[0]
+  erb(:volunteer)
+end

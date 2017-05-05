@@ -41,12 +41,12 @@ describe("the add volunteer path", {:type => :feature}) do
   end
 end
 
-# describe("the view volunteer path", {:type => :feature}) do
-#   it 'allows user to view a volunteer' do
-#     visit '/'
-#     fill_in 'volunteer', :with => 'Queen'
-#     click_button 'Add volunteer'
-#     click_link 'Queen'
-#     expect(page).to have_content 'Queen'
-#   end
-# end
+describe("the view volunteer path", {:type => :feature}) do
+  it 'allows user to view a volunteer' do
+    visit '/'
+    fill_in 'volunteer', :with => 'Queen'
+    click_button 'Add volunteer'
+    click_link 'Queen'
+    expect(page).to have_content 'Queen'
+  end
+end

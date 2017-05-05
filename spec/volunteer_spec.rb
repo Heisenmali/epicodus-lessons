@@ -36,7 +36,7 @@ describe 'Volunteer' do
 		end
 	end
 
-  describe '.add_project' do
+  describe '.add_volunteer' do
     it 'will allow the user to add a project to a volunteer' do
       name = "Chopin"
 			volunteer_uuid = Volunteer.save(name)
@@ -54,6 +54,14 @@ describe 'Volunteer' do
       project_name = "Allen Stone"
       project_uuid = Project.save(project_name)
 			expect(Volunteer.project_name(project_uuid)[0]["name"]).to eq project_name
+		end
+	end
+
+	describe '.find' do
+		it 'will find a volunteer from the database using id' do
+			name = "Karnivool"
+			volunteer_uuid = Volunteer.save(name)
+			expect(Volunteer.find(volunteer_uuid)[0]["name"]).to eq name
 		end
 	end
 end
