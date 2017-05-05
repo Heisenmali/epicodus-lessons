@@ -19,4 +19,8 @@ module Volunteer
   def self.add_project(uuid, project_uuid)
     DB.exec("UPDATE volunteers SET project_id = '#{project_uuid}' WHERE id = '#{uuid}';")
   end
+
+  def self.project_name(project_id)
+    DB.exec("SELECT projects.name FROM projects WHERE '#{project_id}' = projects.id;")
+  end
 end

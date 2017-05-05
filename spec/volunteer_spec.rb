@@ -46,4 +46,15 @@ describe 'Volunteer' do
       expect(Volunteer.all[0]["project_id"]).to eq project_uuid
     end
   end
+
+  describe '.project_name' do
+		it 'will return the name of the project for volunteer' do
+			name = "Bach"
+			volunteer_uuid = Volunteer.save(name)
+      project_name = "Allen Stone"
+      project_uuid = Project.save(project_name)
+			expect(Volunteer.project_name(project_uuid)[0]["name"]).to eq project_name
+		end
+	end
 end
+
