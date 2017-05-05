@@ -6,7 +6,7 @@ Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
 module DBI
-  def self.load_data #load data into database
+  def self.load_data #preload data into database
     project_name = "Layla"
     project_id = Project.save(project_name)
     volunteer_name = "Eric Clapton"
@@ -19,8 +19,8 @@ RSpec.configure do |config|
   config.before(:each) do
     DB.exec("DELETE FROM projects *;")
     DB.exec("DELETE FROM volunteers *;")
-    extend DBI
-    DBI.load_data
+    # extend DBI
+    # DBI.load_data
   end
 end
 

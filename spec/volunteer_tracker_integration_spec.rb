@@ -4,6 +4,10 @@ require 'integration_helper_spec'
 describe("the root path", {:type => :feature}) do
   it 'verifies the hompepage displays a list of projects and a list of volunteers' do
     visit '/'
+    fill_in 'project', :with => 'Layla'
+    click_button 'Add project'
+    fill_in 'volunteer', :with => 'Eric Clapton'
+    click_button 'Add volunteer'
     expect(page).to have_content 'Layla'
     expect(page).to have_content 'Eric Clapton'
   end
