@@ -32,7 +32,7 @@ get '/project/:id' do
   erb(:project)
 end
 
-patch '/project/:id' do
+patch '/project/edit/:id' do
   project_id = params.fetch('id')
   new_name = params.fetch('new-name')
   Project.edit(new_name, project_id)
@@ -60,7 +60,7 @@ get '/volunteer/:id' do
   erb(:volunteer)
 end
 
-patch '/volunteer/:id' do
+patch '/volunteer/edit/:id' do
   volunteer_id = params.fetch('id')
   new_name = params.fetch('new-name')
   Volunteer.edit(new_name, volunteer_id)
