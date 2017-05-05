@@ -19,4 +19,8 @@ module Project
   def self.find(uuid)
     DB.exec("SELECT * FROM projects WHERE id = '#{uuid}';").to_a
   end
+
+  def self.find_volunteers(uuid)
+   stuff =  DB.exec("SELECT * FROM volunteers WHERE project_id = '#{uuid}';").to_a
+  end
 end

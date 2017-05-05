@@ -28,6 +28,20 @@ describe("the view project path", {:type => :feature}) do
     click_link 'Bohemian Rhapsody'
     expect(page).to have_content 'Bohemian Rhapsody'
   end
+
+  it 'allows user to view the list of volunteers for a single project' do
+    visit '/'
+    fill_in 'volunteer', :with => 'Queen'
+    click_button 'Add volunteer'
+    fill_in 'project', :with => 'Bohemian Rhapsody'
+    click_button 'Add project'
+    click_link 'Queen'
+    select('Bohemian Rhapsody', :from => 'project')
+    click_button 'Add project'
+    visit '/'
+    click_link 'Bohemian Rhapsody'
+    expect(page).to have_content 'Queen'
+  end
 end
 
 describe("the edit project path", {:type => :feature}) do
@@ -52,6 +66,8 @@ describe("the delete project path", {:type => :feature}) do
     expect(page).to have_no_content 'Bohemian Rhapsody'
   end
 end
+
+
 
 #VOLUNTEER PATH –––––––––––––––––––––––––––––––––––
 
@@ -93,7 +109,7 @@ describe("the edit volunteer path", {:type => :feature}) do
     click_button 'Add project'
     click_link 'Queen'
     select('Bohemian Rhapsody', :from => 'project')
-    click_button 'Save changes'
+    click_button 'Add project'
     expect(page).to have_content 'Bohemian Rhapsody'
   end
 end

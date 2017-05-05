@@ -29,6 +29,12 @@ end
 get '/project/:id' do
   project_id = params.fetch('id')
   @project_info = Project.find(project_id)[0]
+  volunteers = Project.find_volunteers(project_id)
+  if volunteers == []
+    @volunteers = [{"name" => "none specified yet"}]
+  else
+    @volunteers = volunteers
+  end
   erb(:project)
 end
 

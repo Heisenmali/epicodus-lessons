@@ -1,8 +1,10 @@
 <div class="container">
   <h2><%= @project_info["name"] %></h2>
+  <% @volunteers.each do |volunteer| %>
+    <li><%= volunteer["name"] %> </li>
+  <% end %>
 
-  
-
+ 
   <form action="/project/edit/<%= @project_info["id"] %>" method="post">
     <input type="hidden" name="_method" value="patch">
     <input type="text" name="new-name" placeholder="New name">
