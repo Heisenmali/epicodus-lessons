@@ -62,3 +62,15 @@ describe("the view volunteer path", {:type => :feature}) do
     expect(page).to have_content 'Queen'
   end
 end
+
+describe("the edit volunteer path", {:type => :feature}) do
+  it 'allows user to edit the name of a volunteer' do
+    visit '/'
+    fill_in 'volunteer', :with => 'Queen'
+    click_button 'Add volunteer'
+    click_link 'Queen'
+    fill_in 'new-name', :with => 'Pink Floyd'
+    click_button 'Save changes'
+    expect(page).to have_content 'Pink Floyd'
+  end
+end

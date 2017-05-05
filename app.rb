@@ -52,3 +52,10 @@ get '/volunteer/:id' do
   @volunteer_info = Volunteer.find(volunteer_id)[0]
   erb(:volunteer)
 end
+
+patch '/volunteer/:id' do
+  volunteer_id = params.fetch('id')
+  new_name = params.fetch('new-name')
+  Volunteer.edit(new_name, volunteer_id)
+  redirect "/volunteer/#{volunteer_id}"
+end
