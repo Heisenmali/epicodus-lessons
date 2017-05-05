@@ -8,3 +8,12 @@ describe("the root path", {:type => :feature}) do
     expect(page).to have_content 'Eric Clapton'
   end
 end
+
+describe("the add_project path", {:type => :feature}) do
+  it 'allows user to add a project' do
+    visit '/'
+    fill_in 'project', :with => 'Bohemian Rhapsody'
+    click_button 'Add project'
+    expect(page).to have_content 'Bohemian Rhapsody'
+  end
+end
