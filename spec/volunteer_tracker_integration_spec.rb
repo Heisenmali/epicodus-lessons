@@ -42,6 +42,17 @@ describe("the edit project path", {:type => :feature}) do
   end
 end
 
+describe("the delete project path", {:type => :feature}) do
+  it 'allows user to delete the name of a project' do
+    visit '/'
+    fill_in 'project', :with => 'Bohemian Rhapsody'
+    click_button 'Add project'
+    click_link 'Bohemian Rhapsody'
+    click_button 'Delete project'
+    expect(page).to have_no_content 'Bohemian Rhapsody'
+  end
+end
+
 #VOLUNTEER PATH –––––––––––––––––––––––––––––––––––
 
 describe("the add volunteer path", {:type => :feature}) do
@@ -61,6 +72,17 @@ describe("the view volunteer path", {:type => :feature}) do
     click_link 'Queen'
     expect(page).to have_content 'Queen'
   end
+
+  # it 'allows user to view the project a volunteer is participating in' do
+  #   visit '/'
+  #   fill_in 'volunteer', :with => 'Queen'
+  #   click_button 'Add volunteer'
+  #   fill_in 'project', :with => 'Bohemian Rhapsody'
+  #   click_button 'Add project'
+  #   click_link 'Queen'
+  #   expect(page).to have_content 'Bohemian Rhapsody'
+  # end
+
 end
 
 describe("the edit volunteer path", {:type => :feature}) do
@@ -72,5 +94,16 @@ describe("the edit volunteer path", {:type => :feature}) do
     fill_in 'new-name', :with => 'Pink Floyd'
     click_button 'Save changes'
     expect(page).to have_content 'Pink Floyd'
+  end
+end
+
+describe("the delete volunteer path", {:type => :feature}) do
+  it 'allows user to delete the name of a volunteer' do
+    visit '/'
+    fill_in 'volunteer', :with => 'Queen'
+    click_button 'Add volunteer'
+    click_link 'Queen'
+    click_button 'Delete volunteer'
+    expect(page).to have_no_content 'Queen'
   end
 end

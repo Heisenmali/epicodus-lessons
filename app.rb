@@ -39,6 +39,12 @@ patch '/project/:id' do
   redirect "/project/#{project_id}"
 end
 
+delete '/project/delete/:id' do
+  project_id = params.fetch('id')
+  Project.delete(project_id)
+  redirect '/'
+end 
+
 #VOLUNTEER PATH –––––––––––––––––––––––––––––––––––
 
 post '/volunteer' do
@@ -50,6 +56,7 @@ end
 get '/volunteer/:id' do
   volunteer_id = params.fetch('id')
   @volunteer_info = Volunteer.find(volunteer_id)[0]
+  # @project_name = Volunteer.project_name(@volunteer_info['project_id'])
   erb(:volunteer)
 end
 
@@ -59,3 +66,9 @@ patch '/volunteer/:id' do
   Volunteer.edit(new_name, volunteer_id)
   redirect "/volunteer/#{volunteer_id}"
 end
+
+delete '/volunteer/delete/:id' do
+  volunteer_id = params.fetch('id')
+  Volunteer.delete(volunteer_id)
+  redirect '/'
+end 
