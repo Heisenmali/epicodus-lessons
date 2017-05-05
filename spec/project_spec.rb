@@ -35,6 +35,14 @@ describe 'Project' do
 			expect(Project.all).to eq []
 		end
 	end
+
+		describe '.find' do
+		it 'will find a project from the database using id' do
+			name = "Karnivool"
+			project_uuid = Project.save(name)
+			expect(Project.find(project_uuid)[0]["name"]).to eq name
+		end
+	end
 end
 
 

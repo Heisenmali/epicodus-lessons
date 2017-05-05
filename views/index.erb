@@ -4,7 +4,7 @@
       <a href="project/<%= project['id'] %>"><li><%= project['name'] %></li></a>
     <% end %>
 
-    <form action="/add_project" method="post">
+    <form action="/project" method="post">
       <input type="text" name="project" placeholder="Name a project">
       <button type="submit">Add project</button>
     </form>
@@ -15,7 +15,7 @@
       <a href="volunteer/<%= volunteer['id'] %>"><li><%= volunteer['name'] %></li></a>
     <% end %>
 
-    <form action="/add_volunteer" method="post">
+    <form action="/volunteer" method="post">
       <input type="text" name="volunteer" placeholder="Name a volunteer">
       <button type="submit">Add volunteer</button>
     </form>

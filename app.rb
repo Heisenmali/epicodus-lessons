@@ -20,15 +20,21 @@ end
 
 #PROJECT PATH –––––––––––––––––––––––––––––––––––––
 
-post '/add_project' do
+post '/project' do
   project_name = params.fetch('project')
   Project.save(project_name)
   redirect '/' 
 end
 
+get '/project/:id' do
+  project_id = params.fetch('id')
+  @project_info = Project.find(project_id)[0]
+  erb(:project)
+end
+
 #VOLUNTEER PATH –––––––––––––––––––––––––––––––––––
 
-post '/add_volunteer' do
+post '/volunteer' do
   volunteer_name = params.fetch('volunteer')
   Volunteer.save(volunteer_name)
   redirect '/' 

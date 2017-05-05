@@ -15,4 +15,8 @@ module Project
   def self.delete(uuid)
     DB.exec("DELETE FROM projects WHERE id = '#{uuid}';")
   end
+
+  def self.find(uuid)
+    DB.exec("SELECT * FROM projects WHERE id = '#{uuid}';").to_a
+  end
 end
