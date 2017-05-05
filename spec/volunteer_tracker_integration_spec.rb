@@ -30,6 +30,18 @@ describe("the view project path", {:type => :feature}) do
   end
 end
 
+describe("the edit project path", {:type => :feature}) do
+  it 'allows user to edit the name of a project' do
+    visit '/'
+    fill_in 'project', :with => 'Bohemian Rhapsody'
+    click_button 'Add project'
+    click_link 'Bohemian Rhapsody'
+    fill_in 'new-name', :with => 'Bicycle'
+    click_button 'Save changes'
+    expect(page).to have_content 'Bicycle'
+  end
+end
+
 #VOLUNTEER PATH –––––––––––––––––––––––––––––––––––
 
 describe("the add volunteer path", {:type => :feature}) do

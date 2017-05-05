@@ -32,6 +32,13 @@ get '/project/:id' do
   erb(:project)
 end
 
+patch '/project/:id' do
+  project_id = params.fetch('id')
+  new_name = params.fetch('new-name')
+  Project.edit(new_name, project_id)
+  redirect "/project/#{project_id}"
+end
+
 #VOLUNTEER PATH –––––––––––––––––––––––––––––––––––
 
 post '/volunteer' do
