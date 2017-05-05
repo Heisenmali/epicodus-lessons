@@ -56,7 +56,12 @@ end
 get '/volunteer/:id' do
   volunteer_id = params.fetch('id')
   @volunteer_info = Volunteer.find(volunteer_id)[0]
-  # @project_name = Volunteer.project_name(@volunteer_info['project_id'])
+  @project_names = Project.all
+  if @volunteer_info["project_id"] != nil
+    @assigned_project = Project.find(@volunteer_info["project_id"])
+  else
+    @assigned_project = [{"name" => "none specified yet..."}]
+  end
   erb(:volunteer)
 end
 
@@ -64,6 +69,13 @@ patch '/volunteer/edit/:id' do
   volunteer_id = params.fetch('id')
   new_name = params.fetch('new-name')
   Volunteer.edit(new_name, volunteer_id)
+  redirect "/volunteer/#{volunteer_id}"
+end
+
+post '/volunteer/edit/:id' do
+  volunteer_id = params.fetch('id')
+  project_id = params.fetch('project')
+  Volunteer.add_project(volunteer_id, project_id)
   redirect "/volunteer/#{volunteer_id}"
 end
 

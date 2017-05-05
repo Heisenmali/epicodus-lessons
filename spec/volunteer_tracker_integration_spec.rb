@@ -72,17 +72,6 @@ describe("the view volunteer path", {:type => :feature}) do
     click_link 'Queen'
     expect(page).to have_content 'Queen'
   end
-
-  # it 'allows user to view the project a volunteer is participating in' do
-  #   visit '/'
-  #   fill_in 'volunteer', :with => 'Queen'
-  #   click_button 'Add volunteer'
-  #   fill_in 'project', :with => 'Bohemian Rhapsody'
-  #   click_button 'Add project'
-  #   click_link 'Queen'
-  #   expect(page).to have_content 'Bohemian Rhapsody'
-  # end
-
 end
 
 describe("the edit volunteer path", {:type => :feature}) do
@@ -94,6 +83,18 @@ describe("the edit volunteer path", {:type => :feature}) do
     fill_in 'new-name', :with => 'Pink Floyd'
     click_button 'Save changes'
     expect(page).to have_content 'Pink Floyd'
+  end
+
+  it 'allows user to add the name of a project to a user' do
+    visit '/'
+    fill_in 'volunteer', :with => 'Queen'
+    click_button 'Add volunteer'
+    fill_in 'project', :with => 'Bohemian Rhapsody'
+    click_button 'Add project'
+    click_link 'Queen'
+    select('Bohemian Rhapsody', :from => 'project')
+    click_button 'Save changes'
+    expect(page).to have_content 'Bohemian Rhapsody'
   end
 end
 

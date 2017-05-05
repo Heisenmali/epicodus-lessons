@@ -1,5 +1,6 @@
 <div class="container">
 	<h2><%= @volunteer_info["name"] %></h2>
+	<h3><%= @assigned_project[0]["name"] %></h3>
 
 	<form action="/volunteer/edit/<%= @volunteer_info["id"] %>" method="post">
 		<input type="hidden" name="_method" value="patch">
@@ -10,5 +11,14 @@
 	<form action="/volunteer/delete/<%= @volunteer_info["id"] %>" method="post">
 		<input type="hidden" name="_method" value="delete">
 		<button type="submit">Delete volunteer</button>
+	</form>
+
+	<form action="/volunteer/edit/<%= @volunteer_info["id"] %>" method="post">
+		<select name="project">
+		<% @project_names.each do |project| %>
+			<option value="<%= project["id"] %>"><%= project["name"] %></option>
+		<% end %>
+		</select>
+		<button type="submit">Add project</button>
 	</form>
 </div>
