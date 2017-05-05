@@ -35,4 +35,15 @@ describe 'Volunteer' do
 			expect(Volunteer.all).to eq []
 		end
 	end
+
+  describe '.add_project' do
+    it 'will allow the user to add a project to a volunteer' do
+      name = "Chopin"
+			volunteer_uuid = Volunteer.save(name)
+      project_name = "Allen Stone"
+      project_uuid = Project.save(project_name)
+      Volunteer.add_project(volunteer_uuid, project_uuid)
+      expect(Volunteer.all[0]["project_id"]).to eq project_uuid
+    end
+  end
 end
