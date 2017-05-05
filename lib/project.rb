@@ -11,4 +11,8 @@ module Project
   def self.edit(new_name, uuid)
     DB.exec("UPDATE projects SET name = '#{new_name}' WHERE id = '#{uuid}';")  
   end
+
+  def self.delete(uuid)
+    DB.exec("DELETE FROM projects WHERE id = '#{uuid}';")
+  end
 end

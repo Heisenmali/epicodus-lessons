@@ -19,7 +19,7 @@ describe 'Project' do
 
 	describe '.edit' do
 		it 'will edit a project in the database' do
-			name = "TTNG"
+			name = "Vasudeva"
 			new_name = "CHON"
 			project_uuid = Project.save(name)
 			Project.edit(new_name, project_uuid)
@@ -27,7 +27,15 @@ describe 'Project' do
 			expect(Project.all[0]["name"]).to eq new_name
 		end
 	end
-	
+
+	describe '.delete' do
+		it 'will delete a project from the database' do
+			name = "Karnivool"
+			project_uuid = Project.save(name)
+			Project.delete(project_uuid)
+			expect(Project.all).to eq []
+		end
+	end
 end
 
 
