@@ -17,3 +17,12 @@ describe("the add_project path", {:type => :feature}) do
     expect(page).to have_content 'Bohemian Rhapsody'
   end
 end
+
+describe("the add_volunteer path", {:type => :feature}) do
+  it 'allows user to add a volunteer' do
+    visit '/'
+    fill_in 'volunteer', :with => 'Queen'
+    click_button 'Add volunteer'
+    expect(page).to have_content 'Queen'
+  end
+end
