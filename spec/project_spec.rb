@@ -11,11 +11,23 @@ describe 'Project' do
 
 	describe '.save' do
 		it 'will save a project to the Database' do
-			name = "test project"
+			name = "TTNG"
 			project_uuid = Project.save(name)
 			expect(Project.all[0]["id"]).to eq project_uuid
 		end
 	end
+
+	describe '.edit' do
+		it 'will edit a project in the database' do
+			name = "TTNG"
+			new_name = "CHON"
+			project_uuid = Project.save(name)
+			Project.edit(new_name, project_uuid)
+			expect(Project.all[0]["id"]).to eq project_uuid
+			expect(Project.all[0]["name"]).to eq new_name
+		end
+	end
+	
 end
 
 

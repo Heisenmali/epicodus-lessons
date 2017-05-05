@@ -7,4 +7,8 @@ module Project
     uuid = SecureRandom.uuid
     DB.exec("INSERT INTO projects (id, name) VALUES ('#{uuid}', '#{name}') RETURNING id;")[0]["id"]
   end
+
+  def self.edit(new_name, uuid)
+    DB.exec("UPDATE projects SET name = '#{new_name}' WHERE id = '#{uuid}';")  
+  end
 end
