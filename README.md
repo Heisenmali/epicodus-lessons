@@ -16,6 +16,7 @@ Follow these setup steps:
 
 * Clone the repository to your machine.
 * Make sure you have postgres installed.
+* Go into the project directory using `cd volunteer_tracker.
 * You will need to start a postgres server. To do so, open a new terminal window and type `$ postgres`.
 * Then open another terminal window and type `$ psql`.
 * Next you need to create a database. To do so, type `CREATE DATABASE volunteer_tracker;` in the same terminal window.
