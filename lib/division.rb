@@ -1,2 +1,2 @@
-class Division < ActiveRecord::base
+class Division < ActiveRecord::Base
 end

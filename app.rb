@@ -9,5 +9,9 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 get('/') do
+  Division.create({:name => "HR"})
+  Employee.create({:name => "Ben"})
+  @divisions = Division.all
+  @employees = Employee.all
   erb(:index)
 end
