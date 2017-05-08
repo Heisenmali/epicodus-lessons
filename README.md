@@ -21,7 +21,7 @@ Follow these setup steps:
 * Next you need to create a database. To do so, type `CREATE DATABASE volunteer_tracker;` in the same terminal window.
 * Then you will have to create the tables in which our data is going to be stored. To do so, type `CREATE TABLE volunteers (id uuid PRIMARY KEY, name varchar, poroject_id uuid);`.
 * We need another table for our projects so type: `CREATE TABLE volunteers (id uuid PRIMARY KEY, name varchar);`.
-* Finally you'll need a test database so type `CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker`.
+* Finally you'll need a test database so type `CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker;`.
 
 You can now run `app.rb` in a new terminal window and visit localhost:4567 in the browser to view the app.
 
