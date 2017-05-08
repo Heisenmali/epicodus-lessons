@@ -12,10 +12,18 @@ Bundler
 
 ### Installing
 
-Installation is quick and easy except for the postgress bit, that's more annoying! You can clone this repository to your computer, navigate to the file path in your terminal, and run 'app.rb' by typing 'ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567.
+Follow these setup steps:
 
-You will also need to start a postgres server. To do so, open a new terminal window and type `postgres`.
-Then open another terminal window and type `psql`. Next you need to create a database. To do so type `CREATE DATABASE volunteer_tracker;`. Then you will have to create the tables in which our data is going to be stored. To do so, type `CREATE TABLE volunteers (id uuid PRIMARY KEY, name varchar, poroject_id uuid);`. We need another table for our projects so type: `CREATE TABLE volunteers (id uuid PRIMARY KEY, name varchar);`. Finally you'll need a test database so type `CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker`. And we're done!
+* Clone the repository to your machine.
+* Make sure you have postgres installed.
+* You will need to start a postgres server. To do so, open a new terminal window and type `$ postgres`.
+* Then open another terminal window and type `$ psql`.
+* Next you need to create a database. To do so, type `CREATE DATABASE volunteer_tracker;` in the same terminal window.
+* Then you will have to create the tables in which our data is going to be stored. To do so, type `CREATE TABLE volunteers (id uuid PRIMARY KEY, name varchar, poroject_id uuid);`.
+* We need another table for our projects so type: `CREATE TABLE volunteers (id uuid PRIMARY KEY, name varchar);`.
+* Finally you'll need a test database so type `CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker`.
+
+You can now run `app.rb` in a new terminal window and visit localhost:4567 in the browser to view the app.
 
 ## Built With
 
