@@ -1,4 +1,4 @@
 class Tag < ActiveRecord::Base
-  has_many :medias
-  has_many :recipes, through: :medias
+  has_many :media
+  has_many :recipes, through: :media
 end

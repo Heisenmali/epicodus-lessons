@@ -1,6 +1,6 @@
-class Recipes < ActiveRecord::Base
-  has_many :foods
+class Recipe < ActiveRecord::Base
+  has_many :foods, dependent: :destroy
   has_many :ingredients, through: :foods
-  has_many :medias
-  has_many :tags, through: :medias
+  has_many :media, dependent: :destroy
+  has_many :tags, through: :media
 end
