@@ -75,3 +75,35 @@ get("/tags") do
   @tags = Tag.all
   erb(:tags)
 end
+
+delete('/food/:id') do
+  this_food = Food.find(params['id'])
+  this_food.destroy
+  redirect back
+end
+
+delete('/ingredient/:id') do
+  this_ingredient = Ingredient.find(params['id'])
+  this_ingredient.destroy
+  redirect('/ingredients')
+end
+
+patch('/ingredient/:id') do
+  this_ingredient = Ingredient.find(params['id'])
+  new_name = params['ingredient_name']
+  this_ingredient.update({:name => new_name})
+  redirect back
+end
+
+delete('/tag/:id') do
+  this_tag = Tag.find(params['id'])
+  this_tag.destroy
+  redirect('/tags')
+end
+
+patch('/tag/:id') do
+  this_tag = Tag.find(params['id'])
+  new_name = params['tag_name']
+  this_tag.update({:name => new_name})
+  redirect back
+end
