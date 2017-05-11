@@ -1,0 +1,10 @@
+<h1><%= @tag.name %></h1>
+
+<ul>
+<% if @tag.recipes.any? %>
+  <% @tag.recipes.each do |recipe| %>
+  <li><a href="/recipe/<%=recipe.id%>"><%= recipe.name %></a></li>
+
+  <% end %>
+<% end %>
+</ul>

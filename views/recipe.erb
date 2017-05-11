@@ -2,7 +2,7 @@
 
 <% if @recipe.tags.any? %>
   <% @recipe.tags.each do |tag| %>
-    <%= tag.name %>
+    <a href="/tag/<%= tag.id %>"><%= " #" %><%= tag.name %></a>
   <% end %>
 <% end %>
 
@@ -12,7 +12,7 @@
 <ul>
 <% if @recipe.ingredients.any? %>
   <% @recipe.ingredients.each do |ingredient| %>
-  <li><%= ingredient.name %><a href="<%=ingredient.id%>"></a></li>
+  <li><a href="/ingredient/<%=ingredient.id%>"><%= ingredient.name %></a></li>
 
   <% end %>
 <% end %>

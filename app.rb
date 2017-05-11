@@ -55,3 +55,23 @@ post('/recipe/:id/tag') do
   new_media = Medium.find_or_create_by(recipe_id: recipe.id, tag_id: new_tag.id)
   redirect back
 end
+
+get("/tag/:id") do
+  @tag = Tag.find(params['id'])
+  erb(:tag)
+end
+
+get("/ingredient/:id") do
+  @ingredient = Ingredient.find(params['id'])
+  erb(:ingredient)
+end
+
+get("/ingredients") do
+  @ingredients = Ingredient.all
+  erb(:ingredients)
+end
+
+get("/tags") do
+  @tags = Tag.all
+  erb(:tags)
+end
