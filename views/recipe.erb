@@ -19,9 +19,9 @@
   <form id="delete_food" action="/food/<%= this_food.id %>" method="post">
     <input name="_method" type="hidden" value="delete">
     <button type="submit" class="btn btn-danger">x</button>
+    <a href="/ingredient/<%=ingredient.id%>"><%= ingredient.name %></a></li>
   </form>
 
-  <a href="/ingredient/<%=ingredient.id%>"><%= ingredient.name %></a></li>
 
   <% end %>
 <% end %>
