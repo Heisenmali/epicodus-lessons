@@ -1,7 +1,19 @@
-<% @brands.each do |brand| %>
-<div>
-  <a href="/brand/<%= brand.id %>"><%= brand.name %></a>
-</div>
-<% end %>
+<section class="cf w-100 pa2-ns">
+    <% @brands.each do |brand| %>
+  <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
 
-<a href="brands/new">Add a brand</a>
+    <div class="aspect-ratio aspect-ratio--1x1">
+      <img style="background-image:url(http://mrmrs.io/images/0006.jpg);" 
+        class="db bg-center cover aspect-ratio--object" />
+    </div>
+    <a href="/brand/<%= brand.id %>" class="ph2 ph0-ns pb3 link db">
+      <h3 class="f5 f4-ns mb0 black-90 hover-dark-green"><%= brand.name %></h3>
+      <h3 class="f6 f5 fw4 mt2 black-60"><%= brand.price %></h3>
+    </a>
+  </article>
+    <% end %>
+</section>
+
+<div class="cf w-100 pa3-ns">
+  <a href="brands/new" class="f4 fw6 db black link hover-light-purple">Add a brand</a>
+</div>

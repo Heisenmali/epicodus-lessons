@@ -7,8 +7,6 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 #ROOT PATH
 
 get '/' do
-  # brand_id = Brand.create(name: "Paul Smith", price: "9.50").id
-  # store_id = Store.create(name: "Apple store", location: "portland").id
   erb :index
 end
 
@@ -73,7 +71,6 @@ get '/brands/new' do
 end
 
 post '/brands/new' do
-  binding.pry
   Brand.create(name: params['name'], price: params['price'])
   redirect '/brands'
 end
