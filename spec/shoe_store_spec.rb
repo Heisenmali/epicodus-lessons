@@ -46,11 +46,19 @@ describe Store do
   end
 end
 
+
 describe Brand do
   describe '.capitalize_name' do
     it 'will capitalize name and location before saving' do
-      brand_id = Brand.create(name: "apogee").id
+      brand_id = Brand.create(name: "apogee", price: "59.00").id
       expect(Brand.find(brand_id).name).to eq("Apogee")
+    end
+  end
+
+  describe '.price_adjust' do
+    it 'will adjust price to have 2 decimals before saving' do
+      brand_id = Brand.create(name: "apogee", price: "59").id
+      expect(Brand.find(brand_id).price).to eq("59.00")
     end
   end
 end
