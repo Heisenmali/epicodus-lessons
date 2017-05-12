@@ -1,4 +1,9 @@
 <h2>Welcome to the brand page</h2>
+<h3><%= @brand.name %></h3>
+
+<% @brand.stores.each do |store| %>
+<p>Stores: <%= store.name %></p>
+<% end %>
 
 <form action="/brand/<%= @brand.id %>/edit" method="post">
   <input type="hidden" name="_method" value="patch">
@@ -25,5 +30,5 @@
 
 <form action="/brand/<%= @brand.id %>/delete" method="post">
   <input type="hidden" name="_method" value="delete">
-  <button type="Submit">Delete brand</button>
+  <button type="Submit" id="#delete">Delete brand</button>
 </form>
