@@ -55,12 +55,14 @@ describe("the store path", {:type => :feature}) do
   end
 
 # delete button doesn't route to delete path with Capybara, manual testing works. Capybara can't find the button. Why?
+# Capybara finds the button, but doesn't seem to actually click it. The headless browser is never taken to the delete path, but remains on the same page.
 
   # it 'verifies the store page deletes the store name correctly for a single store' do
   #   PreLoadDB.preload
   #   visit '/stores'
   #   click_link 'Apple'
-  #   click_button('Remove store')
+  #   # click_button('Remove store')
+  #   find('[id=remove]').click
   #   expect(page).to have_content("Apple store") 
   # end
 end

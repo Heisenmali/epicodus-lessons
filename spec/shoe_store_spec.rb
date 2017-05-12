@@ -63,8 +63,10 @@ describe Brand do
   end
 end
 
+
 #VALIDATION
 
+#BRAND CLASS
 
 describe Brand do
   it 'Verify that inputs are not blank' do
@@ -86,7 +88,7 @@ describe Brand do
     expect(Brand.count).to eq(1)
   end
 
-   it 'Verify that store name is less than 100' do
+   it 'Verify that brand name is less than 100' do
     expect(Brand.create(name: "apogee", price: "59").valid?).to eq(true)
   end
 
@@ -95,6 +97,8 @@ describe Brand do
     expect(Brand.count).to eq(0)
   end
 end
+
+#STORE CLASS
 
 describe Store do
   it 'Verify that inputs are not blank' do

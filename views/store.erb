@@ -6,9 +6,11 @@
 
 <form action="/store/<%= @store.id %>/edit" method="post">
   <input type="hidden" name="_method" value="patch">
-  <input type="text" name="new-name" value="<%= @store.name %>">
-  <input type="text" name="new-location" value="<%= @store.location %>">
-  <button type="submit">Make changes</button>
+  <label for="new-name" class="f6 b db mb2">Name</label>
+  <input type="text" name="new-name" value="<%= @store.name %>" class="input-reset ba b--black-20 pa2 mb2 db w-100">
+  <label for="new-location" class="f6 b db mb2">Location</label>
+  <input type="text" name="new-location" value="<%= @store.location %>" class="input-reset ba b--black-20 pa2 mb2 db w-100">
+  <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Make changes"></div>
 </form>
 
 <form class="pa4" action="/store/<%= @store.id %>/edit" method="post">
@@ -21,10 +23,10 @@
     </div>
     <% end %>
   </fieldset>
-  <button type="submit">Add brands</button>
+  <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Add brands"></div>
 </form>
 
 <form action="/store/<%= @store.id %>/delete" method="post">
   <input type="hidden" name="_method" value="delete">
-  <button type="Submit">Remove store</button>
+  <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Remove store"></div>
 </form>

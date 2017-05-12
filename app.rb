@@ -73,6 +73,7 @@ get '/brands/new' do
 end
 
 post '/brands/new' do
+  binding.pry
   Brand.create(name: params['name'], price: params['price'])
   redirect '/brands'
 end
