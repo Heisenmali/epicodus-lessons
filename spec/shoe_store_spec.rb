@@ -33,3 +33,24 @@ describe BrandStore do
   it { should have_db_column :store_id }
   it { should have_db_column :brand_id }
 end
+
+#CALLBACKS
+
+describe Store do
+  describe '.capitalize_name' do
+    it 'will capitalize name and location before saving' do
+      store_id = Store.create(name: "apple", location: "portland").id
+      expect(Store.find(store_id).name).to eq("Apple")
+      expect(Store.find(store_id).location).to eq("Portland")
+    end
+  end
+end
+
+describe Brand do
+  describe '.capitalize_name' do
+    it 'will capitalize name and location before saving' do
+      brand_id = Brand.create(name: "apogee").id
+      expect(Brand.find(brand_id).name).to eq("Apogee")
+    end
+  end
+end

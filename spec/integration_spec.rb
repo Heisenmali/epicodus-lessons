@@ -54,7 +54,7 @@ describe("the store path", {:type => :feature}) do
     expect(page).to have_content("Apple")
   end
 
-# delete button doesn't route to delete path with Capybara, manual testing works. Why?
+# delete button doesn't route to delete path with Capybara, manual testing works. Capybara can't find the button. Why?
 
   # it 'verifies the store page deletes the store name correctly for a single store' do
   #   PreLoadDB.preload
