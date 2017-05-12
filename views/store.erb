@@ -1,0 +1,13 @@
+<h2>Welcome to the store page</h2>
+
+<form action="/store/<%= @store.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="new-name" value="<%= @store.name %>">
+  <input type="text" name="new-location" value="<%= @store.location %>">
+  <button type="submit">Make changes</button>
+</form>
+
+<form action="/store/<%= @store.id %>/delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="Submit">Delete brand</button>
+</form>

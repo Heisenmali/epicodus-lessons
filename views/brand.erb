@@ -1,0 +1,14 @@
+<h2>Welcome to the brand page</h2>
+
+<form action="/brand/<%= @brand.id %>/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="new-name" value="<%= @brand.name %>">
+  <input type="text" name="new-price" value="<%= @brand.price %>">
+  <button type="submit">Make changes</button>
+</form>
+
+
+<form action="/brand/<%= @brand.id %>/delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="Submit">Delete brand</button>
+</form>
