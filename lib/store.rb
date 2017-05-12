@@ -5,8 +5,9 @@ class Store < ActiveRecord::Base
   before_create :capitalize_name
 
   validates :name, presence: true
-  validates :location, presence: true
+  validates :name, length: { maximum: 100 }
   validates :name, uniqueness: { case_sensitive: false }
+  validates :location, presence: true
   
   
   private

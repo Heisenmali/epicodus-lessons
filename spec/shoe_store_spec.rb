@@ -85,7 +85,15 @@ describe Brand do
     expect(Brand.create(name: "apogee", price: "59").valid?).to eq(false)
     expect(Brand.count).to eq(1)
   end
-  
+
+   it 'Verify that store name is less than 100' do
+    expect(Brand.create(name: "apogee", price: "59").valid?).to eq(true)
+  end
+
+  it "Verify that brand won't be saved if name is less than 100" do
+    expect(Brand.create(name: "What a piece of work is man! how noble in reason! how infinite in faculty! in form and moving how express and admirable! in action how like an angel! in apprehension how like a god! the beauty of the world, the paragon of animals! ", price: "59").valid?).to eq(false)
+    expect(Brand.count).to eq(0)
+  end
 end
 
 describe Store do
@@ -106,5 +114,14 @@ describe Store do
     Store.create(name: "Apple", location: "Portland")
     expect(Store.create(name: "Apple", location: "Portland").valid?).to eq(false)
     expect(Store.count).to eq(1)
+  end
+
+  it 'Verify that store name is less than 100' do
+    expect(Store.create(name: "Apple", location: "Portland").valid?).to eq(true)
+  end
+
+  it "Verify that store won't be saved if name is less than 100" do
+    expect(Store.create(name: "What a piece of work is man! how noble in reason! how infinite in faculty! in form and moving how express and admirable! in action how like an angel! in apprehension how like a god! the beauty of the world, the paragon of animals! ", location: "Portland").valid?).to eq(false)
+    expect(Store.count).to eq(0)
   end
 end

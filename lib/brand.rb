@@ -5,8 +5,9 @@ class Brand < ActiveRecord::Base
   before_create :capitalize_name, :price_adjust
 
   validates :name, presence: true
-  validates :price, presence: true
+  validates :name, length: { maximum: 100 }
   validates :name, uniqueness: { case_sensitive: false }
+  validates :price, presence: true
 
 
   private
