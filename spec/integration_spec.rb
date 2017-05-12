@@ -44,13 +44,23 @@ describe("the store path", {:type => :feature}) do
     expect(page).to have_content("Brands: Paul")
   end
 
+  it 'verifies the store is created properly' do
+    visit '/stores'
+    expect(page).to have_no_content("Apple")
+    click_link 'Add a store'
+    fill_in 'name', :with => 'Apple'
+    fill_in 'location', :with => 'Seattle'
+    click_button 'Add store'
+    expect(page).to have_content("Apple")
+  end
+
 # delete button doesn't route to delete path with Capybara, manual testing works. Why?
 
   # it 'verifies the store page deletes the store name correctly for a single store' do
   #   PreLoadDB.preload
   #   visit '/stores'
   #   click_link 'Apple'
-  #   find('#delete').click
+  #   click_button('Remove store')
   #   expect(page).to have_content("Apple store") 
   # end
 end
@@ -89,13 +99,24 @@ describe("the brand path", {:type => :feature}) do
     expect(page).to have_content("Stores: Apple")
   end
 
+  it 'verifies the brand is created properly' do
+    visit '/brands'
+    expect(page).to have_no_content("Paul")
+    click_link 'Add a brand'
+    fill_in 'name', :with => 'Paul'
+    fill_in 'price', :with => '9'
+    click_button 'Add brand'
+    expect(page).to have_content("Paul")
+  end
+
+
 # delete button doesn't route to delete path with Capybara, manual testing works. Why?  
 
   #  it 'verifies the brand page deletes the brand name correctly for a single brand' do
   #   PreLoadDB.preload
   #   visit '/brands'
   #   click_link 'Paul'
-  #   click_on('#delete')
+  #   click_on('Remove brand')
   #   expect(page).to have_content("Make changes")
   # end
 end
