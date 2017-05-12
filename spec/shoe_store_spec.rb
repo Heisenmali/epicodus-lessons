@@ -73,8 +73,19 @@ describe Brand do
 
   it 'Verify that objects are not saved if blank' do
     expect(Brand.create(name: "", price: "59").valid?).to eq(false)
-    expect(Brand.all.any?).to eq(false)
+    expect(Brand.count).to eq(0)
   end
+
+  it 'Verify that object is unique' do
+    expect(Brand.create(name: "apogee", price: "59").valid?).to eq(true)
+  end
+
+  it 'Verify that objects are not saved if not unique' do
+    Brand.create(name: "apogee", price: "59")
+    expect(Brand.create(name: "apogee", price: "59").valid?).to eq(false)
+    expect(Brand.count).to eq(1)
+  end
+  
 end
 
 describe Store do
@@ -85,5 +96,15 @@ describe Store do
   it 'Verify that objects are not saved if blank' do
     expect(Store.create(name: "Apple", location: "").valid?).to eq(false)
     expect(Store.all.any?).to eq(false)
+  end
+
+  it 'Verify that object is unique' do
+    expect(Store.create(name: "Apple", location: "Portland").valid?).to eq(true)
+  end
+
+  it 'Verify that objects are not saved if not unique' do
+    Store.create(name: "Apple", location: "Portland")
+    expect(Store.create(name: "Apple", location: "Portland").valid?).to eq(false)
+    expect(Store.count).to eq(1)
   end
 end

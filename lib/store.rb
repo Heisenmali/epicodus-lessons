@@ -4,9 +4,11 @@ class Store < ActiveRecord::Base
   
   before_create :capitalize_name
 
-   validates :name, presence: true
+  validates :name, presence: true
   validates :location, presence: true
-
+  validates :name, uniqueness: { case_sensitive: false }
+  
+  
   private
     def capitalize_name
       self.name.capitalize!
