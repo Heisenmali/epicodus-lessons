@@ -4,6 +4,10 @@ class Brand < ActiveRecord::Base
 
   before_create :capitalize_name, :price_adjust
 
+  validates :name, presence: true
+  validates :price, presence: true
+
+
   private
     def capitalize_name
       self.name.capitalize!

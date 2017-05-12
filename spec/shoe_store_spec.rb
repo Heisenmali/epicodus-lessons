@@ -62,3 +62,28 @@ describe Brand do
     end
   end
 end
+
+#VALIDATION
+
+
+describe Brand do
+  it 'Verify that inputs are not blank' do
+    expect(Brand.create(name: "apogee", price: "59").valid?).to eq(true)
+  end
+
+  it 'Verify that objects are not saved if blank' do
+    expect(Brand.create(name: "", price: "59").valid?).to eq(false)
+    expect(Brand.all.any?).to eq(false)
+  end
+end
+
+describe Store do
+  it 'Verify that inputs are not blank' do
+    expect(Store.create(name: "apogee", location: "Seattle").valid?).to eq(true)
+  end
+
+  it 'Verify that objects are not saved if blank' do
+    expect(Store.create(name: "Apple", location: "").valid?).to eq(false)
+    expect(Store.all.any?).to eq(false)
+  end
+end
