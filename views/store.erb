@@ -7,7 +7,21 @@
   <button type="submit">Make changes</button>
 </form>
 
+<form class="pa4" action="/store/<%= @store.id %>/edit" method="post">
+  <fieldset id="favorite_movies" class="bn">
+    <legend class="fw7 mb2">brands</legend>
+    <% @brands.each do |brand| %>
+    <div class="flex items-center mb2">
+      <input class="mr2" type="checkbox" id="<%= brand.name %>" name="brand_ids[]" value="<%= brand.id %>">
+      <label for="spacejam" class="lh-copy"><%= brand.name %></label>
+    </div>
+    <% end %>
+  </fieldset>
+  <button type="submit">Add brands</button>
+</form>
+
+
 <form action="/store/<%= @store.id %>/delete" method="post">
   <input type="hidden" name="_method" value="delete">
-  <button type="Submit">Delete brand</button>
+  <button type="Submit">Delete store</button>
 </form>
