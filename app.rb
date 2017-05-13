@@ -17,16 +17,16 @@ get '/' do
   Brand.create(name: "Adidas", price: "42")
   Brand.create(name: "Converse", price: "14")
   Brand.create(name: "Toms", price: "4")
-  Store.create(name: "A Pied", location: "portland")
+  Store.create(name: "A Pied", location: "San-Francisco")
   Store.create(name: "Feet First", location: "New-York")
   Store.create(name: "Shoe a Holic", location: "London")
   Store.create(name: "The Walking Company", location: "Paris")
-  Store.create(name: "City Soles", location: "Milan")
-  Store.create(name: "Alternatives Shoes", location: "Seattle")
+  Store.create(name: "City Soles", location: "Tokyo")
+  Store.create(name: "Alternatives Shoes", location: "Moscow")
   Store.create(name: "Runners High", location: "Copenhagen")
   Store.create(name: "Track Shack", location: "Stockholm")
-  Store.create(name: "Foot Traffic", location: "Oslo")
-  Store.create(name: "Solestruck", location: "Munich")
+  Store.create(name: "Foot Traffic", location: "Berlin")
+  Store.create(name: "Solestruck", location: "Venice")
   erb :index
 end
 

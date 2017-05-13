@@ -4,7 +4,8 @@
       <h1 class="fw6 db black link hover-dark-pink">mccsn</h1>
     </a>
     <div class="dtc v-mid w-75 tr">
-      <a class="link dark-gray f6 f4-ns dib mr3 mr0-ns hover-green" href="/stores" title="stores">Stores</a>
+      <a class="link dark-gray f6 f4-ns dib mr3 mr4-ns hover-green" href="/stores" title="stores">Stores</a>
+      <a class="link dark-gray f6 f4-ns dib mr3 mr0-ns hidden" href="/brands" title="brands">Brands</a>
     </div>
   </nav>
 
@@ -13,7 +14,7 @@
     <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
 
       <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/img/p<%= brand.id.digits[0] %>.jpeg);" 
+        <img style="background-image:url(/img/b<%= brand.id.digits[0] %>.jpeg);" 
           class="db bg-center cover aspect-ratio--object" />
       </div>
       <a href="/brand/<%= brand.id %>" class="ph2 ph0-ns pb3 link db">
@@ -25,6 +26,6 @@
   </section>
 
   <div class="cf w-100 pa3-ns">
-    <a href="brands/new" class="f4 fw6 db black link hover-dark-green">Add a brand</a>
+    <a href="brands/new" class="f4 fw6 db black link hover-dark-green tr">Add a brand</a>
   </div>
 </div>

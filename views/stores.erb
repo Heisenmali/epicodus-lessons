@@ -13,7 +13,7 @@
   <% @stores.each do |store| %>
     <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
       <div class="aspect-ratio aspect-ratio--1x1">
-        <img style="background-image:url(/img/s<%= store.id.digits[0] %>.jpeg);" 
+        <img style="background-image:url(/img/c<%= store.id.digits[0] %>.jpeg);" 
           class="db bg-center cover aspect-ratio--object" />
       </div>
       <a href="/store/<%= store.id %>" class="ph2 ph0-ns pb3 link db">
@@ -26,6 +26,6 @@
   </section>
 
   <div class="cf w-100 pa3-ns"> 
-    <a href="stores/new" class="f4 fw6 db black link hover-dark-red">Add a store</a>
+    <a href="stores/new" class="f4 fw6 db black link hover-dark-red tr">Add a store</a>
   </div>
 </div>
