@@ -1,6 +1,6 @@
-# <!--Shoe-store-->
+# mccsn 
 
-This web app tracks projects and the volunteers working on them.
+This app allows the user to keep track of stores and the brands they carry.
 
 ### Prerequisites
 
@@ -37,15 +37,7 @@ You can now run `$ ruby app.rb` in a new terminal window and visit localhost:456
 
 ## Specifications
 
-<!--| behavior                                           | input                                | output  |
-|----------------------------------------------------|:------------------------------------:|:-------:|
-| User can add, edit, delete, view projects          | See `project_spec.rb`                | idem    |
-| User can add, edit, delete, view volunteers        | See `volunteer_spec.rb`              | id.     |
-| Root lists all projects and all volunteers         | See `volunteer_integration_spec.rb`  | id.     |
-| Project page lists all projects and info           | See `volunteer_integration_spec.rb`  | id.     |
-| Volunteer page lists all projects and info         | See `volunteer_integration_spec.rb`  | id.     |
-| Volunteer page lets user edit name of volunteer    | See `volunteer_integration_spec.rb`  | id.     |
-| Volunteer page lets user add project for volunteer | See `volunteer_integration_spec.rb`  | id.     |-->
+
 
 ## Authors
 

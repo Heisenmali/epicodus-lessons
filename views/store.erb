@@ -4,7 +4,7 @@
   <p class="dib ml0 gray"> <%= @store.location %></p>
   
   <% @store.brands.each do |brand| %>
-  <p>Brands: <%= brand.name %></p>
+  <p><%= brand.name %></p>
   <% end %>
 
   <form action="/store/<%= @store.id %>/edit" method="post">
@@ -18,7 +18,7 @@
 
   <form class="pa4" action="/store/<%= @store.id %>/edit" method="post">
     <fieldset id="favorite_movies" class="bn">
-      <legend class="fw7 mb2">brands</legend>
+      <legend class="fw7 mb2">Brands</legend>
       <% @brands.each do |brand| %>
       <div class="flex items-center mb2">
         <input class="mr2" type="checkbox" id="<%= brand.name %>" name="brand_ids[]" value="<%= brand.id %>">

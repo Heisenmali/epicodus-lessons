@@ -1,3 +1,7 @@
 .info {
   padding-top: 0;
 } 
+
+.edit {
+  display: none;
+}

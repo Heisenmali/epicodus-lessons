@@ -23,7 +23,7 @@ describe("the store path", {:type => :feature}) do
     PreLoadDB.preload
     visit '/stores'
     click_link 'Apple'
-    expect(page).to have_content("Welcome to the store page")
+    expect(page).to have_content("Apple")
   end
 
    it 'verifies the store page edits the store name correctly for a single store' do
@@ -41,7 +41,7 @@ describe("the store path", {:type => :feature}) do
     click_link 'Apple'
     check 'Paul'
     click_on 'Add brands'
-    expect(page).to have_content("Brands: Paul")
+    expect(page).to have_content("Paul")
   end
 
   it 'verifies the store is created properly' do
@@ -80,7 +80,7 @@ describe("the brand path", {:type => :feature}) do
     PreLoadDB.preload
     visit '/brands'
     click_link 'Paul'
-    expect(page).to have_content("Welcome to the brand page")
+    expect(page).to have_content("Paul")
   end
 
   it 'verifies the brand page edits the brand name correctly for a single brand' do
