@@ -2,6 +2,8 @@
 
 This app allows the user to keep track of stores and the brands they carry.
 
+The app is deployed to heroku at https://mccsn.herokuapp.com/
+
 ### Prerequisites
 
 Web browser with ES6 compatibility
