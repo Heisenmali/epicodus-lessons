@@ -6,6 +6,7 @@ gem("rake")
 gem("pg")
 gem("sinatra")
 gem("shoulda-matchers", '~> 2.0')
+ruby "2.4.1"
 
 group(:test) do
   gem("rspec")
