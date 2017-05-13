@@ -1,4 +1,4 @@
-# mccsn 
+# mccsn (moccasin)
 
 This app allows the user to keep track of stores and the brands they carry.
 

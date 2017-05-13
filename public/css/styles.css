@@ -3,5 +3,10 @@
 } 
 
 .edit {
+  margin-top: 10vh;
   display: none;
+}
+
+.vanish {
+  float: right;
 }

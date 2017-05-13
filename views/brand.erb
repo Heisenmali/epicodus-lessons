@@ -1,13 +1,18 @@
 <div class="cf w-100 pa7-ns info">
+
+  <div class="vanish">
+    <a class="fw6 db black link hover-blue" href="#0">Edit brand</a>
+  </div>
   
-  <h2><%= @brand.name %></h2>
+  <h2 class="dib b"><%= @brand.name %> &#160;&#160; </h2>
+  <p class="dib ml0 gray"> <%= @brand.price %></p>
+  <p class="dib ml0 gray"> <%= @brand.id %></p>
+  
   <h3>Stores: </h3>
 
   <% @brand.stores.each do |store| %>
   <p> <%= store.name %></p>
   <% end %>
-
-  
 
   <div class="edit">
     <form action="/brand/<%= @brand.id %>/edit" method="post">
