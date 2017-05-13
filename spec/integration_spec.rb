@@ -57,14 +57,13 @@ describe("the store path", {:type => :feature}) do
 # delete button doesn't route to delete path with Capybara, manual testing works. Capybara can't find the button. Why?
 # Capybara finds the button, but doesn't seem to actually click it. The headless browser is never taken to the delete path, but remains on the same page.
 
-  # it 'verifies the store page deletes the store name correctly for a single store' do
-  #   PreLoadDB.preload
-  #   visit '/stores'
-  #   click_link 'Apple'
-  #   # click_button('Remove store')
-  #   find('[id=remove]').click
-  #   expect(page).to have_content("Apple store") 
-  # end
+  it 'verifies the store page deletes the store name correctly for a single store' do
+    PreLoadDB.preload
+    visit '/stores'
+    click_link 'Apple'
+    click_button 'Remove store'
+    expect(page).to have_no_content("Apple store") 
+  end
 end
 
 #BRAND PATH CRUD
@@ -114,12 +113,12 @@ describe("the brand path", {:type => :feature}) do
 
 # delete button doesn't route to delete path with Capybara, manual testing works. Why?  
 
-  #  it 'verifies the brand page deletes the brand name correctly for a single brand' do
-  #   PreLoadDB.preload
-  #   visit '/brands'
-  #   click_link 'Paul'
-  #   click_on('Remove brand')
-  #   expect(page).to have_content("Make changes")
-  # end
+   it 'verifies the brand page deletes the brand name correctly for a single brand' do
+    PreLoadDB.preload
+    visit '/brands'
+    click_link 'Paul'
+    click_button('Remove brand')
+    expect(page).to have_no_content("Paul")
+  end
 end
 
