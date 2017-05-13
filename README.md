@@ -23,6 +23,8 @@ Follow these setup steps:
 
 You can now run `$ ruby app.rb` in a new terminal window and visit localhost:4567 in the browser to view the app.
 
+Visiting the root path will preload data into the database.
+
 ## Built With
 
 * Ruby

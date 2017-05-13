@@ -7,8 +7,29 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 #ROOT PATH
 
 get '/' do
+  Brand.create(name: "Paul Smith", price: "9.50")
+  Brand.create(name: "Stan Smith", price: "100")
+  Brand.create(name: "Nike", price: "56")
+  Brand.create(name: "Vans", price: "87")
+  Brand.create(name: "Puma", price: "302")
+  Brand.create(name: "Church's'", price: "53")
+  Brand.create(name: "Jordan", price: "23")
+  Brand.create(name: "Adidas", price: "42")
+  Brand.create(name: "Converse", price: "14")
+  Brand.create(name: "Toms", price: "4")
+  Store.create(name: "A Pied", location: "portland")
+  Store.create(name: "Feet First", location: "New-York")
+  Store.create(name: "Shoe a Holic", location: "London")
+  Store.create(name: "The Walking Company", location: "Paris")
+  Store.create(name: "City Soles", location: "Milan")
+  Store.create(name: "Alternatives Shoes", location: "Seattle")
+  Store.create(name: "Runners High", location: "Copenhagen")
+  Store.create(name: "Track Shack", location: "Stockholm")
+  Store.create(name: "Foot Traffic", location: "Oslo")
+  Store.create(name: "Solestruck", location: "Munich")
   erb :index
 end
+
 
 #STORE PATH
 

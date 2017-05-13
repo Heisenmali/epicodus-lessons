@@ -1,19 +1,30 @@
-<section class="cf w-100 pa2-ns">
-    <% @brands.each do |brand| %>
-  <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
-
-    <div class="aspect-ratio aspect-ratio--1x1">
-      <img style="background-image:url(/img/p<%= brand.id.digits[0] %>.jpeg);" 
-        class="db bg-center cover aspect-ratio--object" />
-    </div>
-    <a href="/brand/<%= brand.id %>" class="ph2 ph0-ns pb3 link db">
-      <h3 class="f5 f4-ns mb0 black-90 hover-dark-green"><%= brand.name %></h3>
-      <h3 class="f6 f5 fw4 mt2 black-60"><%= brand.price %></h3>
+<div class="content">
+  <nav class="dt w-100 border-box pa3 ph5-ns">
+    <a class="dtc v-mid mid-gray link w-25" href="/" title="Home">
+      <h1 class="fw6 db black link hover-dark-pink">mccsn</h1>
     </a>
-  </article>
-    <% end %>
-</section>
+    <div class="dtc v-mid w-75 tr">
+      <a class="link dark-gray f6 f4-ns dib mr3 mr0-ns hover-green" href="/stores" title="stores">Stores</a>
+    </div>
+  </nav>
 
-<div class="cf w-100 pa3-ns">
-  <a href="brands/new" class="f4 fw6 db black link hover-light-purple">Add a brand</a>
+  <section class="cf w-100 pa2-ns">
+      <% @brands.each do |brand| %>
+    <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
+
+      <div class="aspect-ratio aspect-ratio--1x1">
+        <img style="background-image:url(/img/p<%= brand.id.digits[0] %>.jpeg);" 
+          class="db bg-center cover aspect-ratio--object" />
+      </div>
+      <a href="/brand/<%= brand.id %>" class="ph2 ph0-ns pb3 link db">
+        <h3 class="f5 f4-ns mb0 black-90 hover-light-purple"><%= brand.name %></h3>
+        <h3 class="f6 f5 fw4 mt2 black-60"><%= brand.price %></h3>
+      </a>
+    </article>
+      <% end %>
+  </section>
+
+  <div class="cf w-100 pa3-ns">
+    <a href="brands/new" class="f4 fw6 db black link hover-dark-green">Add a brand</a>
+  </div>
 </div>

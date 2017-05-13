@@ -1,3 +1,13 @@
+.content {
+  margin: 0 1rem;
+}
+
+.home-nav {
+  padding: 1rem 0 1rem 2rem;
+}
+
+
+
 .info {
   padding-top: 0;
 } 
@@ -9,4 +19,13 @@
 
 .vanish {
   float: right;
+}
+
+.header {
+  display: inline-block;
+}
+
+.ph5-ns {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
