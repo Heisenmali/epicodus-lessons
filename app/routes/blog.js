@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Route } = Ember;
+const { Route, set } = Ember;
 
 export default Route.extend({
 
@@ -10,5 +10,8 @@ export default Route.extend({
       author: 'nkls',
       content: 'this is awesome!'
     });
+  },
+  setupController(controller, model) {
+    set(controller, 'post', model);
   }
 });
