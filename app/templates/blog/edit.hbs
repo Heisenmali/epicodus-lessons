@@ -12,4 +12,4 @@
 {{/if}}  
 
 <button {{action "goBackToIndex"}}>Click to go back</button>
-<button {{action "toggleEdit"}}>Toggle edit</button>
+<button {{action "toggleEdit"}}>{{if editable 'Disable' 'Enable'}}</button>
