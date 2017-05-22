@@ -1,15 +1,21 @@
 import Ember from 'ember';
 
-const { Route, set } = Ember;
+const { Route, get, set } = Ember;
 
-export default Ember.Route.extend({
-  actions: {
-    goBackToIndex() {
-      this.transitionTo('blog.index');
-    }
-  },
+export default Route.extend({
 
   setupController(controller, model) {
     set(controller, 'post',  model);
+    set(controller, 'editable', true);
+  },
+  
+  actions: {
+    goBackToIndex() {
+      this.transitionTo('blog.index');
+    },
+    toggleEdit() {
+      this.controller.toggleProperty('editable');
+    }
   }
+
 });

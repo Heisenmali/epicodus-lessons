@@ -1,13 +1,15 @@
+{{#if editable}}
+  <form>
+    <label for="title">Edit Title:</label>
+    {{input type="text" value=post.title}}
 
-<form>
-  <label for="title">Edit Title:</label>
-  {{input type="text" value=post.title}}
+    <label for="author">Edit Author:</label>
+    {{input type="text" value=post.author}}
 
-  <label for="author">Edit Author:</label>
-  {{input type="text" value=post.author}}
-
-  <label for="content">Edit Content:</label>
-  {{textarea type="text" value=post.content}}
-</form>
+    <label for="content">Edit Content:</label>
+    {{textarea type="text" value=post.content}}
+  </form>
+{{/if}}  
 
 <button {{action "goBackToIndex"}}>Click to go back</button>
+<button {{action "toggleEdit"}}>Toggle edit</button>
