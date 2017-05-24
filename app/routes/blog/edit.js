@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Route, get, set } = Ember;
+const { Route, set } = Ember;
 
 export default Route.extend({
 
@@ -15,6 +15,9 @@ export default Route.extend({
     },
     toggleEdit() {
       this.controller.toggleProperty('editable');
+    },
+    something() {
+      console.log("Woaaaaaah");
     }
   }
 

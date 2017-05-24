@@ -1,7 +1,9 @@
 {{#if editable}}
   <form>
     <label for="title">Edit Title:</label>
-    {{input type="text" value=post.title}}
+    <div {{action "something" on="focusOut"}}>
+      {{input type="text" value=post.title}} 
+    </div>
 
     <label for="author">Edit Author:</label>
     {{input type="text" value=post.author}}
