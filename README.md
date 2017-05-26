@@ -1,12 +1,9 @@
 # _Doctor lookup_
 
-#### _This app allows the user to look up doctors near them by medical condition_
+#### _This app allows the user to search the Portland area for doctors by medical condition._
 
 #### By _**{niklaslong}**_
 
-## Description
-
-__
 
 ## Setup/Installation Requirements
 
@@ -15,7 +12,6 @@ __
 * _Type `npm install` and `bower install` to install dependencies_
 * _Then type `gulp build` and `gulp serve` to run the local server_
 * _Visit localhost:3000 to view app_
-
 
 
 ## Known Bugs
