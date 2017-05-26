@@ -2,7 +2,7 @@
 
 #### _This app allows the user to search the Portland area for doctors by medical condition._
 
-#### By _**{niklaslong}**_
+#### By _**{Niklas Long}**_
 
 
 ## Setup/Installation Requirements
@@ -18,6 +18,8 @@
 
 _none_
 
+_lack of initial commit history is due to an error on my part. I had to delete the initialized .git and replace it with a new one. The initial commit after deleting .git denotes this._ 
+
 
 ## Technologies Used
 
@@ -32,4 +34,4 @@ _none_
 
 *{MIT}*
 
-Copyright (c) 2017 **_{List of contributors or company name}_**
+Copyright (c) 2017 **_{niklaslong}_**
