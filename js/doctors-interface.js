@@ -10,7 +10,7 @@ var displayData = function() {
 
   for (var i = 0; i < doctors[0].apiData.length; i++) {
     $('#output').append(`<h2> ${doctors[0].apiData[i].profile.first_name} ${doctors[0].apiData[i].profile.last_name}</h2> <br> 
-                         <p> ${doctors[0].apiData[i].specialties[0].actor} </p>`);
+                         <p> ${doctors[0].apiData[i].specialties[0].actor} </p> <hr>`);
   }
 };
 
