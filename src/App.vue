@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <doctor></doctor>
+    <doctors></doctors>
   </div>
 </template>
 
 <script>
-import Doctor from './components/Doctor.vue'
+import Doctors from './components/Doctors.vue'
+
 export default {
   name: 'app',
   components: {
-    'doctor': Doctor
+    'doctors': Doctors
   },
   data () {
     return {
@@ -20,5 +21,7 @@ export default {
 </script>
 
 <style>
-
+#app {
+  margin: 0 15vw;
+}
 </style>
