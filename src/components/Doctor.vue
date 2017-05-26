@@ -1,7 +1,7 @@
 <template>
   <div>
     <form>
-      <input v-bind="cond">
+      <input v-model="condition">
     </form>
   
     <button v-on:click="getApi">Click me!</button>
