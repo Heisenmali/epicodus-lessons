@@ -2,15 +2,17 @@
 
 #### _This app allows the user to search the Portland area for doctors by medical condition._
 
-#### By _**{Niklas Long}**_
+#### _Check out the version of this app using vuejs at https://github.com/niklaslong/vue-doctor-app_
 
+#### By _**{Niklas Long}**_
 
 ## Setup/Installation Requirements
 
 * _Clone repository_
 * _Open file in the editor_
-* _Type `npm install` and `bower install` to install dependencies_
-* _Then type `gulp build` and `gulp serve` to run the local server_
+* _Type `npm install` and `bower install` in the command line to install dependencies_
+* _make sure your api key for the Better Doctor Api is in the .env file and exported correctly_
+* _Then type `gulp build` and `gulp serve` in the command line to run the local server_
 * _Visit localhost:3000 to view app_
 
 
