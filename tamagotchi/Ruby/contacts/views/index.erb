@@ -1,0 +1,8 @@
+<h1>Welcome to your address book!</h1>
+
+<ul>
+  <% @output.each do |contact|%>
+  <li><a href="contacts/<%= contact.name.first %>"><%= contact.name.first %></a></li>
+  <% end %>
+</ul>
+<a href="/contacts/addform" class="btn">Add</a>
