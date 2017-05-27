@@ -1,0 +1,15 @@
+<h2><%= "#{@word.word}"%></h2>
+
+<ul>
+<% @word.definitions.each do |definition|%>
+    <li><%= definition.word_definition %></li>
+  <%  end %>
+</ul>
+
+<button id="add-definition" class="btn" type="button">Add a definition</button>
+
+<form id="new-definition" action="/<%= @word.word %>/new-definition" method="post">
+  <label for="added-definition"></label>
+  <input id="added-definition" class="form-control" type="text" name="added-definition" placeholder="New definition">
+  <button type="submit" id="submit-definition" class="btn">Add definition</button>
+</form>

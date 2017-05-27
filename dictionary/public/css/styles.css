@@ -1,0 +1,96 @@
+body {
+    font-family: 'Prata', serif;
+}
+
+body {
+  font-size: 3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal
+}
+
+h1 {
+  font-size: 218%;
+}
+
+h2 {
+  font-size: 164%;
+}
+
+h3 {
+  font-size: 145%;
+}
+
+h4 {
+  font-size: 118%;
+}
+
+#header {
+  padding: 5vh 0 5vh 7vw;
+}
+
+.container {
+  padding-left: 7vw;
+  padding-right: 20vw;
+}
+
+ul {
+  margin: 3vh 0 10vh;
+}
+
+li {
+  list-style: none;
+  padding-left: 15vw;
+  line-height: 2;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+label {
+  font-size: 100%;
+  font-weight: normal;
+  margin: 5vh 0 1vh;
+}
+
+input.form-control {
+  font-size: 100%;
+  height: 8vh;
+}
+
+#new-word {
+  font-size: 100%;
+  float: right;
+}
+
+#new-definition {
+  display: none;
+}
+
+#clear {
+  float: right;
+}
+
+#buttons {
+  float: right;
+  width: 250px;
+}
+
+.btn {
+  margin: 2vh 0;
+  font-size: 100%;
+  height: 8vh;
+  background-color: #cccccc;
+}
+
+.btn:hover {
+  background-color: #2a6496;
+  color: white;
+}
