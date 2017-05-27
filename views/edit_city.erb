@@ -1,0 +1,7 @@
+<h1>Edit city: <%= @city['name']%></h1>
+
+<form action="/city/edit/<%= @city['id']%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" placeholder="<%= @city['name']%>" name="name">
+  <button type="submit">Make changes</button>
+</form>
