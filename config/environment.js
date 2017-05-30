@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: 'AIzaSyDA0VkVgUAqrUS1PwWURVkA5gmm3bzndd4',
+      authDomain: 'superhotels-a0793.firebaseapp.com',
+      databaseURL: 'https://superhotels-a0793.firebaseio.com',
+      storageBucket: 'superhotels-a0793.appspot.com'
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
