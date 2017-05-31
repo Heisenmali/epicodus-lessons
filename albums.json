@@ -1,0 +1,32 @@
+{ "albums": [{
+    "artist": "Led Zeppelin",
+    "album": "I",
+    "genre": "Rock",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/ef/Led_Zeppelin_-_Led_Zeppelin_%281969%29_front_cover.png"
+  }, {
+    "artist": "Pink Floyd",
+    "album": "The Dark Side of the Moon",
+    "genre": "Rock",
+    "image": "http://cps-static.rovicorp.com/3/JPG_500/MI0003/237/MI0003237416.jpg?partner=allrovi.com"
+  }, {
+    "artist": "Tame Impala",
+    "album": "Currents",
+    "genre": "Psych-pop",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/91sqAJFwmJL._SL1400_.jpg"
+  }, {
+    "artist": "Kendrick Lamar",
+    "album": "untitled unmastered",
+    "genre": "Hip to the hop",
+    "image": "http://cdn4.pitchfork.com/albums/23037/1bcdfd6b.jpg"
+  }, {
+    "artist": "Funkadelic",
+    "album": "Maggot Brain",
+    "genre": "Funk",
+    "image": "https://images.genius.com/cea522421a0e24d8dc84c8fe65da0e55.320x320x1.jpg"
+  }, {
+    "artist": "Rage Against the Machine",
+    "album": "Rage Against the Machine",
+    "genre": "Funk Metal",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/1a/RageAgainsttheMachineRageAgainsttheMachine.jpg"
+  }]
+}
