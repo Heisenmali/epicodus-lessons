@@ -1,1 +1,11 @@
-{{album-tile}}
+{{#if albumForm}}
+  {{new-album addAlbum='addAlbum'}}
+{{else}}
+  <button {{action 'newAlbum'}}>Add Album</button>
+{{/if}}
+
+{{#each model as |album|}}
+  {{#link-to 'album' album.id}}
+    {{album-tile album=album}}
+  {{/link-to}}
+{{/each}}
