@@ -3,9 +3,11 @@
 {{else}}
   <button {{action 'newAlbum'}}>Add Album</button>
 {{/if}}
-
+<br>
 {{#each model as |album|}}
   {{#link-to 'album' album.id}}
+  <div class="album-tile">
     {{album-tile album=album}}
+  </div>
   {{/link-to}}
 {{/each}}

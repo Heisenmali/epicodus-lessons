@@ -6,3 +6,9 @@ img{
   white-space: pre-line;
   width: 800px;
 }
+.album-tile {
+  display: inline-block;
+  width: 30%
+  margin-top: 80px;
+  margin-right: 20px;
+}

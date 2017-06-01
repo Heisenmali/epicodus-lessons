@@ -6,7 +6,7 @@
 
 <h3>Comments</h3>
 {{#each model.comments as |comment|}}
-  {{comment-tile comment=comment}}
+  {{comment-tile comment=comment delete="deleteComment"}}
 {{/each}}
 
 {{new-comment addComment='addComment' model=model}}

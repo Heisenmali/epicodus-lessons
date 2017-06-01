@@ -27,6 +27,9 @@ export default Ember.Route.extend({
       newComment.save().then(function() {
         return album.save();
       });
+    },
+    deleteComment(comment) {
+      comment.destroyRecord();
     }
   }
 });
