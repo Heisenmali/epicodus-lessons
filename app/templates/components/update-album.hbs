@@ -1,11 +1,14 @@
 <form>
   <label for="artist">Artist</label>
-  {{input value=album.artist id="artist"}}
+  {{input value=artist id="artist" placeholder=album.artist}}
   <label for="album">Album</label>
-  {{input value=album.album id="album"}}
+  {{input value=title id="title" placeholder=album.album}}
   <label for="genre">Genre</label>
-  {{input value=album.genre id="genre"}}
+  {{input value=genre id="genre" placeholder=album.genre}}
   <label for="img">Image url</label>
-  {{input value=album.image id="image"}}
-  <button {{action 'updateAlbum' album}} type="button" name="button">Add Album</button>
+  {{input value=image id="image" placeholder=album.image}}
+  <br>
+  <label for="img">Review</label>
+  {{input value=review id="review" placeholder=album.review}}
+  <button {{action 'updateAlbum' album}}>Update Album</button>
 </form>

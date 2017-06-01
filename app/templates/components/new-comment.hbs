@@ -1,0 +1,9 @@
+<form>
+  <label for="author">Author</label>
+  {{input value=author id="author"}}
+  <label for="content">Content</label>
+  {{input value=content id="content"}}
+  <label for="rating">Rating</label>
+  {{input value=rating id="rating"}}
+  <button {{action 'addComment'}}>Add comment</button>
+</form>

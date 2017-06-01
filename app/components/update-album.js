@@ -3,14 +3,15 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     updateAlbum(album) {
+
       var params = {
-        artist: this.get('artist') ? this.get('artist') : "",
-        album: this.get('album') ? this.get('album') : "",
-        genre: this.get('genre') ? this.get('genre') : "",
-        image: this.get('image') ? this.get('image') : "",
-        review: ""
+        artist: this.get('artist'),
+        album: this.get('title'),
+        genre: this.get('genre'),
+        image: this.get('image'),
+        review: this.get('review')
       };
-      this.sendAction('updateAlbum', album, params);
+      this.sendAction('update', album, params);
     }
   }
 });

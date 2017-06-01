@@ -5,5 +5,6 @@ export default DS.Model.extend({
   album: DS.attr(),
   genre: DS.attr(),
   image: DS.attr(),
-  review: DS.attr()
+  review: DS.attr(),
+  comments: DS.hasMany('comment', { async: true })
 });
