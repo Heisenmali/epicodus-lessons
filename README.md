@@ -49,12 +49,10 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
-##Plan
+## Planning
 
 1. Configuration/dependencies
   * emberfire (firebase)
-  * 
-  * 
 
 2. Specs
   * Spec 1: All questions are displayed on questions page.
