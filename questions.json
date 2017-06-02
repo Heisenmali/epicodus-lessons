@@ -1,17 +1,22 @@
 { "questions": [{
     "author": "Led Zeppelin",
-    "content": "Where's my zeppelin?"
+    "question": "Where's my zeppelin?",
+    "content": "Here is some extra info about the question"
   }, {
     "author": "Pink Floyd",
-    "content": "How dark is it on the other side of the moon?"
+    "question": "How dark is it on the other side of the moon?",
+    "content": "Here is some extra info about the question"
   }, {
     "author": "Tame Impala",
-    "content": "If water flows, how strong is the current?"
+    "question": "If water flows, how strong is the current?",
+    "content": "Here is some extra info about the question"  
   }, {
     "author": "Funkadelic",
-    "content": "Where's my brain?"
+    "question": "Where's my brain?",
+    "content": "Here is some extra info about the question"  
   }, {
     "author": "Rage Against the Machine",
-    "content": "Rage, is that you?"
+    "question": "Rage, is that you?",
+    "content": "Here is some extra info about the question"
   }]
 }

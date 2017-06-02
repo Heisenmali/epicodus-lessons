@@ -1,7 +1,13 @@
-<form>
-  <label for="creator">Author</label>
-  {{input value=creator id="creator"}}
-  <label for="answer">Answer</label>
-  {{input value=answer id="answer"}}
-  <button {{action 'addAnswer'}}>Add Answer</button>
+<form class="w-70 ph3 pv4">
+  <div class="mt3">
+    <label for="creator" class="db fw6 lh-copy f6">Author</label>
+    {{input value=creator id="creator" class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"}}
+  </div>
+  <div class="mt3">
+    <label for="answer" class="db fw6 lh-copy f6">Answer</label>
+    {{input value=answer id="answer" class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"}}
+  </div>
+  <div class="mt3">
+    <a {{action 'addAnswer'}} class="b ph3 pv2 ba b--black bg-transparent grow pointer f6 dib">Add Answer</a>
+  </div>
 </form>

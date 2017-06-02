@@ -1,13 +1,19 @@
-<h2>{{model.content}}</h2>
-<p>by {{model.author}}</p>
+<article class="cf">
+  <div class="fl w-50 pv4">
+    <h2>{{model.question}}</h2>
+    <p>by {{model.author}}</p>
+    <p>{{model.content}}</p>
+    <div class="pv4">
+      <h3>Answers:</h3>
 
-{{update-question question=model updateQuestion='updateQuestion'}}
+      {{#each model.answers as |answer|}}
+        {{answer-tile answer=answer}}
+      {{/each}}
+    </div>
+  </div>
 
-<h3>Answers:</h3>
-
-{{new-answer newAnswer='addAnswer' model=model}}
-
-{{#each model.answers as |answer|}}
-  {{answer-tile answer=answer}}
-{{/each}}
-
+  <div class="fl w-50">
+    {{update-question question=model updateQuestion='updateQuestion'}}
+    {{new-answer newAnswer='addAnswer' model=model}}
+  </div>
+</article>

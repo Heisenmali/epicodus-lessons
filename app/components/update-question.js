@@ -5,6 +5,7 @@ export default Ember.Component.extend({
     updateQuestion(question) {
       var params = {
         author: this.get('author'),
+        question: this.get('ask'),
         content: this.get('content')
       };
       this.sendAction('updateQuestion', question, params);

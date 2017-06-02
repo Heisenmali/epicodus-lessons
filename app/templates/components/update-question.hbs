@@ -1,7 +1,17 @@
-<form>
-  <label for="author">Author</label>
-  {{input value=author id="author" placeholder=question.author}}
-  <label for="content">Content</label>
-  {{input value=content id="content" placeholder=question.content}}
-  <button {{action 'updateQuestion' question}}>Update Question</button>
+<form class="w-70 ph3 pv4">
+  <div class="mt3">
+    <label for="author" class="db fw6 lh-copy f6">Author</label>
+    {{input value=author id="author" placeholder=question.author class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"}}
+  </div>
+  <div class="mt3">
+    <label for="ask" class="db fw6 lh-copy f6">Question</label>
+    {{input value=ask id="ask" placeholder=question.question class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"}}
+  </div>
+  <div class="mt3">
+    <label for="content" class="db fw6 lh-copy f6">Content</label>
+    {{input value=content id="content" placeholder=question.content class="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"}}
+  </div>
+  <div class="mt3">
+    <button {{action 'updateQuestion' question}} class="b ph3 pv2 ba b--black bg-transparent grow pointer f6 dib">Update Question</button>
+  </div>
 </form>

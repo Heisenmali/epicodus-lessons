@@ -4,7 +4,7 @@
 
 {{#each model as |question|}}
   {{#link-to 'question' question.id}}
-  <div class="question-tile">
+  <div class="question-tile w-60 pv3">
     {{question-tile question=question updateQuestion='updateQuestion'}}
   </div>
   {{/link-to}}
