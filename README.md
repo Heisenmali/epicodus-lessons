@@ -1,4 +1,4 @@
-# askme
+# askmeanything
 
 This app serves as a question and answer message board. Users can submit a questions to which other users can respond with answers. 
 
