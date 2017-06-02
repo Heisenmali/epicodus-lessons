@@ -1,0 +1,7 @@
+<form>
+  <label for="author">Author</label>
+  {{input value=author id="author" placeholder=question.author}}
+  <label for="content">Content</label>
+  {{input value=content id="content" placeholder=question.content}}
+  <button {{action 'updateQuestion' question}}>Update Question</button>
+</form>
