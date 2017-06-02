@@ -1,5 +1,7 @@
 <h1>Questions</h1>
 
+{{new-question newQuestion='addQuestion'}}
+
 {{#each model as |question|}}
   {{#link-to 'question' question.id}}
   <div class="question-tile">
