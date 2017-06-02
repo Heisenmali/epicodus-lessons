@@ -1,0 +1,17 @@
+{ "questions": [{
+    "author": "Led Zeppelin",
+    "content": "Where's my zeppelin?"
+  }, {
+    "author": "Pink Floyd",
+    "content": "How dark is it on the other side of the moon?"
+  }, {
+    "author": "Tame Impala",
+    "content": "If water flows, how strong is the current?"
+  }, {
+    "author": "Funkadelic",
+    "content": "Where's my brain?"
+  }, {
+    "author": "Rage Against the Machine",
+    "content": "Rage, is that you?"
+  }]
+}
