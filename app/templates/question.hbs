@@ -4,3 +4,10 @@
 {{update-question question=model updateQuestion='updateQuestion'}}
 
 <h3>Answers:</h3>
+
+{{new-answer newAnswer='addAnswer' model=model}}
+
+{{#each model.answers as |answer|}}
+  {{answer-tile answer=answer}}
+{{/each}}
+
