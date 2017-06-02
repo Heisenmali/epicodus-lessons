@@ -48,3 +48,30 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+##Plan
+
+1. Configuration/dependencies
+  * emberfire (firebase)
+  * 
+  * 
+
+2. Specs
+  * Spec 1: All questions are displayed on questions page.
+  * Spec 2: Each question has a dedicated page.
+  * Spec 3: Each question has answers. 
+
+3. Integration
+  * Initial routes or index pages with all dependencies in Controller/index.html head
+  * Template/html page for questions
+  * Template/html page for each question
+  * Template/html page for answer component
+
+4. UX/UI
+  * Include and modify Tachyons
+  * Develop custom style
+
+5. Polish
+  * Refactor if necessary
+  * Clean up code and project directory
+  * Make README awesome
