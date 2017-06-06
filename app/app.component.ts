@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
     <h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
     <h3>{{currentFocus}}</h3>
     <ul>
-      <li *ngFor="let currentTask of tasks">{{currentTask.description}}</li>
+      <li [class]="priorityColor(currentTask)" (click)="isDone(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}}
+      <button (click)="editTask()">Edit</button></li>
     </ul>
   </div>
   `
@@ -20,13 +21,40 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
   tasks: Task[] = [
-    new Task('finish weekend Angular homework for Epicodus course'),
-    new Task('Begin brainstorming possible JavaScript group projects'),
-    new Task('Add README file to last few Angular repos on Github')
+    new Task('finish weekend Angular homework for Epicodus course', 4),
+    new Task('Begin brainstorming possible JavaScript group projects', 2),
+    new Task('Add README file to last few Angular repos on Github', 1)
   ];
+
+  completedTask(currentTask: Task) {
+    currentTask.done === true;
+  }
+
+  editTask() {
+    alert("Death - it's a thing")
+  }
+
+  isDone(clickedTask: Task) {
+    if(clickedTask.done === true) {
+      alert('This task is done');
+    } else {
+      alert('Task is not done. Death is approaching, fast.');
+    }
+  }
+
+  priorityColor(currentTask) {
+    if (currentTask.priority === 4){
+      return "bg-danger";
+    } else if (currentTask.priority === 2) {
+      return "bg-warning";
+    } else {
+      return "bg-info";
+    }
+  }
+
 }
 
 export class Task {
   public done: boolean = false;
-  constructor (public description: string) { }
+  constructor (public description: string, public priority: number) { }
 }
