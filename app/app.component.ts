@@ -8,8 +8,21 @@ import { Component } from '@angular/core';
     <h3>{{currentFocus}}</h3>
     <ul>
       <li [class]="priorityColor(currentTask)" (click)="isDone(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}}
-      <button (click)="editTask()">Edit</button></li>
+      <button (click)="editTask(currentTask)">Edit</button></li>
     </ul>
+    <hr>
+    <div>
+      <h3>{{selectedTask.description}}</h3>
+      <p>Task Complete? {{selectedTask.done}}</p>
+      <h3>Edit Task</h3>
+      <label>Enter Task Description:</label>
+      <input [(ngModel)]="selectedTask.description">
+      <label>Enter Task Priority (1-3):</label>
+      <br>
+      <input type="radio" [(ngModel)]="selectedTask.priority" [value]="1">1 (low priority)<br>
+      <input type="radio" [(ngModel)]="selectedTask.priority" [value]="2">2 (medium priority)<br>
+      <input type="radio" [(ngModel)]="selectedTask.priority" [value]="3">3 (high priority)<br>
+    </div>
   </div>
   `
 })
@@ -21,17 +34,17 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
   tasks: Task[] = [
-    new Task('finish weekend Angular homework for Epicodus course', 4),
+    new Task('finish weekend Angular homework for Epicodus course', 3),
     new Task('Begin brainstorming possible JavaScript group projects', 2),
-    new Task('Add README file to last few Angular repos on Github', 1)
-  ];
+    new Task('Add README file to last few Angular repos on Github', 1) ];
+  selectedTask: Task = this.tasks[0];
 
   completedTask(currentTask: Task) {
     currentTask.done === true;
   }
 
-  editTask() {
-    alert("Death - it's a thing")
+  editTask(clickedTask) {
+    this.selectedTask = clickedTask;
   }
 
   isDone(clickedTask: Task) {
@@ -43,7 +56,7 @@ export class AppComponent {
   }
 
   priorityColor(currentTask) {
-    if (currentTask.priority === 4){
+    if (currentTask.priority === 3){
       return "bg-danger";
     } else if (currentTask.priority === 2) {
       return "bg-warning";
