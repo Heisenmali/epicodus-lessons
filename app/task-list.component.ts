@@ -26,7 +26,7 @@ export class TaskListComponent {
 
   filterByCompleteness: string = "incompleteTasks";
 
-  toggleDone(currentTask: Task, doneOrNot: boolean) {
+  toggleDone(currentTask, doneOrNot) {
     currentTask.done = doneOrNot;
   }
 
@@ -34,7 +34,7 @@ export class TaskListComponent {
     this.filterByCompleteness = optionFromMenu;
   }
 
-  isDone(clickedTask: Task) {
+  isDone(clickedTask) {
     if(clickedTask.done === true) {
       console.log("This task is done!");
     } else {
@@ -42,7 +42,7 @@ export class TaskListComponent {
     }
   }
 
-  priorityColor(currentTask: Task){
+  priorityColor(currentTask){
     if (currentTask.priority === 3){
       return "bg-danger";
     } else if (currentTask.priority === 2) {
@@ -52,7 +52,7 @@ export class TaskListComponent {
     }
   }
 
-  editButtonHasBeenClicked(taskToEdit: Task) {
+  editButtonHasBeenClicked(taskToEdit) {
    this.clickSender.emit(taskToEdit);
   }
 }

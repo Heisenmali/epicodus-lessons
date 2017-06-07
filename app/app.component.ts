@@ -33,16 +33,16 @@ export class AppComponent {
     this.selectedTask = null;
   }
 
-  completedTask(currentTask: Task) {
+  completedTask(currentTask) {
     currentTask.done === true;
   }
 
-  editTask(clickedTask: Task) {
+  editTask(clickedTask) {
     this.selectedTask = clickedTask;
   }
 
   newTask(newDescription) {
-    this.masterTaskList.push(new Task(newDescription));
+    this.masterTaskList.push(new Task(newDescription, 1));
   }
 
 }
