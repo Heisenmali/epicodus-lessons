@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
     <new-animal (newAnimalSender)="storeNewAnimal($event)"></new-animal>
-    <list-animal [animals]="animals" (editAnimalSender)="selectAnimal($event)"></list-animal>
+    <list-animal [animals]="animals" (editAnimalSender)="selectAnimal($event)" (selectedAgeSender)="changeAge($event)"></list-animal>
     <edit-animal *ngIf="edit" [animal]="selectedAnimal" (finishedEditSender)="finishedEdit()"></edit-animal>
   `
 })
