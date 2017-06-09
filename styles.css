@@ -1,3 +1,7 @@
 body {
-  padding: 10vh 20vw;
+  padding: 10vh 15vw;
+}
+
+a, label {
+  margin-top: 2vh;
 }

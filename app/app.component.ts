@@ -4,10 +4,14 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-    <a (click)="toggleNew()" class="f6 link dim ba ph3 pv2 mb2 dib black">{{new ? 'Hide form' : 'New Animal' }}</a>
-    <new-animal *ngIf="new" (newAnimalSender)="storeNewAnimal($event)"></new-animal>
-    <list-animal [animals]="animals" (editAnimalSender)="selectAnimal($event)" (selectedAgeSender)="changeAge($event)"></list-animal>
-    <edit-animal *ngIf="edit" [animal]="selectedAnimal" (finishedEditSender)="finishedEdit()"></edit-animal>
+    <div class="fl w-50 pr3">
+      <a (click)="toggleNew()" class="f6 link dim ba ph3 pv2 mb2 dib black">{{new ? 'Hide form' : 'New Animal' }}</a>
+      <new-animal *ngIf="new" (newAnimalSender)="storeNewAnimal($event)"></new-animal>
+      <list-animal [animals]="animals" (editAnimalSender)="selectAnimal($event)" (selectedAgeSender)="changeAge($event)"></list-animal>
+    </div>
+    <div class="fl w-50 pl3" >
+      <edit-animal *ngIf="edit" [animal]="selectedAnimal" (finishedEditSender)="finishedEdit()"></edit-animal>
+    </div>
   `
 })
 
@@ -34,6 +38,7 @@ export class AppComponent {
 
   storeNewAnimal(newAnimal: Animal) {
     this.animals.push(newAnimal);
+    this.toggleNew();
   }
 
   toggleNew() {

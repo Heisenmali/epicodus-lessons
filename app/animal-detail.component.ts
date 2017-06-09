@@ -12,7 +12,6 @@ import { Animal } from './animal.model';
       <p>Sex: {{animal.sex}}</p>
       <p>Likes: {{animal.likes}}</p>
       <p>Dislikes: {{animal.dislikes}}</p> 
-      <a (click)="editAnimal(animal)" class="f6 link dim ba ph3 pv2 mb2 dib black">Edit Animal</a>
     </div>
   `
 })

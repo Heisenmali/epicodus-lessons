@@ -15,6 +15,7 @@ import { Animal } from './animal.model';
     <div *ngFor="let animal of animals | ageSort:selectedAge">
       <h3>{{animal.name}} - {{animal.species}}</h3>
       <animal-detail [animal]="animal"></animal-detail>
+      <a (click)="editAnimal(animal)" class="f6 link dim ba ph3 pv2 mb2 dib black">Edit Animal</a>
     </div>
   `
 })
