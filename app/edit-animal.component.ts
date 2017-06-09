@@ -8,23 +8,33 @@ import { Animal } from './animal.model';
     <form>
       <label>Species</label>
       <input [(ngModel)]="animal.species" name="species" type="text">
+      
       <label>Name</label>
-      <input [(ngModel)]="animal.name" name="name" type="text">      
+      <input [(ngModel)]="animal.name" name="name" type="text">
+            
       <label>Age</label>
-      <input [(ngModel)]="animal.age" name="age" type="text">      
+      <input [(ngModel)]="animal.age" name="age" type="text">
+            
       <label>Diet</label>
-      <input [(ngModel)]="animal.diet" name="diet" type="text">      
+      <input [(ngModel)]="animal.diet" name="diet" type="text">
+            
       <label>Location</label>
-      <input [(ngModel)]="animal.location" name="location" type="text">      
+      <input [(ngModel)]="animal.location" name="location" type="text">
+            
       <label>Caretakers</label>
-      <input [(ngModel)]="animal.caretakers" name="caretakers" type="text">      
+      <input [(ngModel)]="animal.caretakers" name="caretakers" type="text">
+            
       <label>Sex</label>
-      <input [(ngModel)]="animal.sex" name="sex" type="text">      
+      <input [(ngModel)]="animal.sex" name="sex" type="text">
+            
       <label>Likes</label>
-      <input [(ngModel)]="animal.likes" name="likes" type="text">      
+      <input [(ngModel)]="animal.likes" name="likes" type="text">
+            
       <label>Dislikes</label>
-      <input [(ngModel)]="animal.dislikes" name="dislikes" type="text">      
+      <input [(ngModel)]="animal.dislikes" name="dislikes" type="text">
+            
       <button (click)="finishedEdit()" >Save changes</button>
+    </form>
   `
 })
 

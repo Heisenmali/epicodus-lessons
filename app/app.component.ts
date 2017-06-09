@@ -4,6 +4,7 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
+    <new-animal (newAnimalSender)="storeNewAnimal($event)"></new-animal>
     <list-animal [animals]="animals" (editAnimalSender)="selectAnimal($event)"></list-animal>
     <edit-animal *ngIf="edit" [animal]="selectedAnimal" (finishedEditSender)="finishedEdit()"></edit-animal>
   `
@@ -20,7 +21,7 @@ export class AppComponent {
     new Animal('Black Tailed Deer', 'Tinkerbell', 7, 'Herbivore', 'Northern Trail', 2, 'Female', 'Leaves', 'Loud Noises')
   ];
 
-  selectAnimal(animal) {
+  selectAnimal(animal: Animal) {
     this.selectedAnimal = animal;
     this.edit=true;
   }
@@ -28,6 +29,11 @@ export class AppComponent {
   finishedEdit() {
     this.edit = false;
   }
+
+  storeNewAnimal(newAnimal: Animal) {
+    this.animals.push(newAnimal);
+  }
+
 }
 
 
