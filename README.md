@@ -1,12 +1,12 @@
 # Zoo
 
-#### _{Animal tracker for Zoo}_
+#### _Animal tracker for Zoo_
 
-#### By _**{Niklas Long}**_
+#### By _**Niklas Long**_
 
 ## Description
 
-_{This application allows users to add, edit, and view animals and their details. Users can also filter the animal list by age.}_
+_This application allows users to add, edit, and view animals and their details. Users can also filter the animal list by age._
 
 ## Setup/Installation Requirements
 
