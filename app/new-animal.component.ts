@@ -5,34 +5,34 @@ import { Animal } from './animal.model';
   selector: 'new-animal',
   template: `
     <form>
-      <label>Species</label>
-      <input #species type="text">
+      <label class="db fw4 lh-copy f6">Species</label>
+      <input #species type="text" class="pa2 input-reset ba bg-transparent w-100 measure">
 
-      <label>Name</label>
-      <input #name type="text">
+      <label class="db fw4 lh-copy f6">Name</label>
+      <input #name type="text" class="pa2 input-reset ba bg-transparent w-100 measure">
 
-      <label>Age</label>
-      <input #age type="text">
+      <label class="db fw4 lh-copy f6">Age</label>
+      <input #age type="text" class="pa2 input-reset ba bg-transparent w-100 measure">
 
-      <label>Diet</label>
-      <input #diet type="text">
+      <label class="db fw4 lh-copy f6">Diet</label>
+      <input #diet type="text" class="pa2 input-reset ba bg-transparent w-100 measure">
 
-      <label>Location</label>
-      <input #location type="text"> 
+      <label class="db fw4 lh-copy f6">Location</label>
+      <input #location type="text" class="pa2 input-reset ba bg-transparent w-100 measure"> 
 
-      <label>Caretakers</label>
-      <input #caretakers type="text"> 
+      <label class="db fw4 lh-copy f6">Caretakers</label>
+      <input #caretakers type="text" class="pa2 input-reset ba bg-transparent w-100 measure"> 
 
-      <label>Sex</label>
-      <input #sex type="text">  
+      <label class="db fw4 lh-copy f6">Sex</label>
+      <input #sex type="text" class="pa2 input-reset ba bg-transparent w-100 measure">  
 
-      <label>Likes</label>
-      <input #likes type="text">   
+      <label class="db fw4 lh-copy f6">Likes</label>
+      <input #likes type="text" class="pa2 input-reset ba bg-transparent w-100 measure">   
 
-      <label>Dislikes</label>
-      <input #dislikes type="text">   
+      <label class="db fw4 lh-copy f6">Dislikes</label>
+      <input #dislikes type="text" class="pa2 input-reset ba bg-transparent w-100 measure">   
 
-      <button (click)="createAnimal(species.value, name.value, age.value, diet.value, location.value, caretakers.value, sex.value, likes.value, dislikes.value)">Add animal</button>
+      <a (click)="createAnimal(species.value, name.value, age.value, diet.value, location.value, caretakers.value, sex.value, likes.value, dislikes.value)" class="f6 link dim ba ph3 pv2 mb2 dib black">Add animal</a>
     </form>
   `
 })
