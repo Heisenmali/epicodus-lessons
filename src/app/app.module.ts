@@ -12,6 +12,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { EditProjectComponent } from './edit-project/edit-project.component';
 
 
 export const firebaseConfig = {
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     AppComponent,
     ListProjectsComponent,
     AdminComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    EditProjectComponent
   ],
   imports: [
     BrowserModule,

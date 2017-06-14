@@ -3,5 +3,10 @@
 <div *ngFor="let project of projects | async" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetail(project)"><em>{{project.name}}</em> by {{project.manager}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{project.description}}
+      <hr>
+      <app-edit-project [selectedProject]="project"></app-edit-project>
+    </div>
   </div>
 </div>

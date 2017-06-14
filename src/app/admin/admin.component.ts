@@ -20,7 +20,6 @@ export class AdminComponent implements OnInit {
   }
 
   submitForm(name: string, manager: string, description: string, goal: number) {
-    console.log(typeof goal);
     var newProject: Project = new Project(name, manager, description, goal);
     this.projectService.addProject(newProject);
   }

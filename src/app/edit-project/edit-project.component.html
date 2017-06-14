@@ -1,0 +1,17 @@
+<h4>Edit Album</h4>
+
+<label>New Album Name:</label>
+<input [(ngModel)]="selectedProject.name">
+<br>
+<label>New Project Manager:</label>
+<input [(ngModel)]="selectedProject.manager">
+<br>
+<label>New Project Description:</label>
+<input [(ngModel)]="selectedProject.description">
+<br>
+<label>New Project Goal:</label>
+<input [(ngModel)]="selectedProject.goal">
+
+<button (click)="beginUpdatingProject(selectedProject)">Update</button>
+<hr>
+<button (click)="beginDeletingProject(selectedProject)">Delete</button>
