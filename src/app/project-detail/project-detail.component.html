@@ -1,3 +1,6 @@
-<p>
-  project-detail works!
-</p>
+<div>
+  <h3>{{(projectToDisplay | async)?.name}}</h3>
+  <h3>{{(projectToDisplay | async)?.manager}}</h3>
+  <h3>{{(projectToDisplay | async)?.description}}</h3>
+  <h3>$ {{(projectToDisplay | async)?.goal}}</h3>
+</div>
