@@ -11,6 +11,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 
 export const firebaseConfig = {
@@ -24,7 +25,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     ListProjectsComponent,
-    AdminComponent
+    AdminComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
