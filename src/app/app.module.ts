@@ -13,6 +13,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { GoalSearchPipe } from './goal-search.pipe';
 
 
 export const firebaseConfig = {
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     ListProjectsComponent,
     AdminComponent,
     ProjectDetailComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    GoalSearchPipe
   ],
   imports: [
     BrowserModule,

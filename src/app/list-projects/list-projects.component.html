@@ -1,6 +1,17 @@
 <h2>Projects</h2>
 
-<div *ngFor="let project of projects | async" class="panel panel-default">
+
+<div id="selectMenu">
+  <select (change)="onChangeProject($event.target.value)">
+    <option value="0" selected="selected">All Project</option>
+    <option value="50">Under $50</option>
+    <option value="100">Under $100</option>
+    <option value="200">Under $200</option>
+    <option value="400">Under $400</option>
+  </select>
+</div>
+
+<div *ngFor="let project of projects | goalSearch:filterByGoal" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetail(project)"><em>{{project.name}}</em> by {{project.manager}}</h3>
     <div *ngIf="currentRoute === '/admin'">
