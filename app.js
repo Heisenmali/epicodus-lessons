@@ -1,14 +1,16 @@
+{type: 'safe'}
+
 var grid =
 
 [
-  ["s", "s", "s", "s", "s", "s", "s", "s"],
-  ["s", "s", "s", "s", "s", "s", "s", "s"],
-  ["s", "s", "s", "s", "s", "s", "s", "s"],
-  ["s", "s", "s", "s", "s", "s", "s", "s"],
-  ["s", "s", "s", "s", "s", "s", "s", "s"],
-  ["s", "s", "s", "s", "s", "s", "s", "s"],
-  ["s", "s", "s", "s", "s", "s", "s", "s"],
-  ["s", "s", "s", "s", "s", "s", "s", "s"]
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}],
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}],
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}],
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}],
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}],
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}],
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}],
+  [{type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}, {type: 'safe'}]
 ];
 
 //grid[y][x]
@@ -34,12 +36,25 @@ var compareObjects = function(one, two) {
   }
 }
 
-
 var addMines = function() {
+  var mines = generateMines();
+
+  console.log(mines)
+
+  for (var i in mines) {
+    var grid_x = mines[i].x;
+    var grid_y = mines[i].y;
+
+    grid[grid_y][grid_x].type = "mine";
+  }
+}
+
+
 //  1. Select a random square from the grid record its coordinates
 //  2. Assign it as a mine
 //  3. Keep count of mine number
 //  4. select  new random square check if it's already been selected. If so select a new one. If not go to step 2
+var generateMines = function() {
 
   var mines = [];
 
@@ -67,15 +82,14 @@ var addMines = function() {
       mines.push(selectedMine);
     }
   }
-
-  console.log(mines)
+  return mines;
 }
 
 
 
 //running the app
 var run = function() {
-  // console.log(grid);
+  console.log(grid);
 }
 
 window.onload = function() {
