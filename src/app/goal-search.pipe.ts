@@ -7,10 +7,12 @@ export class GoalSearchPipe implements PipeTransform {
 
   transform(projects: any[], filterGoal) {
     var output = [];
+    console.log(filterGoal)
 
     if (filterGoal != 0) {
       for (var i in projects) {
-        if ((parseInt(projects[i].goal) < filterGoal) && (parseInt(projects[i].goal) > filterGoal / 2)) {
+        console.log(filterGoal)
+        if ((parseInt(projects[i].goal) < filterGoal)) {
           output.push(projects[i])
         }
       }
