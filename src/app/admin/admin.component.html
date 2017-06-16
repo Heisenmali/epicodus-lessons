@@ -7,29 +7,29 @@
       <div>
         <label>Climber name:</label>
         <br>
-        <input #newName>
+        <input #newName required>
       </div>
 
       <div>
         <label>Climber Age:</label>
         <br>
-        <input #newAge>
+        <input #newAge type="number" required>
       </div>
 
       <div>
         <label>Climber Bio:</label>
         <br>
-        <textarea #newBio></textarea>
+        <textarea #newBio required></textarea>
       </div>
       <div>
         <label>Climber Goal:</label>
         <br>
-        <input #newGoal>
+        <input #newGoal required>
       </div>
       <div>
         <label>Climber type:</label>
         <br>
-        <input #newType>
+        <input #newType required>
       </div>
       <button (click)="submitForm(newName.value, newAge.value, newBio.value, newGoal.value, newType.value); newName.value=''; newAge.value=''; newBio.value=''; newGoal.value='';newType.value=''">Add</button>
     </div>

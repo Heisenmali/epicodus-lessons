@@ -1,6 +1,8 @@
+
+
 <div id="selectMenu">
   <select (change)="onChangeUser($event.target.value)">
-    <option value="AllUsers" selected="selected">All users</option>    
+    <option value="AllUsers" selected="selected">All climbers</option>    
     <option value="All">All rounders</option>
     <option value="Trad">Trad</option>
     <option value="Sport">Sport</option>
@@ -10,7 +12,7 @@
 </div>
 
 <div class="user" *ngFor="let user of users | type:climbingType">
-  <h2 (click)="goToDetail(user)">{{user.name}}</h2>
+  <h2 class="userDetail" (click)="goToDetail(user)">{{user.name}}</h2>
   <div *ngIf="currentRoute === '/admin'">
         {{user.bio}}
         <hr>

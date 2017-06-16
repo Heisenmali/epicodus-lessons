@@ -1,19 +1,19 @@
 <h4>Edit User</h4>
 
 <label>New User Name:</label>
-<input [(ngModel)]="selectedUser.name">
+<input [(ngModel)]="selectedUser.name" required>
 <br>
 <label>New User Age:</label>
-<input [(ngModel)]="selectedUser.age">
+<input [(ngModel)]="selectedUser.age" type="number" required>
 <br>
 <label>New User Bio:</label>
-<input [(ngModel)]="selectedUser.bio">
+<input [(ngModel)]="selectedUser.bio" required>
 <br>
 <label>New User Goal:</label>
-<input [(ngModel)]="selectedUser.goal">
+<input [(ngModel)]="selectedUser.goal" required>
 <br>
 <label>New User Type:</label>
-<input [(ngModel)]="selectedUser.type">
+<input [(ngModel)]="selectedUser.type" required>
 
 <button (click)="beginUpdatingUser(selectedUser)">Update</button>
 <hr>
