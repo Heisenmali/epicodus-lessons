@@ -12,6 +12,9 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { AboutComponent } from './about/about.component';
+import { NavComponent } from './nav/nav.component';
+import { TypePipe } from './type.pipe';
 
 
 export const firebaseConfig = {
@@ -25,7 +28,10 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     ListUsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    AboutComponent,
+    NavComponent,
+    TypePipe
   ],
   imports: [
     BrowserModule,

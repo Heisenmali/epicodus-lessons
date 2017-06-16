@@ -1,3 +1,14 @@
-<div *ngFor="let user of users">
+<div id="selectMenu">
+  <select (change)="onChangeUser($event.target.value)">
+    <option value="AllUsers" selected="selected">All users</option>    
+    <option value="All">All rounders</option>
+    <option value="Trad">Trad</option>
+    <option value="Sport">Sport</option>
+    <option value="Bouldering">Bouldering</option>
+    <option value="Aid">Aid</option>
+  </select>
+</div>
+
+<div *ngFor="let user of users | type:climbingType">
   <p (click)="goToDetail(user)">{{user.name}}</p>
 </div>

@@ -1,17 +1,26 @@
 { "users": [{
-    "name": "Eric Clapton",
-    "age": "72",
-    "bio": "Play guitar, sometimes",
-    "goal": "Play more"
+    "name": "Adam Ondra",
+    "age": "24",
+    "bio": "I climb a lot",
+    "goal": "Climb more",
+    "type": "Sport"
     }, {
-    "name": "James Rhodes",
-    "age": "42",
-    "bio": "Dark past, play the piano",
-    "goal": "Write a third book"
-      }, {
+    "name": "Ueli Steck",
+    "age": "40",
+    "bio": "Died doing what he loved",
+    "goal": "Hornbein route",
+    "type": "All"
+    }, {
     "name": "Tommy Caldwell",
     "age": "38",
     "bio": "I climb a lot",
-    "goal": "More climbing"
+    "goal": "More climbing",
+    "type": "All"
+  }, {
+    "name": "James Pearson",
+    "age": "-",
+    "bio": "Love trad",
+    "goal": "More climbing",
+    "type": "Trad"
   }]
 }

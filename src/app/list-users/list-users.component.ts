@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class ListUsersComponent implements OnInit {
   users: any[];
+  climbingType = 'AllUsers';
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
@@ -21,6 +23,10 @@ export class ListUsersComponent implements OnInit {
 
   goToDetail(clickedUser) {
     this.router.navigate(['users', clickedUser.$key])
+  }
+
+  onChangeUser(type) {
+    this.climbingType = type;
   }
 
 }
