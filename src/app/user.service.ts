@@ -15,4 +15,10 @@ export class UserService {
     return this.users;
   }
 
+  findUserById(userId: string) {
+    return this.database.object('users/' + userId);
+  }
+
+
+
 }

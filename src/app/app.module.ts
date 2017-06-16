@@ -11,6 +11,7 @@ import { ListUsersComponent } from './list-users/list-users.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 
 export const firebaseConfig = {
@@ -23,7 +24,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
