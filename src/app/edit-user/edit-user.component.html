@@ -1,0 +1,20 @@
+<h4>Edit User</h4>
+
+<label>New User Name:</label>
+<input [(ngModel)]="selectedUser.name">
+<br>
+<label>New User Age:</label>
+<input [(ngModel)]="selectedUser.age">
+<br>
+<label>New User Bio:</label>
+<input [(ngModel)]="selectedUser.bio">
+<br>
+<label>New User Goal:</label>
+<input [(ngModel)]="selectedUser.goal">
+<br>
+<label>New User Type:</label>
+<input [(ngModel)]="selectedUser.type">
+
+<button (click)="beginUpdatingUser(selectedUser)">Update</button>
+<hr>
+<button (click)="beginDeletingUser(selectedUser)">Delete</button>

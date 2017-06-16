@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ListUsersComponent implements OnInit {
   users: any[];
   climbingType = 'AllUsers';
+  currentRoute: string = this.router.url;
 
   constructor(private userService: UserService, private router: Router) { }
 

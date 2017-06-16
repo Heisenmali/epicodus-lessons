@@ -22,7 +22,20 @@ export class UserService {
   addUser(newUser) {
     this.users.push(newUser);
   }
+  
+  updateUser(userToUpdate) {
+    var userEntryInFirebase = this.findUserById(userToUpdate.$key);
+    userEntryInFirebase.update({
+      name: userToUpdate.name,
+      age: userToUpdate.age,
+      bio: userToUpdate.bio,
+      goal: userToUpdate.goal,
+      type: userToUpdate.type
+    })
+  }
 
-
-
+  deleteUser(userToDelete) {
+    var userEntryInFirebase = this.findUserById(userToDelete.$key);
+    userEntryInFirebase.remove();
+  }
 }
