@@ -80,3 +80,4 @@ Then create an api-keys.ts file in the app directory and include your newly acqu
 ## Comments
 
   * Form validation can be greatly improved by adding server side validation. 
+  * About page content could be stored in firebase. 
