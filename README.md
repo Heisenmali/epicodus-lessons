@@ -35,7 +35,7 @@ add your apiKey (see below)
 
 ## Adding your API Key
 
-In order to use the app correctly, you need to aqcuire your own api-key from firebase. To do this, create an account with firebase, create a new database and use the seed.json file in this project to seed your database. Set the rules for read and write to 'true'. Click on 'overview' and then 'add your database to your web app' to get your api-key.
+In order to use the app correctly, you need to acquire your own api-key from firebase. To do this, create an account with firebase, create a new database and use the seed.json file in this project to seed your database. Set the rules for read and write to 'true'. Click on 'overview' and then 'add your database to your web app' to get your api-key.
 
 Then create an api-keys.ts file in the app directory and include your newly acquired api-key as an exported variable named masterFirebaseConfig. (`export var masterFirebaseConfig{insert api key in here}`).
 
@@ -81,3 +81,7 @@ Then create an api-keys.ts file in the app directory and include your newly acqu
 
   * Form validation can be greatly improved by adding server side validation. 
   * About page content could be stored in firebase. 
+
+## Licence 
+
+MIT
