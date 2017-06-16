@@ -27,11 +27,22 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Setup
+
+run `npm install`
+run `bower install`
+add your apiKey (see below)
+
+## Adding your API Key
+
+In order to use the app correctly, you need to aqcuire your own api-key from firebase. To do this, create an account with firebase, create a new database and use the seed.json file in this project to seed your database. Set the rules for read and write to 'true'. Click on 'overview' and then 'add your database to your web app' to get your api-key.
+
+Then create an api-keys.ts file in the app directory and include your newly acquired api-key as an exported variable named masterFirebaseConfig. (`export var masterFirebaseConfig{insert api key in here}`).
+
 ## Planning
 
 1. Configuration/dependencies
-  * Angular
-  * Gulp
+  * Angular-cli
   * Npm
   * Bower
 
@@ -55,6 +66,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   * Component for viewing: list-users
   * Component for editing: edit-user
   * Component for adding: new-user
+  * Component for navbar: nav
   
 4. UX/UI
   * Develop custom style
