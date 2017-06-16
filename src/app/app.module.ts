@@ -15,6 +15,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import { TypePipe } from './type.pipe';
+import { AdminComponent } from './admin/admin.component';
 
 
 export const firebaseConfig = {
@@ -31,7 +32,8 @@ export const firebaseConfig = {
     UserDetailComponent,
     AboutComponent,
     NavComponent,
-    TypePipe
+    TypePipe,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

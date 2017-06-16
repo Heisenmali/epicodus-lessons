@@ -18,5 +18,4 @@ export class TypePipe implements PipeTransform {
     }
     return output;
   }
-
 }

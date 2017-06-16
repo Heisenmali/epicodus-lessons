@@ -19,6 +19,10 @@ export class UserService {
     return this.database.object('users/' + userId);
   }
 
+  addUser(newUser) {
+    this.users.push(newUser);
+  }
+
 
 
 }
