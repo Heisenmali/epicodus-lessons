@@ -1,0 +1,17 @@
+{ "users": [{
+    "name": "Eric Clapton",
+    "age": "72",
+    "bio": "Play guitar, sometimes",
+    "goal": "Play more"
+    }, {
+    "name": "James Rhodes",
+    "age": "42",
+    "bio": "Dark past, play the piano",
+    "goal": "Write a third book"
+      }, {
+    "name": "Tommy Caldwell",
+    "age": "38",
+    "bio": "I climb a lot",
+    "goal": "More climbing"
+  }]
+}
