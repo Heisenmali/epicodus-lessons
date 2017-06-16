@@ -52,10 +52,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 3. Integration
   * Initial routes and index page with all dependencies
-  * Component for viewing: list-animal
-  * Component for editing: edit-animal
-  * Component for adding: new-animal
-  * Pipe to filter animals by age: age.pipe
+  * Component for viewing: list-users
+  * Component for editing: edit-user
+  * Component for adding: new-user
+  
 
 4. UX/UI
   * Develop custom style
