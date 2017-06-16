@@ -1,6 +1,7 @@
 <div>
-  <h3>{{(userToDisplay | async)?.name}}</h3>
-  <h4>{{(userToDisplay | async)?.age}}</h4>
-  <h4>{{(userToDisplay | async)?.bio}}</h4>
-  <h4>{{(userToDisplay | async)?.goal}}</h4>
+  <h2>{{(userToDisplay | async)?.name}}</h2>
+  <h4>Age: {{(userToDisplay | async)?.age}}</h4>
+  <h4>Bio: {{(userToDisplay | async)?.bio}}</h4>
+  <h4>Goal: {{(userToDisplay | async)?.goal}}</h4>
+  <h4>Style: {{(userToDisplay | async)?.type}}</h4>
 </div>

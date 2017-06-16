@@ -1,0 +1,15 @@
+nav {
+  padding-top: 4vh;
+}
+
+ul {
+  display: inline;
+  list-style: none;
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 0vh 4vw;
+}
