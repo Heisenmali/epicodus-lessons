@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+  margin: 0;
+  background-color: #e0f0ec;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  color: #317873;
+  background-color: #a3c1ad;
+  margin: 0;
+  padding: 15px;
+}
+
+h2 {
+  color: #5f9ea0;
+  font-style: oblique;
+}
+
+p {
+  font-style: italic;
+}
+
+ul {
+  font-size: 20px;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
