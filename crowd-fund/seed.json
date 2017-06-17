@@ -1,0 +1,17 @@
+{ "projects": [{
+    "name": "Minor surgery",
+    "manager": "Josh",
+    "description": "Need a new tooth",
+    "goal": "1000"
+    }, {
+    "name": "Sparrow's birthday party",
+    "manager": "Kat",
+    "description": "NEED TO BUY CHEESE",
+    "goal": "2000000"
+      }, {
+    "name": "Fund my trip to Guatemala",
+    "manager": "Jimi",
+    "description": "I need sun",
+    "goal": "3"
+  }]
+}
