@@ -1,6 +1,6 @@
-require "rails_helper"
+require 'rails_helper'
 
-describe List do
+describe Task do
   it { should validate_presence_of :description }
   it { should belong_to :list }
 end
