@@ -2,12 +2,15 @@ class SightingsController < ApplicationController
 
   def new
     @animal = Animal.find(params[:animal_id])
+    @regions = Region.all
     @sighting = @animal.sightings.new
   end
 
   def create
     @animal = Animal.find(params[:animal_id])
-    @sighting = @animal.sightings.new(sighting_params)
+    @region = Region.find(params[:region_id])
+    @sighting = @animal.sightings.new()
+    @region.sightings << @sighting
     if @sighting.save
       redirect_to animal_path(@sighting.animal)
     else
@@ -41,6 +44,6 @@ class SightingsController < ApplicationController
 
   private
     def sighting_params
-      params.require(:sighting).permit(:latitude, :longitude)
+      params.require(:sighting).permit()
     end
 end
