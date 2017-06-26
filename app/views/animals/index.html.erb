@@ -2,6 +2,8 @@
 
 <ul>
   <% @animals.each do |animal| %>
-    <li><%= link_to "#{animal.name the animal.species}", animal_path(animal) %></li>
+    <li><%= link_to "#{animal.name} the #{animal.species}", animal_path(animal) %></li>
   <% end %>
 </ul>
+
+<%= link_to "New Animal", new_animal_path %>
