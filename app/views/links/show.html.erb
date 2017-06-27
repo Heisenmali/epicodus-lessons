@@ -1,0 +1,7 @@
+<h1><%= @link.title %></h1>
+
+<p><%= link_to "Return to links", links_path %></p>
+<p><%= link_to "Edit", edit_link_path(@link) %></p>
+<p><%= link_to "Delete", link_path(@link),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"}%></p>
