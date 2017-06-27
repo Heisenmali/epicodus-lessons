@@ -36,7 +36,6 @@ class LinksController < ApplicationController
       else
         new_votes = @link.vote_up(@link)
         new_score = @link.update_score(@link, new_votes)
-        # binding.pry
         @link.update(votes: new_votes, score: new_score)
         redirect_to link_path(@link)
       end
