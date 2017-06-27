@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   def index
-    @links = Link.order_by_votes
+    @links = Link.order_by_score
   end
 
   def new
@@ -35,7 +35,9 @@ class LinksController < ApplicationController
         end
       else
         new_votes = @link.vote_up(@link)
-        @link.update({votes: new_votes})
+        new_score = @link.update_score(@link, new_votes)
+        # binding.pry
+        @link.update(votes: new_votes, score: new_score)
         redirect_to link_path(@link)
       end
   end
@@ -47,6 +49,6 @@ class LinksController < ApplicationController
 
 private
   def link_params
-    params.require(:link).permit(:title, :url, :votes)
+    params.require(:link).permit(:title, :url, :votes, :score)
   end
 end

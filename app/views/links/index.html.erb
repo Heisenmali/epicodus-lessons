@@ -4,7 +4,8 @@
   <% @links.each do |link| %>
     <li>
       <%= link_to link.title, link_path(link) %> |
-      Votes: <%= link.votes%>
+      Votes: <%= link.votes%> |
+      Score: <%= link.score %>
     </li>
   <% end %>
 </ul>
