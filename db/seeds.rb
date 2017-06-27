@@ -8,8 +8,16 @@
 
 Link.destroy_all
 
+
 10.times do |index|
   Link.create!(title: Faker::Friends.unique.quote, url: Faker::Internet.unique.url)
 end
 
+Link.all.each do |link|
+  10.times do |index|
+    link.comments.create(content: Faker::Hipster.unique.sentence, link_id: link.id)
+  end
+end
+
 p "Faker created #{Link.count} links"
+p "Faker created #{Comment.count} comments"
