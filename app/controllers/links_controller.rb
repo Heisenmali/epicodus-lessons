@@ -27,17 +27,23 @@ class LinksController < ApplicationController
 
   def update
     @link = Link.find(params[:id])
-    if @link.update(link_params)
-      redirect_to link_path(@link)
-    else
-      render :edit
-    end
+      if link_params[:votes] == nil
+        if @link.update(link_params)
+          redirect_to link_path(@link)
+        else
+          render :edit
+        end
+      else
+        new_votes = @link.vote_up(@link)
+        @link.update({votes: new_votes})
+        redirect_to link_path(@link)
+      end
   end
 
-def destroy
-  Link.find(params[:id]).destroy
-  redirect_to links_path
-end
+  def destroy
+    Link.find(params[:id]).destroy
+    redirect_to links_path
+  end
 
 private
   def link_params

@@ -1,4 +1,12 @@
 <h1><%= @link.title %></h1>
+<p>Votes: <%= @link.votes %></p>
+<p>link: <%= @link.url %></p>
+
+<%= form_for @link do |f| %>
+  <%= f.hidden_field :votes, :value => 1 %>
+
+  <%= f.submit  %>
+<% end %>
 
 <p><%= link_to "Return to links", links_path %></p>
 <p><%= link_to "Edit", edit_link_path(@link) %></p>
