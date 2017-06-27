@@ -9,7 +9,7 @@
 Link.destroy_all
 
 10.times do |index|
-  Link.create!(title: Faker::Friends.quote, url: Faker::Internet.url)
+  Link.create!(title: Faker::Friends.unique.quote, url: Faker::Internet.unique.url)
 end
 
 p "Faker created #{Link.count} links"
