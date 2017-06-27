@@ -8,8 +8,20 @@
   <%= f.submit  %>
 <% end %>
 
+<hr>
+<h1>Comments:</h1>
+<ul>
+  <% @comments.each do |comment| %>
+  <li><%= comment.content %></li>
+  <% end%>
+</ul>
+<hr>
+
 <p><%= link_to "Return to links", links_path %></p>
 <p><%= link_to "Edit", edit_link_path(@link) %></p>
 <p><%= link_to "Delete", link_path(@link),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"}%></p>
+
+
+<%= link_to "Add Comment", new_link_comment_path(@link) %>
