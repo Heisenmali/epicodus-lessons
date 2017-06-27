@@ -1,3 +1,5 @@
+<%= render "layouts/errors", :object => @link %>
+
 <%= form_for @link do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
