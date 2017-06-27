@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Link.destroy_all
+
+10.times do |index|
+  Link.create!(title: Faker::Friends.quote, url: Faker::Internet.url)
+end
+
+p "Faker created #{Link.count} links"
