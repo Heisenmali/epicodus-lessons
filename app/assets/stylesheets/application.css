@@ -64,6 +64,7 @@ h1 {
 
 body {
   background-color: black;
+  color: #e5e5e5;
 }
 
 @media (max-width: 666px) {
