@@ -13,7 +13,7 @@
 <h3>all</h3>
 <div class="row">
   <%= render partial: "row", locals: {movies: @alpha_movies}%>
-</div>  
+</div>
 
 <h3>recent</h3>
 <div class="row">
@@ -22,15 +22,16 @@
 
 <h3>most-reviewed</h3>
 <div class="row">
-    <%= render partial: "row", locals: {movies: []}%>
+    <%= render partial: "row", locals: {movies: @most_reviewed}%>
 </div>
 
 <h3>unreviewed</h3>
 <div class="row">
-    <%= render partial: "row", locals: {movies: []}%>
+    <%= render partial: "row", locals: {movies: @unreviewed}%>
 </div>
 
 <h3>search</h3>
+<p><%= link_to "searcg", movies_path(search: ")(&%} A")%></p>
 <div class="row">
-    <%= render partial: "row", locals: {movies: []}%>
+    <%= render partial: "row", locals: {movies: @search_out}%>
 </div>
