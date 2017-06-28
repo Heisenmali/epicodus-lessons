@@ -1,7 +1,16 @@
 <h1>notflix</h1>
 
-<ul>
-  <% @movies.each do |movie|%>
-    <li><%= movie.title %></li>
-  <% end %>
-</ul>
+<h3>featured</h3>
+<div class="row">
+  <%= render partial: "row", locals: {movies: @movies}%>
+</div>
+
+<h3>popular</h3>
+<div class="row">
+    <%= render partial: "row", locals: {movies: @movies}%>
+</div>
+
+<h3>all</h3>
+<div class="block">
+  <%= render partial: "row", locals: {movies: @movies}%>
+</div>
