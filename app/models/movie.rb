@@ -43,9 +43,6 @@ class Movie < ActiveRecord::Base
     end
   end
 
-  # scope :search_by_title, -> (query) { where("title like ?",
-  #   "%#{query}%") }
-
   def self.alpha
     all.sort_by{ |movie| movie.title }
   end

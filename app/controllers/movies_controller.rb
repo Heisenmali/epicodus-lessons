@@ -6,8 +6,9 @@ class MoviesController < ApplicationController
     @recent = Movie.all.sort_by_recent
     @most_reviewed = Movie.all.sort_by_most_reviews
     @unreviewed = Movie.unreviewed
-    if params[:search].gsub!(/[^a-z0-9]/i, "") != ""
-      @search_out = Movie.search_by_title(params[:search])
+
+    if params[:query] && params[:query].gsub!(/[^a-z0-9]/i, "") != ""
+      @search_out = Movie.search_by_title(params[:query])
     else
       @search_out = @movies
     end
