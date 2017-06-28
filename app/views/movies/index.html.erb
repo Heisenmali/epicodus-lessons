@@ -31,14 +31,11 @@
 </div>
 
 <h3>search</h3>
-
 <%= form_tag("/movies", method: "get") do %>
-  <%= label_tag(:query, "Search for:") %>
   <%= text_field_tag(:query) %>
-  <%= submit_tag("Search") %>
+  <%= submit_tag("go") %>
 <% end %>
 
-<p><%= link_to "searcg", movies_path(search: ")(&%} A")%></p>
 <div class="row">
     <%= render partial: "row", locals: {movies: @search_out}%>
 </div>
