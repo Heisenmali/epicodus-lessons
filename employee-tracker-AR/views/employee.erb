@@ -1,0 +1,29 @@
+<h2>Employee: <%= @employee.name() %></h2>
+<hr>
+
+<% if @projects %>
+  <h3> Currently working on the following projects:
+  <ul>
+    <% @projects.each do |project| %> </h3>
+      <li><%= project.name %></li>
+    <% end %>
+  </ul>
+
+<% else %>
+    <p><strong>Employee has not yet been assigned to a project.</strong></p>
+    <br>
+    <p><a href="/projects">Add a project to the database</a></p>
+<% end %>
+
+<h3>Assign employee to a project:</h3>
+<form id="update_project_id" action="/employees/<%= @employee.id() %>" method="post">
+  <input type="hidden" name="employee_id" id="employee_id" value="<%= @employee.id() %>">
+  <label for="project_select">Select the Project:  </label>
+    <br>
+  <select id="project_id" name="project_id">
+    <% @list_projects.each() do |project| %>
+      <option value="<%= project.id() %>"><%= project.name() %></option>
+    <% end %>
+  </select>
+  <button type="submit">Submit</button>
+</form>
