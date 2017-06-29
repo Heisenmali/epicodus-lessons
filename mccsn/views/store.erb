@@ -1,0 +1,52 @@
+
+<nav class="dt w-100 border-box pa3 store-brand-nav">
+  <a class="dtc v-mid mid-gray link w-25" href="/" title="Home">
+    <h1 class="fw6 db black link hover-dark-pink">mccsn</h1>
+  </a>
+  <div class="dtc v-mid w-75 tr">
+    <a class="link dark-gray f6 f4-ns dib mr3 mr4-ns" href="/stores" title="stores">Stores</a>
+    <a class="link dark-gray f6 f4-ns dib mr3 mr0-ns" href="/brands" title="brands">Brands</a>
+  </div>
+</nav>
+<div class="cf w-100 pa7-ns info">
+
+  <div class="vanish">
+    <a class="fw6 db black link hover-blue" href="#0">Edit store</a>
+  </div>
+  
+  <h2 class="dib b" ><%= @store.name %> &#160;&#160; </h2>
+  <p class="dib ml0 gray"> <%= @store.location %></p>
+  
+  <% @store.brands.each do |brand| %>
+  <p><%= brand.name %></p>
+  <% end %>
+
+  <div class="edit">
+    <form action="/store/<%= @store.id %>/edit" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <label for="new-name" class="f6 b db mb2">Name</label>
+      <input type="text" name="new-name" value="<%= @store.name %>" class="input-reset ba b--black-20 pa2 mb2 db w-100">
+      <label for="new-location" class="f6 b db mb2">Location</label>
+      <input type="text" name="new-location" value="<%= @store.location %>" class="input-reset ba b--black-20 pa2 mb2 db w-100">
+      <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Make changes"></div>
+    </form>
+
+    <form class="pa4" action="/store/<%= @store.id %>/edit" method="post">
+      <fieldset id="favorite_movies" class="bn">
+        <legend class="fw7 mb2">Brands</legend>
+        <% @brands.each do |brand| %>
+        <div class="flex items-center mb2">
+          <input class="mr2" type="checkbox" id="<%= brand.name %>" name="brand_ids[]" value="<%= brand.id %>">
+          <label for="spacejam" class="lh-copy"><%= brand.name %></label>
+        </div>
+        <% end %>
+      </fieldset>
+      <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Add brands"></div>
+    </form>
+
+    <form action="/store/<%= @store.id %>/delete" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <div class="mt3"><input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6" type="submit" value="Remove store"></div>
+    </form>
+  </div>
+</div>

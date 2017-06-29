@@ -1,0 +1,31 @@
+<div class="content"> 
+  <nav class="dt w-100 border-box pa3 ph5-ns">
+    <a class="dtc v-mid mid-gray link w-25" href="/" title="Home">
+      <h1 class="fw6 db black link hover-dark-pink">mccsn</h1>
+    </a>
+    <div class="dtc v-mid w-75 tr">
+      <a class="link dark-gray f6 f4-ns dib mr3 mr0-ns hover-light-purple" href="/brands" title="brands">Brands</a>
+    </div>
+  </nav>
+
+  <section class="cf w-100 pa2-ns">
+
+  <% @stores.each do |store| %>
+    <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
+      <div class="aspect-ratio aspect-ratio--1x1">
+        <img style="background-image:url(/img/c<%= store.id.digits[0] %>.jpeg);" 
+          class="db bg-center cover aspect-ratio--object" />
+      </div>
+      <a href="/store/<%= store.id %>" class="ph2 ph0-ns pb3 link db">
+        <h3 class="f5 f4-ns mb0 black-90 hover-green"><%= store.name %></h3>
+        <h3 class="f6 f5 fw4 mt2 black-60"><%= store.location %></h3>
+      </a>
+    </article>
+  <% end %>
+
+  </section>
+
+  <div class="cf w-100 pa3-ns"> 
+    <a href="stores/new" class="f4 fw6 db black link hover-dark-red tr">Add a store</a>
+  </div>
+</div>
