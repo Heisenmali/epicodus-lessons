@@ -1,0 +1,7 @@
+.env
+node_modules/
+bower_components/
+build/
+tmp/
+css/bootstrap.css
+.DS_Store
