@@ -1,0 +1,17 @@
+{
+  "name": "club",
+  "description": "",
+  "main": "",
+  "authors": [
+    "nkls <niklas@long.ch>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

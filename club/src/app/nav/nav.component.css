@@ -1,0 +1,19 @@
+nav {
+  padding-top: 4vh;
+}
+
+ul {
+  display: inline;
+  list-style: none;
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 0vh 3.5vw;
+}
+
+a:hover {
+  color: #5afe57;
+}
