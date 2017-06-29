@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie Tickets</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src= "js/jquery-3.2.0.js"></script>
+    <script type="text/javascript" src= "js/scripts.js"></script>
+  </head>
+  <body>
+
+    <div class="main-content">
+      <form id="viewer-info">
+        <select id="movie-name" class="form-control">
+          <option value="theDouble">The Double</option>
+          <option value="waterWorld">Waterworld</option>
+          <option value="avatar2">Avatar 2</option>
+          <option value="avatar3">Avatar 3</option>
+        </select>
+
+        <label for="viewer-age">How old are you?</label>
+        <input id="viewer-age" class="form-control" type="number">
+
+        <select id="movie-time" class="form-control">
+          <option value="1">1pm</option>
+          <option value="2">2pm</option>
+          <option value="3">3pm</option>
+          <option value="4">4pm</option>
+        </select>
+
+        <button class="btn" type="submit" name="button">Submit!</button>
+
+      </form>
+
+      <div id="output">
+        <p id="price"></p>
+        <p id="available"></p>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
