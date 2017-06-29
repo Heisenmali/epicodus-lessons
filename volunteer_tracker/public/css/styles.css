@@ -1,0 +1,49 @@
+body {
+  font-family: 'Fauna One', serif;
+  font-size: 1.5em;
+  letter-spacing: 20;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+
+  font-weight: normal
+}
+
+h1 {
+  font-size: 218%;
+}
+
+h2 {
+  font-size: 164%;
+}
+
+h3 {
+  font-size: 145%;
+}
+
+h4 {
+  font-size: 118%;
+}
+
+.header {
+  padding: 3vh 0;
+}
+
+.btn {
+  margin: 7px 0 13px;
+}
+
+.form-control {
+  width: 23vw;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #65737e;
+}

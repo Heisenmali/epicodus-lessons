@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6">
+    <form action="/project" method="post">
+      <input class="form-control" type="text" name="project" placeholder="Name a project">
+      <button class="btn" type="submit">Add project</button>
+    </form>
+
+    <hr>
+
+    <% @projects.each do |project| %>
+      <a href="project/<%= project['id'] %>"><li><%= project['name'] %></li></a>
+    <% end %>
+  </div>
+
+   <div class="col-md-6">
+    <form action="/volunteer" method="post">
+      <input class="form-control" type="text" name="volunteer" placeholder="Name a volunteer">
+      <button class="btn" type="submit">Add volunteer</button>
+    </form>
+    
+    <hr>
+
+    <% @volunteers.each do |volunteer| %>
+      <a href="volunteer/<%= volunteer['id'] %>"><li><%= volunteer['name'] %></li></a>
+    <% end %>
+  </div>
+</div>
+
+
