@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Ikaros";
+  font-weight: normal;
+  src: url(../Ikaros/Ikaros-Regular.otf);
+}
+
+@font-face {
+  font-family: "Ikaros";
+  font-weight: lighter;
+  src: url(../Ikaros/Ikaros-Light.otf);
+}
+
+body {
+  font-family: "Ikaros";
+  font-size: 1.8em;
+  background-color: #bb1515;
+  color: #e0cda7;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 218%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 164%;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 145%;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 118%;
+  font-weight: lighter;
+  padding: 20px 0;
+}
+
+.header {
+  height: 35vh;
+  text-align: center;
+  padding: 40px;
+}
+
+.main-content {
+  padding: 0 20vw 0 10vw;
+}
+
+.form-group {
+  padding: 3vh 0;
+}
+
+/*TEXT FIELDS*/
+
+input[type=text] {
+  border: none;
+  background-color: #bb1515;
+  border-bottom: 5px solid #e0cda7;
+  padding: 10px;
+  margin: 20px 0;
+  transition: 0.3s ease all;
+}
+
+/*Chrome and Safari border outline removed when focused */
+
+input[type=text]:focus {
+  outline: none;
+  width: 40vw;
+  border-bottom: 5px solid #e0cda7;
+  transition: 0.3s ease all;
+}
+
+/*Firefox box shadow removed when data entered doesn't match regex pattern*/
+
+input[type=text]:invalid {
+  border-bottom: 5px solid #e0cda7;
+  width: 40vw;
+  outline: none;
+  box-shadow: none;
+  transition: 0.3s ease all;
+}
+
+input[type=text]:valid {
+  border-bottom: 1px solid #e0cda7;
+  width: 40vw;
+  outline: none;
+  box-shadow: none;
+  transition: 0.3s ease all;
+}
+
+/*RADIO BUTTONS*/
+
+label {
+  font-weight: normal;
+  width: 100%;
+}
+
+label span#text {
+  padding-left: 0.5em;
+}
+
+[type="radio"] { /*Makes the standard radio checkbox dissapear using clip */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+[type="radio"] + span::before {
+  content: "\00a6";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  color: #bb1515;
+  margin-right: 1em;
+  transition: 0.4s ease all;
+}
+
+[type="radio"]:hover + span::before {
+  content: "\00a6";/*"\00ac"*/
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  transition: 0.4s ease all;
+  color: #e0cda7;
+}
+
+[type="radio"]:checked + span::before {
+  content: "\00a6";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  transition: 0.4s ease all;
+  color: #e0cda7;
+}
+
+/*SUBMIT BUTTON*/
+
+button {
+  border-top: 1px solid #e0cda7;
+  border-bottom: 1px solid #e0cda7;
+  border-left: 1px solid #bb1515;
+  border-right: 1px solid #bb1515;
+  background-color: #bb1515;
+  padding: 10px;
+  margin: 3vh 3vh 10vh 3vh;
+  transition: 0.4s ease all;
+}
+
+button:hover {
+  border-top: 1px solid #bb1515;
+  border-bottom: 1px solid #bb1515;
+  border-left: 1px solid #e0cda7;
+  border-right: 1px solid #e0cda7;
+  transition: 0.4s ease all;
+}
+
+/*FOOTER*/
+
+.footer {
+  height: 60vh;
+  padding: 10vh 20vw 20vh 10vw;
+  background-color: #2a334f;
+}
+
+.footer h4 {
+  display: none;
+}
+
+p {
+  display: none;
+  border-left: 1px solid #e0cda7;
+  padding-left: 1em;
+}
