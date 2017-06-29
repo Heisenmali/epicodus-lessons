@@ -1,0 +1,47 @@
+.container-fluid {
+  padding: 25px;
+}
+
+.banner .container-fluid {
+  padding:0;
+}
+
+.banner {
+  min-height: 50vh;
+  max-height: 50vh;
+  width: auto;
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 50vh;
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+img {
+  width: 2700px;
+  height: 100%;
+}
+
+/*Main content*/
+
+.main-content {
+  padding: 0;
+}
+
+.attr {
+  background-color: black;
+  color: white;
+
+}
+
+.events {
+  background-color: green;
+  color: white;
+}
+
+.food {
+  background-color: yellow;
+  color: black;
+}
