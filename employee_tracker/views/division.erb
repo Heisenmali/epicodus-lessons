@@ -1,0 +1,7 @@
+<h2><%= @division.name %></h2>
+
+<form action="/division/edit/<%= @division.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" name="new-name">
+  <button type="submit" name="button">Make changes</button>
+</form>
