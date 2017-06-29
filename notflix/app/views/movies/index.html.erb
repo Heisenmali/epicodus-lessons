@@ -1,0 +1,41 @@
+<h1>notflix</h1>
+
+<h3>featured</h3>
+<div class="row">
+  <%= render partial: "row", locals: {movies: []}%>
+</div>
+
+<h3>popular</h3>
+<div class="row">
+    <%= render partial: "row", locals: {movies: @popular}%>
+</div>
+
+<h3>all</h3>
+<div class="row">
+  <%= render partial: "row", locals: {movies: @alpha_movies}%>
+</div>
+
+<h3>recent</h3>
+<div class="row">
+    <%= render partial: "row", locals: {movies: @recent}%>
+</div>
+
+<h3>most-reviewed</h3>
+<div class="row">
+    <%= render partial: "row", locals: {movies: @most_reviewed}%>
+</div>
+
+<h3>unreviewed</h3>
+<div class="row">
+    <%= render partial: "row", locals: {movies: @unreviewed}%>
+</div>
+
+<h3>search</h3>
+<%= form_tag("/movies", method: "get") do %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("go") %>
+<% end %>
+
+<div class="row">
+    <%= render partial: "row", locals: {movies: @search_out}%>
+</div>

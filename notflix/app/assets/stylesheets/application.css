@@ -1,0 +1,148 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+h3 {
+  color: #e5e5e5;
+  margin: auto;
+  font-size: 23px;
+  font-style: italic;
+  margin-left: 5%;
+  display: inline;
+}
+
+form {
+  display: inline;
+}
+
+input[type="text"] {
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  width: 20%;
+}
+
+input {
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e5e5e5;
+    border-radius: 16px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="submit"]{
+  border: none;
+  text-decoration: underline;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  font-style: italic;
+}
+
+.movie {
+  display: inline-block;
+  position: relative;
+}
+
+.row {
+  overflow: auto;
+  white-space: nowrap;
+  margin-bottom: 35px;
+  width: 92%;
+  margin-left: 5%;
+}
+
+.block {
+  margin-left: 5%;
+  max-width: 1820px;
+}
+
+img.image {
+    position: relative;
+}
+
+.movie-link{
+  display: inline;
+  z-index: 3;
+  position: absolute;
+  top: 36%;
+  left: 26%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 10px;
+}
+
+h1 {
+  color: #B9090B;
+  font-size: 9em;
+  margin: auto;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  color: #e5e5e5;
+}
+
+@media (max-width: 666px) {
+  .row {
+    width: 300px;
+  }
+}
+
+@media (min-width: 667px) and (max-width: 986px) {
+  .row {
+    width: 604px;
+  }
+}
+
+@media (min-width: 987px) and (max-width: 1306px) {
+  .row {
+    width: 908px;
+  }
+}
+
+@media (min-width: 1307px) and (max-width: 1626px) {
+  .row {
+    width: 1212px;
+  }
+}
+
+@media (min-width: 1627px) and (max-width: 1946px) {
+  .row {
+    width: 1516px;
+  }
+}
+
+@media (min-width: 1947px) {
+  .row {
+    width: 1820px;
+  }
+}

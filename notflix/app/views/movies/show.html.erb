@@ -1,0 +1,10 @@
+<h1><%= link_to "notflix", movies_path%></h1>
+<h2><%=@movie.title%></h2>
+<ul>
+  <% @movie.ratings.each do |rating|%>
+    <li>
+      <h4><%= rating.title%></h4>
+      <p><%= rating.review %></p>
+    </li>
+  <% end %>
+</ul>

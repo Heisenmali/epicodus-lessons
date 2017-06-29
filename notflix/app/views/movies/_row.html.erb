@@ -1,0 +1,9 @@
+
+  <% movies.each do |movie|%>
+    <%=link_to movie_path(movie) do%>
+      <div class="movie">
+        <img src="<%= movie.image%>" class="image" />
+        <span class="movie-link"><%=movie.title%></span>
+      </div>
+    <% end %>
+  <% end %>
