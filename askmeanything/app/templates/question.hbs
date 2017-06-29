@@ -1,0 +1,19 @@
+<article class="cf">
+  <div class="fl w-50 pv4">
+    <h2>{{model.question}}</h2>
+    <p>by {{model.author}}</p>
+    <p>{{model.content}}</p>
+    <div class="pv4">
+      <h3>Answers:</h3>
+
+      {{#each model.answers as |answer|}}
+        {{answer-tile answer=answer}}
+      {{/each}}
+    </div>
+  </div>
+
+  <div class="fl w-50">
+    {{update-question question=model updateQuestion='updateQuestion'}}
+    {{new-answer newAnswer='addAnswer' model=model}}
+  </div>
+</article>
