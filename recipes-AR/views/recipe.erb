@@ -1,0 +1,82 @@
+<h1><%= @recipe.name %></h1>
+
+<% if @recipe.tags.any? %>
+  <% @recipe.tags.each do |tag| %>
+    <a href="/tag/<%= tag.id %>"><%= " #" %><%= tag.name %></a>
+  <% end %>
+<% end %>
+
+
+
+<h3>Ingredients:</h3>
+<ul>
+<% if @recipe.ingredients.any? %>
+  <% @recipe.ingredients.each do |ingredient| %>
+  <li>
+
+  <% this_food = Food.find_by(recipe_id: @recipe.id, ingredient_id: ingredient.id) %>
+
+  <form id="delete_food" action="/food/<%= this_food.id %>" method="post">
+    <input name="_method" type="hidden" value="delete">
+    <button type="submit" class="btn btn-danger">x</button>
+    <a href="/ingredient/<%=ingredient.id%>"><%= ingredient.name %></a></li>
+  </form>
+
+
+  <% end %>
+<% end %>
+</ul>
+
+<form id="add_ingredient" action="/recipe/<%= @recipe.id %>/ingredient" method="post">
+  <label for="ingredient_name">Add a new ingredient:  </label>
+  <input type="text" name="ingredient_name" id="ingredient_name" required>
+  <button type="submit" class="btn btn-primary">Add Ingredient</button>
+</form>
+
+<br>
+<hr>
+<br>
+
+<h3>instructions:</h3>
+
+<% if @recipe.instructions %>
+  <pre><%= @recipe.instructions %></pre>
+
+<% end %>
+
+<form id="add_instructions" action="/recipe/<%= @recipe.id %>/instructions" method="post">
+  <label for="instructions">Write the instructions:  </label>
+  <textarea type="text" rows="4" cols="50" name="instructions" id="instructions" placeholder="<%= @recipe.instructions %>" required></textarea>
+  <button type="submit" class="btn btn-info">Add Instruction</button>
+</form>
+
+<br>
+<hr>
+<br>
+
+<form id="add_tag" action="/recipe/<%= @recipe.id %>/tag" method="post">
+  <label for="tag_name">Add a new tag:  </label>
+  <input type="text" name="tag_name" id="tag_name" required>
+  <button type="submit" class="btn btn-info">Add Tag</button>
+</form>
+
+<br>
+<hr>
+<br>
+
+<form id="update_recipe" action="/recipe/<%= @recipe.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="recipe_name">Rename this recipe:</label>
+  <input type="text" name="recipe_name" id="recipe_name" required>
+  <button type="submit" class="btn btn-warning">Rename</button>
+</form>
+
+<br>
+<hr>
+<br>
+
+<form id="delete_recipe" action="/recipe/<%= @recipe.id %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <label for="recipe_name">Delete this recipe:</label>
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form>

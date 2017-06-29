@@ -1,0 +1,24 @@
+<h1><%= @ingredient.name %></h1>
+
+<ul>
+<% if @ingredient.recipes.any? %>
+  <% @ingredient.recipes.each do |recipe| %>
+  <li><a href="/recipe/<%=recipe.id%>"><%= recipe.name %></a></li>
+
+  <% end %>
+<% end %>
+</ul>
+
+<form id="delete_ingredient" action="/ingredient/<%= @ingredient.id %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button type="submit" class="btn btn-danger">Delete this ingredient</button>
+</form>
+
+<hr>
+
+<form id="update_ingredient" action="/ingredient/<%= @ingredient.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="ingredient_name">Rename this ingredient:</label>
+  <input type="text" name="ingredient_name" id="ingredient_name" required>
+  <button type="submit" class="btn btn-warning">Rename</button>
+</form>
