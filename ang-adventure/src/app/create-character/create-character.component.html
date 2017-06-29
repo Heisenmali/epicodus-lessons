@@ -1,0 +1,10 @@
+<form>
+  <label>Name</label>
+  <input #name type="text">
+  <select (change)="onChangeTrait($event.target.value)">
+    <option value="courage" selected="selected">Courage</option>
+    <option value="strength">Strength</option>
+    <option value="intelligence">Intelligence</option>
+  </select>
+  <button (click)="createCharacter(name.value)" type="button">Start story</button>
+</form>
