@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby Room | A Chat App</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link  rel='stylesheet' href="/css/styles.css" type="text/css">
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Nunito" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="/js/spin.min.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+  <!-- Place modals here to escape bootstrap container -->
+  <div id="user-modal" class="modal" onclick="this.style.display='none';">
+    <div id="user-modal-content">
+      <div id="user-modal-image-div"></div>
+      <div id="user-modal-name-div"></div>
+      <div id="user-modal-about-div"></div>
+    </div>
+  </div>
+  <div id="terms-modal" class="modal" onclick="this.style.display='none';">
+    <%= erb :terms %>
+  </div>
+  <!-- end modals -->
+
+  <% if @user != nil && session[:uuid] != nil %>
+  <div class="nav">
+    <div class="container">
+      <a href="/chat/" class="ruby">Ruby Room</a>
+      <div class="nav-contents">
+        <span class="ruby">Hello, <%= @user.username %></span>
+        <a href="/signout">Logout</a>
+        <a href="/user/">Account Settings</a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <div class="container">
+    <br><br>
+
+    <%= yield %>
+    <hr>
+    <div id="footer">
+      <p><a href="/">&copy; The Ruby Room Co. <%= Time.new.year %></a></p>
+    </div>
+
+    <br><br>
+  </div>
+</body>
+
+<!-- import script for UI interactions -->
+<script src="/js/ui.js" type="text/javascript"></script>
+
+</html>
