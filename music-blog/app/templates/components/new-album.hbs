@@ -1,0 +1,11 @@
+<form>
+  <label for="artist">Artist</label>
+  {{input value=artist id="artist"}}
+  <label for="album">Album</label>
+  {{input value=album id="album"}}
+  <label for="genre">Genre</label>
+  {{input value=genre id="genre"}}
+  <label for="img">Image url</label>
+  {{input value=image id="image"}}
+  <button {{action 'addAlbum'}} type="button" name="button">Add Album</button>
+</form>
