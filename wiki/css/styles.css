@@ -1,0 +1,43 @@
+/*Main left column*/
+
+.left-column {
+  padding: 15px 15px 15px 30px;
+}
+
+/*Main right column*/
+
+.rightmaincolumn {
+  border: 1px solid black;
+}
+
+.topbox {
+ background-color: grey;
+}
+
+.mainbox {
+  padding: 10px;
+}
+
+.mainbox .col-md-5 {
+  border: 1px solid black;
+  margin: 3px;
+}
+
+.mainbox .col-md-5:first-child {
+  background-color: #dff0d8;
+}
+
+.mainbox .col-md-5:last-child {
+  background-color: #d9edf7;
+}
+
+/*headers in right main column*/
+
+h2.boxed {
+  border: 1px solid black;
+  background-color: rgb(206, 242, 224);
+}
+
+h2.unbox {
+border-style: none;
+}
