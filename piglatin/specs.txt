@@ -1,0 +1,39 @@
+1: The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels.;
+  Example Input: 3;
+  Example Output: 3;
+
+2: The program adds "ay" to single-letter words beginning with a vowel.;
+  Example Input: i;
+  Example Output: iay;
+
+3: The program adds "ay" to any single consonant.;
+  Example Input: c;
+  Example Output: cay;
+
+4: the program adds "ay" to multiple letter words beginning with a vowel.;
+  Example Input: input;
+  Example Output: inputay;
+
+5: the program adds "ay" to multiple letter words beginning with a consonant.;
+    Example Input: cat;
+    Example Output: catay;
+
+6: the program moves the first consonant to the end and adds "ay" after.;
+  Example Input: cat;
+  Example Output: atcay;
+
+7: the program moves all the first consecutive consonants to the end and adds "ay" after.;
+  Example Input: track ;
+  Example Output: acktray ;
+
+8: If the first consonants include "qu" , move the u with the q and add "ay".
+  Example Input: squeal ;
+  Example Output: ealsquay ;
+
+9: If the word begins with a "y", move "y" to the end and add "ay"
+  Example Input: your or yay;
+  Example Output: ouryay or ayyay ;
+
+10: making all this work across multiple words
+  Example Input: hello world;
+  Example output: ellohay orldway;
