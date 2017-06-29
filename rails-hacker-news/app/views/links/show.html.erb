@@ -1,0 +1,27 @@
+<h1><%= @link.title %></h1>
+<p>Votes: <%= @link.votes %></p>
+<p>link: <%= @link.url %></p>
+
+<%= form_for @link do |f| %>
+  <%= f.hidden_field :votes, :value => 1 %>
+
+  <%= f.submit "Up Vote"%>
+<% end %>
+
+<hr>
+<h1>Comments:</h1>
+<ul>
+  <% @comments.each do |comment| %>
+  <li><%= comment.content %></li>
+  <% end%>
+</ul>
+<hr>
+
+<p><%= link_to "Return to links", links_path %></p>
+<p><%= link_to "Edit", edit_link_path(@link) %></p>
+<p><%= link_to "Delete", link_path(@link),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"}%></p>
+
+
+<%= link_to "Add Comment", new_link_comment_path(@link) %>

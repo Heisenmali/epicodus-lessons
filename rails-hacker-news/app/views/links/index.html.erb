@@ -1,0 +1,15 @@
+<h1>Links</h1>
+
+<ul>
+  <% @links.each do |link| %>
+    <li>
+      <%= link_to link.title, link_path(link) %> |
+      Votes: <%= link.votes%> |
+      Score: <%= link.score %>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <%= link_to "Add a link", new_link_path %>
+</p>
