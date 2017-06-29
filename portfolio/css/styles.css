@@ -1,0 +1,153 @@
+
+
+body {
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 218%;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 164%;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 145%;
+  font-weight: normal;
+  margin: 40px 0 10px 0px;
+}
+
+h4 {
+font-size: 118%;
+font-weight: lighter;
+}
+
+p {
+  margin: 0 0 25px;
+}
+
+h1:first-letter, h2:first-letter, p small:first-letter {
+  color: rgb(0, 235, 127);
+}
+
+.container-fluid {
+  padding: 30px 23vw 30px 90px;
+}
+
+/*header section*/
+
+small {
+  font-style: italic;
+}
+
+/*main section*/
+
+ul {
+  list-style: none;
+}
+
+.gh {
+  text-align: right;
+}
+
+a.ghpages {
+  color: black;
+}
+
+a.ghrepo {
+  color: black;
+}
+
+a:hover {
+  color: rgb(0, 235, 127);
+  text-decoration: none;
+}
+
+span {
+  color: rgb(0, 235, 127);
+}
+
+/*about section*/
+
+.black {
+  background: black;
+}
+
+.aboutbox {
+  background-color: black;
+  color: white;
+}
+
+.left {
+
+}
+
+.right {
+  float: right;
+}
+
+#strike {
+  text-decoration: line-through;
+  color: white;
+}
+
+#interests {
+  list-style-type: lower-roman;
+  color: rgb(0, 235, 127);
+}
+
+#interests li span {
+  color: white;
+}
+
+.meimg {
+  width: 125px;
+  float: right;
+  padding-top: 30px;
+}
+
+img {
+  height: 125px;
+  width: 125px;
+  float: right;
+}
+
+.imgdesc {
+  text-align: left;
+  line-height: 100px;
+  width: 150px;
+}
+
+/*footer section*/
+
+.footerbox {
+  background-color: black;
+  color: white;
+  height: 30vh;
+}
+
+sup {
+  color: rgb(0, 235, 127);
+}
+
+/*media queries */
+
+@media screen and (max-width: 991px) {
+
+    .right {
+        float: left;
+    }
+
+    .meimg {
+      padding-top: 90px;
+    }
+}
