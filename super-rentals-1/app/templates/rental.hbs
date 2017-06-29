@@ -1,0 +1,7 @@
+<div class="rental-deet">
+  <h2>More information about {{model.owner}}'s {{model.type}}</h2>
+  {{rental-detail rental=model destroyReview="destroyReview"}}
+  <br>
+  {{update-rental rental=model update="update"}}
+  {{new-review saveReview="saveReview" rental=model}}
+</div>

@@ -1,0 +1,10 @@
+<div class="announcement">
+<h2>Announcements</h2>
+<ul>
+  {{#each model as |announcement|}}
+    {{announcement-tile destroyAnnouncement="destroyAnnouncement" announcement=announcement}}
+  {{/each}}
+</ul>
+
+{{new-announcement saveAnnouncement="saveAnnouncement"}}
+</div>
