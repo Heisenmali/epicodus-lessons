@@ -10,4 +10,10 @@ class Product < ActiveRecord::Base
     products = Product.all
     products.sort_by { |product| product.reviews.length }.last
   end
+
+  scope :three_most_recent, -> do
+    products = Product.all
+    sorted_products = products.sort_by { |product| product.created_at }.reverse
+    sorted_products.slice(0, 3)
+  end
 end

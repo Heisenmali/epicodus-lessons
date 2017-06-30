@@ -28,4 +28,12 @@ describe Product do
       expect(Product.most_reviewed.reviews.length).to eq(20)
     end
   end
+
+  describe 'three_most_recent' do
+    it 'will return the three most recently added products' do
+      product = Product.create(name: Faker::Ancient.primordial, cost:Faker::Number.digit, country: Faker::Address.country)
+      expect(Product.three_most_recent.length).to eq(3)
+      expect(Product.three_most_recent.first).to eq(product)
+    end
+  end
 end
