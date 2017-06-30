@@ -7,6 +7,11 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
   end
+  
+  def show
+    @product = Product.find(params[:id])
+    @reviews = @product.reviews
+  end
 
   def create
     @product = Product.new(product_params)
@@ -17,6 +22,11 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+  end
+
+
+  def edit
+    @product = Product.find(params[:id])
   end
 
 
