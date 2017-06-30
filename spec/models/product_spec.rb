@@ -5,6 +5,6 @@ describe Product do
   it { should validate_presence_of :cost }
   it { should validate_presence_of :country }
 
-  it { should have_many :reviews }
-  it { should have_many :users }
+  it { should have_many(:reviews).dependent(:destroy) }
+  it { should have_many(:users).through(:reviews) }
 end
