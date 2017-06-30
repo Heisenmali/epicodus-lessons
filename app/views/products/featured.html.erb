@@ -1,4 +1,13 @@
-<%= @product_no_1.name %>
-<% @newest_three.each do |product| %>
-  <p><%= product.name %> | <%= product.created_at %></p>
-<% end %>
+<h1 class="pl3">Featured</h1>
+
+<div class="pl3">
+  <p><%= link_to @product_no_1.name, product_path(@product_no_1), class: "" %></p>
+</div>
+
+<div class="pl3">
+  <% @newest_three.each do |product| %>
+    <div>
+      <p><%= link_to product.name, product_path(product) %></p>
+    </div>
+  <% end %>
+</div>
