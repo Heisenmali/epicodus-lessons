@@ -1,5 +1,15 @@
 <h1>Products</h1>
 
-<% @products.each do |product|%>
-  <%= link_to product.name, product_path(product), class: "" %>
-<% end %>
+
+
+<div class="fl w-10 pl3">
+  <% @products.each do |product|%>
+    <div class="pv2">
+      <%= link_to product.name, product_path(product), class: "" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="fr w-50 mr6"> 
+  <%= render :partial => "show"  if action_name == "show" %>
+</div>
