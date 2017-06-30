@@ -5,4 +5,9 @@ class Product < ActiveRecord::Base
 
   validates :name, :cost, :country, presence: true
 
+
+  scope :most_reviewed, -> do
+    products = Product.all
+    products.sort_by { |product| product.reviews.length }.last
+  end
 end
