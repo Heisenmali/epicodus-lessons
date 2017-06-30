@@ -16,4 +16,9 @@ class Product < ActiveRecord::Base
     sorted_products = products.sort_by { |product| product.created_at }.reverse
     sorted_products.slice(0, 3)
   end
+
+  scope :made_in_usa, -> do
+    products = Product.all
+    products.find_all { |product| product.country == "USA"}
+  end
 end

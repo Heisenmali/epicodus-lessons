@@ -29,11 +29,19 @@ describe Product do
     end
   end
 
-  describe 'three_most_recent' do
+  describe '.three_most_recent' do
     it 'will return the three most recently added products' do
       product = Product.create(name: Faker::Ancient.primordial, cost:Faker::Number.digit, country: Faker::Address.country)
       expect(Product.three_most_recent.length).to eq(3)
       expect(Product.three_most_recent.first).to eq(product)
+    end
+  end
+
+  describe 'made_in_usa' do
+    it 'will return products from USA only' do
+      product = Product.create(name: Faker::Ancient.primordial, cost:Faker::Number.digit, country: "USA")
+      expect(Product.made_in_usa.length).to eq(1)
+      expect(Product.made_in_usa.first).to eq(product)
     end
   end
 end
