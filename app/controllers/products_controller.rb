@@ -4,6 +4,11 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def featured
+    @product_no_1 = Product.most_reviewed
+    @newest_three = Product.three_most_recent 
+  end
+
   def new
     @product = Product.new
   end

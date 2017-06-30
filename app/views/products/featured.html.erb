@@ -1,0 +1,4 @@
+<%= @product_no_1.name %>
+<% @newest_three.each do |product| %>
+  <p><%= product.name %> | <%= product.created_at %></p>
+<% end %>
