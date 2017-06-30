@@ -8,6 +8,9 @@ def new
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.create(review_params)
+    @user = User.first
+    @user.reviews << @review
+    
     if @review.save
       redirect_to product_path(@product)
     else
