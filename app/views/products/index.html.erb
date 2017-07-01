@@ -1,11 +1,11 @@
-<h1 class="pl3">Products</h1>
+<h1 class="pl4">Products</h1>
 
 
 
-<div class="fl w-10 pl3">
+<div class="fl w-10 pl4">
   <% @products.each do |product|%>
     <div class="pv2">
-      <%= link_to product.name, product_path(product), class: "" %>
+      <%= link_to product.name, product_path(product), class: "link hover-dark-red" %>
     </div>
   <% end %>
 </div>

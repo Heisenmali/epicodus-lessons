@@ -1,13 +1,13 @@
-<h1 class="pl3">Featured</h1>
+<h1 class="pl4">Featured</h1>
 
-<div class="pl3">
-  <p><%= link_to @product_no_1.name, product_path(@product_no_1), class: "" %></p>
+<div class="pl4 pv2">
+  <p class ="mv0"><%= link_to @product_no_1.name, product_path(@product_no_1), class: "link hover-dark-red" %></p>
 </div>
 
-<div class="pl3">
+<div class="pl4">
   <% @newest_three.each do |product| %>
-    <div>
-      <p><%= link_to product.name, product_path(product) %></p>
+    <div class="pv2">
+      <p class ="mv0"><%= link_to product.name, product_path(product), class: "link hover-dark-red" %> </p>
     </div>
   <% end %>
 </div>
