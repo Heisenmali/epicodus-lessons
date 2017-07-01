@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @americans = Product.made_in_usa
   end
 
   def featured
@@ -17,6 +18,7 @@ class ProductsController < ApplicationController
     @products = Product.all
     @product = Product.find(params[:id])
     @reviews = @product.reviews
+    @americans = Product.made_in_usa
     render :index
   end
 

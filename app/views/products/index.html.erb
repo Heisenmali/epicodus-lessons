@@ -8,7 +8,20 @@
       <%= link_to product.name, product_path(product), class: "link hover-dark-red" %>
     </div>
   <% end %>
+  <hr>
+
+  <% if @americans %>
+    <% @americans.each do |american|%>
+      <div class="pv2">
+        <%= link_to american.name, product_path(american), class: "link hover-dark-red" %>
+      </div>
+    <% end %>
+  <% end %>
+  <hr>
+<%= link_to "Add a product", new_product_path %>
 </div>
+
+
 
 <div class="fl w-50 ml6"> 
   <%= render :partial => "show"  if action_name == "show" %>

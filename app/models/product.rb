@@ -19,6 +19,6 @@ class Product < ActiveRecord::Base
 
   scope :made_in_usa, -> do
     products = Product.all
-    products.find_all { |product| product.country == "USA"}
+    products.find_all { |product| product.country == "USA" }
   end
 end
