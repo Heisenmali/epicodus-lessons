@@ -1,0 +1,8 @@
+<% if current_user %>
+  <h1>Hello <%= @user.email %></h1>
+  <%= link_to "View your fotoads", photos_path %>
+  <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
+<% else %>
+  <%= link_to "sign up", new_user_registration_path %> <br>
+  <%= link_to "sign in", new_user_session_path %> <br>
+<% end %>
