@@ -1,10 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/fotoad/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/fotoad/spec/models/tag_spec.rb": [
         1,
         null,
         1,
+        2,
         2,
         null
       ],
@@ -533,7 +534,7 @@
         1,
         1,
         1,
-        null,
+        1,
         null,
         null
       ],
@@ -593,28 +594,15 @@
         null,
         1,
         0,
-        null,
-        null,
-        1,
         0,
         null,
         null,
         1,
         0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
         null,
         null,
         1,
         0,
-        0,
-        null,
-        null,
-        1,
         0,
         0,
         0,
@@ -626,8 +614,45 @@
         1,
         0,
         0,
+        null,
+        null,
+        1,
         0,
         0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/fotoad/app/controllers/tags_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
         null,
         null,
         1,
@@ -654,8 +679,21 @@
         null,
         1,
         null
+      ],
+      "/Users/Guest/Desktop/fotoad/app/models/tag.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/fotoad/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null
       ]
     },
-    "timestamp": 1499278870
+    "timestamp": 1499291519
   }
 }

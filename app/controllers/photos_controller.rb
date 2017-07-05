@@ -9,6 +9,7 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
+    @tag = Tag.new
   end
 
   def new
