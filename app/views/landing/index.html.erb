@@ -1,1 +1,9 @@
-<h1>landing page baby</h1>
+<% if current_user %>
+  <h1>Pictures your tagged in</h1>
+  <% @photos.each do |photo| %>
+    <%= image_tag(photo.image) %>
+    <%= photo.description %>
+  <% end %>
+<% else %>
+  <h1>landing page baby</h1>
+<% end %>

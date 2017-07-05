@@ -4,7 +4,6 @@ class TagsController < ApplicationController
   end
 
   def create
-    binding.pry
     @tag = Tag.new(tag_params)
     if @tag.save
       flash[:notice] = "Successfully tagged!"
