@@ -1,2 +1,7 @@
 <%= image_tag @photo.image %>
 <%= @photo.description %>
+
+<% if current_user.id == @photo.user_id %>
+  <%= link_to 'edit photo', edit_photo_path(@photo) %>
+  <%= link_to 'destroy', photo_path(@photo), method: "delete" %>
+<% end %>
