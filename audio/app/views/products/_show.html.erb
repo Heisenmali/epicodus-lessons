@@ -1,0 +1,23 @@
+
+<h2 class="mt2"><%= @product.name %></h2>
+<p><%= @product.description %></p>
+<p><%= @product.cost %> audio-coins | <%= @product.country %></p>
+
+
+<hr>
+<h3>Reviews:</h3>
+<% @reviews.each do |review| %>
+  <h4><%= review.rating %> kudos | by <%= review.user.name %></h4>
+  <p><%= review.content %></p>
+<% end%>
+
+<hr>
+
+<p><%= link_to "Return to products", products_path, class: "link hover-light-purple" %></p>
+<p><%= link_to "Edit", edit_product_path(@product), class: "link hover-gray" %></p>
+<p><%= link_to "Delete", product_path(@product),
+                        :data => {:confirm => "You sure?",
+                                  :method => "delete"}, class: "link hover-red"%></p>
+
+
+<%= link_to "Add Review", new_product_review_path(@product), class: "link hover-gray" %>
