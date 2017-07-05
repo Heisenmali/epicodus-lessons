@@ -12,7 +12,8 @@
     <div class="navbar">
       <% if current_user %>
         <p>Welcome <%= current_user.email %>
-          <%= link_to "photos", photos_path %> | 
+        <%= link_to "explore", photos_path %> | <%= link_to "your photos", {:controller => "photos", :action => "index", :filter => "user_images" } %>
+ |
           <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
         </p>
       <% else %>

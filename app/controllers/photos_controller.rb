@@ -1,6 +1,10 @@
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.all
+    if params['filter'] === "user_images"
+      @photos = Photo.user_images(current_user)
+    else
+      @photos = Photo.all
+    end
   end
 
   def show
