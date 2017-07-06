@@ -5,6 +5,7 @@
 
 <% @tagged_users.each do |user| %>
   <%= user.email %>
+  <%= button_to 'X', {controller: 'tags', action: 'destroy', photo_id: @photo.id, user_id: user.id}, method: "delete" %>
 <% end %>
 
 <br>

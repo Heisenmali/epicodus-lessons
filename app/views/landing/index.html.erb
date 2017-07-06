@@ -1,7 +1,7 @@
 <% if current_user %>
   <h1>Pictures your tagged in</h1>
   <% @photos.each do |photo| %>
-    <%= image_tag(photo.image) %>
+    <%= link_to image_tag(photo.image), photo_path(photo) %>
     <%= photo.description %>
   <% end %>
 <% else %>

@@ -13,6 +13,13 @@ class TagsController < ApplicationController
     end
   end
 
+  def destroy
+    @tag = Tag.find_by user_id: params['user_id'], photo_id: params['photo_id']
+    flash[:alert] = "Tag has been deleted"
+    @tag.destroy
+    redirect_to root_path
+  end
+
 private
   def tag_params
     params.require(:tag).permit(:user_id, :photo_id)
