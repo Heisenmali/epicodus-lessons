@@ -12,8 +12,11 @@
     <div class="navbar">
       <% if current_user %>
         <p>Welcome <%= current_user.email %>
+        <% if isAdmin? %>
+          <%= link_to "admin", rails_admin_path %>
+        <%end %> |
         <%= link_to "profile", root_path %> |
-        <%= link_to "explore", photos_path %> | <%= link_to "your photos", {:controller => "photos", :action => "index", :filter => "user_images" } %> 
+        <%= link_to "explore", photos_path %> | <%= link_to "your photos", {:controller => "photos", :action => "index", :filter => "user_images" } %>
  |
           <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
         </p>
