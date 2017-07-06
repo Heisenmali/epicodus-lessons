@@ -10,6 +10,7 @@ class PhotosController < ApplicationController
   def show
     @photo = Photo.find(params[:id])
     @tag = Tag.new
+    @tagged_users = User.find_tagged_users(@photo.id)
   end
 
   def new

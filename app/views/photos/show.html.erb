@@ -1,10 +1,16 @@
 <%= image_tag @photo.image %>
 <%= @photo.description %>
 
+<br>
+
+<% @tagged_users.each do |user| %>
+  <%= user.email %>
+<% end %>
+
+<br>
+
 <% if current_user.id == @photo.user_id %>
-<p>
-  tag a user
-</p>
+
   <%= link_to 'tag a user', {controller: 'tags', action: 'new', photo_id: @photo.id} %>
   <%= link_to 'edit photo', edit_photo_path(@photo) %>
   <%= link_to 'destroy', photo_path(@photo), method: "delete" %>

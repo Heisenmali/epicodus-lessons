@@ -4,7 +4,7 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.new(tag_params)
+    @tag = Tag.find_or_initialize_by(tag_params)
     if @tag.save
       flash[:notice] = "Successfully tagged!"
       redirect_to  photos_path
