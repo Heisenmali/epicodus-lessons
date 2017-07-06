@@ -5,11 +5,31 @@
         1,
         null,
         1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
         1,
         1,
         1,
+        null,
+        null,
         1,
         1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
@@ -634,7 +654,7 @@
       "/Users/Guest/Desktop/flickr-clone/app/helpers/application_helper.rb": [
         1,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -679,7 +699,7 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -832,6 +852,6 @@
         1
       ]
     },
-    "timestamp": 1499376969
+    "timestamp": 1499377329
   }
 }
