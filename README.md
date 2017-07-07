@@ -3,6 +3,7 @@
 ## Configuration
   * uses Ruby 2.4.1, Rails 5.1.2
   * tachyons css framework for styling
+  * uses Rails admin gem for the admin dashboard
 
 ## Setup
   * run `bundle install` to download all gems used for this project.
@@ -27,6 +28,9 @@
   * Here the project directory is on the desktop. Thie line of code can be found in `/db/seeds.rb` file 
 
   * to seed the database run `rake db:seed`. This will generate 20 products, and a random number (between 1 and 10) of reviews per product and store them in the database.
+
+## Accounts 
+  * An admin account is automatically seeded. The email is `admin@test` and the password is `admin_test`
 
 ## Rspec
   * run `rspec` to run the tests.
