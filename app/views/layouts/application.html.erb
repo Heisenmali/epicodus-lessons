@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= flash[:error] %>
+    <%= link_to 'sign out', destroy_user_session_path, method: "delete" %>
     <%= yield %>
   </body>
 </html>
