@@ -17,6 +17,7 @@
   * to seed the images, make sure you change the path in the `image` property on this line, to wherever the project directory is stored: 
   
   ```ruby
+  # /db/seeds.rb
   product = Product.create(name: Faker::Space.unique.star_cluster, 
                            description: Faker::Hipster.paragraph(3), 
                            price: Faker::Number.decimal(2), 
