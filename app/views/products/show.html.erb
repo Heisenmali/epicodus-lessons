@@ -5,3 +5,5 @@
 <% @reviews.each do |review| %>
   <p><%= review.content %></p>
 <% end %>
+
+<%= link_to 'add a review', new_product_review_path(@product) %>
