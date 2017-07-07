@@ -1,31 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/niklas/Desktop/music_store/spec/features/create_reviews_pages_spec.rb": [
+      "/Users/niklas/Desktop/music_store/spec/controllers/about_controller_spec.rb": [
         1,
         null,
-        1,
-        1,
-        2,
-        2,
-        2,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         null,
         null
@@ -607,6 +585,9 @@
         1,
         1,
         null,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -634,6 +615,21 @@
       ],
       "/Users/niklas/Desktop/music_store/app/helpers/application_helper.rb": [
         1,
+        1,
+        11,
+        null,
+        null,
+        1,
+        12,
+        null,
+        null
+      ],
+      "/Users/niklas/Desktop/music_store/app/helpers/about_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/niklas/Desktop/music_store/app/helpers/home_helper.rb": [
+        1,
         null
       ],
       "/Users/niklas/Desktop/music_store/app/channels/application_cable/channel.rb": [
@@ -645,6 +641,20 @@
       "/Users/niklas/Desktop/music_store/app/channels/application_cable/connection.rb": [
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/niklas/Desktop/music_store/app/controllers/about_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/niklas/Desktop/music_store/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -737,6 +747,42 @@
         1,
         null
       ],
+      "/Users/niklas/Desktop/music_store/spec/controllers/home_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/niklas/Desktop/music_store/spec/features/create_reviews_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/niklas/Desktop/music_store/spec/features/login_pages_spec.rb": [
         1,
         null,
@@ -813,6 +859,6 @@
         null
       ]
     },
-    "timestamp": 1499454546
+    "timestamp": 1499460326
   }
 }

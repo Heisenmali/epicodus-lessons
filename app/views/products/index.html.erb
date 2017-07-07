@@ -1,8 +1,22 @@
 <h1>Index for products works</h1>
 
-<% @products.each do |product| %>
-  <div>
-    <%= image_tag product.image %>
-    <li><%= link_to product.name, product_path(product) %></li>
+<article>
+  <div class="cf pa2">
+    <% @products.each do |product| %>
+      <div class="fl w-50 w-25-m w-20-l pa2">
+        <%= link_to product_path(product) do %>
+          <%= image_tag product.image %>
+          <dl class="mt2 f6 lh-copy">
+            <dt class="clip">Name</dt>
+            <dd class="ml0 black truncate w-100 tc"><%= product.name %></dd>
+            <dt class="clip">Price</dt>
+            <dd class="ml0 black truncate w-100 tc"><%= product.price %></dd>
+          </dl>
+        <% end %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</article>
+
+
+  

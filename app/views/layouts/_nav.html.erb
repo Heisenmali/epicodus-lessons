@@ -1,5 +1,11 @@
-<%= link_to 'home', root_path %>
-<%= link_to 'products', products_path %>
+<% if is_logged_in? %>
+  <%= link_to 'home', root_path %>
+  <%= link_to 'products', products_path %>
+  <%= link_to 'about', about_index_path %>
+  
+  <% if is_admin? %>
+    <%= link_to 'admin', rails_admin_path %>
+  <% end %>
 
-<%= link_to 'admin', rails_admin_path %>
-<%= link_to 'sign out', destroy_user_session_path %>
+   <%= link_to 'sign out', destroy_user_session_path, method: 'delete' %>
+<% end %>
