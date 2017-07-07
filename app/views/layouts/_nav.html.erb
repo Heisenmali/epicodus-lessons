@@ -1,11 +1,14 @@
-<% if is_logged_in? %>
-  <%= link_to 'home', root_path %>
-  <%= link_to 'products', products_path %>
-  <%= link_to 'about', about_index_path %>
-  
-  <% if is_admin? %>
-    <%= link_to 'admin', rails_admin_path %>
-  <% end %>
+<div class="tc pv4 bb b--moon-gray" id="nav"> 
+  <% if is_logged_in? %>
+    <%= link_to 'home', root_path, class: "pa2" %>
+    <%= link_to 'products', products_path, class: "pa2" %>
+    <%= link_to 'about', about_index_path, class: "pa2" %>
+    
+    <%= link_to 'sign out', destroy_user_session_path, method: 'delete', class: "pa2 " %>
+    
+    <% if is_admin? %>
+      <%= link_to 'admin', rails_admin_path, class: "pa2" %>
+    <% end %>
 
-   <%= link_to 'sign out', destroy_user_session_path, method: 'delete' %>
-<% end %>
+  <% end %>
+</div>
