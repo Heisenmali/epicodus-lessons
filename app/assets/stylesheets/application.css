@@ -17,12 +17,37 @@
 body {
   margin: 0;
   font-family: 'Inconsolata', monospace;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 h1, h2, h3, h4, #nav {
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
+}
+
+h1 {
+  font-size: 218%;
+}
+
+h2 {
+  font-size: 164%;
+}
+
+h3 {
+  font-size: 145%;
+}
+
+h4 {
+font-size: 118%;
+font-weight: lighter;
+}
+
+img {
+  height: 100%;
+}
+
+.product {
+  height: 55vh;
 }
 
 #nav {
