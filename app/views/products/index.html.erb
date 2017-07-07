@@ -1,5 +1,8 @@
 <h1>Index for products works</h1>
 
 <% @products.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
+  <div>
+    <%= image_tag product.image %>
+    <li><%= link_to product.name, product_path(product) %></li>
+  </div>
 <% end %>
