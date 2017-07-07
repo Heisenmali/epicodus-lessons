@@ -9,8 +9,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/nav' %>
     <%= flash[:error] %>
-    <%= link_to 'sign out', destroy_user_session_path, method: "delete", id: "sign-out" %>
     <%= yield %>
   </body>
 </html>
