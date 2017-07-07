@@ -519,10 +519,13 @@
         null,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
         null,
         null,
-        null,
-        null,
+        1,
         null,
         null,
         null,
@@ -578,6 +581,8 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         null,
         null,
@@ -602,7 +607,7 @@
       "/Users/niklas/Desktop/music_store/app/controllers/application_controller.rb": [
         1,
         1,
-        null,
+        1,
         null
       ],
       "/Users/niklas/Desktop/music_store/app/helpers/application_helper.rb": [
@@ -671,6 +676,6 @@
         null
       ]
     },
-    "timestamp": 1499443072
+    "timestamp": 1499444788
   }
 }
