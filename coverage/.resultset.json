@@ -875,7 +875,6 @@
         2,
         2,
         2,
-        null,
         null
       ],
       "/Users/niklas/Desktop/music_store/spec/models/user_spec.rb": [
@@ -889,6 +888,6 @@
         null
       ]
     },
-    "timestamp": 1499471204
+    "timestamp": 1499471323
   }
 }

@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-07T16:46:44-07:00">2017-07-07T16:46:44-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-07T16:48:43-07:00">2017-07-07T16:48:43-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -443,7 +443,7 @@
       <tr>
         <td class="strong"><a href="#d9d906c4240b0c90c69f2bee31314baca87ec83e" class="src_link" title="spec/models/review_spec.rb">spec/models/review_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
+        <td>7</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -1252,7 +1252,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :reviews</code>
+          <code class="ruby">  has_many :reviews, dependent: :destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -1422,7 +1422,7 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :reviews</code>
+          <code class="ruby">  has_many :reviews, dependent: :destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
@@ -5495,7 +5495,7 @@
         <li class="covered" data-hits="2" data-linenumber="4">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { should have_many :reviews }</code>
+          <code class="ruby">  it { should have_many(:reviews).dependent(:destroy) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="5">
@@ -5586,12 +5586,6 @@
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
           <code class="ruby">end</code>
         </li>
       
@@ -5635,7 +5629,7 @@
         <li class="covered" data-hits="2" data-linenumber="4">
           <span class="hits">2</span>
           
-          <code class="ruby">  it { should have_many :reviews }</code>
+          <code class="ruby">  it { should have_many(:reviews).dependent(:destroy) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="5">
