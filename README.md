@@ -14,12 +14,16 @@
   * run `rake db:test:prepare`, to create the test database.
 
 ## Database initialization
-  * to seed the images, make sure you change the path in the `image` property on this line, to wherever the project directory is stored: ```product = Product.create(name: Faker::Space.unique.star_cluster, description: Faker::Hipster.paragraph(3), price: Faker::Number.decimal(2), image: File.open(ENV['HOME'] + "/desktop/music_store/public/seed_images/#{i}.jpg"))```. Here the project directory is on the desktop.
+  * to seed the images, make sure you change the path in the `image` property on this line, to wherever the project directory is stored: 
+  
+  ```product = Product.create(name: Faker::Space.unique.star_cluster, description: Faker::Hipster.paragraph(3), price: Faker::Number.decimal(2), image: File.open(ENV['HOME'] + "/desktop/music_store/public/seed_images/#{i}.jpg"))``` 
+  
+  * Here the project directory is on the desktop. Thie line of code can be found in `/db/seeds.rb` file 
 
   * to seed the database run `rake db:seed`. This will generate 20 products, and a random number (between 1 and 10) of reviews per product and store them in the database.
 
 ## Rspec
   * run `rspec` to run the tests.
-  
+
 ## Licence
   _MIT, project by niklaslong_
