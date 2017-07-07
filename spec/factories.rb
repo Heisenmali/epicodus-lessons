@@ -9,5 +9,6 @@ FactoryGirl.define do
   factory :product do
     name "test_product"
     description "test_description"
+    price "20"
   end
 end
