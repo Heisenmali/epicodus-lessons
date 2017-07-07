@@ -615,11 +615,11 @@
       "/Users/niklas/Desktop/music_store/app/helpers/application_helper.rb": [
         1,
         1,
-        11,
+        12,
         null,
         null,
         1,
-        12,
+        13,
         null,
         null
       ],
@@ -646,7 +646,7 @@
       "/Users/niklas/Desktop/music_store/app/controllers/about_controller.rb": [
         1,
         1,
-        null,
+        1,
         null,
         null
       ],
@@ -749,6 +749,22 @@
       "/Users/niklas/Desktop/music_store/spec/controllers/home_controller_spec.rb": [
         1,
         null,
+        1,
+        null,
+        null
+      ],
+      "/Users/niklas/Desktop/music_store/spec/features/about_index_pages_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         1,
         null,
         null
@@ -858,6 +874,6 @@
         null
       ]
     },
-    "timestamp": 1499468313
+    "timestamp": 1499470294
   }
 }
