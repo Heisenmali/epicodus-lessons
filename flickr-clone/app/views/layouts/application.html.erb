@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fotoad</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <% if current_user %>
+        <p>Welcome <%= current_user.email %>
+        <% if isAdmin? %>
+          <%= link_to "admin", rails_admin_path %>
+        <%end %> |
+        <%= link_to "profile", root_path %> |
+        <%= link_to "explore", photos_path %> | <%= link_to "your photos", {:controller => "photos", :action => "index", :filter => "user_images" } %>
+ |
+          <%= link_to "sign out", destroy_user_session_path, :method => "delete"%>
+        </p>
+      <% else %>
+        <%= link_to "sign up", new_user_registration_path %>
+        <%= link_to "sign in", new_user_session_path %>
+      <% end %>
+      <hr>
+    </div>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>

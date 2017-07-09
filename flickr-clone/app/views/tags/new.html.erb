@@ -1,0 +1,5 @@
+<%= form_for @tag do |f| %>
+  <%= f.select :user_id,  User.all.collect { |user| [user.email, user.id] } %> <br>
+  <%= f.hidden_field :photo_id, { :value => params["photo_id"]} %>
+  <%= f.submit %>
+<% end %>
