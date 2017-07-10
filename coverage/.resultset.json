@@ -601,6 +601,8 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         null
       ],
@@ -711,8 +713,24 @@
         1,
         null
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/app/models/account.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/app/models/order_item.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/app/models/product.rb": [
         1,
+        1,
+        1,
+        null,
         1,
         1,
         null,
@@ -734,6 +752,9 @@
       ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/factories.rb": [
         1,
+        1,
+        null,
+        null,
         1,
         1,
         1,
@@ -857,12 +878,31 @@
         null,
         null
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/models/account_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/models/order_item_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/models/product_spec.rb": [
         1,
         null,
         1,
         2,
         2,
+        2,
+        2,
+        null,
         2,
         2,
         2,
@@ -884,10 +924,12 @@
         2,
         2,
         2,
+        null,
+        2,
         2,
         null
       ]
     },
-    "timestamp": 1499705790
+    "timestamp": 1499710473
   }
 }

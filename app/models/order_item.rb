@@ -1,4 +1,4 @@
 class OrderItem < ActiveRecord::Base
-  belongs_to :products, dependent: :destroy
-  belongs_to :account, despendent: :destroy
+  belongs_to :product, dependent: :destroy
+  belongs_to :account, dependent: :destroy
 end

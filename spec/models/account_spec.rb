@@ -1,5 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Account, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Account do
+  it { should have_many(:order_items) }
+  it { should have_many(:products).through(:order_items) }
 end
