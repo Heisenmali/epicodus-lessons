@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :products, through: :reviews
 
+  has_one :account, dependent: :destroy
+
   validates :email, presence: true
   validates :password, presence: true
 end
