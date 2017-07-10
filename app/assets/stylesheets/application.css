@@ -55,6 +55,10 @@ img {
   font-variant: small-caps;
 }
 
+.logo {
+  height: 5vh;
+  width: auto;
+}
 
 a {
   text-decoration: none;
@@ -65,6 +69,7 @@ a {
   display: inline-block;
   position: relative;
 }
+
 
 
 .cart-button {
@@ -78,6 +83,16 @@ a {
   bottom: 0;
   right: 0;
   visibility: hidden;
+}
+
+.product-button {
+  visibility: visible;
+  border: none;
+  background-color: black;
+  color: white;
+  height: 5vh;
+  width: 10vw;
+  font-size: 14px;
 }
 
 .image-container:hover .cart-button {

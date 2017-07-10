@@ -1,8 +1,13 @@
 <%= flash[:notice] %>
-<% if @items %>
-  <% @items.each do |item| %>
-    <%= item.product.name %>
-    <%= link_to 'X', {controller: 'order_items', action: 'destroy', id: item.id, product_id: item.product.id}, method: "delete" %>
-    <br>
+<div class="about ph7 pv3">
+  <h2>Shopping Cart</h2> 
+  <% if @items %>
+    <% @items.each do |item| %>
+      <div class="bb b--moon-gray pv4">
+        <%= item.product.name %>
+        <%= link_to 'x', {controller: 'order_items', action: 'destroy', id: item.id, product_id: item.product.id}, method: "delete", class: "fr" %>
+        <br>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
