@@ -6,6 +6,7 @@
       <div class="bb b--moon-gray pv4">
         <%= item.product.name %>
         <%= link_to 'x', {controller: 'order_items', action: 'destroy', id: item.id, product_id: item.product.id}, method: "delete", class: "fr" %>
+        <span class="fr pr5">$<%= item.product.price %></span>
         <br>
       </div>
     <% end %>
