@@ -4,15 +4,21 @@
   <div class="cf pa4">
     <% @products.each do |product| %>
       <div class="fl w-50 w-30-m w-25-l pa3">
-        <%= link_to product_path(product) do %>
+        <%-# link_to product_path(product) do -%>
           <%= image_tag product.image, class: "db link dim tc"%>
+
+          <%= form_for @order_item do |f| %>
+            <%= f.hidden_field :product_id, value: product.id %>
+            <%= f.submit "Add to cart" %>
+          <% end %>
+
           <dl class="mt2 f5 lh-copy">
             <dt class="clip">Name</dt>
             <dd class="ml0 black truncate w-100 tc"><%= product.name %></dd>
             <dt class="clip">Price</dt>
             <dd class="ml0 black truncate w-100 tc">$<%= product.price %></dd>
           </dl>
-        <% end %>
+        <%-# end -%>
       </div>
     <% end %>
   </div>

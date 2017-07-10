@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :about, only: :index
   resources :home, only: :index
+  resources :order_items
   
   resources :products do
     resources :reviews
