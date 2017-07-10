@@ -1,6 +1,8 @@
 Product.destroy_all
 Review.destroy_all
 User.destroy_all
+OrderItem.destroy_all
+Account.destroy_all
 
 user = User.create(email: 'admin@test', password: 'admin_test', password_confirmation: "admin_test", admin: true)
 

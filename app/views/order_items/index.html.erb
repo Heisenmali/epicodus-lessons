@@ -1,3 +1,8 @@
-<% @items.each do |item| %>
-  <%= item.product.name %>
+<%= flash[:notice] %>
+<% if @items %>
+  <% @items.each do |item| %>
+    <%= item.product.name %>
+    <%= link_to 'X', {controller: 'order_items', action: 'destroy', id: item.id, product_id: item.product.id}, method: "delete" %>
+    <br>
+  <% end %>
 <% end %>
