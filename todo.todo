@@ -1,7 +1,7 @@
 Database:
   ✔ migration for order_items @done (7/10/2017, 10:39:20 AM)
   ✔ migration for accounts @done (7/10/2017, 10:39:37 AM)
-  ☐ seed with new data
+  ☐ seed with new data @today 
   
 Model: 
   ✔ create accounts (seperate from user) which contain id @done (7/10/2017, 10:53:38 AM)
@@ -9,10 +9,16 @@ Model:
   ✔ create has many relationship between accounts and products (through orders_items) @done (7/10/2017, 10:53:34 AM)
 
 Controllers: 
-  ☐ create order controller
+  ☐ create OrderItem controller @high 
 
 Routes: 
-  ☐ add order routes
+  ☐ cart routes @low 
 
 Specs: 
-  ☐ test associations
+  ✔ test associations @done (7/10/2017, 11:21:30 AM)
+
+
+Steps: 
+  ☐ press button
+  ☐ OrderItem controller creates new association and order_item object
+  ☐ 
