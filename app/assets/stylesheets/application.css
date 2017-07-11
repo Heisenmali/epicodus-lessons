@@ -47,6 +47,10 @@ img {
   width: 100%;
 }
 
+.product-image {
+  width: auto;
+}
+
 .product {
   height: 55vh;
 }
