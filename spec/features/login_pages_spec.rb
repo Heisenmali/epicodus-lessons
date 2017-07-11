@@ -11,8 +11,8 @@ describe 'the login path' do
   end 
   
   it "denies a basic user access to the admin pane" do
-    visit products_path
-    expect(page).to have_current_path products_path
+    visit rails_admin_path
+    expect(page).to have_content 'You are not an admin'
   end 
 
   it "logs out a user" do
