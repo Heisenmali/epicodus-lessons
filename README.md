@@ -1,5 +1,9 @@
 # README
 
+## Branches
+  * The master branch contains fridays work
+  * The dev branch currently contains work done on Monday, which adds a shopping cart and other fun things to the website.
+
 ## Configuration
   * uses Ruby 2.4.1, Rails 5.1.2
   * tachyons css framework for styling
