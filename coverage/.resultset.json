@@ -792,17 +792,6 @@
         1,
         null
       ],
-      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/factories/factories_spec.rb": [
-        1,
-        null,
-        1,
-        4,
-        4,
-        4,
-        null,
-        null,
-        null
-      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/support/factory_girl.rb": [
         1,
         1,
@@ -995,6 +984,17 @@
         2,
         null
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/models/factories_spec.rb": [
+        1,
+        null,
+        1,
+        4,
+        4,
+        4,
+        null,
+        null,
+        null
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/models/order_item_spec.rb": [
         1,
         null,
@@ -1039,6 +1039,6 @@
         null
       ]
     },
-    "timestamp": 1499780068
+    "timestamp": 1499780522
   }
 }
