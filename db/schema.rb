@@ -28,10 +28,8 @@ ActiveRecord::Schema.define(version: 20170711165512) do
     t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
     t.string "status", default: "unresolved"
     t.integer "quantity"
-
     t.index ["account_id"], name: "index_order_items_on_account_id"
     t.index ["product_id"], name: "index_order_items_on_product_id"
   end
