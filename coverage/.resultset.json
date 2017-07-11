@@ -120,6 +120,14 @@
         null,
         1
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/config/spring.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        5
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/config/environments/test.rb": [
         1,
         null,
@@ -559,6 +567,14 @@
         null,
         null
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/config/initializers/stripe.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -582,6 +598,7 @@
         null,
         1,
         null,
+        1,
         1,
         1,
         1,
@@ -645,6 +662,10 @@
         1,
         null
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/app/helpers/charges_helper.rb": [
+        1,
+        null
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/app/helpers/home_helper.rb": [
         1,
         null
@@ -665,6 +686,34 @@
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/app/controllers/charges_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
         null,
         null
       ],
@@ -831,6 +880,13 @@
         1,
         null
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/controllers/charges_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/controllers/home_controller_spec.rb": [
         1,
         null,
@@ -967,6 +1023,23 @@
         null,
         null
       ],
+      "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/helpers/charges_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/niklas/Documents/Web development/Epicodus stuff/music_store/spec/models/account_spec.rb": [
         1,
         null,
@@ -1030,6 +1103,6 @@
         null
       ]
     },
-    "timestamp": 1499787284
+    "timestamp": 1499792344
   }
 }
