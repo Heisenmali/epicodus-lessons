@@ -1,10 +1,12 @@
 class OrderItemsController < ApplicationController
+  include CalculateAmount
 
   def index
     if (OrderItem.all.length != 0)
       @items = current_account.order_items.all
+      @amount = calculate_cart_amount(@items)
     else
-      flash[:notice] =" Your cart is empty"
+      flash[:notice] =" Your cart is empty, why don't you add something!"
     end
   end
 
