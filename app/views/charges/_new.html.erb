@@ -7,13 +7,13 @@
     <% end %>
   </article>
 
-  <%= hidden_field_tag :amount, "#{@amount*100}" %>
+  <%= hidden_field_tag :amount, "#{@amount.round(2)*100}" %>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button pay-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
-          data-amount="<%= @amount*100 %>"
+          data-amount="<%= @amount.round(2)*100 %>"
           data-locale="auto"></script>
 
-  <%= button_tag "Pay $#{@amount}, you know you want to... 😘", class: "pay-button dim" %>
+  <%= button_tag "Pay $#{@amount.to_f.round(2)}, you know you want to... 😘", class: "pay-button dim" %>
 <% end %>

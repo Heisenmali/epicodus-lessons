@@ -2,6 +2,7 @@ Database:
   ✔ migration for order_items @done (7/10/2017, 10:39:20 AM)
   ✔ migration for accounts @done (7/10/2017, 10:39:37 AM)
   ✔ seed with new data @today @done (7/10/2017, 4:19:06 PM)
+  ☐ add status to order_item
   
 Model: 
   ✔ create accounts (seperate from user) which contain id @done (7/10/2017, 10:53:38 AM)
@@ -10,13 +11,18 @@ Model:
 
 Controllers: 
   ✔ create OrderItem controller @high @done (7/10/2017, 4:18:57 PM)
+  ✔ stripe @done (7/11/2017, 2:30:15 PM)
+  ☐ implement cart emptying
 
 Routes: 
   ✔ order_item routes @done (7/10/2017, 4:18:55 PM)
+  ✔ stripe @done (7/11/2017, 2:30:20 PM)
 
 Specs: 
   ✔ test associations @done (7/10/2017, 11:21:30 AM)
-  ☐ Integration specs for cart
+  ✔ Integration specs for cart @done (7/11/2017, 2:30:00 PM)
+  ☐ Integration specs for stripe
 
 Views: 
-  ☐ add form to show product
+  ✔ add form to show product @done (7/11/2017, 2:29:34 PM)
+  ✔ add stripe buttons and views @done (7/11/2017, 2:29:51 PM)

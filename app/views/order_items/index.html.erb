@@ -10,7 +10,7 @@
         <br>
       </div>
     <% end %>
-    <span class="fr pv5">Total: $<%= @amount %></span>
+    <span class="fr pv5">Total: $<%= @amount.round(2) %></span>
     <%= render partial: 'charges/new' %>
   <% end %>
 </div>

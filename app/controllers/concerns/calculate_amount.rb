@@ -2,9 +2,7 @@ require 'active_support/concern'
 
 module CalculateAmount
   extend ActiveSupport::Concern
-
   
-
   def calculate_cart_amount(items)
     amount = 0
     items.each do |item|

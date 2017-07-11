@@ -1,11 +1,11 @@
 class ChargesController < ApplicationController
+  include ManageCart
 
   def new
   end
 
   def create
     # Amount in cents
-    byebug
     @amount = params[:amount].to_i
 
     customer = Stripe::Customer.create(
@@ -19,6 +19,10 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
+    
+    clear_cart
+
+    redirect_to cart_index_path
 
   rescue Stripe::CardError => e
     flash[:error] = e.message

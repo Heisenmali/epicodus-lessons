@@ -1,9 +1,11 @@
 class OrderItemsController < ApplicationController
-  include CalculateAmount
+  include CalculateAmount, ManageCart
+
+
 
   def index
-    if (OrderItem.all.length != 0)
-      @items = current_account.order_items.all
+    if (find_unresolved_items.any?)
+      @items = find_unresolved_items
       @amount = calculate_cart_amount(@items)
     else
       flash[:notice] =" Your cart is empty, why don't you add something!"
@@ -12,6 +14,7 @@ class OrderItemsController < ApplicationController
 
   def create
     current_account.order_items.create(order_item_params)
+    current_account.update(cart_status: "full")
     redirect_to cart_index_path
   end
 
