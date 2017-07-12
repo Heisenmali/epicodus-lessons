@@ -1,11 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/chatroom/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/chatroom/spec/models/account_spec.rb": [
         1,
         null,
         1,
-        1,
+        2,
+        2,
+        2,
         null
       ],
       "/Users/Guest/Desktop/chatroom/spec/rails_helper.rb": [
@@ -622,6 +624,25 @@
         1,
         null
       ],
+      "/Users/Guest/Desktop/chatroom/app/models/account.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/chatroom/app/models/chat.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/chatroom/app/models/message.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/Guest/Desktop/chatroom/spec/factories/users.rb": [
         1,
         1,
@@ -634,8 +655,31 @@
         1,
         1,
         null
+      ],
+      "/Users/Guest/Desktop/chatroom/spec/models/chat_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/chatroom/spec/models/message_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/chatroom/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1499878365
+    "timestamp": 1499891980
   }
 }
