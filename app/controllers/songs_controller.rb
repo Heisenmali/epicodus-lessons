@@ -17,7 +17,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.create!(song_params)
-    json_response(@song, :created)
+    json_response(JSONAPI::Serializer.serialize(@song, :created))
   end
 
   def update
@@ -40,6 +40,6 @@ class SongsController < ApplicationController
 
   private
   def song_params
-    params.permit(:artist, :title)
+    params.require(:song).permit(:id, :artist, :title)
   end
 end
