@@ -1,6 +1,12 @@
 class SongsController < ApplicationController
+  include Response
   def index
-    @songs = Song.all
+    if params[:artist]
+      artist = params[:artist]
+      @songs = Song.search(artist)
+    else
+      @songs = Song.all
+    end
     json_response(@songs)
   end
 
@@ -10,25 +16,29 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.create(song_params)
-    json_response(@song)
+    @song = Song.create!(song_params)
+    json_response(@song, :created)
   end
 
   def update
     @song = Song.find(params[:id])
-    @song.update(song_params)
+    if @song.update!(song_params)
+      render status: 200, json: {
+       message: "Your song has successfully been updated."
+      }
+    end
   end
 
   def destroy
     @song = Song.find(params[:id])
-    @song.destroy
+    if @song.destroy!
+      render status: 200, json: {
+       message: "Your song has successfully been deleted."
+      }
+    end
   end
 
   private
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
-
   def song_params
     params.permit(:artist, :title)
   end

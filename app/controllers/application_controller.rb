@@ -1,8 +1,5 @@
 class ApplicationController < ActionController::API
-  require 'json'
-
-private
-  def json_response(object)
-    render json: object, status: :ok
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+    json_response({ message: exception.message }, :not_found)
   end
 end
