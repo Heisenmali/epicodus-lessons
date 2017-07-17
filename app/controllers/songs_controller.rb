@@ -7,7 +7,7 @@ class SongsController < ApplicationController
     else
       @songs = Song.all
     end
-    json_response(@songs)
+    json_response(JSONAPI::Serializer.serialize(@songs, is_collection: true))
   end
 
   def show
