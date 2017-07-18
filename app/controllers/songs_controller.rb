@@ -31,6 +31,7 @@ class SongsController < ApplicationController
   end
 
   def destroy
+    print "PARAAAAAMS: #{params}"
     @song = Song.find(params[:id])
     if @song.destroy!
       render status: 200, json: {
