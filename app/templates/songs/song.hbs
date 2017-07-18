@@ -1,1 +1,13 @@
-<h1>{{model.artist}} | {{model.title}}</h1>
+<h1>
+  {{model.artist}} | {{model.title}}
+  <button {{action 'deleteSong' model}}>Delete</button>
+  <button {{action 'updateSong'}}>Update</button>
+</h1>
+
+{{#if updateFormShow}}
+  <form {{action "" on="submit"}}>
+    {{input type="text" placeholder="artist" value=model.artist}}
+    {{input type="text" placeholder="title" value=model.title}}
+    <button type="submit">Add</button>
+  </form>
+{{/if}}

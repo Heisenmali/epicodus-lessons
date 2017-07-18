@@ -1,3 +1,4 @@
+{{outlet}}
 {{#each model as |song|}}
 {{#link-to "songs.song" song}}
   {{song.artist}} |
@@ -10,5 +11,3 @@
   {{input type="text" placeholder="title" value=title}}
   <button type="submit">Add</button>
 </form>
-
-{{outlet}}
