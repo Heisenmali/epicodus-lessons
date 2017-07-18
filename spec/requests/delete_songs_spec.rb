@@ -9,7 +9,7 @@ describe "delete a song route", :type => :request do
   end
 
   it 'deletes a song' do
-    expect(JSON.parse(response.body)['message']).to eq('Your song has successfully been deleted.')
+    expect(JSON.parse(response.body)['data']['attributes']['message']).to eq('The song was deleted')
   end
 
   it 'returns status code 200' do
