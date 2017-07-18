@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  showForm: false,
+  showUpdateForm: false,
 
   actions: {
-    updateSong: function() {
-      this.set('showForm', !this.get('showForm'))
+    updateForm: function() {
+      this.set('showUpdateForm', !this.get('showUpdateForm'))
     }
   }
 });
