@@ -11,6 +11,13 @@ class Seed
         artist: Faker::RockBand.name,
         title: Faker::ChuckNorris.fact
       )
+
+      5.times do |i|
+        song.reviews.create!(
+          author: Faker::RockBand.name,
+          content: Faker::Hipster.sentence,
+        )
+      end
     end
   end
 end
