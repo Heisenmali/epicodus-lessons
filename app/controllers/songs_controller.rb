@@ -24,9 +24,7 @@ class SongsController < ApplicationController
   def update
     @song = Song.find(params[:id])
     if @song.update!(song_attributes)
-      render status: 200, json: {
-       message: "Your song has successfully been updated."
-      }
+      json_response({"data":{"type":"messages","attributes":{"message":"The song was updated"}}})
     end
   end
 
