@@ -5,4 +5,6 @@ class ReviewSerializer
   attribute :id
   attribute :author
   attribute :content
+
+  has_one :song
 end

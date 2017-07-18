@@ -5,4 +5,6 @@ class SongSerializer
   attribute :id
   attribute :artist
   attribute :title
+
+  has_many :reviews
 end

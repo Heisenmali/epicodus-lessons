@@ -1,7 +1,8 @@
 class ReviewsController < ApplicationController
   include Response
   def index
-    @reviews = Review.all
+    song = Song.find(params['song_id'])
+    @reviews = song.reviews
     json_response(JSONAPI::Serializer.serialize(@reviews, is_collection: true))
   end
 
@@ -29,7 +30,7 @@ class ReviewsController < ApplicationController
   #     json_response({"data":{"type":"messages","attributes":{"message":"The song was deleted"}}})
   #   end
   # end
-  # 
+  #
   # private
   # def song_params
   #   params.require(:data).permit(:type, {
