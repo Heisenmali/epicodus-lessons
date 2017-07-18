@@ -16,13 +16,13 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.create!(song_params)
-    json_response(JSONAPI::Serializer.serialize(@song, :created))
+    @song = Song.create!(song_attributes)
+    json_response(JSONAPI::Serializer.serialize(@song))
   end
 
   def update
     @song = Song.find(params[:id])
-    if @song.update!(song_params)
+    if @song.update!(song_attributes)
       render status: 200, json: {
        message: "Your song has successfully been updated."
       }
@@ -40,6 +40,12 @@ class SongsController < ApplicationController
 
   private
   def song_params
-    params.require(:song).permit(:id, :artist, :title)
+    params.require(:data).permit(:type, {
+     attributes: [:artist, :title]
+   })
+  end
+
+  def song_attributes
+    song_params[:attributes] || {}
   end
 end
