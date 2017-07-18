@@ -11,3 +11,9 @@
     <button type="submit">Add</button>
   </form>
 {{/if}}
+
+<ul>
+  {{#each model.reviews as |review|}}
+    <li>{{review.author}}</li>
+  {{/each}}
+</ul>

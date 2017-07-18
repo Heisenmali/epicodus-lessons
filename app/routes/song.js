@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       var controller = this.get('controller'),
           song = controller.get('model');
       song.save();
-      controller.send('updateForm');
+      controller.updateForm();
     }
   }
 });
