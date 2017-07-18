@@ -12,7 +12,7 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    json_response(@song)
+    json_response(JSONAPI::Serializer.serialize(@song))
   end
 
   def create
@@ -31,19 +31,16 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    print "PARAAAAAMS: #{params}"
     @song = Song.find(params[:id])
     if @song.destroy!
-      render status: 200, json: {
-       message: "Your song has successfully been deleted."
-      }
+      json_response({"data":{"type":"messages","attributes":{"message":"The song was deleted"}}})
     end
   end
 
   private
   def song_params
     params.require(:data).permit(:type, {
-     attributes: [:artist, :title]
+     attributes: [:artist, :title, :id]
    })
   end
 
