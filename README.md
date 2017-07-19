@@ -6,7 +6,7 @@ To set up:
 
 * `rake db:setup`
 
-# Additions by niklslong
+# Additions by me!
 
 * look at todo.todo file!
 
