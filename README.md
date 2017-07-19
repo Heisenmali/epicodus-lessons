@@ -8,12 +8,7 @@ To set up:
 
 # Additions by niklslong
 
-  * unit and integration testing
-  * rails admin
-  * images for products
-  * authorisation using bcrypt and rails admin
-  * slight product page redesign
-  * uses AJAX for product show, adding and deleting from cart.
+* look at todo.todo file!
 
 # Dependencies
   
