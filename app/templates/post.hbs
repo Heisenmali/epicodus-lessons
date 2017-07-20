@@ -3,5 +3,5 @@
 {{model.author}}
 
 {{#each model.components as |comp|}}
-  {{component comp.componentType}}
+  {{component comp.componentType comp=comp}}
 {{/each}}
