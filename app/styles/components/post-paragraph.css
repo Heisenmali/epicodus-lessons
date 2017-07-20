@@ -1,0 +1,3 @@
+.para {
+  composes: pa7 bb from global;
+}
