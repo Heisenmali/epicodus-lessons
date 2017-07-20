@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Post.destroy_all
+Component.destroy_all
+
+post = Post.create(author: 'nkls')
+
+post_heading = Component.create(component_type: 'post_heading', content: 'hello world, this is the post heading component')
+
+post_paragraph = Component.create(component_type: 'post_paragraph', content: 'hello world, this is the post paragraph component')
+
+post.components << post_heading
+post.components << post_paragraph
