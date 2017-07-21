@@ -6,7 +6,7 @@ class ParksController < ApplicationController
   end
 
   def random
-    
+    json_response(Park.random_park)
   end
 
   def show 
