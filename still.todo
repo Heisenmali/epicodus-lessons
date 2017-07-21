@@ -6,6 +6,6 @@ objectives:
     ✔ Model scopes should be used to process parameters from API calls. @done (7/21/2017, 2:52:54 PM)
     ✔ At least one of the objectives from Monday's Further Exploration lesson (such as versioning, token authentication, or serialization). @done (7/21/2017, 2:20:11 PM)
     ✔ Thorough exception handling. @done (7/21/2017, 2:05:08 PM)
-    ☐ Complete testing with request specs.
+    ✔ Complete testing with request specs. @done (7/21/2017, 4:06:52 PM)
     ✔ Randomized data with Faker or your own custom seed code. @done (7/21/2017, 1:22:34 PM)
     ☐ A README that thoroughly documents all endpoints, including parameters that can be passed in.

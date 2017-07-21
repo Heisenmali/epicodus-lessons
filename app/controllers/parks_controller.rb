@@ -29,9 +29,13 @@ class ParksController < ApplicationController
   end
 
   def update
-    park = Park.find(params[:id])
-    if park.update!(park_params)
-      json_response(message: "song was updated")
+    if park_params.empty?
+      json_response(message: "You left the name parameter blank, you need to specify a name parameter if you want me to do something. Otherwise I'll just sit around and do nothing ;-)")
+    else
+      park = Park.find(params[:id])
+      if park.update!(park_params)
+        json_response(message: "song was updated")
+      end
     end
   end
 
