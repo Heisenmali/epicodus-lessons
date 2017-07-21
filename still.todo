@@ -1,6 +1,6 @@
 objectives: 
 
-    ☐ Endpoints for GET (all and by id), POST, PUT and DELETE.
+    ✔ Endpoints for GET (all and by id), POST, PUT and DELETE. @done (7/21/2017, 2:14:19 PM)
     ☐ A RANDOM endpoint that randomly returns a park/business/animal.
     ☐ A second custom endpoint that accepts parameters (example: a SEARCH route that allows users to search by specific park names).
     ☐ Model scopes should be used to process parameters from API calls.

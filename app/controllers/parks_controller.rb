@@ -1,7 +1,7 @@
 class ParksController < ApplicationController
    include Response
   def index
-    parks = Park.all
+    parks = Park.all.page params[:page]
     json_response(parks)
   end
 
