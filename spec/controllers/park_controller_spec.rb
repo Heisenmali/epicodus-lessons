@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe ParkController, type: :controller do
+RSpec.describe ParksController, type: :controller do
 
 end
