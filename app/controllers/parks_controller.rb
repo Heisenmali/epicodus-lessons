@@ -5,6 +5,10 @@ class ParksController < ApplicationController
     json_response(parks)
   end
 
+  def random
+    
+  end
+
   def show 
     park = Park.find(params[:id])
     json_response(park)
