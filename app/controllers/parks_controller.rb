@@ -18,8 +18,12 @@ class ParksController < ApplicationController
     json_response(Park.search_parks(params[:name]))
   end
 
+  def create
+    park = Park.create!(park_params)
+    json_response(park, :created)
+  end
+
   def update
-    byebug
     park = Park.find(params[:id])
     if park.update!(park_params)
       json_response(message: "song was updated")

@@ -1,5 +1,6 @@
 class Park < ApplicationRecord
   paginates_per 5
+  validates :name, presence: true
 
   scope :random_park, -> do
     parks = Park.all
