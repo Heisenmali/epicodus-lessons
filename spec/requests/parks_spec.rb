@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 describe "parks API" do
+
+ # CRUD ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
   it 'sends a list of parks' do
     FactoryGirl.create_list(:park, 10)
 
@@ -10,7 +13,7 @@ describe "parks API" do
     # test for the 200 status-code
     expect(response).to be_success
 
-    # check to make sure the right amount of messages are returned, tests the pagination
+    # check to make sure the right amount of parks are returned, tests the pagination
     expect(json.length).to eq(5)
   end
 
@@ -23,7 +26,7 @@ describe "parks API" do
     # test for the 200 status-code
     expect(response).to be_success
 
-    # check to make sure the right amount of messages are returned
+    # check to make sure the right amount of parks are returned
     expect(json['id']).to eq(park.id)
   end
 
@@ -36,7 +39,7 @@ describe "parks API" do
     # test for the 200 status-code
     expect(response).to be_success
 
-    # check to make sure the right amount of messages are returned
+    # check to make sure the new name is returned
     expect(json['name']).to eq("helloworld")
   end
 
@@ -49,7 +52,7 @@ describe "parks API" do
     # test for the 200 status-code
     expect(response).to be_success
 
-    # check to make sure the right amount of messages are returned
+    # check to make sure the success message is returned
     expect(json['message']).to eq("song was updated")
   end
 
@@ -62,7 +65,25 @@ describe "parks API" do
     # test for the 200 status-code
     expect(response).to be_success
 
-    # check to make sure the right amount of messages are returned
+    # check to make sure the deletion message is returned
     expect(json['message']).to eq("song was deleted")
+  end
+
+  # CUSTOM ROUTES ––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+  it 'returns a random park' do
+    parks = FactoryGirl.create_list(:park, 100)
+    max = parks.last.id + 1
+    min = parks.first.id
+    range = (min..max)
+    
+    get '/random'
+    json = JSON.parse(response.body)
+
+    # test for the 200 status-code
+    expect(response).to be_success
+
+    # check to make sure the deletion message is returned
+    expect(range.include?(json['id'])).to eq(true)
   end
 end
