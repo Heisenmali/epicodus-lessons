@@ -5,4 +5,8 @@ class Park < ApplicationRecord
     parks = Park.all
     parks[rand(0..parks.length)]
   end
+
+  scope :search_parks, -> (search_term = nil) do
+    Park.where(name: search_term)
+  end
 end
