@@ -5,7 +5,7 @@ objectives:
     ☐ A second custom endpoint that accepts parameters (example: a SEARCH route that allows users to search by specific park names).
     ☐ Model scopes should be used to process parameters from API calls.
     ☐ At least one of the objectives from Monday's Further Exploration lesson (such as versioning, token authentication, or serialization).
-    ☐ Thorough exception handling.
+    ✔ Thorough exception handling. @done (7/21/2017, 2:05:08 PM)
     ☐ Complete testing with request specs.
     ✔ Randomized data with Faker or your own custom seed code. @done (7/21/2017, 1:22:34 PM)
     ☐ A README that thoroughly documents all endpoints, including parameters that can be passed in.
