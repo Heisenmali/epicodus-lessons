@@ -30,6 +30,18 @@ describe "parks API" do
     expect(json['id']).to eq(park.id)
   end
 
+  it 'returns and error message if the park is not found'  do
+    FactoryGirl.create_list(:park, 10)
+    get '/parks/0'
+    json = JSON.parse(response.body)
+
+    # test for the 200 status-code
+    expect(response).to have_http_status(404)
+
+    # check to make sure the right amount of parks are returned
+    expect(json['message']).to eq("Couldn't find Park with 'id'=0")
+  end
+
   it 'creates a park' do
     FactoryGirl.create_list(:park, 10)
 
@@ -72,18 +84,45 @@ describe "parks API" do
   # CUSTOM ROUTES ––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
   it 'returns a random park' do
-    parks = FactoryGirl.create_list(:park, 100)
+    FactoryGirl.create_list(:park, 100)
+    parks = Park.all
     max = parks.last.id + 1
     min = parks.first.id
     range = (min..max)
-    
+
     get '/random'
     json = JSON.parse(response.body)
 
     # test for the 200 status-code
     expect(response).to be_success
-
+    
     # check to make sure the deletion message is returned
     expect(range.include?(json['id'])).to eq(true)
+  end
+
+  it 'returns the searched park' do
+    park = FactoryGirl.create_list(:park, 100).first
+    
+    get '/search', params: {"name": park.name}
+    json = JSON.parse(response.body)
+  
+    # test for the 200 status-code
+    expect(response).to be_success
+
+    # check to make sure the deletion message is returned
+    expect(json.first['name']).to eq(park.name)
+  end
+
+   it 'returns a message if the search yielded no results' do
+    park = FactoryGirl.create_list(:park, 100).first
+    
+    get '/search', params: {"name": "d"}
+    json = JSON.parse(response.body)
+  
+    # test for the 200 status-code
+    expect(response).to be_success
+
+    # check to make sure the deletion message is returned
+    expect(json['message']).to eq("There are no results for your search")
   end
 end

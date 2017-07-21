@@ -15,7 +15,12 @@ class ParksController < ApplicationController
   end
 
   def search
-    json_response(Park.search_parks(params[:name]))
+    park = Park.search_parks(params[:name])
+    if park.empty?
+      json_response({message: "There are no results for your search"})
+    else
+      json_response(park)
+    end
   end
 
   def create
