@@ -9,4 +9,11 @@ class ParksController < ApplicationController
     park = Park.find(params[:id])
     json_response(park)
   end
+
+  def destroy
+    park = Park.find(params[:id])
+    if park.destroy!
+      json_response(message: "song was deleted")
+    end
+  end
 end
