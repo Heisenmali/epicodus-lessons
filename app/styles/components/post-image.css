@@ -5,3 +5,13 @@
 .showMe {
   visibility: visible;
 }
+
+.container {
+  
+}
+
+img {
+  position: absolute;
+  width: 50%;
+  height: auto;
+}
