@@ -7,15 +7,10 @@
 }
 
 .container {
-  composes: mv5 from global;
-  overflow: hidden;
-  height: 90vh;
+  composes: aspect-ratio aspect-ratio--16x9 mv5 from global;
+  height: 70vh;
 }
 
 .imageThing {
-  composes: db from global;
-  position: absolute;
-  left: 30%;
-  height: 90%;
-  width: auto;
+  composes: aspect-ratio--object cover from global;
 }

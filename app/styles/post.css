@@ -1,4 +1,4 @@
 .comp {
-  composes: mv1 from global;
-  padding-left: 30vw;
+  composes: mv3 from global;
+  padding: 0 3vw 0 5vw;
 } 
