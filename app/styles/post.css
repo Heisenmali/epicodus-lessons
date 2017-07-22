@@ -1,3 +1,4 @@
 .comp {
-  composes: pl7 pr6 from global;
+  composes: mv1 from global;
+  padding-left: 30vw;
 } 

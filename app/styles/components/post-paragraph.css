@@ -1,0 +1,3 @@
+.para {
+  composes: f4 lh-copy measure from global;
+}
