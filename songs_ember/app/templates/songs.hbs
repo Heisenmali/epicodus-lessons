@@ -1,0 +1,13 @@
+{{outlet}}
+{{#each model as |song|}}
+{{#link-to "song" song}}
+  {{song.artist}} |
+  {{song.title}} <br> <hr>
+  {{/link-to}}
+{{/each}}
+
+<form {{action "createSong" on="submit"}}>
+  {{input type="text" placeholder="artist" value=artist}}
+  {{input type="text" placeholder="title" value=title}}
+  <button type="submit">Add</button>
+</form>
