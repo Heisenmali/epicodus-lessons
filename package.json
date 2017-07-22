@@ -28,7 +28,6 @@
     "ember-cli-qunit": "^4.0.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
-    "ember-cli-tachyons-shim": "^4.6.1",
     "ember-cli-uglify": "^1.2.0",
     "ember-css-modules": "^0.7.2",
     "ember-data": "~2.13.2",
@@ -38,10 +37,13 @@
     "ember-source": "~2.14.0",
     "ember-welcome-page": "^3.0.0",
     "loader.js": "^4.2.3",
-    "tachyons": "^4.6.1"
+    "tachyons": "^4.7.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "ember-cli-node-assets": "^0.2.2"
+  }
 }
