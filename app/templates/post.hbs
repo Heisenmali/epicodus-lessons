@@ -3,5 +3,7 @@
 {{model.author}}
 
 {{#each model.components as |comp|}}
-  {{component comp.componentType comp=comp}}
+  <div local-class="comp">
+    {{component comp.componentType comp=comp }}
+  </div>
 {{/each}}

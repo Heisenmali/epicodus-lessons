@@ -7,11 +7,14 @@
 }
 
 .container {
-  
+  overflow: hidden;
+  height: 90vh;
 }
 
-img {
+.imageThing {
+  composes: db from global;
   position: absolute;
-  width: 50%;
-  height: auto;
+  left: 25%;
+  height: 90%;
+  width: auto;
 }
