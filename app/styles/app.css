@@ -1,6 +1,6 @@
 body {
-  font-size: 1.6em;
-  font-family: charterregular;
+  font-size: 1.5em;
+   font-family: charterregular; 
   background-color: #f7f7f7;
 }
 
@@ -8,12 +8,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: Helvetica, sans-serif; 
+   font-family: Helvetica, sans-serif;  
   font—size: 218%;
 }
 
 h2 {
+   font-family: Helvetica, sans-serif;  
   font—size: 164%;
+  font-weight: normal;
 }
 
 h3 {
