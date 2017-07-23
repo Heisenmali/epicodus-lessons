@@ -1,5 +1,5 @@
 .para {
-  composes: f4 lh-copy from global;
+  composes: lh-copy from global;
   padding-left: 27vw;
   max-width: 80vw;
 }
