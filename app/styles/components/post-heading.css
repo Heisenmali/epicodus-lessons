@@ -1,3 +1,3 @@
 .heading {
-  composes: f1 lh-copy measure from global;
+  composes: f1 lh-copy measure pv3 from global;
 }
