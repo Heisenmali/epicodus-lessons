@@ -1,7 +1,7 @@
 Post.destroy_all
 Component.destroy_all
 
-post = Post.create(author: 'nkls', title: 'Beer and Peanuts', teaser: 'Learning how to climb, training to become a better climber and continuing to grind along the slow road of self-improvement was and still is one of the greatest social adventures of my life.', media: "http://i.huffpost.com/gen/1985279/images/o-ROCK-CLIMBING-SUNSET-facebook.jpg")
+post = Post.create(author: 'nkls', title: 'Beer and Peanuts', teaser: 'Learning how to climb, training to become a better climber and continuing to grind along the slow road of self-improvement was and still is one of the greatest social adventures of my life.', media: "http://i.huffpost.com/gen/1985279/images/o-ROCK-CLIMBING-SUNSET-facebook.jpg", date: "2017-07-24")
 
 post_heading = Component.create(component_type: 'post-heading', content: 'Beer and Peanuts')
 
