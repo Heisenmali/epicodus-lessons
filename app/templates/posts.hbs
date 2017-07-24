@@ -7,11 +7,11 @@
         <p>{{post.teaser}}</p>
       </div>
       <div local-class="post-tile-image">
-        <img src="http://i.huffpost.com/gen/1985279/images/o-ROCK-CLIMBING-SUNSET-facebook.jpg" class="db" alt="Photo of a dimly lit room with a computer interface terminal.">  
+        <img src="{{post.media}}" class="db">  
       </div>
     </div>
     <p local-class="post-tile-author">By <span class="ttu">{{post.author}}</span></p>
-    <time local-class="post-tile-date">Nov. 21, 2016</time>
+    <time local-class="post-tile-date">{{post.date}}</time>
   </article>
   {{/link-to}}
 {{/each}}

@@ -4,5 +4,7 @@ export default DS.Model.extend({
   author: DS.attr('string'),
   title: DS.attr('string'),
   teaser: DS.attr('string'),
+  media: DS.attr('string'),
+  date: DS.attr('string'),
   components: DS.hasMany('component', {async: true, inverse: 'post'})
 });
