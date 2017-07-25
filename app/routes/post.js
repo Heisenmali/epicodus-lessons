@@ -9,12 +9,12 @@ export default Ember.Route.extend({
       comp.set('content', newContent);
       comp.save();
     },
-    newPara(post) {
+    newComponent(post, type) {
       console.log(post);
       let comment = this.store.createRecord('component', {
         post: post,
         content: 'helloWorld, this is a new component',
-        componentType: 'post-paragraph'
+        componentType: type
       });
       comment.save();
     }
