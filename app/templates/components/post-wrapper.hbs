@@ -1,1 +1,6 @@
-{{yield}}
+{{#each post.components as |comp|}}
+  <div>
+    {{component comp.componentType comp=comp saveChanges=(action this.attrs.saveChanges)}}
+  </div>
+{{/each}}
+
