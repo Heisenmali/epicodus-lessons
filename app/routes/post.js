@@ -6,8 +6,12 @@ export default Ember.Route.extend({
   },
   actions: {
     saveChanges(comp, newContent) {
-      comp.set('content', newContent);
-      comp.save();
+      if (newContent) {
+        comp.set('content', newContent);
+        comp.save();
+      } else {
+        comp.destroyRecord();
+      }
     },
     newComponent(post, type) {
       console.log(post);
