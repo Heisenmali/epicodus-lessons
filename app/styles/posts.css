@@ -23,8 +23,12 @@
   composes: flex flex-column flex-row-ns from global;
 }
 
-.post-tile-text {
+.post-tile-div {
   composes: w-100 w-60-ns pr3-ns order-2 order-1-ns from global;
+}
+
+.post-tile-text {
+  composes: mt0 from global;
 }
 
 .post-tile-image {
