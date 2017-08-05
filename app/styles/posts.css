@@ -1,3 +1,15 @@
+.row {
+  composes: flex flex-column flex-row-ns from global;
+}
+
+.nav-col {
+   composes: mr6 pr5 from global;
+}
+
+.post-tile-col {
+  /* composes: */
+}
+
 .post-tile {
   text-decoration: none;
   color: black;

@@ -1,18 +1,26 @@
-{{#each model as |post|}}
-  {{#link-to 'post' post local-class="post-tile"}}
-  <article local-class="post-tile-article">
-    <div local-class="post-tile-row">
-      <div local-class="post-tile-text">
-        <h2>{{post.title}}</h2>
-        <p>{{post.teaser}}</p>
-      </div>
-      <div local-class="post-tile-image">
-        <img src="{{post.media}}" class="db">  
-      </div>
-    </div>
-    <p local-class="post-tile-author">By <span class="ttu">{{post.author}}</span></p>
-    <time local-class="post-tile-date">{{post.date}}</time>
-  </article>
-  {{/link-to}}
-{{/each}}
 
+<div local-class="row">
+  <div local-class="nav-col">
+    {{main-nav}}
+  </div>
+
+  <div local-class="tile-col">
+    {{#each model as |post|}}
+      {{#link-to 'post' post local-class="post-tile"}}
+      <article local-class="post-tile-article">
+        <div local-class="post-tile-row">
+          <div local-class="post-tile-text">
+            <h2>{{post.title}}</h2>
+            <p>{{post.teaser}}</p>
+          </div>
+          <div local-class="post-tile-image">
+            <img src="{{post.media}}" class="db">  
+          </div>
+        </div>
+        <p local-class="post-tile-author">By <span class="ttu">{{post.author}}</span></p>
+        <time local-class="post-tile-date">{{post.date}}</time>
+      </article>
+      {{/link-to}}
+    {{/each}}
+  </div>
+</div>

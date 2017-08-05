@@ -14,7 +14,6 @@ nav {
   text-decoration: line-through;
 }
 
-
 .header {
   composes: dt w-100 from global;
   background-color: #FEE800;    
@@ -23,6 +22,7 @@ nav {
 
 .title {
   composes: w-40 pl7 pt7 from global;
+  text-decoration: underline;
 }
 
 .nav-item {
