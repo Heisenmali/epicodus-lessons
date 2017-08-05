@@ -12,13 +12,13 @@
           <div local-class="post-tile-div">
             <h2 local-class="post-tile-text">{{post.title}}</h2>
             <p>{{post.teaser}}</p>
-          </div>
-          <div local-class="post-tile-image">
-            <img src="{{post.media}}" class="db">  
-          </div>
-        </div>
         <p local-class="post-tile-author">By <span class="ttu">{{post.author}}</span></p>
         <time local-class="post-tile-date">{{post.date}}</time>
+          </div>
+          <div local-class="post-tile-image-div">
+            <img src="{{post.media}}" local-class="post-tile-image">  
+          </div>
+        </div>
       </article>
       {{/link-to}}
     {{/each}}
