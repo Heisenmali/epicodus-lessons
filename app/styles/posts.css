@@ -7,7 +7,7 @@
 }
 
 .post-tile-col {
-  /* composes: */
+   composes: pt4 from global;
 }
 
 .post-tile {
