@@ -16,7 +16,7 @@
 }
 
 .post-tile-article {
-  composes: pv4 bt bb b--black-10 ph5 from global;
+  composes: pv4 bb b--black-10 ph5 from global;
 }
 
 .post-tile-row {
