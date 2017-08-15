@@ -8,21 +8,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: Helvetica, sans-serif;  
-  font-size: 218%;
+  /* font-family: Helvetica, sans-serif;   */
+  font-size: 3.244em;
 }
 
 h2 {
-  font-family: Helvetica, sans-serif;  
-  font-size: 164%;
+  /* font-family: Helvetica, sans-serif;   */
+  font-size: 2.883em;
 }
 
 h3 {
-  font-size: 145%;
+  font-size: 2.563em;
 }
 
 h4 {
-  font-size: 118%;
+  font-size: 2.278em;
+}
+
+h5 {
+  font-size: 2.025em;
+}
+
+h6 {
+  font-size: 1.8em;
 }
 
 
