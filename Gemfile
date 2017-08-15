@@ -26,11 +26,20 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 gem 'jsonapi-resources'
+gem 'aws-sdk', '~> 2'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'faker'
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'shoulda-matchers'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'pry'
+  gem 'factory_girl_rails'
 end
 
 group :development do

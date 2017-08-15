@@ -43,4 +43,20 @@ post.components << post_paragraph7
 post.components << post_paragraph8
 post.components << post_paragraph9
 
+
+
+# second post
+
+post2 = Post.create(author: 'Kev', title: 'Beer and Things', teaser: Faker::Hipster.paragraph(3), media: "http://i.huffpost.com/gen/1985279/images/o-ROCK-CLIMBING-SUNSET-facebook.jpg", date: "2017-07-24")
+
+post2_heading = Component.create(component_type: 'post-heading', content: 'Beer and Things')
+
+post2.components << post2_heading
+
+5.times do 
+  para = Component.create(component_type: 'post-paragraph', content: Faker::Hipster.paragraph(3))
+
+  post2.components << para
+end
+
 puts 'DONE RAN THE SEED'
