@@ -22,7 +22,7 @@ nav {
 
 .title {
   composes: w-40 pl7 pt7 from global;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .nav-item {

@@ -11,7 +11,7 @@
         <div local-class="post-tile-row">
           <div local-class="post-tile-div">
             <h6 local-class="post-tile-title">{{post.title}}</h6>
-            <p>{{post.teaser}}</p>
+            <p>{{truncate-text post.teaser limit=140}}</p>
         <p local-class="post-tile-author">By <span class="ttu">{{post.author}}</span></p>
         <time local-class="post-tile-date">{{post.date}}</time>
           </div>

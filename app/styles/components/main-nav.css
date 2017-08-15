@@ -7,7 +7,7 @@ nav {
 .nav-item, .nav-item-home {
   display: list-item;
   color: black;
-  font-size: 18px;
+  font-size: 0.889em;
   list-style: none;
   text-decoration: none;
 }
