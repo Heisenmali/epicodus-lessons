@@ -1,0 +1,8 @@
+<% content_for(:title, 'About') %>
+
+<div class="about ph7 pv3">
+  <h2>About us</h2>
+  <% @about_paras.each do |para| %>
+    <p><%= para %></p>
+  <% end %>
+</div>

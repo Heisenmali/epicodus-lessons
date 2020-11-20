@@ -1,0 +1,25 @@
+<div class="product mb3 w-100 mt5">
+  <div class="w-50 fl h-100-ns tc">
+    <%= image_tag @product.image, class: "product-image" %>
+  </div>
+
+
+
+  <div class="pv3 pr6 w-50 fr bb b--moon-gray h-100-ns">
+    <h3><%= @product.name %></h3>
+    <p>$<%= @product.price %></p>
+    <p><%= @product.description %></p>
+    <%= form_for @order_item, url: {controller: "order_items", action: "create"} do |f| %>
+      <%= f.hidden_field :product_id, value: @product.id %>
+      <%= f.submit "Add to cart", class: "product-button dim" %>
+    <% end %>
+  </div>
+</div>
+<br>
+
+<div class="w-50 fr pr6">
+  <h4><%= link_to 'add a review', new_product_review_path(@product) %></h4>
+  <% @reviews.each do |review| %>
+    <p><%= review.user.email %> | <%= review.content %> </p>
+  <% end %>
+</div>
