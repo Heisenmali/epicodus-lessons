@@ -1,0 +1,7 @@
+<h1>hello world!</h1>
+
+{{#each model as |post|}}
+  {{#link-to 'post' post}}
+    {{post.title}} - {{post.author}}
+  {{/link-to}}
+{{/each}}
