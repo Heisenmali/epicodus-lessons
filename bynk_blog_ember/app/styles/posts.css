@@ -1,0 +1,50 @@
+.row {
+  composes: flex flex-column flex-row-ns from global;
+}
+
+.nav-col {
+   composes: mr7 from global;
+}
+
+.post-tile-col {
+   composes: pt4 from global;
+}
+
+.post-tile {
+  text-decoration: none;
+  color: black;
+}
+
+.post-tile-article {
+  composes: pv4 bb b--black-10 pr5 from global;
+}
+
+.post-tile-row {
+  composes: flex flex-column flex-row-ns from global;
+}
+
+.post-tile-div {
+  composes: w-100 w-60-ns pr3-ns order-2 order-1-ns from global;
+}
+
+.post-tile-title {
+  composes: mt0 mb2 from global;
+}
+
+.post-tile-image-div {
+  composes: pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns from global;
+}
+
+.post-tile-image {
+  composes: db from global;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.post-tile-author {
+  composes: f6 lh-copy gray mv0 from global;
+}
+
+.post-tile-date {
+  composes: f6 db gray from global;
+}

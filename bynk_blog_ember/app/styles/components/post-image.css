@@ -1,0 +1,16 @@
+.hideMe {
+  visibility: hidden;
+}
+
+.showMe {
+  visibility: visible;
+}
+
+.container {
+  composes: aspect-ratio aspect-ratio--16x9 mv5 from global;
+  height: 70vh;
+}
+
+.imageThing {
+  composes: aspect-ratio--object cover from global;
+}

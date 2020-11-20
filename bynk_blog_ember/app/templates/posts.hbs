@@ -1,0 +1,26 @@
+
+<div local-class="row">
+  <div local-class="nav-col">
+    {{main-nav}}
+  </div>
+
+  <div local-class="post-tile-col">
+    {{#each model as |post|}}
+      {{#link-to 'post' post local-class="post-tile"}}
+      <article local-class="post-tile-article">
+        <div local-class="post-tile-row">
+          <div local-class="post-tile-div">
+            <h6 local-class="post-tile-title">{{post.title}}</h6>
+            <p>{{truncate-text post.teaser limit=140}}</p>
+        <p local-class="post-tile-author">By <span class="ttu">{{post.author}}</span></p>
+        <time local-class="post-tile-date">{{post.date}}</time>
+          </div>
+          <div local-class="post-tile-image-div">
+            <img src="{{post.media}}" local-class="post-tile-image">  
+          </div>
+        </div>
+      </article>
+      {{/link-to}}
+    {{/each}}
+  </div>
+</div>

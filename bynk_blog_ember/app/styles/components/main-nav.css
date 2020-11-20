@@ -1,0 +1,25 @@
+/* NAV */
+
+nav {
+  position: fixed;
+}
+
+.nav-item, .nav-item-home {
+  display: list-item;
+  color: black;
+  font-size: 0.889em;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-item:hover, .nav-item-home:hover {
+  text-decoration: line-through;
+}
+
+.nav-item {
+  composes: pb1 from global;
+}
+
+.nav-item-home {
+  composes: pb3 from global;
+}

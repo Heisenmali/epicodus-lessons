@@ -1,0 +1,47 @@
+nav {
+  position: fixed;
+}
+
+.nav-item, .nav-item-home {
+  display: list-item;
+  color: black;
+  font-size: 18px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-item:hover, .nav-item-home:hover {
+  text-decoration: line-through;
+}
+
+.header {
+  composes: dt w-100 from global;
+  background-color: #FEE800;    
+  height: 100vh;
+}
+
+.title {
+  composes: w-40 pl7 pt7 from global;
+  /* text-decoration: underline; */
+}
+
+.nav-item {
+  composes: pb1 from global;
+}
+
+.nav-item-home {
+  composes: pb3 from global;
+}
+
+.logo {
+  height: 60vh;
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  right: 11vw;
+}
+
+.content {
+  height: 90vh;
+  background-color: #fefefe;
+}

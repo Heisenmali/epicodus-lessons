@@ -1,0 +1,5 @@
+.blockquote {
+  composes: lh-copy tc pv5 from global;
+  padding-left: 13vw;
+  max-width: 87vw;
+}
